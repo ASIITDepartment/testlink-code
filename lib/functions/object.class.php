@@ -5,11 +5,9 @@
  *
  * @filesource  object.class.php
  * @package     TestLink
- * @copyright   2007-2016, TestLink community 
+ * @copyright   2007-2019, TestLink community 
  * @link        http://www.testlink.org
  *
- * @internal revisions
- * @since 1.9.15
  **/
  
 /** 
@@ -292,6 +290,8 @@ abstract class tlObject implements iSerialization
                     'tcversions' => DB_TABLE_PREFIX . 'tcversions',
                     'tcsteps' => DB_TABLE_PREFIX . 'tcsteps',
                     'testcase_keywords' => DB_TABLE_PREFIX . 'testcase_keywords',
+                    'testcase_platforms' => DB_TABLE_PREFIX . 'testcase_platforms',
+
                     'testplan_platforms' => DB_TABLE_PREFIX . 'testplan_platforms',
                     'testcase_script_links' => DB_TABLE_PREFIX . 'testcase_script_links',
                     'testplan_tcversions' => DB_TABLE_PREFIX . 'testplan_tcversions',
@@ -305,7 +305,9 @@ abstract class tlObject implements iSerialization
                     'user_group_assign' => DB_TABLE_PREFIX . 'user_group_assign',
                     'user_testplan_roles' => DB_TABLE_PREFIX . 'user_testplan_roles',
                     'user_testproject_roles' => DB_TABLE_PREFIX . 'user_testproject_roles',
-                    'users' => DB_TABLE_PREFIX . 'users'); 
+                    'users' => DB_TABLE_PREFIX . 'users',
+                    'execution_tcsteps_wip' => DB_TABLE_PREFIX . 'execution_tcsteps_wip'
+    ); 
 
     if ($tableNames != null)
     { 
@@ -327,19 +329,19 @@ abstract class tlObject implements iSerialization
   static public function getDBViews($itemNames = null) {
     $items = array('tcversions_last_active' => null,
                    'tcversions_without_keywords' => null,
-                   'last_executions' => null,
-                   'last_executions_by_platforms' => null,
-                   'latest_tcase_version_number' => null,
+                   'tcversions_without_platforms' => null,
+                   'latest_exec_by_context' => null,
+                   'latest_exec_by_testplan' => null,
+                   'latest_exec_by_testplan_plat' => null,
                    'latest_tcase_version_id' => null,
+                   'latest_tcase_version_number' => null,
                    'latest_req_version' => null,
                    'latest_req_version_id' => null,
-                   'latest_rspec_revision' => null,); 
+                   'latest_rspec_revision' => null); 
     
     foreach($items as $key => $value) {
       $items[$key] = DB_TABLE_PREFIX . $key;
     }
-
-
 
     if ($itemNames != null) { 
       $itemNames = (array)$itemNames;

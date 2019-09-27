@@ -70,53 +70,55 @@ require_once("exec_cfield_mgr.class.php");
  * Automatic loader for PHP classes
  * See PHP Manual for details 
  */
-function tlAutoload($class_name) 
-{
+function tlAutoload($class_name)  {
 
   // exceptions
   // 1. remove prefix and convert lower case
   $tlClasses = null;
   $tlClassPrefixLen = 2;
   $classFileName = $class_name;
+
    
   // 2. add a lower case directory 
   $addDirToInclude = array('Kint' => true);
 
   // this way Zend_Loader_Autoloader will take care of these classes.
   // Needed in order to make work bugzillaxmlrpc interface
-  if( strstr($class_name,'Zend_') !== FALSE )
-  {
+  if( strstr($class_name,'Zend_') !== FALSE ) {
     return false;
   }
-    
-  if (isset($tlClasses[$classFileName]))
-  {
+
+  // Workaround
+  // https://github.com/smarty-php/smarty/issues/344 
+  // https://github.com/smarty-php/smarty/pull/345
+  if( strpos($class_name,'Smarty_Internal_Compile_') !== FALSE ) {
+    return false;
+  }
+
+  if (isset($tlClasses[$classFileName])) {
     $len = tlStringLen($classFileName) - $tlClassPrefixLen;
     $classFileName = strtolower(tlSubstr($classFileName,$tlClassPrefixLen,$len));
   }
   
-  if (isset($addDirToInclude[$class_name]))
-  {
+  if (isset($addDirToInclude[$class_name])) {
     $classFileName = strtolower($class_name) . "/" . $class_name;
   }  
 
   // Plugin special processing, class name ends with Plugin (see plugin_register())
   // Does not use autoload
-  if( preg_match('/Plugin$/', $class_name) == 1 )
-  {
+  if( preg_match('/Plugin$/', $class_name) == 1 ) {
     return;
   }  
 
 
   // fix provided by BitNami for:
   // Reason: We had a problem integrating TestLink with other apps. 
-  // You can reproduce it installing ThinkUp and TestLink applications in the same stack.  
-  try 
-  {
-    include_once $classFileName . '.class.php';
+  // You can reproduce it installing ThinkUp and TestLink applications in the same stack. 
+
+  try {
+      include_once $classFileName . '.class.php';
   } 
-  catch (Exception $e)
-  {
+  catch (Exception $e) {
   }  
   
 }
@@ -388,8 +390,11 @@ function initTopMenu(&$db)
  * @uses initMenu() 
  * @internal revisions
  **/
-function initProject(&$db,$hash_user_sel)
-{
+function initProject(&$db,$hash_user_sel) {
+
+  $ckObj = new stdClass();
+  $ckCfg = config_get('cookie');
+  
   $tproject = new testproject($db);
   $user_sel = array("tplan_id" => 0, "tproject_id" => 0 );
   $user_sel["tproject_id"] = isset($hash_user_sel['testproject']) ? intval($hash_user_sel['testproject']) : 0;
@@ -398,16 +403,14 @@ function initProject(&$db,$hash_user_sel)
   $tproject_id = isset($_SESSION['testprojectID']) ? $_SESSION['testprojectID'] : 0;
 
   // test project is Test Plan container, then we start checking the container
-  if( $user_sel["tproject_id"] != 0 )
-  {
+  if( $user_sel["tproject_id"] != 0 ) {
     $tproject_id = $user_sel["tproject_id"];
   }
+  
   // We need to do checks before updating the SESSION to cover the case that not defined but exists
-  if (!$tproject_id)
-  {
+  if (!$tproject_id) {
     $all_tprojects = $tproject->get_all();
-    if ($all_tprojects)
-    {
+    if ($all_tprojects) {
       $tproject_data = $all_tprojects[0];
       $tproject_id = $tproject_data['id'];
     }
@@ -420,8 +423,6 @@ function initProject(&$db,$hash_user_sel)
   $tplan_id = isset($_SESSION['testplanID']) ? $_SESSION['testplanID'] : null;
 
   // Now we need to validate the TestPlan
-  $ckObj = new stdClass();
-  $ckCfg = config_get('cookie');
   $ckObj->name = $ckCfg->prefix .  "TL_user${_SESSION['userID']}_proj${tproject_id}_testPlanId";
 
   if($user_sel["tplan_id"] != 0)
@@ -475,24 +476,20 @@ function testlinkInitPage(&$db, $initProject = FALSE, $dontCheckSession = false,
 
   doSessionStart();
   setPaths();
-  if( isset($_SESSION['locale']) && !is_null($_SESSION['locale']) )
-  {
+  if( isset($_SESSION['locale']) && !is_null($_SESSION['locale']) ) {
     setDateTimeFormats($_SESSION['locale']);
   } 
   doDBConnect($db);
   
-  if (!$pageStatistics && (config_get('log_level') == 'EXTENDED'))
-  {
+  if (!$pageStatistics && (config_get('log_level') == 'EXTENDED')) {
     $pageStatistics = new tlPageStatistics($db);
   }
   
-  if (!$dontCheckSession)
-  {
+  if (!$dontCheckSession) {
     checkSessionValid($db);
   }
   
-  if ($userRightsCheckFunction)
-  {
+  if ($userRightsCheckFunction) {
     checkUserRightsFor($db,$userRightsCheckFunction,$onFailureGoToLogin);
   }
    
@@ -500,24 +497,21 @@ function testlinkInitPage(&$db, $initProject = FALSE, $dontCheckSession = false,
   plugin_init_installed();
    
   // adjust Product and Test Plan to $_SESSION
-  if ($initProject)
-  {
+  if ($initProject) {
     initProject($db,$_REQUEST);
   }
    
   // used to disable the attachment feature if there are problems with repository path
   /** @TODO this check should not be done anytime but on login and using */
-  global $g_repositoryType;
-  global $g_attachments;
   global $g_repositoryPath;
-  $g_attachments->disabled_msg = "";
-  if($g_repositoryType == TL_REPOSITORY_TYPE_FS)
-  {
+  global $g_repositoryType;
+  global $tlCfg;
+  $tlCfg->attachments->disabled_msg = "";
+  if($g_repositoryType == TL_REPOSITORY_TYPE_FS) {
     $ret = checkForRepositoryDir($g_repositoryPath);
-    if(!$ret['status_ok'])
-    {
-      $g_attachments->enabled = FALSE;
-      $g_attachments->disabled_msg = $ret['msg'];
+    if(!$ret['status_ok']) {
+      $tlCfg->attachments->enabled = FALSE;
+      $tlCfg->attachments->disabled_msg = $ret['msg'];
     }
   }
 }
@@ -637,13 +631,11 @@ function check_string($str2check, $regexp_forbidden_chars)
  * 
  * @internal Revisions
  */
-function config_get($config_id)
-{
-  $t_value = '';  
+function config_get($config_id, $default=null) {
+  $t_value = (null == $default) ? '' : $default;  
   $t_found = false;  
   $logInfo = array('msg' => "config option not available: {$config_id}", 'level' => 'WARNING');
-  if(!$t_found)
-  {
+  if(!$t_found) {
     $my = "g_" . $config_id;
     if( ($t_found = isset($GLOBALS[$my])) )
     {
@@ -1056,16 +1048,12 @@ function tlSubStr($str,$start,$length = null)
  *        does not exists.
  *
  */
-function getItemTemplateContents($itemTemplate, $webEditorName, $defaultText='') 
-{
+function getItemTemplateContents($itemTemplate, $webEditorName, $defaultText='') {
     $editorTemplate = config_get($itemTemplate);
     $value=$defaultText;
-    if( !is_null($editorTemplate) )
-    {
-      if (property_exists($editorTemplate, $webEditorName)) 
-      {
-        switch($editorTemplate->$webEditorName->type)
-        {
+    if( !is_null($editorTemplate) ) {
+      if (property_exists($editorTemplate, $webEditorName)) {
+        switch($editorTemplate->$webEditorName->type) {
           case 'string':
             $value = $editorTemplate->$webEditorName->value;
           break;
@@ -1076,8 +1064,7 @@ function getItemTemplateContents($itemTemplate, $webEditorName, $defaultText='')
              
           case 'file':
             $value = getFileContents($editorTemplate->$webEditorName->value);
-            if (is_null($value))
-            {
+            if (is_null($value)) {
               $value = lang_get('problems_trying_to_access_template') . 
                        " {$editorTemplate->$webEditorName->value} ";
             } 

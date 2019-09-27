@@ -6,7 +6,7 @@
  * @package     TestLink
  * @filesource  requirement_mgr.class.php
  * @author      Francisco Mancardi <francisco.mancardi@gmail.com>
- * @copyright   2007-2018, TestLink community 
+ * @copyright   2007-2019, TestLink community 
  *
  * Manager for requirements.
  * Requirements are children of a requirement specification (requirements container)
@@ -206,7 +206,7 @@ function get_by_id($id,$version_id=self::ALL_VERSIONS,$version_number=1,$options
     default:
       $outf = " /* $debugMsg */ SELECT REQ.id,REQ.srs_id,REQ.req_doc_id," . 
               " REQV.scope,REQV.status,REQV.type,REQV.active," . 
-              " REQV.is_open,REQV.author_id,REQV.version,REQV.id AS version_id," .
+              " REQV.is_open,REQV.is_open AS reqver_is_open,REQV.author_id,REQV.version,REQV.id AS version_id," .
               " REQV.expected_coverage,REQV.creation_ts,REQV.modifier_id," .
               " REQV.modification_ts,REQV.revision, -1 AS revision_id, " .
               " NH_REQ.name AS title, REQ_SPEC.testproject_id, " .
@@ -1466,28 +1466,30 @@ function createFromMap($req,$tproject_id,$parent_id,$author_id,$filters = null,$
   static $doProcessCF = false;
   static $debugMsg;
   static $getByAttributeOpt;
-  static $getLastChildInfoOpt;  // TICKET 5528: Importing a requirement with CF fails after the first time
+  static $getLastChildInfoOpt;  
   
-  if(is_null($linkedCF) )
-  {
+  if(is_null($linkedCF) ) {
     $debugMsg = 'Class:' . __CLASS__ . ' - Method: ' . __FUNCTION__;
     $fieldSize = config_get('field_size');
     
-    $linkedCF = $this->cfield_mgr->get_linked_cfields_at_design($tproject_id,cfield_mgr::CF_ENABLED,null,
-                                                                'requirement',null,'name');
+    $linkedCF = $this->cfield_mgr->get_linked_cfields_at_design(
+      $tproject_id,cfield_mgr::CF_ENABLED,null,'requirement',null,'name');
     $doProcessCF = true;
 
     $messages = array();
     $messages['cf_warning'] = lang_get('no_cf_defined_can_not_import');
     $messages['cfield'] = lang_get('cf_value_not_imported_missing_cf_on_testproject');
 
-    $labels = array('import_req_created' => '','import_req_skipped' =>'', 'import_req_updated' => '', 
-                    'frozen_req_unable_to_import' => '', 'requirement' => '', 'import_req_new_version_created' => '',
+    $labels = array('import_req_created' => '',
+                    'import_req_skipped' =>'', 'import_req_updated' => '', 
+                    'frozen_req_unable_to_import' => '', 'requirement' => '', 
+                    'import_req_new_version_created' => '',
                     'import_req_update_last_version_failed' => '',
-                    'import_req_new_version_failed' => '', 'import_req_skipped_plain' => '',
-                    'req_title_lenght_exceeded' => '', 'req_docid_lenght_exceeded' => '');
-    foreach($labels as $key => $dummy)
-    {
+                    'import_req_new_version_failed' => '', 
+                    'import_req_skipped_plain' => '',
+                    'req_title_lenght_exceeded' => '', 
+                    'req_docid_lenght_exceeded' => '');
+    foreach($labels as $key => $dummy) {
       $labels[$key] = lang_get($key);
     }  
     $getByAttributeOpt = array('output' => 'id');
@@ -1749,9 +1751,9 @@ function createFromMap($req,$tproject_id,$parent_id,$author_id,$filters = null,$
 		return $knownAttachments;
 	}
   
-// ---------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
 // Custom field related functions
-// ---------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
 
 /*
   function: get_linked_cfields
@@ -1761,9 +1763,9 @@ function createFromMap($req,$tproject_id,$parent_id,$author_id,$filters = null,$
 
 
   args: id: requirement id
-    $child_id: requirement version id or requirement revision id
-        [parent_id]:
-                     this information is vital, to get the linked custom fields.
+        $child_id: requirement version id or requirement revision id
+        [parent_id]: this information is vital, 
+                     to get the linked custom fields.
                      null -> use requirement_id as starting point.
                      !is_null -> use this value as testproject id
 
@@ -1791,27 +1793,22 @@ function createFromMap($req,$tproject_id,$parent_id,$author_id,$filters = null,$
 
                   node_id: requirement id
                            null if for this requirement, custom field was never edited.
-
-  
-
-
-  20111110 - franciscom - TICKET 4802: Exporting large amount of requirements ( qty > 1900) fails
 */
-function get_linked_cfields($id,$child_id,$parent_id=null)
+function get_linked_cfields($id,$child_id,$parent_id=null,$opt=null)
 {
-  if( !is_null($parent_id) )
-  {
+  $options = array('access_key' => null);
+  $options = array_merge($options,(array)$opt);
+  
+  if( !is_null($parent_id) ) {
       $tproject_id = $parent_id;
-  }
-  else
-  {
-      $req_info = $this->get_by_id($id);
-      $tproject_id = $req_info[0]['testproject_id'];
-      unset($req_info);
+  } else {
+    $req_info = $this->get_by_id($id);
+    $tproject_id = $req_info[0]['testproject_id'];
+    unset($req_info);
   }
 
-  $cf_map = $this->cfield_mgr->get_linked_cfields_at_design($tproject_id,cfield_mgr::ENABLED,null,
-                                                            'requirement',$child_id);
+  $cf_map = $this->cfield_mgr->get_linked_cfields_at_design($tproject_id,cfield_mgr::ENABLED,null,'requirement',
+    $child_id,$options['access_key']);
   return $cf_map;
 }
 
@@ -1839,9 +1836,6 @@ function get_linked_cfields($id,$child_id,$parent_id=null)
 
 
   returns: html string
-
-
-  @internal revisions
 */
 function html_table_of_custom_field_inputs($id,$version_id,$parent_id=null,$name_suffix='', $input_values = null)
 {
@@ -1864,31 +1858,23 @@ function html_table_of_custom_field_inputs($id,$version_id,$parent_id=null,$name
 
   returns: html string
 
-  revision:
-  BUGID 4056
-
 */
 function html_table_of_custom_field_values($id,$child_id,$tproject_id=null)
 {
-    $NO_WARNING_IF_MISSING=true;
+  $NO_WARNING_IF_MISSING=true;
   $cf_smarty = '';
 
   $root_id = is_null($id) ? $tproject_id : null;  
   $cf_map = $this->get_linked_cfields($id,$child_id,$root_id);
 
-  // BUGID 3989
   $show_cf = config_get('custom_fields')->show_custom_fields_without_value;
   
-  if(!is_null($cf_map))
-  {
-    foreach($cf_map as $cf_id => $cf_info)
-    {
+  if(!is_null($cf_map)) {
+    foreach($cf_map as $cf_id => $cf_info) {
       // if user has assigned a value, then node_id is not null
-      // BUGID 3989
-      if($cf_info['node_id'] || $show_cf)
-      {
+      if($cf_info['node_id'] || $show_cf) {
         $label = str_replace(TL_LOCALIZE_TAG,'',
-                                   lang_get($cf_info['label'],null,$NO_WARNING_IF_MISSING));
+                    lang_get($cf_info['label'],null,$NO_WARNING_IF_MISSING));
 
         $cf_smarty .= '<tr><td class="labelHolder">' .
                 htmlspecialchars($label) . ":</td><td>" .
@@ -1949,9 +1935,8 @@ function html_table_of_custom_field_values($id,$child_id,$tproject_id=null)
  {
     $xml = null;
     $cfMap=$this->get_linked_cfields($id,$version_id,$tproject_id);
-  if( !is_null($cfMap) && count($cfMap) > 0 )
-  {
-        $xml = $this->cfield_mgr->exportValueAsXML($cfMap);
+    if( !is_null($cfMap) && count($cfMap) > 0 ) {
+      $xml = $this->cfield_mgr->exportValueAsXML($cfMap);
     }
     return $xml;
  }
@@ -2182,10 +2167,8 @@ function html_table_of_custom_field_values($id,$child_id,$tproject_id=null)
   {
     $cfmap_from = $this->get_linked_cfields($source['id'],$source['version_id'],$tproject_id);
     $cfield=null;
-    if( !is_null($cfmap_from) )
-    {
-      foreach($cfmap_from as $key => $value)
-      {
+    if( !is_null($cfmap_from) ) {
+      foreach($cfmap_from as $key => $value) {
         $cfield[$key]=array("type_id"  => $value['type'], "cf_value" => $value['value']);
       }
       $this->cfield_mgr->design_values_to_db($cfield,$destination['version_id'],null,'reqversion_copy_cfields');
@@ -3856,19 +3839,13 @@ function getByIDBulkLatestVersionRevision($id,$opt=null)
          " JOIN {$this->tables['nodes_hierarchy']} NH_REQ ON NH_REQ.id = REQ.id " .
          $where_clause;
 
-
-  // echo $sql;
   $sqlOpt = ($my['opt']['outputFormat'] == 'map' ? 0 : database::CUMULATIVE);        
   $recordset = $this->db->fetchRowsIntoMap($sql,'id',$sqlOpt);
 
 
   $rs = null;
-  // echo 'IN::' . __FUNCTION__ . '<br>';
-  // new dBug($recordset);
 
-
-  if(!is_null($recordset))
-  {
+  if(!is_null($recordset)) {
     // Decode users
     $rs = $recordset;
 
@@ -4025,20 +4002,18 @@ function getCoverageCounter($id) {
    * render Image Attachments INLINE
    * 
    */
-  function renderImageAttachments($id,&$item2render,$basehref=null)
-  {
+  function renderImageAttachments($id,&$item2render,$basehref=null) {
     static $attSet;
     static $targetTag;
 
-    if(!$attSet || !isset($attSet[$id]))
-    {
-      $attSet[$id] = $this->attachmentRepository->getAttachmentInfosFor($id,$this->attachmentTableName,'id');
+    $version_id = intval($item2render['version_id']);
+    if(!$attSet || !isset($attSet[$id])) {
+      $attSet[$id] = $this->attachmentRepository->getAttachmentInfosFor($version_id,$this->attachmentTableName,'id');
       $beginTag = '[tlInlineImage]';
       $endTag = '[/tlInlineImage]';
     }  
 
-    if(is_null($attSet[$id]))
-    {
+    if(is_null($attSet[$id])) {
       return;
     } 
 
@@ -4050,51 +4025,39 @@ function getCoverageCounter($id) {
 
     $key2check = array('scope');
     $rse = &$item2render;
-    foreach($key2check as $item_key)
-    {
+    foreach($key2check as $item_key) {
       $start = strpos($rse[$item_key],$beginTag);
       $ghost = $rse[$item_key];
 
       // There is at least one request to replace ?
-      if($start !== FALSE)
-      {
+      if($start !== FALSE) {
         $xx = explode($beginTag,$rse[$item_key]);
 
         // How many requests to replace ?
         $xx2do = count($xx);
         $ghost = '';
-        for($xdx=0; $xdx < $xx2do; $xdx++)
-        {
+        for($xdx=0; $xdx < $xx2do; $xdx++) {
           // Hope was not a false request.
-          if( strpos($xx[$xdx],$endTag) !== FALSE)
-          {
+          if( strpos($xx[$xdx],$endTag) !== FALSE) {
             // Separate command string from other text
             // Theorically can be just ONE, but it depends
             // is user had not messed things.
             $yy = explode($endTag,$xx[$xdx]);
-            if( ($elc = count($yy)) > 0)
-            {
+            if( ($elc = count($yy)) > 0) {
               $atx = $yy[0];
-              try
-              {
-                if(isset($attSet[$id][$atx]) && $attSet[$id][$atx]['is_image'])
-                {
+              try {
+                if(isset($attSet[$id][$atx]) && $attSet[$id][$atx]['is_image']) {
                   $ghost .= str_replace('%id%',$atx,$img);
                 } 
                 $lim = $elc-1;
-                for($cpx=1; $cpx <= $lim; $cpx++) 
-                {
+                for($cpx=1; $cpx <= $lim; $cpx++) {
                   $ghost .= $yy[$cpx];
                 }  
-              } 
-              catch (Exception $e)
-              {
+              } catch (Exception $e) {
                 $ghost .= $rse[$item_key];
               }
             }  
-          }
-          else
-          {
+          } else {
             // nothing to do
             $ghost .= $xx[$xdx];
           }  
@@ -4102,8 +4065,7 @@ function getCoverageCounter($id) {
       }
 
       // reconstruct field contents
-      if($ghost != '')
-      {
+      if($ghost != '') {
         $rse[$item_key] = $ghost;
       }
     }   
@@ -4115,8 +4077,7 @@ function getCoverageCounter($id) {
    * scope is managed at revision and version level
    * @since 1.9.13
    */ 
-  function inlineImageProcessing($idCard,$scope,$rosettaStone)
-  {
+  function inlineImageProcessing($idCard,$scope,$rosettaStone) {
     // get all attachments, then check is there are images
     $att = $this->attachmentRepository->getAttachmentInfosFor($idCard->id,$this->attachmentTableName,'id');
     foreach($rosettaStone as $oid => $nid)
@@ -4777,8 +4738,8 @@ function getCoverageCounter($id) {
              " WHERE LRQV.req_version_id IN (" . 
                implode(',', $itemSet) . ")" .
              " AND is_active = 1" .
-             " GROUP BY req_id ";
-    // echo $sql;
+             " GROUP BY RCOV.req_id ";
+
     $rs = $this->db->fetchRowsIntoMap($sql,'req_id');
     return $rs;
   }
@@ -4888,33 +4849,58 @@ function getCoverageCounter($id) {
   * what is meaning of Good?
   * 
   */
-  function getGoodForReqVersion($reqVersionID) {                         
+  function getGoodForReqVersion($reqVersionID, $opt=null) {                         
     $debugMsg = 'Class:' . __CLASS__ . ' - Method: ' . __FUNCTION__;
+    
+    $options = array('verbose' => false, 'tproject_id' => null);
+    $options = array_merge($options,(array)$opt);
     
     $sql = " /* $debugMsg */ " . 
            " SELECT REQ.id,REQ.id AS req_id,REQ.req_doc_id,
              NHREQ.name AS title, RCOV.is_active,
              RCOV.testcase_id,RCOV.tcversion_id,
              NHRS.name AS req_spec_title," . 
-           " REQV.id AS req_version_id, REQV.version " .
+           " REQV.id AS req_version_id, REQV.version ";
 
-           " FROM {$this->object_table} REQ " .
-           " JOIN {$this->tables['req_specs']} RSPEC " .
-           " ON REQ.srs_id = RSPEC.id " .
-           " JOIN {$this->tables['req_coverage']} RCOV " .
-           " ON RCOV.req_id = REQ.id " .
-           " JOIN {$this->tables['nodes_hierarchy']} NHRS " .
-           " ON NHRS.id=RSPEC.id " .
-           " JOIN {$this->tables['nodes_hierarchy']} NHREQ " .
-           " ON NHREQ.id=REQ.id " .
-           " JOIN {$this->tables['req_versions']} REQV " .
-           " ON RCOV.req_version_id=REQV.id ";
+    $addJoin = '';       
+    if($options['verbose']) {
+      $addFP = " TCV.tc_external_id AS external_id";
+      if( ($tprj = intval($options['tproject_id'])) > 0 ) {
+        $sqlP = " SELECT prefix FROM {$this->tables['testprojects']}
+                  WHERE id=$tprj";
+        $dummy = $this->db->get_recordset($sqlP);
+        
+        if( count($dummy) == 1 ) {
+          $prefix = $dummy[0]['prefix'];
+        }          
+        $glue = config_get('testcase_cfg');
+        $glue = $glue->glue_character;
+        $addFP = " CONCAT('$prefix','$glue',TCV.tc_external_id) AS tc_external_id ";
+      }            
+
+      $sql .= ",NH_TC.name AS testcase_name,$addFP";
+      $addJoin = " JOIN {$this->tables['nodes_hierarchy']} NH_TC
+                   ON NH_TC.id = RCOV.testcase_id
+                   JOIN {$this->tables['tcversions']} TCV
+                   ON TCV.id = RCOV.tcversion_id ";          
+    }
+
+    $sql .= " FROM {$this->object_table} REQ 
+              JOIN {$this->tables['req_specs']} RSPEC 
+              ON REQ.srs_id = RSPEC.id 
+              JOIN {$this->tables['req_coverage']} RCOV 
+              ON RCOV.req_id = REQ.id 
+              JOIN {$this->tables['nodes_hierarchy']} NHRS 
+              ON NHRS.id=RSPEC.id 
+              JOIN {$this->tables['nodes_hierarchy']} NHREQ 
+              ON NHREQ.id=REQ.id 
+              JOIN {$this->tables['req_versions']} REQV 
+              ON RCOV.req_version_id=REQV.id $addJoin ";
+
 
     $idList = implode(",",(array)$reqVersionID);
     
     $sql .= " WHERE RCOV.req_version_id IN (" . $idList . ")";
-
-    echo $sql;
 
     return $this->db->fetchRowsIntoMap($sql,'req_version_id',true);
   }

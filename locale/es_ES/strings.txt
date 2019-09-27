@@ -35,7 +35,7 @@
 $TLS_STRINGFILE_CHARSET = "UTF-8";
 
 // Last Update of this file
-$TLS_last_update = "Última actualización de idioma: 29/12/2012";
+$TLS_last_update = "Última actualización de idioma: 12/2/2019";
 
 // ----- General terms (used wide) ----------------------------
 $TLS_active_click_to_change = "Activo (clic para inactivar)";
@@ -564,7 +564,7 @@ $TLS_passwd_lost = "Tu contraseña ha sido enviada a la dirección de e-mail que
                   "Si tienes algún otro problema, por favor, contacta con tu administrador de TestLink.";
 $TLS_password_reseted = "La nueva contraseña ha sido enviada por e-mail";
 $TLS_please_login = "Por favor, inicia la sesión ...";
-$TLS_session_expired = "¡La sesión ha espirado! Por favor, inicia la sesión de nuevo.";
+$TLS_session_expired = "¡La sesión ha expirado! Por favor, inicia la sesión de nuevo.";
 $TLS_your_first_login = "¡Bienvenido a TestLink! En este momento tienes acceso como invitado. Por favor, inicia la sesión ...";
 
 
@@ -3711,6 +3711,8 @@ $TLS_mantis_bug_created = "Defecto de MANTIS %s - Creado (nombre:%s) en el proye
 $TLS_bugzilla_bug_created = "Defecto de BUGZILLA Creado (nombre:%s) en el producto:%s";
 $TLS_gitlab_bug_created = "Defecto de GITLAB Creado (nombre:%s) en el proyecto con identificador:%s";
 $TLS_gitlab_bug_comment = "Commentario realizado en el defecto de GITLAB (nombre:%s)";
+$TLS_kaiten_bug_created = "Defecto de KAITEN Creado (nombre:%s) en el proyecto con identificador:%s";
+$TLS_kaiten_bug_comment = "Commentario realizado en el defecto de KAITEN (nombre:%s)";
 $TLS_bts_check_ok = "La conexión es correcta";
 $TLS_bts_check_ko = "La conexión es correcta, comprueba la configuración";
 $TLS_check_bts_connection = "Comprueba la conexión";

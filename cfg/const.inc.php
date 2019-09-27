@@ -8,7 +8,7 @@
  * 
  * @filesource  const.inc.php
  * @package     TestLink
- * @copyright   2007-2018, TestLink community 
+ * @copyright   2007-2019, TestLink community 
  * @see         config.inc.php
  *
  **/
@@ -19,15 +19,15 @@
 define('TL_SMARTY_VERSION',3);  // @since 1.9.8
 
 /** TestLink Release version (MUST BE changed before the release day) */
-define('TL_VERSION_NUMBER', '1.9.18'); 
-define('TL_VERSION', TL_VERSION_NUMBER . ' (Gaura)'); 
+define('TL_VERSION_NUMBER', '1.9.20'); 
+define('TL_VERSION', TL_VERSION_NUMBER . ' [DEV] (Raijin)'); 
 define('TL_FACE_DIR', 'prague'); 
 
 /** Latest Database version that is used to give users feedback 
  *  about necesssary upgrades
  *  if you set this parameter also upgrade 
  *  lib/functions/configCheck.php - checkSchemaVersion() */
-define('TL_LATEST_DB_VERSION', 'DB ' . '1.9.18');
+define('TL_LATEST_DB_VERSION', 'DB ' . '1.9.20');
 
 // needed to avoid problems in install scripts that do not include config.inc.php
 // want to point to root install dir, need to remove fixed part
@@ -52,6 +52,12 @@ ini_set('include_path',ini_get('include_path') .
 
 /** Localization directory base */
 define('TL_LOCALE_PATH', TL_ABS_PATH . 'locale/');
+
+clearstatcache();
+$tf = 'custom_const.inc.php';
+if ( file_exists($tf) ) {
+  require_once($tf);
+}
 
 
 // --------------------------------------------------------------------------------
@@ -288,7 +294,7 @@ $tlCfg->locales_date_format = array('cs_CZ' => '%d.%m.%Y','de_DE' => '%d.%m.%Y',
                                     'fi_FI' => '%d/%m/%Y','fr_FR' => '%d/%m/%Y','id_ID' => '%d/%m/%Y',
                                     'it_IT' => '%d/%m/%Y','ja_JP' => '%Y/%m/%d','ko_KR' => '%Y/%m/%d',
                                     'nl_NL' => '%d-%m-%Y','pl_PL' => '%d.%m.%Y','pt_BR' => '%d/%m/%Y',
-                                    'pt_PT' => '%d/%m/%Y','ru_RU' => '%d/%m/%Y','zh_CN' => '%Y-%m-%d'); 
+                                    'pt_PT' => '%d/%m/%Y','ru_RU' => '%d.%m.%Y','zh_CN' => '%Y-%m-%d'); 
 
 /** @var array Localized format of full timestamp */
 $tlCfg->locales_timestamp_format = array('cs_CZ' => '%d.%m.%Y %H:%M:%S','de_DE' => '%d.%m.%Y %H:%M:%S',
@@ -299,7 +305,7 @@ $tlCfg->locales_timestamp_format = array('cs_CZ' => '%d.%m.%Y %H:%M:%S','de_DE' 
                                          'ja_JP' => '%Y/%m/%d %H:%M:%S','ko_KR' => '%Y/%m/%d %H:%M:%S',
                                          'nl_NL' => '%d-%m-%Y %H:%M:%S','pl_PL' => '%d.%m.%Y %H:%M:%S',
                                          'pt_BR' => '%d/%m/%Y %H:%M:%S','pt_PT' => '%d/%m/%Y %H:%M:%S',
-                                         'ru_RU' => '%d/%m/%Y %H:%M:%S','zh_CN' => '%Y-%m-%d %H:%M:%S'); 
+                                         'ru_RU' => '%d.%m.%Y %H:%M:%S','zh_CN' => '%Y-%m-%d %H:%M:%S'); 
 
 /** @var array localized date format for smarty templates (html_select_date function) 
  * deprecated since use of datepicker */
@@ -948,5 +954,11 @@ define('LINK_TC_REQ_CLOSED_BY_NEW_REQVERSION', 4);
 define('LINK_TC_RELATION_OPEN', 1);
 define('LINK_TC_RELATION_CLOSED_BY_EXEC', 2);
 define('LINK_TC_RELATION_CLOSED_BY_NEW_TCVERSION', 3);
+
+
+define('USE_LATEST_EXEC_ON_CONTEX_FOR_COUNTERS', 1);
+define('USE_LATEST_EXEC_ON_TESTPLAN_FOR_COUNTERS',2);
+define('USE_LATEST_EXEC_ON_TESTPLAN_PLAT_FOR_COUNTERS',3);
+
 
 // END 

@@ -167,8 +167,7 @@ function csrfguard_replace_forms($form_data_html)
  * @param Smarty $smarty
  * @return CSRF filtered content
  */
-function smarty_csrf_filter($source, &$smarty) 
-{
+function smarty_csrf_filter($source, $smarty) {
   return csrfguard_replace_forms($source);
 }
 
@@ -186,7 +185,7 @@ function csrfguard_start()
     {
       //trigger_error("No CSRFName found, probable invalid request.",E_USER_ERROR);
       //return false;
-      redirect($_SESSION['basehref'] . 'error.php?message=No CSRFName found, probable invalid request.');
+      redirect($_SESSION['basehref'] . 'error.php?code=1');
       exit();
     }
 
@@ -199,7 +198,7 @@ function csrfguard_start()
     {
       //trigger_error("Invalid CSRF token.",E_USER_ERROR);
       //return false;
-      redirect($_SESSION['basehref'] . 'error.php?message=Invalid CSRF token.');
+      redirect($_SESSION['basehref'] . 'error.php?code=2');
       exit();
     }
   }

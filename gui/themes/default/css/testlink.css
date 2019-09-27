@@ -7,14 +7,72 @@ Purpose: Default TestLink CSS
 */
 
 /* ***** GLOBAL HTML ***************************************************************** */
+html, body {
+	height:100%;
+	width:100%;
+	margin: 0px;
+}
 body, body.testlink {
-	background:  	#EEE!important; 
+	background-color: white !important;
 	font-family: 	'Trebuchet MS', Arial, Verdana, sans-serif;
 	font-size: 		small;
 	margin:			0px;
 	padding:		0px;
+	height:100%;
 }
-
+iframe {
+ border:none;
+}
+iframe.sideBarFrame {
+	width:100%;
+	height:calc(100% - 57px);
+}
+iframe.contentFrame-small {
+	border: none;
+	height:calc(100% - 5px);
+	width: calc(100% - 150px);
+	padding-left: 2px;
+}
+iframe.contentFrame-large {
+	border: none;
+	height:calc(100% - 5px);
+	width: calc(100% - 50px);
+	padding-left: 2px;
+}
+iframe.treeframe {
+	width:calc(99% - 70%);
+	height:calc(100% - 35px);
+	float:left;
+}
+iframe.workframe {
+	width:calc(100% - 29%);
+	height:calc(100% - 35px);
+}
+.sidebar.compact.sidebar-large {
+	width:150px !important;
+}
+.sidebar.compact.sidebar-small{
+	width:50px !important;
+}
+span.menu-text-shown{
+	display:block;
+}
+span.menu-text-hidden{
+	display:none;
+}
+div.white-space{
+	height:20px;
+	background-color:whitesmoke;
+}
+table.table{
+	margin:0px;
+}
+ul.nav.nav-tabs.padding-18{
+	padding-top:5px;
+}
+.x-tree-node{
+	font-size:13px!important;
+}
 /** 
 use together with #header-wrap, to create a section on top of body
 that remain always visible while rest of body content scrolls,
@@ -120,7 +178,6 @@ div.menu_bar {
 }
 
 select.menu_combo {
-	background: 	#EEE;
 	border-style:	none;
 	font-size:	 	smaller;
 	font-weight:    bold;
@@ -152,7 +209,6 @@ present on page (example grid())
 On chrome seems not work
 */
 #header-wrap {
-	background:		#eee;
 	border-bottom:	1px solid #000;
 	height: 100px;
 	position: fixed;
@@ -194,7 +250,6 @@ span.form_label {
 
 /* for tree menu */
 div.tree {
-	background: 	#EEE;
 	padding: 		3px;
 	border: 		1px solid #808080;
 	margin:			3px;
@@ -206,7 +261,6 @@ div.groupBtn {
 }
 
 div.vertical_menu {
-	background: 	#EEE;
 	font-size:      90%;
 	margin: 		3px;
 	padding: 		2px;
@@ -446,7 +500,6 @@ span.unselected a, span.unselected a:visited {
 
 /* ***** Common ********************* */
 table.common {
-	background:     #EEE;
 	border: 		1px solid black;
 	margin-bottom:	20px;
 	min-width:		50%;
@@ -487,7 +540,6 @@ table.common caption, table.smallGrey caption {
 
 /* ***** Simple Table (often used to show data) ***************** */
 table.simple, table.simple_tableruler {
-	background:     #EEE;
 	border: 		thin solid black;
 	font-size:		90%;
 	margin:			5px;
@@ -511,13 +563,18 @@ table.tableruler tbody tr:hover{
 
 /* Used for filters and options settings */
 table.smallGrey {
-	background:     #EEE;
 	border: 		1px solid black;
 	font-size:		smaller;
 	margin-bottom:	10px;
 	margin-right:	0px;
 }
 
+table.no-border {
+	border: 		0px none;
+	font-size:		90%;
+	margin:			5px 0px;
+	width:			auto;
+}
 
 table.invisible {
 	border: 		0px none;
@@ -527,7 +584,6 @@ table.invisible {
 }
 
 table.mainTable{
-	background: 	#EEE;
 	border: 		1px double black;
 	min-width:		200px;
 }
@@ -541,7 +597,6 @@ table.mainTable th {
 }
 
 table.link_and_exec {
-	background:     #EEE;
 	border: 		1px solid black;
 	margin-bottom:	10px;
 	margin-right:	0px;
@@ -553,7 +608,6 @@ table.link_and_exec th {
 
 /* *****  Table Execution History ********* */
 table.exec_history {
-	background:     #EEE;
 	border: 		thin solid black;
 	font-size:		90%;
 	margin:			20px;
@@ -613,6 +667,14 @@ div.blocked {
 
 div.not_run {
 	background:		black;
+}
+
+div.backup_exist {
+	color: 			black;
+	margin: 		8px;
+	padding: 		6px;
+	text-align: 	center;
+	background:		#EEE;
 }
 
 
@@ -885,7 +947,6 @@ div.login_form.medium {
   vertical-align: 	middle;
 }
 
-/* havlatm: @TODO title must be header markup */
 .exec_tc_title {
 	background:		#059;
 	color:			white;
@@ -893,6 +954,16 @@ div.login_form.medium {
 	padding: 		3px;
 	text-align: 	left;
 }
+
+.exec_tc_title_alert {
+	background:		#B22222;
+	color:			white;
+	margin-bottom:	4px;
+	padding: 		3px;
+	text-align: 	left;
+	border-radius: 10px;
+}
+
 
 .exec_additional_info{
 	background-color: 	#F0F4F0; /* whitesmoke=F0F4F0, #FFC*/
@@ -1129,6 +1200,7 @@ color: black;
 /* To adjust Bootstrap tables */
 .table {
   font-size: 12px;
+  width: 100%;
 }
 
 .table th, .table tr, .table td {
@@ -1145,6 +1217,27 @@ color: black;
   color: #495057;
   background-color: #e9ecef;
   border-color: #dee2e6;
+}
+p.text-border {
+	border: 1px solid black;
+	background: white;
+	padding : 10px;
+}
+div.form-border {
+	border: 1px solid black;
+	background: white;
+	padding : 10px;
+}
+.yellow {
+	color : yellow;
+}
+#footer{
+	width:100%;
+	border-top : 3px double #e3e3e3;
+	position: absolute;
+	bottom: 0;
+	padding-top:5px;
+	font-style: normal;
 }
 
 /* ----- END ------------------------------------------------------------------------- */

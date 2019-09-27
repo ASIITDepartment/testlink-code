@@ -6,7 +6,7 @@
  * @filesource  tree.class.php
  * @package     TestLink
  * @author      Francisco Mancardi
- * @copyright   2005-2017, TestLink community 
+ * @copyright   2005-2019, TestLink community 
  * @link        http://www.testlink.org/
  *
  */
@@ -97,11 +97,9 @@ class tree extends tlObject
    *             value: numeric code used to identify a node type
    *
    */
-  function get_available_node_types() 
-  {
+  function get_available_node_types() {
     static $nodeTypes;
-    if( !$nodeTypes )
-    {
+    if( !$nodeTypes ) {
       $sql = " SELECT * FROM {$this->tables['node_types']} "; 
       $nodeTypes = $this->db->fetchColumnsIntoMap($sql,'description','id');
     }
@@ -254,8 +252,7 @@ class tree extends tlObject
              output != null => array
 
   */
-  function get_subtree_list($node_id,$node_type_id=null,$output=null)
-  {
+  function get_subtree_list($node_id,$node_type_id=null,$output=null) {
     $nodes = array();
     $this->_get_subtree_list($node_id,$nodes,$node_type_id);
     $node_list = is_null($output) ? implode(',',$nodes) : $nodes;
@@ -408,13 +405,11 @@ class tree extends tlObject
     returns: array
 
   */
-  function get_path($node_id,$to_node_id = null,$format = 'full') 
-  {
+  function get_path($node_id,$to_node_id = null,$format = 'full')  {
     $the_path = array();
     $this->_get_path($node_id,$the_path,$to_node_id,$format); 
     
-    if( !is_null($the_path) && count($the_path) > 0 )
-    {
+    if( !is_null($the_path) && count($the_path) > 0 ) {
       $the_path=array_reverse($the_path);  
     }
     return $the_path;
@@ -423,15 +418,13 @@ class tree extends tlObject
   /**
    *
    */
-  function get_path_new($node_id,$to_node_id = null,$format = 'full') 
-  {
+  function get_path_new($node_id,$to_node_id = null,$format = 'full')  {
     $the_path = array();
     $trip='';
     $matrioska = array();
     $this->_get_path($node_id,$the_path,$to_node_id,$format); 
     
-    if( !is_null($the_path) && ($loop2do=count($the_path)) > 0 )
-    {
+    if( !is_null($the_path) && ($loop2do=count($the_path)) > 0 ) {
       $the_path=array_reverse($the_path);  
       $matrioska = $the_path[0];
       $matrioska['childNodes']=array();
@@ -594,8 +587,7 @@ class tree extends tlObject
             
              
   */
-  function get_children($id,$exclude_node_types=null,$opt=null) 
-  {
+  function get_children($id,$exclude_node_types=null,$opt=null) {
     $debugMsg = 'Class:' . __CLASS__ . ' - Method: ' . __FUNCTION__;
     
     $my['opt'] = array('accessKey' => null);
@@ -721,20 +713,18 @@ class tree extends tlObject
     returns: order
   
   */
-  function getBottomOrder($parentID,$opt=null)
-  {
+  function getBottomOrder($parentID,$opt=null) {
     $debugMsg='Class:' .__CLASS__ . ' - Method:' . __FUNCTION__ . ' :: ';
     
     $my['opt'] = array();
-    $my['opt'] = array_merge(array('node_type' => null),$opt);
+    $my['opt'] = array_merge(array('node_type' => null),(array)$opt);
 
     
     $sql = "SELECT MAX(node_order) AS max_order" .
            " FROM {$this->object_table} " . 
            " WHERE parent_id={$parentID} ";
 
-    if(!is_null($my['opt']['node_type']))
-    {
+    if(!is_null($my['opt']['node_type'])) {
       $sql .= " AND node_type_id = " . $this->node_descr_id[$my['opt']['node_type']];
     }       
 
@@ -840,8 +830,7 @@ class tree extends tlObject
     
   
   */
-  function get_subtree($node_id,$filters=null,$options=null)
-  {
+  function get_subtree($node_id,$filters=null,$options=null) {
     $my['filters'] = array('exclude_node_types' => null, 'exclude_children_of' => null,
                            'exclude_branches' => null,'additionalWhereClause' => '', 'family' => null);
                                
@@ -948,10 +937,10 @@ class tree extends tlObject
                  " FROM {$this->object_table} AS NH_TC " .
                  " {$my['options']['addJoin']} " .
                  " JOIN {$this->tables['req_coverage']} RC " .
-                 " ON RC.testcase_id = id " .
+                 " ON RC.testcase_id = NH_TC.id " .
                  " WHERE RC.req_id = {$node_id} " .
                  " {$my['filters']['additionalWhereClause']}" .
-                 " ORDER BY node_order,id";
+                 " ORDER BY NH_TC.node_order,NH_TC.id";
         break;
 
       }
@@ -1211,8 +1200,7 @@ class tree extends tlObject
    * when path can not be found instead of null, anyway a map will be returned, with key=itemID value=NULL
    * @internal revisions
    **/
-  function get_full_path_verbose(&$items,$options=null)
-  {
+  function get_full_path_verbose(&$items,$options=null) {
       $debugMsg='Class:' .__CLASS__ . ' - Method:' . __FUNCTION__ . ' :: ';
       $goto_root=null;
       $path_to=null;
@@ -1410,9 +1398,8 @@ class tree extends tlObject
    * getTreeRoot()
    *
    */
-  function getTreeRoot($node_id)
-  {
-    $path = $this->get_path($node_id);
+  function getTreeRoot($node_id) {
+    $path = (array)$this->get_path($node_id);
     $path_len = count($path);
     $root_node_id = ($path_len > 0)? $path[0]['parent_id'] : $node_id;
     return $root_node_id;
@@ -1687,6 +1674,20 @@ class tree extends tlObject
     $sql .= $addJoin . $where;
     $rs = $this->db->fetchRowsIntoMap($sql,'id');
     return $rs;  
+  }
+
+  /**
+   *
+   */
+  function getNodeType($id) {
+    $sql = " SELECT node_type_id, NT.description AS node_type 
+             FROM {$this->tables['nodes_hierarchy']} NH
+             JOIN {$this->tables['node_types']} NT 
+             ON NT.id = NH.node_type_id 
+             WHERE NH.id = " . intval($id);
+    $rs = $this->db->get_recordset($sql);
+    
+    return null != $rs ? current($rs) : null;         
   }
   
 }// end class

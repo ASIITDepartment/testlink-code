@@ -5,7 +5,7 @@
  *
  * @package 	  TestLink
  * @author 		  franciscom
- * @copyright 	2005-2018, TestLink community
+ * @copyright 	2005-2019, TestLink community
  * @copyright 	Mantis BT team (some parts of code was reused from the Mantis project) 
  * @filesource  cfield_mgr.class.php
  * @link 		    http://testlink.sourceforge.net
@@ -441,7 +441,8 @@ class cfield_mgr extends tlObject
 
   */
   function get_linked_cfields_at_design($tproject_id,$enabled,$filters=null,
-                                        $node_type=null,$node_id=null,$access_key='id')
+                                        $node_type=null,$node_id=null,
+                                        $access_key='id')
   {
     $debugMsg = 'Class:' . __CLASS__ . ' - Method: ' . __FUNCTION__;
   	
@@ -449,8 +450,17 @@ class cfield_mgr extends tlObject
     $additional_values="";
     $additional_filter="";
 
-    switch($node_type)
-    {
+    switch ($access_key) {
+      case 'id':
+      case 'node_id':
+      break;
+      
+      default:
+        $access_key = 'id';
+      break;  
+    }
+
+    switch($node_type) {
       case 'build':
         $table_key = 'cfield_build_design_values'; 
       break;
@@ -460,24 +470,33 @@ class cfield_mgr extends tlObject
       break;
     }
 
-    if( !is_null($node_type) )
-    {
-      $additional_join .= " JOIN {$this->tables['cfield_node_types']} CFNT ON CFNT.field_id=CF.id " .
-                          " AND CFNT.node_type_id=" . 
-                          $this->db->prepare_int($this->decode['nodes'][$node_type]);
+    if( !is_null($node_type) ) {
+      $additional_join .= 
+        " JOIN {$this->tables['cfield_node_types']} CFNT 
+          ON CFNT.field_id=CF.id AND CFNT.node_type_id=" . 
+        $this->db->prepare_int($this->decode['nodes'][$node_type]);
     }
 
-    if( !is_null($node_id) )
-    {
+    $targetIsArray = false;
+    if( !is_null($node_id) ) {
       $additional_values .= ",CFDV.value AS value,CFDV.node_id AS node_id";
-      $additional_join .= " LEFT OUTER JOIN {$this->tables[$table_key]} CFDV ON CFDV.field_id=CF.id " .
-                          " AND CFDV.node_id=" . $this->db->prepare_int($node_id);
+      
+      if( is_array($node_id) ) {
+        $targetIsArray = true;
+        $sane = array_map('intval', $node_id);
+        $inClause = implode(',',$sane);
+      } else {
+        $inClause = $this->db->prepare_int($node_id);
+      }
+      
+      $additional_join .= 
+        " LEFT OUTER JOIN {$this->tables[$table_key]} CFDV ON CFDV.field_id=CF.id 
+          AND CFDV.node_id IN ($inClause) "; 
     }
 
-    if( !is_null($filters) )
-    {
-      if( isset($filters['show_on_execution']) && !is_null($filters['show_on_execution']) )
-      {
+    if (!is_null($filters)) {
+      if (isset($filters['show_on_execution']) && 
+          !is_null($filters['show_on_execution']) ) {
         $additional_filter .= " AND CF.show_on_execution=1 ";
       }   
         
@@ -487,19 +506,18 @@ class cfield_mgr extends tlObject
       // {
       //     $additional_filter .= " AND CF.show_on_testplan_design=1 ";
       // }   
-      if( isset($filters['show_on_testplan_design']) && !is_null($filters['show_on_testplan_design']) )
-      {
+      if (isset($filters['show_on_testplan_design']) && 
+          !is_null($filters['show_on_testplan_design'])) {
         $additional_filter .= " AND CF.enable_on_testplan_design=1 ";
       }   
            
       if( isset($filters['cfield_id']) && !is_null($filters['cfield_id']) )
       {
-        $additional_filter .= " AND CF.id={$filters['cfield_id']} ";
+        $additional_filter .= " AND CF.id = {$filters['cfield_id']} ";
       }
         
       $filterKey='location';
-      if( isset($filters[$filterKey]) && !is_null($filters[$filterKey]) )
-      {
+      if( isset($filters[$filterKey]) && !is_null($filters[$filterKey]) ) {
         $additional_filter .= " AND CFTP.$filterKey={$filters[$filterKey]} ";
       }
     }
@@ -515,7 +533,12 @@ class cfield_mgr extends tlObject
          $additional_filter .
          " ORDER BY display_order,CF.id ";
 
-    $map = $this->db->fetchRowsIntoMap($sql,$access_key);
+    if ( $targetIsArray ) {
+      $map = $this->db->fetchArrayRowsIntoMap($sql,$access_key); 
+    } else {
+      $map = $this->db->fetchRowsIntoMap($sql,$access_key); 
+    }
+
     return $map;
   }
 
@@ -1752,23 +1775,20 @@ function name_is_unique($id,$name)
         $sql = " SELECT value,field_id,execution_id " .
                " FROM {$this->tables['cfield_execution_values']} " . $where_clause;
 
-        $rs = $this->db->get_recordset($sql); 			   
+        $rs = (array)$this->db->get_recordset($sql); 			   
 
         // max_length_value = 0 => no limit
-        if( $this->max_length_value > 0 && tlStringLen($value) > $this->max_length_value)
-        {
+        if( $this->max_length_value > 0 && tlStringLen($value) > $this->max_length_value) {
            $value = substr($value,0,$this->max_length_value);
         }
         $safe_value=$this->db->prepare_string($value);
 
-        if( count($rs) > 0 && $value != "")   //$this->db->num_rows($result) > 0 )
-        {
+        $howMany = count($rs);
+        if( $howMany > 0 && $value != "" ) {
           $sql = " UPDATE {$this->tables['cfield_execution_values']} " .
                  " SET value='{$safe_value}' " .   $where_clause;
     	    $this->db->exec_query($sql);      
-        }
-        else if (count($rs) == 0 && $value != "")
-        {
+        } else if( $howMany == 0 && $value != "" ) {
 
           # Remark got from Mantis code:
   		    # Always store the value, even if it's the default value
@@ -1779,9 +1799,7 @@ function name_is_unique($id,$name)
   			         " VALUES	( {$field_id}, {$node_id}, {$execution_id}, {$testplan_id}, '{$safe_value}' )";
 		      $this->db->exec_query($sql);
         
-        } 
-        else if (count($rs) > 0 && $value == "") 
-        {
+        } else if( $howMany > 0 && $value == "") {
   			  $sql = "/* $debugMsg */ DELETE FROM {$this->tables['cfield_execution_values']} " . $where_clause;
   			  $this->db->exec_query($sql);
   		  }
@@ -2754,12 +2772,11 @@ function getValuesFromUserInput($cf_map,$name_suffix='',$input_values=null)
         break;
       }
 			
-			if (isset($input_values[$cf_info['html_input_name']])) 
-			{
+			if (isset($input_values[$cf_info['html_input_name']])) {
 				$value = $input_values[$cf_info['html_input_name']];
-			} 
-			else if (isset($cf_info['value'])) 
-			{
+			} else if (isset($input_values[$cf_info['id']])) {
+        $value = $input_values[$cf_info['id']]['value'];
+      } else if (isset($cf_info['value'])) {
 				$value = $cf_info['value'];
 			}
 	
@@ -2978,50 +2995,24 @@ function getValuesFromUserInput($cf_map,$name_suffix='',$input_values=null)
   }
 
   /**
-   * value DD/MM/YYYY HH:MM:SS
-   * 
+   *
    *
    */
-  /*
-  function cfdatetime2mktime($value)
-  {
-    if ($value == '') 
-    {
-      return '';
-    }
-    else
-    {
-      $localesDateFormat = config_get('locales_date_format');
-      $locale = (isset($_SESSION['locale'])) ? $_SESSION['locale'] : 'en_GB';
-      $date_format = str_replace('%', '', $localesDateFormat[$locale]);
+  function initViewGUI() {
+    $gogo = new stdClass();
 
-      // first replace multiple spaces with just one
-      $pc = explode(' ',$value);
-      $dpart = $pc[0];
-      $tpart = $pc[1];
-      $pvalue = split_localized_date($dpart, $date_format);
-      if($pvalue != null) 
-      {
-        // parse time part
-        $tt = explode(':', $tpart)
+    $gogo->cfield = null;
+    $gogo->cfield_is_used = 0;
+    $gogo->cfield_is_linked = 0;
+    $gogo->linked_tprojects = null;
 
-        if($value['hour'] == -1 || $value['minute'] == -1 || $value['second'] == -1) {
-                  $value['hour'] = $value['minute'] = $value['second'] = 0;
-        
+    $gogo->cf_map = $this->get_all(null,'transform');
+    $gogo->cf_types = $gogo->cfield_types = $this->get_available_types();
+    
+    // MAGIC 10
+    $gogo->drawControlsOnTop = (null != $gogo->cf_map && count($gogo->cf_map) > 10); 
 
-        $cfvalue = mktime($value['hour'], $value['minute'], 
-                                              $value['second'],
-                                                          $pvalue['month'], $parsed_value['day'], 
-                                                          $parsed_value['year']);
-      }
-      else
-      {
-        return '';
-      }  
-
-    } 
+    return $gogo;
   }
-  */
-
     
 } // end class

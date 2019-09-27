@@ -52,6 +52,7 @@ function generateHtmlEmail(&$smarty, $template_file, $mailCfg) {
 function displayReport($template_file, &$smarty, $doc_format, $mailCfg = null)
 {
 
+  $doc_format = intval($doc_format);
   switch($doc_format)
   {
     case FORMAT_HTML:
@@ -70,9 +71,6 @@ function displayReport($template_file, &$smarty, $doc_format, $mailCfg = null)
       {
         case 'results/resultsGeneral.tpl'; 
          flushHttpHeader(FORMAT_HTML, $doc_kind = 0);
-         $message =   
-           
-
          $mf->msg = $op->status_ok ? '' : lang_get('send_mail_ko');
          $mf->msg .= ' ' . $op->msg;
          $mf->title = ''; //$mailCfg->subject;
@@ -106,8 +104,7 @@ function flushHttpHeader($format, $doc_kind = 0)
   $file_extensions = config_get('reports_file_extension');
   $reports_applications = config_get('reports_applications');
 
-  switch($doc_kind)
-  {
+  switch($doc_kind) {
     case DOC_TEST_SPEC: 
       $kind_acronym = '_test_spec'; 
     break;
@@ -130,8 +127,7 @@ function flushHttpHeader($format, $doc_kind = 0)
   }
   
 
-  if ($format == FORMAT_MAIL_HTML)
-  {
+  if ($format == FORMAT_MAIL_HTML) {
     tLog('flushHttpHeader> Invalid format: '.$format, 'ERROR');
   }
   

@@ -267,6 +267,7 @@ $TLS_update_hint = "check to update value when saving";
 // Buttons (used wide)
 $TLS_btn_apply = "Apply";
 $TLS_btn_add = "Add";
+$TLS_btn_add_to_testsuites_deep = "Add also to children (Test Suites)";
 $TLS_btn_add_to_testplans = "Add to Test Plans";
 $TLS_btn_assign = "Assign";
 $TLS_btn_cancel = "Cancel";
@@ -1463,6 +1464,7 @@ $TLS_edit_execution = "edit execution";
 $TLS_platform_description = "Platform description";
 $TLS_remoteExecFeeback = "Remote Test Case Execution Feedback";
 
+$TLS_updateLinkToLatestTCVersion = 'Update Linked TCV To The Latest';
 // ----- gui/templates/inc_testsuite_viewer_ro.tpl -----
 $TLS_keywords = "Keywords";
 
@@ -1704,6 +1706,7 @@ $TLS_btn_del_this_version = "Delete this version";
 $TLS_btn_execute_automatic_testcase = "Execute automatic test case";
 $TLS_btn_mv_cp = "Move / Copy";
 $TLS_btn_new_version = "New version";
+$TLS_btn_new_version_from_latest = "Create New Version From Latest";
 $TLS_btn_new_sibling = "New sibling";
 $TLS_hint_new_sibling = "Create another test case under current Test Suite";
 $TLS_hint_new_version = "Create a new version";
@@ -2388,7 +2391,7 @@ $TLS_error_ldap_update_failed = "Updating LDAP failed";
 $TLS_error_ldap_user_not_found = "LDAP user not found";
 $TLS_error_ldap_start_tls_failed = "LDAP start TLS failed";
 $TLS_unknown_authentication_method = "Do not know how to handle %s authentication method";
-
+$TLS_tluser_account_expired = "The user account has expired";
 
 // ----- lib/functions/product.inc.php -----
 $TLS_info_product_delete_fails = "An error occurred while deleting the Test Project";
@@ -2497,7 +2500,8 @@ $TLS_right_testplan_show_testcases_newest_versions = 'Show Test Cases Newest Ver
 
 $TLS_right_testcase_freeze = 'Freeze/Unfreeze Test Case Version';
 
-
+$TLS_right_testproject_add_remove_keywords_executed_tcversions =
+ 'Add/Remove Keywords from Executed Test Case Versions';
 
 
 
@@ -2725,6 +2729,9 @@ $TLS_opt_req_cf = "Requirement Custom Fields";
 $TLS_opt_req_relations = "Requirement Relations";
 $TLS_opt_req_linked_tcs = "Requirement related Test Cases";
 $TLS_opt_req_coverage = "Requirement Coverage";
+$TLS_opt_cfexec_comb = "Segregate Exec Results By Custom Fields";
+
+
 $TLS_title_tc_print_navigator = "Navigator - Print Test Specification";
 $TLS_title_req_print_navigator = "Navigator - Print Requirement Specification";
 $TLS_title_tp_print_navigator = "Navigator - Print Test Plan ";
@@ -3746,6 +3753,8 @@ $TLS_mantis_bug_created = "MANTIS Issue %s - Created (summary:%s) on project wit
 $TLS_bugzilla_bug_created = "BUGZILLA Issue Created (summary:%s) on product:%s";
 $TLS_gitlab_bug_created = "GITLAB Issue Created (summary:%s) on project with identifier:%s";
 $TLS_gitlab_bug_comment = "GITLAB Commented Issue (summary:%s)";
+$TLS_kaiten_bug_created = "KAITEN Issue Created (summary:%s) on project with identifier:%s";
+$TLS_kaiten_bug_comment = "KAITEN Commented Issue (summary:%s)";
 $TLS_bts_check_ok = "Connection is OK";
 $TLS_bts_check_ko = "Connection is KO (detailed messages on TestLink Event Log), check configuration";
 $TLS_check_bts_connection = "Check connection";
@@ -3821,7 +3830,14 @@ $TLS_security_check_ko = 'Security check failed';
 $TLS_issue_on_step = "Issue Executing Step number ";
 
 $TLS_add_link_to_tlexec = "Add Link in Issue Tracker to Test Case Execution Feature";
+$TLS_add_link_to_tlexec_print_view = "Add Link in Issue Tracker to Test Case Execution Print View";
+
 $TLS_dl2tl = 'Link to TestLink Execution: ';
+$TLS_dl2tlpv = 'Link to TestLink Execution Print View: ';
+
+$TLS_dlToTCSpecPV = 'Link to TestLink Test Case: ';
+$TLS_dlToTCSpecPVCode = '[TLTC@:%s]';
+
 $TLS_old_style_login = 'Well known login screen';
 $TLS_new_style_login = 'Try the new login screen';
 
@@ -3897,5 +3913,83 @@ $TLS_can_not_delete_relation_related_tcversion_frozen =  "Delete Disabled: Relat
 $TLS_obsolete = 'obsolete';
 
 $TLS_tcversion_executed_keyword_assignment_blocked = ' Test Case Version Has been executed, system configuration does not allow keyword management';
+
+$TLS_select_keywords = 'Select Keywords';
+
+$TLS_issueReporter = 'Reported By';
+$TLS_issueHandler = 'Assigned To / Handled By';
+
+$TLS_API_MISSING_REQUIRED_PROP = 'Missing Required Input/Argument:';
+$TLS_API_TESTPLAN_ID_DOES_NOT_EXIST = 'Test Plan with ID: %s does not exist';
+$TLS_API_TESTPLAN_APIKEY_DOES_NOT_EXIST = 'Test Plan with API KEY: %s does not exist';
+
+$TLS_tcvqty_with_kw = 'Quantity of Test Case Versions using this keyword';
+$TLS_can_not_delete_a_frozen_relation = 'A Frozen relation can not be deleted';
+
+$TLS_cannot_link_latest_version_reason_has_been_exec = 'Link to latest version of test case <b>%s</b> cannot be added - REASON: has been executed';
+
+$TLS_reqLinkingDisabledAfterExec = 'System config blocks requirement version link management for executed test case versions';
+$TLS_yourRoleHasReqLinkingDisabled = 'Your Roles does not have requirement version link to test case version right';
+
+$TLS_restAPIExecParameters = "REST API create execution args";
+
+$TLS_can_not_delete_relation_because_this_is_not_the_latest =
+"Delete Disabled: test case version is not the LATEST";
+
+$TLS_updateLinkToThisTCVersion = 'Update Linked TCV To This one';
+$TLS_hasNewestVersionMsg = 'Attention: This is not the latest available version';
+
+$TLS_saveStepsForPartialExec = 'Save Steps Work In Progress Execution';
+$TLS_partialExecNothingToSave = 'Steps Work In Progress Execution: There are no notes or results to save';
+
+$TLS_partialExecNoAttachmentsWarning = 'ATTENTION: When saving Steps Work In Progress Execution, Attachments will not be saved';
+
+$TLS_testcase_has_no_name = 'Test Case has empty name';
+$TLS_copy_attachments_from_latest_exec = 'Copy Latest Exec Attachments';
+
+$TLS_exec_tree_counters_logic = 'Tree Counters Latest Exec On';
+$TLS_use_latest_exec_on_testplan_for_counters = 'Test Plan';
+$TLS_use_latest_exec_on_contex_for_counters = 'Chosen Build';
+$TLS_use_latest_exec_on_testplan_plat_for_counters = 
+  'Test Plan on Platform';
+
+
+$TLS_download_csv = 'Download As CSV';
+$TLS_select_platforms = "Select Platforms";
+$TLS_without_platforms = "without platforms";
+$TLS_platforms = "Platforms";
+$TLS_tcv_qty = "Number of Test Case Linked";
+$TLS_createKW = 'Create Keyword';
+
+$TLS_btn_create_and_link = 'Create & Link';
+$TLS_create_keyword_and_link = 'Create Keyword and Link to TCV';
+$TLS_export_skel = 'Export Skeleton';
+
+$TLS_title_res_by_kw_on_plat = "Results by Keyword on Platform: ";
+$TLS_title_res_by_prio_on_plat = "Results by Priority on Platform: ";
+$TLS_title_res_by_tl_testsuite_on_plat = 
+  "Results by Top Level Test Suite on Platform: ";
+
+$TLS_title_res_by_tl_testsuite = "Results by Top Level Test Suite";
+
+$TLS_title_res_by_build_on_plat = "Results by Build on Platform:";
+$TLS_title_res_build = 'Results by Build';
+$TLS_info_neverRunByPP_report = 
+  "This report shows test cases that have not been run in each active build present on selected Test Plan (and Platform). <br>
+   Test cases <b>with and without tester assignment</b>
+   are considered<br />";
+
+$TLS_neverRunByPP_title = "Test Cases Never Runned"; 
+$TLS_link_report_never_run = "Test Cases Never Runned";
+
+
+$TLS_commit_id = 'commit id';
+$TLS_branch = 'branch';
+$TLS_tag = 'tag';
+$TLS_release_candidate = 'release candidate';
+
+$TLS_allowed_files = "Allowed files:";
+$TLS_allowed_filenames_regexp = "Filename must verify this regexp:";
+
 
 // ----- END ------------------------------------------------------------------

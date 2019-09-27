@@ -8,7 +8,7 @@
  * @filesource  tcEdit.php
  * @package     TestLink
  * @author      TestLink community
- * @copyright   2007-2018, TestLink community 
+ * @copyright   2007-2019, TestLink community 
  * @link        http://www.testlink.org/
  *
  *
@@ -39,13 +39,14 @@ $commandMgr->setTemplateCfg(templateConfiguration());
 $testCaseEditorKeys = array('summary' => 'summary','preconditions' => 'preconditions');
 $init_inputs = true;
 $opt_cfg = initializeOptionTransferCfg($optionTransferName,$args,$tproject_mgr);
-$gui = initializeGui($db,$args,$cfg,$tcase_mgr);
+$gui = initializeGui($db,$args,$cfg,$tcase_mgr,$tproject_mgr);
 
 $smarty = new TLSmarty();
 
 $name_ok = 1;
 $doRender = false;
 $pfn = $args->doAction;
+
 
 $testCaseEditorKeys = null;
 switch($args->doAction) {
@@ -68,16 +69,16 @@ switch($args->doAction) {
   case "doReorderSteps":
   case "doInsertStep":
   case "doResequenceSteps":
+  case "doStepOperationExit":
     $testCaseEditorKeys = array('steps' => 'steps', 'expected_results' => 'expected_results');
   break;
 
 }
 
-
-switch($args->doAction)
-{
+switch($args->doAction) {
   case "doUpdate":
   case "doAdd2testplan":
+  case 'updateTPlanLinkToTCV':
     $op = $commandMgr->$pfn($args,$_REQUEST);
   break;
 
@@ -108,8 +109,18 @@ switch($args->doAction)
   case "setExecutionType":
   case "setEstimatedExecDuration":
   case "removeKeyword":
+  case "addKeyword":
   case "freeze":
   case "unfreeze":
+  case "doStepOperationExit":
+  case "removePlatform":
+  case "addPlatform":
+
+/*
+var_dump($_REQUEST);
+die();
+    die();
+*/
     $op = $commandMgr->$pfn($args,$_REQUEST);
     $doRender = true;
   break;
@@ -120,7 +131,10 @@ switch($args->doAction)
   break;
 
   case "deleteFile":
-    deleteAttachment($db,$args->file_id);
+    $fileInfo = deleteAttachment($db,$args->file_id,false);
+    if( $args->tcversion_id == 0 && null != $fileInfo ) {
+      $args->tcversion_id = $fileInfo['fk_id'];
+    }
     $commandMgr->show($args,$_REQUEST,array('status_ok' => true),false);
   break;
 
@@ -269,42 +283,11 @@ else if($args->do_copy || $args->do_copy_ghost_zone)
 
 }
 else if($args->do_create_new_version) {
-  $user_feedback = '';
-  $show_newTC_form = 0;
-  $action_result = "do_update";
-  $msg = lang_get('error_tc_add');
-  $op = $tcase_mgr->create_new_version($args->tcase_id,$args->user_id,$args->tcversion_id);
-
-  if ($op['msg'] == "ok") {
-    $user_feedback = sprintf(lang_get('tc_new_version'),$op['version']);
-    $msg = 'ok';
-  
-    // @since 1.9.15
-    // Source version need to be set to FROZEN
-    $tcase_mgr->setIsOpen($args->tcase_id,$args->tcversion_id,0);
-  }
-
-  $gui->viewerArgs['action'] = $action_result;
-  $gui->viewerArgs['refreshTree'] = DONT_REFRESH;
-  $gui->viewerArgs['msg_result'] = $msg;
-  $gui->viewerArgs['user_feedback'] = $user_feedback;
-  $gui->path_info = null;
-  
-  // used to implement go back ??
-  $gui->loadOnCancelURL = $_SESSION['basehref'] . 
-                          '/lib/testcases/archiveData.php?edit=testcase&id=' . $args->tcase_id .
-                          "&show_mode={$args->show_mode}";
-
-  $gui->codeTrackerEnabled = $tproject_mgr->isCodeTrackerEnabled($args->tproject_id);
-
-  
-  $identity = new stdClass();
-  $identity->id = $args->tcase_id;
-  $identity->tproject_id = $args->tproject_id;
-  $identity->version_id = !is_null($args->show_mode) ? $args->tcversion_id : testcase::ALL_VERSIONS;
- 
-
-  $tcase_mgr->show($smarty,$gui,$identity,$gui->grants,array('getAttachments' => true));
+  createNewVersion($smarty,$args,$gui,$tcase_mgr,$args->tcversion_id);
+}
+else if($args->do_create_new_version_from_latest) { 
+  $ltcv = $tcase_mgr->getLatestVersionID($args->tcase_id);
+  createNewVersion($smarty,$args,$gui,$tcase_mgr,$ltcv);
 
 }
 else if($args->do_activate_this || $args->do_deactivate_this) {
@@ -350,6 +333,7 @@ function init_args(&$cfgObj,$otName,&$tcaseMgr) {
     $nu = key($tcaseMgr->get_last_active_version($args->tcase_id));
   }
 
+
   $args->name = isset($_REQUEST['testcase_name']) ? $_REQUEST['testcase_name'] : null;
 
   // Normally Rich Web Editors  
@@ -373,18 +357,18 @@ function init_args(&$cfgObj,$otName,&$tcaseMgr) {
 
   $key2loop = array('edit_tc' => 'edit', 'delete_tc' => 'delete','do_delete' => 'doDelete',
                     'create_tc' => 'create','do_create' => 'doCreate');
-  foreach($key2loop as $key => $action)
-  {
-    if( isset($_REQUEST[$key]) )
-    {
+
+  foreach($key2loop as $key => $action) {
+    if( isset($_REQUEST[$key]) ) {
       $args->doAction = $action;
       break;
     }
   }
 
    
-  $key2loop = array('move_copy_tc','delete_tc_version','do_move','do_copy','do_copy_ghost_zone',
-                    'do_create_new_version','do_delete_tc_version');
+  $key2loop = array('move_copy_tc','delete_tc_version','do_move','do_copy',
+                    'do_copy_ghost_zone','do_delete_tc_version',
+                    'do_create_new_version','do_create_new_version_from_latest');
   foreach($key2loop as $key) {
     $args->$key = isset($_REQUEST[$key]) ? 1 : 0;
   }
@@ -401,7 +385,7 @@ function init_args(&$cfgObj,$otName,&$tcaseMgr) {
     
   $key2loop=array("keyword_assignments","requirement_assignments");
   foreach($key2loop as $key) {
-    $args->copy[$key]=isset($_REQUEST[$key])?true:false;    
+    $args->copy[$key] = isset($_REQUEST[$key])?true:false;    
   }    
   
   
@@ -433,11 +417,12 @@ function init_args(&$cfgObj,$otName,&$tcaseMgr) {
 
 
   // Specialized webEditorConfiguration
-  $action2check = array("editStep" => true,"createStep" => true, "doCreateStep" => true,
+  $action2check = array("editStep" => true,"createStep" => true, 
+                        "doCreateStep" => true,
                         "doUpdateStep" => true, "doInsertStep" => true, 
-                        "doCopyStep" => true,"doUpdateStepAndInsert" => true);
-  if( isset($action2check[$args->doAction]) )
-  {
+                        "doCopyStep" => true,
+                        "doUpdateStepAndInsert" => true);
+  if( isset($action2check[$args->doAction]) ) {
     $cfgObj->webEditorCfg = getWebEditorCfg('steps_design');  
   }   
 
@@ -479,6 +464,8 @@ function init_args(&$cfgObj,$otName,&$tcaseMgr) {
 
   $args->tckw_link_id = isset($_GET['tckw_link_id']) ? intval($_GET['tckw_link_id']) : 0;
 
+ $args->tcplat_link_id = isset($_GET['tcplat_link_id']) ? intval($_GET['tcplat_link_id']) : 0;
+
 
   $args->tplan_id = isset($_REQUEST['tplan_id']) ? intval($_REQUEST['tplan_id']) : 0;
   $args->platform_id = isset($_REQUEST['platform_id']) ? intval($_REQUEST['platform_id']) : 0;
@@ -486,6 +473,13 @@ function init_args(&$cfgObj,$otName,&$tcaseMgr) {
 
   $cbk = 'changeExecTypeOnSteps';
   $args->applyExecTypeChangeToAllSteps = isset($_REQUEST[$cbk]);
+
+  $k2c = array('free_keywords','free_platforms');
+  foreach ($k2c as $kv) {
+    $args->$kv = isset($_REQUEST[$kv]) ? $_REQUEST[$kv] : null;
+  }
+
+  $tcaseMgr->setTestProject($args->tproject_id);
 
   return $args;
 }
@@ -599,9 +593,9 @@ function getGrants(&$dbHandler) {
  * 
  *
  */
-function initializeGui(&$dbHandler,&$argsObj,$cfgObj,&$tcaseMgr)
-{
+function initializeGui(&$dbHandler,&$argsObj,$cfgObj,&$tcaseMgr,&$tprojMgr) {
   $guiObj = new stdClass();
+  $guiObj->tplan_id = $argsObj->tplan_id;
   $guiObj->tproject_id = $argsObj->tproject_id;
   $guiObj->editorType = $cfgObj->webEditorCfg['type'];
   $guiObj->grants = getGrants($dbHandler);
@@ -647,6 +641,7 @@ function initializeGui(&$dbHandler,&$argsObj,$cfgObj,&$tcaseMgr)
     $guiObj->$right = $guiObj->grants->$right = $argsObj->user->hasRight($dbHandler,$right,$argsObj->tproject_id);
   }
 
+  $guiObj->codeTrackerEnabled = $tprojMgr->isCodeTrackerEnabled($guiObj->tproject_id);
 
   return $guiObj;
 }
@@ -655,37 +650,43 @@ function initializeGui(&$dbHandler,&$argsObj,$cfgObj,&$tcaseMgr)
  * manage GUI rendering
  *
  */
-function renderGui(&$argsObj,$guiObj,$opObj,$templateCfg,$cfgObj,$editorKeys)
-{
-    $smartyObj = new TLSmarty();
+function renderGui(&$argsObj,$guiObj,$opObj,$templateCfg,$cfgObj,$editorKeys) {
+  $smartyObj = new TLSmarty();
     
-    // needed by webeditor loading logic present on inc_head.tpl
-    $smartyObj->assign('editorType',$guiObj->editorType);  
+  // needed by webeditor loading logic present on inc_head.tpl
+  $smartyObj->assign('editorType',$guiObj->editorType);  
 
-    $renderType = 'none';
+  $renderType = 'none';
 
-    //
-    // key: operation requested (normally received from GUI on doAction)
-    // value: operation value to set on doAction HTML INPUT
-    // This is useful when you use same template (example xxEdit.tpl), for create and edit.
-    // When template is used for create -> operation: doCreate.
-    // When template is used for edit -> operation: doUpdate.
-    //              
-    // used to set value of: $guiObj->operation
-    //
-    $actionOperation = array('create' => 'doCreate', 'doCreate' => 'doCreate',
-                             'edit' => 'doUpdate','delete' => 'doDelete', 'doDelete' => '',
-                             'createStep' => 'doCreateStep', 'doCreateStep' => 'doCreateStep',
-                             'doCopyStep' => 'doUpdateStep',
-                             'editStep' => 'doUpdateStep', 
-                             'doUpdateStep' => 'doUpdateStep', 
-                             'doUpdateStepAndInsert' => 'doUpdateStep', 
-                             'doDeleteStep' => '', 'doReorderSteps' => '','doResequenceSteps' => '',
-                             'doInsertStep' => 'doUpdateStep',
-                             'setImportance' => '','setStatus' => '',
-                             'setExecutionType' => '', "setEstimatedExecDuration" => '',
-                             'doAddRelation' => '', 'doDeleteRelation' => '',
-                             'removeKeyword' => '', 'freeze' => '', 'unfreeze' => '');
+  //
+  // key: operation requested (normally received from GUI on doAction)
+  // value: operation value to set on doAction HTML INPUT
+  // This is useful when you use same template (example xxEdit.tpl), 
+  // for create and edit.
+  // When template is used for create -> operation: doCreate.
+  // When template is used for edit -> operation: doUpdate.
+  //              
+  // used to set value of: $guiObj->operation
+  //
+  $actionOperation = array('create' => 'doCreate', 'doCreate' => 'doCreate',
+                           'edit' => 'doUpdate','delete' => 'doDelete', 
+                           'createStep' => 'doCreateStep', 
+                           'doCreateStep' => 'doCreateStep',
+                           'doCopyStep' => 'doUpdateStep',
+                           'editStep' => 'doUpdateStep', 
+                           'doUpdateStep' => 'doUpdateStep', 
+                           'doInsertStep' => 'doUpdateStep',
+                           'doUpdateStepAndInsert' => 'doUpdateStep');
+
+  $nak = array('doDelete','doDeleteStep','doReorderSteps','doResequenceSteps',
+               'setImportance','setStatus','setExecutionType', 
+               'setEstimatedExecDuration','doAddRelation','doDeleteRelation',
+               'removeKeyword','freeze','unfreeze','addKeyword',
+               'removePlatform','addPlatform');
+
+  foreach($nak as $ak) {
+    $actionOperation[$ak] = '';
+  }
 
   $key2work = 'initWebEditorFromTemplate';
   $initWebEditorFromTemplate = property_exists($opObj,$key2work) ? $opObj->$key2work : false;                             
@@ -694,14 +695,12 @@ function renderGui(&$argsObj,$guiObj,$opObj,$templateCfg,$cfgObj,$editorKeys)
 
   $oWebEditor = createWebEditors($argsObj->basehref,$cfgObj->webEditorCfg,$editorKeys); 
 
-  foreach ($oWebEditor->cfg as $key => $value)
-  {
+  foreach ($oWebEditor->cfg as $key => $value) {
     $of = &$oWebEditor->editor[$key];
     $rows = $oWebEditor->cfg[$key]['rows'];
     $cols = $oWebEditor->cfg[$key]['cols'];
     
-    switch($argsObj->doAction)
-    {
+    switch($argsObj->doAction) {
       case "edit":
       case "delete":
       case "editStep":
@@ -731,89 +730,124 @@ function renderGui(&$argsObj,$guiObj,$opObj,$templateCfg,$cfgObj,$editorKeys)
     }
     $guiObj->operation = $actionOperation[$argsObj->doAction];
   
-    if($initWebEditorFromTemplate)
-    {
+    if($initWebEditorFromTemplate) {
       $of->Value = getItemTemplateContents('testcase_template', $of->InstanceName, '');  
-    }
-    else if( $cleanUpWebEditor )
-    {
+    } else if( $cleanUpWebEditor ) {
       $of->Value = '';
     }
     $smartyObj->assign($key, $of->CreateHTML($rows,$cols));
   }
       
-  switch($argsObj->doAction) 
-  {
+  switch($argsObj->doAction) {
     case "doDelete":
       $guiObj->refreshTree = $argsObj->refreshTree;
     break;
   }
 
-  switch($argsObj->doAction)
-  {
-        case "edit":
-        case "create":
-        case "delete":
-        case "createStep":
-        case "editStep":
-        case "doCreate":
-        case "doDelete":
-        case "doCreateStep":
-        case "doUpdateStep":
-        case "doDeleteStep":
-        case "doReorderSteps":
-        case "doCopyStep":
-        case "doInsertStep":
-        case "doResequenceSteps":
-        case "setImportance":
-        case "setStatus":
-        case "setExecutionType":
-        case "setEstimatedExecDuration":
-        case "doAddRelation":
-        case "doDeleteRelation":
-        case "doUpdateStepAndInsert":
-        case "removeKeyword":        
-        case "freeze":        
-        case "unfreeze":        
-            $renderType = 'template';
-            
-            // Document this !!!!
-            $key2loop = get_object_vars($opObj);
-            foreach($key2loop as $key => $value)
-            {
-             $guiObj->$key = $value;
-            }
-            $guiObj->operation = $actionOperation[$argsObj->doAction];
-            
-            $tplDir = (!isset($opObj->template_dir)  || is_null($opObj->template_dir)) ? $templateCfg->template_dir : $opObj->template_dir;
-            $tpl = is_null($opObj->template) ? $templateCfg->default_template : $opObj->template;
+  switch($argsObj->doAction) {
+    case "edit":
+    case "create":
+    case "delete":
+    case "createStep":
+    case "editStep":
+    case "doCreate":
+    case "doDelete":
+    case "doCreateStep":
+    case "doUpdateStep":
+    case "doDeleteStep":
+    case "doReorderSteps":
+    case "doCopyStep":
+    case "doInsertStep":
+    case "doResequenceSteps":
+    case "setImportance":
+    case "setStatus":
+    case "setExecutionType":
+    case "setEstimatedExecDuration":
+    case "doAddRelation":
+    case "doDeleteRelation":
+    case "doUpdateStepAndInsert":
+    case "removeKeyword":  
+    case "addKeyword":  
+    case "freeze":        
+    case "unfreeze":        
+    case "removePlatform":  
+    case "addPlatform":  
+      $renderType = 'template';
+      
+      // Document this !!!!
+      $key2loop = get_object_vars($opObj);
+      foreach($key2loop as $key => $value) {
+       $guiObj->$key = $value;
+      }
+      $guiObj->operation = $actionOperation[$argsObj->doAction];
+        
+      $tplDir = (!isset($opObj->template_dir)  || is_null($opObj->template_dir)) ? $templateCfg->template_dir : $opObj->template_dir;
+      $tpl = is_null($opObj->template) ? $templateCfg->default_template : $opObj->template;
 
-            $pos = strpos($tpl, '.php');
-            if($pos === false)
-            {
-              $tpl = $tplDir . $tpl;      
-            }
-            else
-            {
-              $renderType = 'redirect';  
-            } 
-        break;
-    }
+      $pos = strpos($tpl, '.php');
+      if($pos === false) {
+        $tpl = $tplDir . $tpl;      
+      } else {
+        $renderType = 'redirect';  
+      } 
+    break;
+  }
 
-    switch($renderType)
-    {
-      case 'template':
-        $smartyObj->assign('gui',$guiObj);
-        $smartyObj->display($tpl);
-      break;  
- 
-      case 'redirect':
-        header("Location: {$tpl}");
-        exit();
-      break;
+  switch($renderType) {
+    case 'template':
+      $smartyObj->assign('gui',$guiObj);
+      $smartyObj->display($tpl);
+    break;  
 
-      default:
-      break;
-    }
+    case 'redirect':
+      header("Location: {$tpl}");
+      exit();
+    break;
 
+    default:
+    break;
+  }
+
+}
+
+
+/**
+ *
+ */
+function createNewVersion(&$tplEng,&$argsObj,&$guiObj,&$tcaseMgr,$sourceTCVID) {
+  $user_feedback = '';
+  $msg = lang_get('error_tc_add');
+
+  $op = $tcaseMgr->create_new_version($argsObj->tcase_id,
+          $argsObj->user_id,$sourceTCVID);
+
+  $candidate = $sourceTCVID;
+  if ($op['msg'] == "ok") {
+    $candidate = $op['id'];
+    $user_feedback = sprintf(lang_get('tc_new_version'),$op['version']);
+    $msg = 'ok';
+    $tcCfg = config_get('testcase_cfg');
+    $isOpen = !$tcCfg->freezeTCVersionOnNewTCVersion;
+    $tcaseMgr->setIsOpen($argsObj->tcase_id,$sourceTCVID,$isOpen);
+  } 
+  $identity = new stdClass();
+  $identity->id = $argsObj->tcase_id;
+  $identity->tproject_id = $argsObj->tproject_id;
+  $identity->version_id = !is_null($argsObj->show_mode) ? $candidate : testcase::ALL_VERSIONS;
+
+  $guiObj->viewerArgs['action'] = "do_update";
+  $guiObj->viewerArgs['refreshTree'] = DONT_REFRESH;
+  $guiObj->viewerArgs['msg_result'] = $msg;
+  $guiObj->viewerArgs['user_feedback'] = $user_feedback;
+  $guiObj->path_info = null;
+  
+  // used to implement go back ??
+  $guiObj->loadOnCancelURL = $_SESSION['basehref'] . 
+    '/lib/testcases/archiveData.php?edit=testcase&id=' . $argsObj->tcase_id .
+    "&show_mode={$argsObj->show_mode}";
+
+
+  $tcaseMgr->show($tplEng,$guiObj,$identity,$guiObj->grants,
+                  array('getAttachments' => true));
+  exit();
 }

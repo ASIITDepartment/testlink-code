@@ -6,7 +6,7 @@
  *
  * @package     TestLink
  * @author      Andreas Simon
- * @copyright   2018 TestLink community
+ * @copyright   2018,2019 TestLink community
  * @filesource  reqOverview.php
  *
  * List requirements with (or without) Custom Field Data in an ExtJS Table.
@@ -43,11 +43,16 @@ if(count($gui->reqIDs) > 0)  {
   $type_labels = init_labels($cfg->req->type_labels);
   $status_labels = init_labels($cfg->req->status_labels);
   
-  $labels2get = array('no' => 'No', 'yes' => 'Yes', 'not_aplicable' => null,'never' => null,
-                      'req_spec_short' => null,'title' => null, 'version' => null, 'th_coverage' => null,
-                      'frozen' => null, 'type'=> null,'status' => null,'th_relations' => null, 'requirements' => null,
-                      'number_of_reqs' => null, 'number_of_versions' => null, 'requirement' => null,
-                      'version_revision_tag' => null, 'week_short' => 'calendar_week_short');
+  $labels2get = array('no' => 'No', 'yes' => 'Yes', 
+                      'not_aplicable' => null,'never' => null,
+                      'req_spec_short' => null,'title' => null, 
+                      'version' => null, 'th_coverage' => null,
+                      'frozen' => null, 'type'=> null,'status' => null,
+                      'th_relations' => null, 'requirements' => null,
+                      'number_of_reqs' => null, 'number_of_versions' => null, 
+                      'requirement' => null,
+                      'version_revision_tag' => null, 
+                      'week_short' => 'calendar_week_short');
           
   $labels = init_labels($labels2get);
   
@@ -64,23 +69,35 @@ if(count($gui->reqIDs) > 0)  {
   }
   else {
     $reqSet = $req_mgr->get_by_id($gui->reqIDs, $version_option,null,array('output_format' => 'mapOfArray'));
-  }  
+  }
 
-  
-  if($cfg->req->expected_coverage_management)  {
+  // conditions to generate reqVersion Set
+  // having this set, is useful to try to improve performance
+  // to get Custom Fields when req qty > 2000
+  //
+  if ( $cfg->req->expected_coverage_management ||
+       $gui->processCF )  {
     $xSet = array_keys($reqSet);
 
     foreach($xSet as $rqID) {
       $reqVersionSet[] = $reqSet[$rqID][0]['version_id'];
     }
+  }  
+  
+  if($cfg->req->expected_coverage_management)  {
 
     $coverageSet = $req_mgr->getLatestReqVersionCoverageCounterSet($reqVersionSet);
-
   }
 
   if($cfg->req->relations->enable) {
     $relationCounters = $req_mgr->getRelationsCounters($gui->reqIDs);
   }
+
+  if ($gui->processCF) {
+    // get custom field values bulk
+    $cfByReqVer = (array)$req_mgr->get_linked_cfields(null,$reqVersionSet,$args->tproject_id,array('access_key' => 'node_id'));
+  }  
+        
 
   // array to gather table data row per row
   $rows = array();    
@@ -90,7 +107,8 @@ if(count($gui->reqIDs) > 0)  {
     $req = $reqSet[$id];
 
     // create the link to display
-    $title = htmlentities($req[0]['req_doc_id'], ENT_QUOTES, $cfg->charset) . $cfg->glue_char . 
+    $title = htmlentities($req[0]['req_doc_id'], ENT_QUOTES, $cfg->charset) . 
+               $cfg->glue_char . 
              htmlentities($req[0]['title'], ENT_QUOTES, $cfg->charset);
     
     // reqspec-"path" to requirement
@@ -185,7 +203,7 @@ if(count($gui->reqIDs) > 0)  {
       
       if($gui->processCF) {
         // get custom field values for this req version
-        $linked_cfields = (array)$req_mgr->get_linked_cfields($id,$version['version_id']);
+        $linked_cfields = $cfByReqVer[$version['version_id']];
 
         foreach ($linked_cfields as $cf) {
           $verbose_type = $req_mgr->cfield_mgr->custom_field_types[$cf['type']];

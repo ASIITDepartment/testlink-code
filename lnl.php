@@ -9,19 +9,18 @@
  * 
  * @package   TestLink
  * @author    franciscom
- * @copyright 2012,2017 TestLink community
+ * @copyright 2012,2019 TestLink community
  * @link      http://www.testlink.org/
  */
 
 // some session and settings stuff from original index.php 
 require_once('config.inc.php');
-require_once('./cfg/reports.cfg.php');
+require_once('reports.cfg.php');
 require_once('common.php');
 
 doDBConnect($db);
 $args = init_args($db);
-switch($args->light)
-{
+switch($args->light) {
   case 'red':
     // can not find user or item 
   break;
@@ -30,9 +29,8 @@ switch($args->light)
     $reportCfg = config_get('reports_list');
     $what2launch = null; 
     $cfg = isset($reportCfg[$args->type]) ? $reportCfg[$args->type] : null;
-    
-    switch($args->type)
-    {
+
+    switch($args->type) {
       case 'exec':
         $what2launch = "lib/execute/execPrint.php" .
                        "?id={$args->id}&apikey=$args->apikey";
@@ -46,7 +44,6 @@ switch($args->light)
       case 'metricsdashboard':
         $what2launch = "lib/results/metricsDashboard.php?apikey=$args->apikey";
       break;
-
 
       case 'test_report':
         $param = "&type={$args->type}&level=testproject" .
@@ -116,22 +113,29 @@ switch($args->light)
       default:
         $needle = 'list_tc_';
         $nl = strlen($needle);
-        if(strpos($key,$needle) !== FALSE)
-        {
+        if(strpos($key,$needle) !== FALSE) {
           $param = "&tproject_id={$args->tproject_id}&tplan_id={$args->tplan_id}" .
                    "&format={$args->format}";
           $what2launch = $cfg['url'] ."&apikey=$args->apikey{$param}";
-        }  
-        else
-        {
-          echo 'ABORTING - UNKNOWN TYPE:' . $args->type;
-          die(); 
+        } else {
+      
+          $awl = config_get('accessWithoutLogin');
+          if( !isset($awl[$args->type]) ) {
+            echo 'ABORTING - UNKNOWN TYPE:' . $args->type;
+            die(); 
+          }
+          
+          $conf = $awl[$args->type];
+          $param = "";
+          foreach($args->use as $prop => $useIt) {
+            $param .= "&$prop={$args->$prop}";
+          }
+          $what2launch = $conf['url'] ."&apikey=$args->apikey{$param}";
         }  
       break;
     }  
   
-    if(!is_null($what2launch))
-    {
+    if(!is_null($what2launch)) {
       // changed to be able to get XLS file using wget
       // redirect(TL_BASE_HREF . $what2launch);
       //echo $what2launch;
@@ -144,7 +148,6 @@ switch($args->light)
   default:
     // ??
   break;
-  
 } 
 
 
@@ -152,13 +155,12 @@ switch($args->light)
 /**
  *
  */
-function init_args(&$dbHandler)
-{
+function init_args(&$dbHandler) {
+
   $_REQUEST = strings_stripSlashes($_REQUEST);
   $args = new stdClass();
 
-  try
-  {
+  try {
     // ATTENTION - give a look to $tlCfg->reports_list
     // format domain: see reports.cfg.php FORMAT_*
     $typeSize = 30;
@@ -169,13 +171,13 @@ function init_args(&$dbHandler)
                                        $userAPIkeyLen,$objectAPIkeyLen),
                      "tproject_id" => array(tlInputParameter::INT_N),
                      "tplan_id" => array(tlInputParameter::INT_N),
+                     "build_id" => array(tlInputParameter::INT_N),
                      "level" => array(tlInputParameter::STRING_N,0,16),
                      "type" => array(tlInputParameter::STRING_N,0,$typeSize),
                      'id' => array(tlInputParameter::INT_N),
-                     'format' => array(tlInputParameter::STRING_N,0,1));  
-  }
-  catch (Exception $e)  
-  {  
+                     'format' => array(tlInputParameter::STRING_N,0,1),
+                     'entities' => array(tlInputParameter::STRING_N,0,3));  
+  } catch (Exception $e) {  
     echo $e->getMessage();
     exit();
   }
@@ -189,12 +191,18 @@ function init_args(&$dbHandler)
   $args->light = 'red';
   $opt = array('setPaths' => true,'clearSession' => true);
   
+  // what to use when is custom
+  $masks = array('tproject_id' => 1, 'tplan_id' => 2, 'build_id' => 4);
+  $args->use = $masks;
+  foreach($masks as $kx => $mm) {
+    $args->use[$kx] = (($args->entities & $mm) > 0); 
+  }
+
   // validate apikey to avoid SQL injection
   $args->apikey = trim($args->apikey);
   $akl = strlen($args->apikey);
   
-  switch($akl)
-  {
+  switch($akl) {
     case $userAPIkeyLen:
     case $objectAPIkeyLen:
     break;
@@ -204,27 +212,22 @@ function init_args(&$dbHandler)
     break;  
   }
 
-  if($akl == $userAPIkeyLen)
-  {
+  if($akl == $userAPIkeyLen) {
     $args->debug = 'USER-APIKEY';
     setUpEnvForRemoteAccess($dbHandler,$args->apikey,null,$opt);
     $user = tlUser::getByAPIKey($dbHandler,$args->apikey);
     $args->light = (count($user) == 1) ? 'green' : 'red';
-  }
-  else
-  {
-    if(is_null($args->type) || trim($args->type) == '')
-    {
+  } else {
+    if(is_null($args->type) || trim($args->type) == '') {
       throw new Exception("Aborting - Bad type", 1);
     } 
 
-    if($args->type == 'exec')
-    {
+    if($args->type == 'exec') {
       $tex = DB_TABLE_PREFIX . 'executions';
       $sql = "SELECT testplan_id FROM $tex WHERE id=" . intval($args->id);
       $rs = $dbHandler->get_recordset($sql);
-      if( is_null($rs) )
-      {
+
+      if( is_null($rs) ) {
         die(__FILE__ . '-' . __LINE__);
       }  
 
@@ -232,8 +235,7 @@ function init_args(&$dbHandler)
       $tpl = DB_TABLE_PREFIX . 'testplans';
       $sql = "SELECT api_key FROM $tpl WHERE id=" . intval($rs['testplan_id']);
       $rs = $dbHandler->get_recordset($sql);
-      if( is_null($rs) )
-      {
+      if( is_null($rs) ) {
         die(__FILE__ . '-' . __LINE__);
       }  
       $rs = $rs[0];
@@ -246,8 +248,7 @@ function init_args(&$dbHandler)
     $kerberos->args = $args;
     $kerberos->method = null;
 
-    if( setUpEnvForAnonymousAccess($dbHandler,$args->apikey,$kerberos,$opt) )
-    {
+    if( setUpEnvForAnonymousAccess($dbHandler,$args->apikey,$kerberos,$opt) ) {
       $args->light = 'green';
     }
   }

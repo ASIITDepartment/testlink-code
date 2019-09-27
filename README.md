@@ -1,4 +1,6 @@
-# TestLink 1.9.18 Gaura - Read me
+# TestLink 1.9.20 Raijin - Read me
+
+[![](https://codescene.io/projects/5570/status.svg) Get more details at **codescene.io**.](https://codescene.io/projects/5570/jobs/latest-successful/results)
 
 ## Contents
  1. [Introduction](#1-introduction)
@@ -65,7 +67,7 @@ has been done and what still needs to be done.
 
 ## 2. Release notes / CRITICAL Configuration Notes
 
-This release contains bugfixes and enhancement for 1.9.17
+This release contains bugfixes and enhancement for 1.9.18
 See CHANGELOG file for detailed list of issues fixed.
 
 Give a look also to:
@@ -265,7 +267,7 @@ case steps and expected results, also test case ID's are empty in GUI
 
 ### Special Cases
 
- 1. Upgrade from 1.9.3 to 1.9.4/5/6/7/../16/17/18
+ 1. Upgrade from 1.9.3 to 1.9.4/5/6/7/../16/17/18/19
 
 WARNING: if you are using a table prefix replace `prefix` with your prefix
 
@@ -297,6 +299,9 @@ then look at sections: 'Upgrade from 1.9.4/5 to 1.9.7',
                        'Upgrade from 1.9.14 to 1.9.15',
                        'Upgrade from 1.9.15 to 1.9.16',
                        'Upgrade from 1.9.16 to 1.9.17'
+                       'Upgrade from 1.9.17 to 1.9.18'
+                       'Upgrade from 1.9.18 to 1.9.19'
+                       'Upgrade from 1.9.19 to 1.9.20'
 
  3. Upgrade from 1.9.7 to 1.9.8
 
@@ -371,8 +376,23 @@ WARNING: if you are using a table prefix replace `prefix` with your prefix
 
 WARNING: if you are using a table prefix replace `prefix` with your prefix
 
-  a. Execute `install/sql/alter_tables/1.9.18/<your_db>/DB.1.9.17/step1/db_schema_update.sql`
-  b. Execute (IF EXISTS) `install/sql/alter_tables/1.9.18/<your_db>/DB.1.9.17/stepZ/z_final_step.sql`
+  a. Execute `install/sql/alter_tables/1.9.18/<your_db>/DB.1.9.18/step1/db_schema_update.sql`
+  b. Execute (IF EXISTS) `install/sql/alter_tables/1.9.18/<your_db>/DB.1.9.18/stepZ/z_final_step.sql`
+
+14. Upgrade from 1.9.18 to 1.9.19
+
+WARNING: if you are using a table prefix replace `prefix` with your prefix
+
+  a. Execute `install/sql/alter_tables/1.9.19/<your_db>/DB.1.9.19/step1/db_schema_update.sql`
+  b. Execute (IF EXISTS) `install/sql/alter_tables/1.9.19/<your_db>/DB.1.9.19/stepZ/z_final_step.sql`
+
+15. Upgrade from 1.9.19 to 1.9.20
+
+WARNING: if you are using a table prefix replace `prefix` with your prefix
+
+  a. Execute `install/sql/alter_tables/1.9.20/<your_db>/DB.1.9.20/step1/db_schema_update.sql`
+  b. Execute (IF EXISTS) `install/sql/alter_tables/1.9.20/<your_db>/DB.1.9.20/stepZ/z_final_step.sql`
+
 
 **Hint**: When using MySQL Query Browser make sure you are not using single
           command execution. (open script or use special script tab to
@@ -389,7 +409,7 @@ than yours. Extreme example: migration from 1.7.4
     1.7.4 => 1.7.5 => 1.8.1 => 1.8.2 => 1.8.3 => 1.8.4 => 1.8.5 => 1.9.0
     1.9.0 => 1.9.1 => 1.9.2 => 1.9.3 => 1.9.4 => 1.9.5 => 1.9.6 => 1.9.7 =>
     1.9.8 => 1.9.9 => 1.9.10 => 1.9.11 => 1.9.12 => 1.9.13 => 1.9.14 =>
-    1.9.15 => 1.9.16 => 1.9.17 => 1.9.18
+    1.9.15 => 1.9.16 => 1.9.17 => 1.9.18 => 1.9.19
 
 You have to read carefully README and instructions (if any) provided by
 installer. Sometimes version changes do not require actions on DB structure
@@ -517,6 +537,9 @@ PLEASE: read these short hints before you write a topic:
         instead of TestLink. Use Google first.
 
 ## 10. Changes
+
+### 1.9.19
+  - DB Schema changes new unique indexes.
 
 
 ### 1.9.18

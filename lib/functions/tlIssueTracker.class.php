@@ -6,11 +6,9 @@
  * @filesource  tlIssueTracker.php
  * @package     TestLink
  * @author      franciscom
- * @copyright   2012,2013 TestLink community
+ * @copyright   2012,2019 TestLink community
  * @link        http://testlink.sourceforge.net/
  *
- * @internal revisions
- * @since 1.9.10
  *
 **/
 
@@ -51,9 +49,9 @@ class tlIssueTracker extends tlObject
                        19 =>  array('type' => 'trac','api' =>'xmlrpc','enabled' => true, 'order' => -1),
                        20 =>  array('type' => 'trackplus','api' =>'soap','enabled' => false, 'order' => -1),
                        21 =>  array('type' => 'trackplus','api' =>'db','enabled' => false, 'order' => -1),
-                       22 =>  array('type' => 'gitlab','api' =>'rest','enabled' => true, 'order' => -1)
+                       22 =>  array('type' => 'gitlab','api' =>'rest','enabled' => true, 'order' => -1),
+                       23 =>  array('type' => 'kaiten','api' =>'rest','enabled' => true, 'order' => -1)
                      );
-  
     
   var $entitySpec = array('name' => 'string','cfg' => 'string','type' => 'int');
     
@@ -685,8 +683,7 @@ class tlIssueTracker extends tlObject
    *
    *
    */
-  function checkConnection($its)
-  {
+  function checkConnection($its) {
     $xx = $this->getByID($its);
     $class2create = $xx['implementation'];
     $its = new $class2create($xx['type'],$xx['cfg'],$xx['name']);

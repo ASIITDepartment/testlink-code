@@ -7,7 +7,7 @@
  *
  * @package     TestLink
  * @filesource  planAddTC.php
- * @copyright   2007-2018, TestLink community 
+ * @copyright   2007-2019, TestLink community 
  * @link        http://testlink.sourceforge.net/
  * 
  **/
@@ -65,7 +65,7 @@ switch($args->item_level) {
 switch($args->doAction) {
   case 'doAddRemove':
     // Remember:  checkboxes exist only if are checked
-    $gui->itemQty = count($args->testcases2add);
+    $gui->itemQty = count((array)$args->testcases2add);
     
     if( !is_null($args->testcases2add) ) {
       addToTestPlan($db,$args,$gui,$tplan_mgr,$tcase_mgr);
@@ -133,12 +133,21 @@ if($do_display) {
 
   // Add Test Cases to Test plan - Right pane does not honor custom field filter
   // filter by test case execution type
-  $filters = array('keywords' => $args->keyword_id, 'testcases' => $testCaseSet, 
-                   'exec_type' => $args->executionType, 'importance' => $args->importance,
-                   'cfields' => $args->control_panel['filter_custom_fields'],
+  $filters = array('keywords' => $args->keyword_id, 
+                   'testcases' => $testCaseSet, 
+                   'exec_type' => $args->executionType, 
+                   'importance' => $args->importance,
                    'workflow_status' => $args->workflow_status,
-                   'tcase_name' => $args->control_panel['filter_testcase_name']);
+                   'cfields' => null, 'tcase_name' => null);
 
+  if( isset($args->control_panel['filter_custom_fields']) ) {
+    $filters['cfields'] = $args->control_panel['filter_custom_fields']; 
+  }
+
+  if( isset($args->control_panel['filter_testcase_name']) ) {
+    $filters['tcase_name'] = 
+      $args->control_panel['filter_testcase_name']; 
+  }
 
   $out = gen_spec_view($db,'testPlanLinking',$args->tproject_id,$args->object_id,$tsuite_data['name'],
                        $tplan_linked_tcversions,null,$filters,$opt);
@@ -254,7 +263,9 @@ if($do_display) {
 
 	// Choose enable/disable display of custom fields, analysing if this kind of custom fields
 	// exists on this test project.
-	$cfields=$tsuite_mgr->cfield_mgr->get_linked_cfields_at_testplan_design($args->tproject_id,1,'testcase');
+	$cfields = 
+    (array)$tsuite_mgr->cfield_mgr->get_linked_cfields_at_testplan_design($args->tproject_id,1,'testcase');
+
 	$opt = array('write_button_only_if_linked' => 0, 'add_custom_fields' => 0);
 	$opt['add_custom_fields'] = count($cfields) > 0 ? 1 : 0;
 
@@ -265,9 +276,7 @@ if($do_display) {
 	'cfields' => $args->control_panel['filter_custom_fields'],
 	'tcase_name' => $args->control_panel['filter_testcase_name']);
 	
-	if($args->item_level == 'reqcoverage')
-	{
-	
+	if($args->item_level == 'reqcoverage') {	
 	  $out = array();
 	  $out = gen_coverage_view($db,'testPlanLinking',$args->tproject_id,$args->object_id,$requirement_data_name,
  	  $tplan_linked_tcversions,null,$filters,$opt);
@@ -967,29 +976,29 @@ function setAdditionalGuiData($guiObj)
 function init_build_selector(&$testplan_mgr, &$argsObj) {
 
   // init array
-  $html_menu = array('items' => null, 'selected' => null, 'count' => 0);
+  $menu = array('items' => null, 'selected' => null, 'count' => 0);
 
-  $html_menu['items'] = $testplan_mgr->get_builds_for_html_options($argsObj->tplan_id,
-                                                                   testplan::GET_ACTIVE_BUILD,
-                                                                   testplan::GET_OPEN_BUILD);
-  $html_menu['count'] = count($html_menu['items']);
+  $menu['items'] = 
+    (array)$testplan_mgr->get_builds_for_html_options($argsObj->tplan_id,
+                                                      testplan::GET_ACTIVE_BUILD,
+                                                      testplan::GET_OPEN_BUILD);
+  $menu['count'] = count($menu['items']);
   
   // if no build has been chosen yet, select the newest build by default
   $build_id = $argsObj->build_id;
-  if (!$build_id && $html_menu['count']) {
-    $keys = array_keys($html_menu['items']);
+  if (!$build_id && $menu['count']) {
+    $keys = array_keys($menu['items']);
     $build_id = end($keys);
   }
-  $html_menu['selected'] = $build_id;
+  $menu['selected'] = $build_id;
   
-  return $html_menu;
+  return $menu;
 } // end of method
 
 /**
  *
  */ 
-function addToTestPlan(&$dbHandler,&$argsObj,&$guiObj,&$tplanMgr,&$tcaseMgr)
-{
+function addToTestPlan(&$dbHandler,&$argsObj,&$guiObj,&$tplanMgr,&$tcaseMgr) {
   // items_to_link structure:
   // key: test case id , value: map 
   //                            key: platform_id value: test case VERSION ID

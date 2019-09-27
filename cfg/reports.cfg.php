@@ -8,10 +8,6 @@
  *
  * SCOPE: Definition of report/metrics menu 
  * 
- * @internal revisions
- * @since 1.9.17
- *
- * 
  */
 
 /** type of documents */
@@ -33,16 +29,20 @@ define('FORMAT_PDF', 5);
 define('FORMAT_MAIL_HTML', 6);
 
 /** supported document formats (value = localization ID) */
-$tlCfg->reports_formats = array(FORMAT_HTML => 'format_html',FORMAT_MSWORD => 'format_pseudo_msword',
-								FORMAT_MAIL_HTML => 'format_mail_html');
+$tlCfg->reports_formats = array( FORMAT_HTML => 'format_html',
+	                               FORMAT_MSWORD => 'format_pseudo_msword',
+								                 FORMAT_MAIL_HTML => 'format_mail_html');
 
 /** Mime Content Type */
-$tlCfg->reports_applications = array(FORMAT_HTML => 'text/html',FORMAT_XLS => 'application/vnd.ms-excel', 
-									 FORMAT_MSWORD => 'application/vnd.ms-word');
+$tlCfg->reports_applications = 
+  array(FORMAT_HTML => 'text/html',
+  	    FORMAT_XLS => 'application/vnd.ms-excel', 
+				FORMAT_MSWORD => 'application/vnd.ms-word');
 
 
 /** Report file extenssion */
-$tlCfg->reports_file_extension = array(FORMAT_HTML => 'html',FORMAT_XLS => 'xls',FORMAT_MSWORD => 'doc');
+$tlCfg->reports_file_extension = 
+  array(FORMAT_HTML => 'html',FORMAT_XLS => 'xls',FORMAT_MSWORD => 'doc');
 
 
 /** 
@@ -137,6 +137,7 @@ $tlCfg->reports_list['list_tc_blocked'] = array(
 	'directLink' => '%slnl.php?apikey=%s&tproject_id=%s&tplan_id=%s&type=list_tc_blocked',
 	'format' => 'format_html,format_pseudo_ods'
 );
+
 $tlCfg->reports_list['list_tc_not_run'] = array( 
 	'title' => 'link_report_not_run',
 	'url' => 'lib/results/resultsByStatus.php?type=' . $tlCfg->results['status_code']['not_run'],
@@ -145,6 +146,16 @@ $tlCfg->reports_list['list_tc_not_run'] = array(
 	'format' => 'format_html,format_pseudo_ods',
 	'misc' => array('bugs_not_linked' => false)
 );
+
+$tlCfg->reports_list['never_run'] = array( 
+	'title' => 'link_report_never_run',
+	'url' => 'lib/results/neverRunByPP.php',
+	'enabled' => 'all', 
+	'directLink' => '%slnl.php?apikey=%s&tproject_id=%s&tplan_id=%s&type=never_run',
+	'format' => 'format_html,format_pseudo_ods',
+	'misc' => array('bugs_not_linked' => false)
+);
+
 
 $tlCfg->reports_list['tcases_without_tester'] = array(
 	'title' => 'link_report_tcases_without_tester',
@@ -218,7 +229,6 @@ $tlCfg->reports_list['free_tcases'] = array(
 // Add custom configuration
 clearstatcache();
 $f2inc = TL_ABS_PATH . 'cfg/custom_reports.cfg.php';
-if ( file_exists($f2inc) )
-{
+if ( file_exists($f2inc) ) {
   require_once($f2inc);
 }

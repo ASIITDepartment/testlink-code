@@ -43,7 +43,20 @@ switch($args->doc_type)  {
     // $filters->build_id = $tplan_mgr->get_max_build_id($args->tplan_id);
     $gui->buildInfoSet = null;
     if( $args->doc_type == DOC_TEST_PLAN_EXECUTION_ON_BUILD) {
-      $gui->buildInfoSet = $tplan_mgr->get_builds($args->tplan_id); 
+      $gui->buildInfoSet = $tplan_mgr->get_builds($args->tplan_id);
+
+      if( null != $gui->buildInfoSet ) {
+        $gui->buildRptLinkSet = array();
+        $dl = $args->basehref .
+              "lnl.php?apikey=" . $args->tplan_info['api_key'] .
+              "&tproject_id=$args->tproject_id" .
+              "&tplan_id=$args->tplan_id" .
+              "&type=testreport_onbuild";
+
+        foreach( $gui->buildInfoSet as $bid => $nunu ) {
+          $gui->buildRptLinkSet[$bid] = $dl . "&build_id=$bid";         
+        }       
+      }
     } 
 
     $additionalInfo = new stdClass();
@@ -113,6 +126,9 @@ $smarty->assign('docTestPlanId', $args->tplan_id);
 $smarty->assign('menuUrl', $rightPaneAction);
 $smarty->assign('additionalArgs',$additionalArgs);
 
+$optCfg = new printDocOptions();
+$smarty->assign('printPreferences', $optCfg->getJSPrintPreferences());
+
 $smarty->display($templateCfg->template_dir . $templateCfg->default_template);
 
 
@@ -155,13 +171,14 @@ function init_args(&$dbHandler) {
     $args->showHelpIcon = false;
     $args->tplan_id = intval(isset($_SESSION['testplanID']) ? intval($_SESSION['testplanID']) : 0);
 
-    if($args->tplan_id > 0) {  
-      $tplan_mgr = new testplan($dbHandler);
-      $args->tplan_info = $tplan_mgr->get_by_id($args->tplan_id);
-      $args->mainTitle = $l18n['test_plan'] . ': ' . $args->tplan_info['name'];
-    }
   }  
-
+  
+  if($args->tplan_id > 0) {  
+    $tplan_mgr = new testplan($dbHandler);
+    $args->tplan_info = $tplan_mgr->get_by_id($args->tplan_id);
+    $args->mainTitle = $l18n['test_plan'] . ': ' . $args->tplan_info['name'];
+  }
+  
   return $args;
 }
 
@@ -305,61 +322,33 @@ function init_checkboxes(&$args) {
   
   $execCfg = config_get('exec_cfg');
 
+  $optCfg = new printDocOptions();
+
   // Check Box Set
   $cbSet = array();
   
-  // these are the options which are always needed, type-specific ones follow below in switch
-  $cbSet[] = array( 'value' => 'toc','description' => 'opt_show_toc', 'checked' => 'n');
-  $cbSet[] = array( 'value' => 'headerNumbering','description' => 'opt_show_hdrNumbering','checked' => 'n');
-  
+  $cbSet += $optCfg->getDocOpt();
   switch($args->doc_type) {
     case 'reqspec':
-      $key2init = array('req_spec_scope','req_spec_author','req_spec_overwritten_count_reqs',
-                        'req_spec_type','req_spec_cf','req_scope','req_author','req_status',
-                        'req_type','req_cf','req_relations','req_linked_tcs','req_coverage','displayVersion');
-
-      $key2init2yes = array('req_spec_scope' => 'y','req_scope' => 'y');
-      foreach($key2init as $key) {
-        $checked = isset($key2init2yes[$key]) ? $key2init2yes[$key] : 'n';
-        $cbSet[] = array('value' => $key,'description' => 'opt_' . $key, 'checked' => $checked);
-      } 
+      $cbSet = array_merge($cbSet,$optCfg->getReqSpecOpt());
     break;
-    
+
     default:
-      $cbSet[] = array('value' => 'header','description' => 'opt_show_suite_txt','checked' => 'n');
-      $cbSet[] = array('value' => 'summary','description' => 'opt_show_tc_summary','checked' => 'y');
-      $cbSet[] = array('value' => 'body','description' => 'opt_show_tc_body','checked' => 'n');
-      $cbSet[] = array('value' => 'author','description' => 'opt_show_tc_author','checked' => 'n');
-      $cbSet[] = array('value' => 'keyword','description' => 'opt_show_tc_keys','checked' => 'n');
-      $cbSet[] = array('value' => 'cfields','description' => 'opt_show_cfields','checked' => 'n');
-
-      if($args->testprojectOptReqs) {
-        $cbSet[] = array( 'value' => 'requirement','description' => 'opt_show_tc_reqs','checked' => 'n');
-      }
-
-      if ($args->doc_type == DOC_TEST_PLAN_EXECUTION || $args->doc_type == DOC_TEST_PLAN_EXECUTION_ON_BUILD) {
-        $cbSet[] = array('value' => 'notes', 'description' => 'opt_show_tc_notes',  'checked' => 'n');
-        
-        if($execCfg->steps_exec) {  
-          $cbSet[] = array('value' => 'step_exec_notes', 'description' => 'opt_show_tcstep_exec_notes',  
-                                   'checked' => 'n');
-        }
-        $cbSet[] = array('value' => 'passfail','description' => 'opt_show_passfail','checked' => 'y');
-        
-        if($execCfg->steps_exec) {  
-          $cbSet[] = array('value' => 'step_exec_status','description' => 'opt_show_tcstep_exec_status','checked' => 'y');
-        }
-        
-        $cbSet[] = array('value' => 'build_cfields','description' => 'opt_show_build_cfields','checked' => 'n');
-        $cbSet[] = array('value' => 'metrics','description' => 'opt_show_metrics','checked' => 'n');
-        // $cbSet[] = array('value' => 'assigned_to_me','description' => 'opt_show_only_assigned_to_me','checked' => 'n');
-      }
-    break;    
+      $cbSet = array_merge($cbSet,$optCfg->getTestSpecOpt());
+    break;
   }
+
+  if( $args->doc_type == DOC_TEST_PLAN_EXECUTION || 
+      $args->doc_type == DOC_TEST_PLAN_EXECUTION_ON_BUILD ) {
+    $cbSet = array_merge($cbSet,$optCfg->getExecOpt());
+  }  
 
   foreach ($cbSet as $key => $elem)  {
     $cbSet[$key]['description'] = lang_get($elem['description']);
+    if( !isset($cbSet[$key]['checked']) ) {
+      $cbSet[$key]['checked'] = 'n'; 
+    }
   }
-  
+
   return $cbSet;
 }

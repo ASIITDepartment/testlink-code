@@ -35,14 +35,11 @@
   returns:
 
 */
-function focusInputField(id,selectIt)
-{
+function focusInputField(id,selectIt) {
   var f = document.getElementById(id);
-  if (f)
-  {
+  if (f) {
     f.focus();
-    if(selectIt)
-    {
+    if(selectIt) {
       f.select();
     } 
   }
@@ -103,11 +100,10 @@ function close_help()
   returns:
 
 */
-function open_popup(page)
-{
+function open_popup(page) {
   var windowCfg="left=350,top=50,screenX=350,screenY=50,fullscreen=no,resizable=yes," + 
                 "toolbar=no,status=no,menubar=no,scrollbars=yes,directories=no,location=no," +
-                "width=400,height=650";
+                "width=600,height=500";
   window.open(page, "_blank",windowCfg);
   return true;
 }
@@ -145,7 +141,7 @@ function ST(id,version)
 function STS(id)
 {
   var _FUNCTION_NAME_='STS';
-  var action_url = fRoot+'/'+menuUrl+"?level=testsuite&id="+id+args;
+  var action_url = fRoot+menuUrl+"?level=testsuite&id="+id+args;
   // alert(args);
   parent.workframe.location = action_url;
 }
@@ -168,8 +164,7 @@ function SP()
 /**
  *  EXecution DaShboard (EXDS)
  */
-function EXDS()
-{
+function EXDS() {
   var action_url = fRoot+'lib/execute/execDashboard.php';
   parent.workframe.location = action_url;
 }
@@ -184,8 +179,7 @@ function EXDS()
   returns:
 
 */
-function EP(id)
-{
+function EP(id) {
   // menuUrl 99% => archiveData.php
   // can be planAddTC.php
   var _FUNCTION_NAME_="EP";
@@ -323,12 +317,7 @@ function ER(id)
 
 }
 
-/* Generate doc: a selected Test Suite from Test Specification
-function TPROJECT_PRS(id)
-{
-	var pParams = tree_getPrintPreferences();
-	parent.workframe.location = fRoot+menuUrl+"?type=testspec&level=testsuite&id="+id+args+"&"+pParams;
-}
+/* 
   function: TPLAN_PTS
             Test PLAN Print Test Suite
 
@@ -337,8 +326,7 @@ function TPROJECT_PRS(id)
   returns:
 
 */
-function TPLAN_PTS(id)
-{
+function TPLAN_PTS(id) {
   var pParams = tree_getPrintPreferences();
   parent.workframe.location = fRoot+menuUrl+"?level=testsuite&id="+id+args+"&"+pParams;
 }
@@ -347,11 +335,10 @@ function TPLAN_PTS(id)
   function: TPLAN_PTP
             Test PLAN Print Test Plan
 */
-function TPLAN_PTP(id)
-{
+function TPLAN_PTP(id) {
   var pParams = tree_getPrintPreferences();
   var my_location = fRoot+menuUrl+"?level=testproject&id="+id+args+"&"+pParams;
-  parent.workframe.location =my_location;
+  parent.workframe.location = my_location;
 }
 
 
@@ -417,8 +404,10 @@ function changeFeature(feature)
   } 
 }
 
-function openFileUploadWindow(id,tableName)
-{
+/**
+ *
+ */
+function openFileUploadWindow(id,tableName) {
   var windowCfg="width=510,height=300,resizable=yes,dependent=yes";
   window.open(fRoot+"lib/attachments/attachmentupload.php?id="+id+"&tableName="+tableName,
               "FileUpload",windowCfg);
@@ -547,43 +536,32 @@ function confirm_and_submit(msg,form_id,field_id,field_value,action_field_id,act
   Symbiosis (from Ancient Greek σύν "together" and βίωσις "living")
 
 */
-function tree_getPrintPreferences()
-{
-  var params = [];
-  var fields = ['header','summary','toc','body','passfail', 'cfields','testplan', 'metrics', 
-                'author','requirement','keyword','notes','assigned_to_me',
-                'req_spec_scope','req_spec_author','req_spec_overwritten_count_reqs',
-                'req_spec_type','req_spec_cf','req_scope','req_author','req_status',
-                'req_type','req_cf','req_relations','req_linked_tcs','req_coverage', 
-                'headerNumbering','displayVersion','build_cfields','step_exec_notes','step_exec_status'];
+function tree_getPrintPreferences() {
 
-  for (var idx= 0;idx < fields.length;idx++)
-  {
+  var params = [];
+  var fields = printPreferences.split(',');
+  
+  for (var idx= 0;idx < fields.length;idx++) {
     var v = tree_getCheckBox(fields[idx]);
-    if (v)
-    {
+    if (v) {
       params.push(v);
     } 
   }
 
   var f = document.getElementById('format');
-  if(f)
-  {
+  if(f) {
     params.push("format="+f.value);
   }
 
   var bx = document.getElementById('build_id');
-  if(bx)
-  {
+  if(bx) {
     params.push("build_id="+bx.value);
   }
 
   var bx = document.getElementById('with_user_assignment');
-  if(bx)
-  {
+  if(bx) {
     var vv = 0;
-    if(bx.checked)
-    {
+    if(bx.checked) {
       vv = 1;
     }  
     params.push("with_user_assignment=" + vv);
@@ -673,9 +651,7 @@ function bug_dialog()
   this.NoRefresh = false;
 }
 
-function std_dialog(additional)
-{
-  // alert('std_dialog() - called');
+function std_dialog(additional) {
   this.refWindow = null;
   this.refLocation = null;
   this.refAdditional=additional;
@@ -683,8 +659,7 @@ function std_dialog(additional)
 }
 
 
-function dialog_onSubmit(odialog)
-{
+function dialog_onSubmit(odialog) {
   // In this way we do not do refresh.
   odialog.NoRefresh = true;
   return true;
@@ -700,7 +675,17 @@ function dialog_onLoad(odialog)
     odialog.refLocation = top.opener.location;
     if(odialog.refAdditional != undefined)
     {
-       odialog.refLocation += odialog.refAdditional;
+      // Only add odialog.refAdditional if not already present
+      // IMPORTANT
+      // cast to string, is neeed to avoid issues with
+      // str.replace() => will return undefined
+      var haystack = String(odialog.refLocation);
+      var needle = String(odialog.refAdditional);
+
+      odialog.refLocation = haystack.replace(needle,'');
+      odialog.refLocation += odialog.refAdditional;
+
+      // alert(odialog.refLocation);
     } 
   }
   catch(e)
@@ -864,8 +849,7 @@ function openAssignmentOverviewWindow(user_id, build_id, tplan_id) {
  * @author Andreas Simon
  * @param tc_id
  */
-function openTCEditWindow(tcase_id,tcversion_id) 
-{
+function openTCEditWindow(tcase_id,tcversion_id)  {
   var url = "lib/testcases/archiveData.php?edit=testcase&id=" + tcase_id + "&tcversion_id=" + tcversion_id;
   var width = getCookie("TCEditPopupWidth");
   var height = getCookie("TCEditPopupHeight");
@@ -953,23 +937,19 @@ function open_help_window(help_page,locale)
   rev :
 
 */
-function openTCaseWindow(tcase_id,tcversion_id,show_mode)
-{
+function openTCaseWindow(tcase_id,tcversion_id,show_mode) {
   var feature_url = "lib/testcases/archiveData.php";
   feature_url +="?allow_edit=0&show_mode="+show_mode+"&edit=testcase&id="+
           tcase_id+"&tcversion_id="+tcversion_id;
 
-  // 20101111 - asimon - now also remembers popup size
   var width = getCookie("TCEditPopupWidth");
   var height = getCookie("TCEditPopupHeight");
 
-  if (width == null)
-  {
+  if (width == null) {
     var width = "800";
   }
 
-  if (height == null)
-  {
+  if (height == null) {
     var height = "600";
   }
 
@@ -1771,28 +1751,41 @@ function openTCW(tcase_external_id,version_number)
 /**
  *
  */
-function toogleShowHide(oid,display_type)
-{
+function toogleShowHide(oid,display_type) {
   var obj = document.getElementById(oid);
   
-  if (!obj)
-  {
+  if (!obj) {
     return;
   }                  
   
-  if(obj.style.display == 'none')
-  {
-    if(display_type != undefined)
-    {
+  if(obj.style.display == 'none') {
+    if(display_type != undefined) {
       obj.style.display = display_type;
-    } 
-    else
-    {
+    } else {
       obj.style.display = '';
     } 
+  } else {
+    obj.style.display = 'none';
   }
-  else
-  {
+}
+
+/**
+ *
+ */
+function toggleShowHide(oid,display_type) {
+  var obj = document.getElementById(oid);
+  
+  if (!obj) {
+    return;
+  }                  
+  
+  if(obj.style.display == 'none') {
+    if(display_type != undefined) {
+      obj.style.display = display_type;
+    } else {
+      obj.style.display = '';
+    } 
+  } else {
     obj.style.display = 'none';
   }
 }
@@ -1907,26 +1900,19 @@ function validateStepsReorder(cssClassName)
 function toogleRequiredOnShowHide(oid,display_type)
 {
   var obj = document.getElementById(oid);
-  if (!obj)
-  {
+  if (!obj) {
     return;
   }                  
 
-  if(obj.style.display == 'none')
-  {
-    if(display_type != undefined)
-    {
+  if(obj.style.display == 'none') {
+    if(display_type != undefined) {
       obj.style.display = display_type;
-    } 
-    else
-    {
+    } else {
       // SHOW, then field has to be Required
       obj.style.display = '';
       obj.setAttribute('required','required');
     } 
-  }
-  else
-  {
+  } else {
     obj.style.display = 'none';
     obj.removeAttribute('required'); 
   }
@@ -1937,8 +1923,7 @@ function toogleRequiredOnShowHide(oid,display_type)
  * @author Andreas Simon
  * @param tc_id
  */
-function openTSEditWindow(tsuite_id) 
-{
+function openTSEditWindow(tsuite_id)  {
 
   var url = "lib/testcases/archiveData.php?edit=testsuite&id=" + tsuite_id 
   var width = getCookie("TSEditPopupWidth");
@@ -1956,4 +1941,30 @@ function openTSEditWindow(tsuite_id)
   
   var windowCfg = "width="+width+",height="+height+",resizable=yes,scrollbars=yes,dependent=yes";
   window.open(fRoot+url, '_blank', windowCfg);
+}
+
+/**
+ *
+ */
+function openKWMgmtWindow(page) {
+ 
+  var width = getCookie("KWMgmtPopupWidth");
+  var height = getCookie("KWMgmtPopupHeight");
+
+
+alert(page);
+
+  if (width == null) {
+    var width = "800";
+  }
+
+  if (height == null) {
+    var height = "600";
+  }
+
+  var windowCfg = "width="+width+",height="+height+
+                  ",resizable=yes,scrollbars=yes,dependent=yes";
+
+  // second parameter(window name) with spaces caused bug on IE
+  window.open(fRoot+feature_url,"Keywords",windowCfg);
 }
