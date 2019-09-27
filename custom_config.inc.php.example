@@ -171,12 +171,12 @@
 //
 //
 // SMTP server Configuration ("localhost" is enough in the most cases)
-//$g_smtp_host        = 'localhost';  # SMTP server MUST BE configured  
+$g_smtp_host        = 'smtp.office365.com';  # SMTP server MUST BE configured  
 
 # Configure using custom_config.inc.php
-//$g_tl_admin_email     = 'tl_admin@127.0.0.1'; # for problem/error notification 
-//$g_from_email         = 'testlink@127.0.0.1';  # email sender
-//$g_return_path_email  = 'francisco@127.0.0.1';
+$g_tl_admin_email     = 'Brady.Bodily@asirobots.com'; # for problem/error notification 
+$g_from_email         = 'Mail.Man@asirobots.com';  # email sender
+$g_return_path_email  = 'DoNotReply@asirobots.com';
 
 # Urgent = 1, Not Urgent = 5, Disable = 0
 // $g_mail_priority = 5;   
@@ -186,8 +186,10 @@
 #$g_phpMailer_method = SMTP_SEND;
 
 // Configure only if SMTP server requires authentication
-//$g_smtp_username    = '';  # user  
-//$g_smtp_password    = '';  # password 
+$g_smtp_username    = 'Mail.Man@asirobots.com';  # user  
+$g_smtp_password    = 'Robot$16';  # password
+$g_smtp_port = '587';
+$g_smtp_connection_mode = 'starttls'; 
 //
 
 // TRUE  -> the whole execution history for the choosen build will be showed

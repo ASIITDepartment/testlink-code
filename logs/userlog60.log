@@ -1,0 +1,1718 @@
+	[19/Aug/29 19:38:54][AUDIT][i34nd26ghf5g1r7d3d69385i8d][GUI - Test Project ID : 71110]
+		Login for 'Jarom.Drollinger' from '209.253.35.146' succeeded
+[<<][5d6829ce51003359041226][DEFAULT][/login.php][19/Aug/29 19:38:54][19/Aug/29 19:38:54][took 0.060169 secs]
+[<<][5d6829cea8568778240958][DEFAULT][/index.php][19/Aug/29 19:38:54][19/Aug/29 19:38:54][took 0.003344 secs]
+[>>][5d6829cea9340258910473][DEFAULT][/index.php][19/Aug/29 19:38:54]
+[<<][5d6829cea9340258910473][DEFAULT][/index.php][19/Aug/29 19:38:54][19/Aug/29 19:38:54][took 0.0019130000000001 secs]
+[<<][5d6829ceec014811008748][DEFAULT][/lib/general/navBar.php][19/Aug/29 19:38:54][19/Aug/29 19:38:54][took 0.0032880000000001 secs]
+[>>][5d6829ceecdb2491962175][DEFAULT][/lib/general/navBar.php][19/Aug/29 19:38:54]
+[<<][5d6829ceecdb2491962175][DEFAULT][/lib/general/navBar.php][19/Aug/29 19:38:54][19/Aug/29 19:38:54][took 0.002089 secs]
+[>>][5d6829ceed67a667543485][DEFAULT][/lib/general/navBar.php][19/Aug/29 19:38:54]
+[<<][5d6829ceed67a667543485][DEFAULT][/lib/general/navBar.php][19/Aug/29 19:38:54][19/Aug/29 19:38:54][took 0.008486 secs]
+[<<][5d6829cf035e8997141543][DEFAULT][/lib/general/mainPage.php][19/Aug/29 19:38:55][19/Aug/29 19:38:55][took 0.007139 secs]
+[>>][5d6829cf05285728863043][DEFAULT][/lib/general/mainPage.php][19/Aug/29 19:38:55]
+[<<][5d6829cf05285728863043][DEFAULT][/lib/general/mainPage.php][19/Aug/29 19:38:55][19/Aug/29 19:38:55][took 0.001436 secs]
+[>>][5d6829cf058a8319554523][DEFAULT][/lib/general/mainPage.php][19/Aug/29 19:38:55]
+	[19/Aug/29 19:38:55][WARNING][i34nd26ghf5g1r7d3d69385i8d][GUI - Test Project ID : 71110]
+		E_NOTICE
+Undefined index: platform_view - in /opt/bitnami/apps/testlink/htdocs/gui/templates_c/835a037b28214872edd369779d57f903f1734c6a.file.mainPageLeft.tpl.php - Line 205
+[<<][5d6829cf058a8319554523][DEFAULT][/lib/general/mainPage.php][19/Aug/29 19:38:55][19/Aug/29 19:38:55][took 0.057063 secs]
+[<<][5d6829d8c1c01470890160][DEFAULT][/lib/general/navBar.php][19/Aug/29 19:39:04][19/Aug/29 19:39:04][took 0.002904 secs]
+[>>][5d6829d8c2821494852386][DEFAULT][/lib/general/navBar.php][19/Aug/29 19:39:04]
+[<<][5d6829d8c2821494852386][DEFAULT][/lib/general/navBar.php][19/Aug/29 19:39:04][19/Aug/29 19:39:04][took 0.00178 secs]
+[>>][5d6829d8c2fb2351163699][DEFAULT][/lib/general/navBar.php][19/Aug/29 19:39:04]
+	[19/Aug/29 19:39:04][WARNING][i34nd26ghf5g1r7d3d69385i8d][GUI - Test Project ID : 21]
+		E_NOTICE
+Undefined property: stdClass::$prefix - in /opt/bitnami/apps/testlink/htdocs/lib/general/navBar.php - Line 173
+[<<][5d6829d8c2fb2351163699][DEFAULT][/lib/general/navBar.php][19/Aug/29 19:39:04][19/Aug/29 19:39:04][took 0.04756 secs]
+[<<][5d6829d923215932726272][DEFAULT][/lib/general/mainPage.php][19/Aug/29 19:39:05][19/Aug/29 19:39:05][took 0.004796 secs]
+[>>][5d6829d9245f6058069967][DEFAULT][/lib/general/mainPage.php][19/Aug/29 19:39:05]
+[<<][5d6829d9245f6058069967][DEFAULT][/lib/general/mainPage.php][19/Aug/29 19:39:05][19/Aug/29 19:39:05][took 0.002415 secs]
+[>>][5d6829d925004900746423][DEFAULT][/lib/general/mainPage.php][19/Aug/29 19:39:05]
+	[19/Aug/29 19:39:05][WARNING][i34nd26ghf5g1r7d3d69385i8d][GUI - Test Project ID : 21]
+		E_NOTICE
+Undefined index: platform_view - in /opt/bitnami/apps/testlink/htdocs/gui/templates_c/835a037b28214872edd369779d57f903f1734c6a.file.mainPageLeft.tpl.php - Line 205
+[<<][5d6829d925004900746423][DEFAULT][/lib/general/mainPage.php][19/Aug/29 19:39:05][19/Aug/29 19:39:05][took 0.073574 secs]
+	[19/Sep/5 16:07:42][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Login for 'Jarom.Drollinger' from '209.253.35.146' succeeded
+[<<][5d7132ce3094f859579325][DEFAULT][/login.php][19/Sep/5 16:07:42][19/Sep/5 16:07:42][took 0.037511 secs]
+[<<][5d7132ce81dfd134769089][DEFAULT][/index.php][19/Sep/5 16:07:42][19/Sep/5 16:07:42][took 0.0031129999999999 secs]
+[>>][5d7132ce82af7086046861][DEFAULT][/index.php][19/Sep/5 16:07:42]
+[<<][5d7132ce82af7086046861][DEFAULT][/index.php][19/Sep/5 16:07:42][19/Sep/5 16:07:42][took 0.0013909999999999 secs]
+[<<][5d7132cec6513548165911][DEFAULT][/lib/general/navBar.php][19/Sep/5 16:07:42][19/Sep/5 16:07:42][took 0.0033240000000001 secs]
+[>>][5d7132cec72fa238015719][DEFAULT][/lib/general/navBar.php][19/Sep/5 16:07:42]
+[<<][5d7132cec72fa238015719][DEFAULT][/lib/general/navBar.php][19/Sep/5 16:07:42][19/Sep/5 16:07:42][took 0.002139 secs]
+[>>][5d7132cec7bf5204938921][DEFAULT][/lib/general/navBar.php][19/Sep/5 16:07:42]
+[<<][5d7132cec7bf5204938921][DEFAULT][/lib/general/navBar.php][19/Sep/5 16:07:42][19/Sep/5 16:07:42][took 0.004874 secs]
+[<<][5d7132ced2a74989698219][DEFAULT][/lib/general/mainPage.php][19/Sep/5 16:07:42][19/Sep/5 16:07:42][took 0.0063770000000001 secs]
+[>>][5d7132ced4405789721075][DEFAULT][/lib/general/mainPage.php][19/Sep/5 16:07:42]
+[<<][5d7132ced4405789721075][DEFAULT][/lib/general/mainPage.php][19/Sep/5 16:07:42][19/Sep/5 16:07:42][took 0.001418 secs]
+[>>][5d7132ced4a32882280938][DEFAULT][/lib/general/mainPage.php][19/Sep/5 16:07:42]
+	[19/Sep/5 16:07:42][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_NOTICE
+Undefined index: platform_view - in /opt/bitnami/apps/testlink/htdocs/gui/templates_c/835a037b28214872edd369779d57f903f1734c6a.file.mainPageLeft.tpl.php - Line 205
+[<<][5d7132ced4a32882280938][DEFAULT][/lib/general/mainPage.php][19/Sep/5 16:07:42][19/Sep/5 16:07:42][took 0.08415 secs]
+[<<][5d7132dc73c31045971749][DEFAULT][/lib/general/mainPage.php][19/Sep/5 16:07:56][19/Sep/5 16:07:56][took 0.003274 secs]
+[>>][5d7132dc749bf153554387][DEFAULT][/lib/general/mainPage.php][19/Sep/5 16:07:56]
+[<<][5d7132dc749bf153554387][DEFAULT][/lib/general/mainPage.php][19/Sep/5 16:07:56][19/Sep/5 16:07:56][took 0.002119 secs]
+[>>][5d7132dc7529c780074132][DEFAULT][/lib/general/mainPage.php][19/Sep/5 16:07:56]
+	[19/Sep/5 16:07:56][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_NOTICE
+Undefined index: platform_view - in /opt/bitnami/apps/testlink/htdocs/gui/templates_c/835a037b28214872edd369779d57f903f1734c6a.file.mainPageLeft.tpl.php - Line 205
+[<<][5d7132dc7529c780074132][DEFAULT][/lib/general/mainPage.php][19/Sep/5 16:07:56][19/Sep/5 16:07:56][took 0.069415 secs]
+[<<][5d7132df0fd66951789640][DEFAULT][/lib/general/frmWorkArea.php][19/Sep/5 16:07:59][19/Sep/5 16:07:59][took 0.003303 secs]
+[>>][5d7132df10b11796124173][DEFAULT][/lib/general/frmWorkArea.php][19/Sep/5 16:07:59]
+[<<][5d7132df10b11796124173][DEFAULT][/lib/general/frmWorkArea.php][19/Sep/5 16:07:59][19/Sep/5 16:07:59][took 0.002095 secs]
+[>>][5d7132df113de248761589][DEFAULT][/lib/general/frmWorkArea.php][19/Sep/5 16:07:59]
+[<<][5d7132df113de248761589][DEFAULT][/lib/general/frmWorkArea.php][19/Sep/5 16:07:59][19/Sep/5 16:07:59][took 0.002684 secs]
+[<<][5d7132df2113d407188600][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 16:07:59][19/Sep/5 16:07:59][took 0.003282 secs]
+[>>][5d7132df21ebd979130444][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 16:07:59]
+[<<][5d7132df21ebd979130444][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 16:07:59][19/Sep/5 16:07:59][took 0.002027 secs]
+[>>][5d7132df22746098109892][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 16:07:59]
+[<<][5d7132df22746098109892][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 16:07:59][19/Sep/5 16:07:59][took 0.147236 secs]
+[<<][5d7132df2ecdb131607663][DEFAULT][/lib/execute/execDashboard.php][19/Sep/5 16:07:59][19/Sep/5 16:07:59][took 0.103935 secs]
+[>>][5d7132df4838e956853834][DEFAULT][/lib/execute/execDashboard.php][19/Sep/5 16:07:59]
+[<<][5d7132df4838e956853834][DEFAULT][/lib/execute/execDashboard.php][19/Sep/5 16:07:59][19/Sep/5 16:07:59][took 0.00249 secs]
+[>>][5d7132df48dda947094382][DEFAULT][/lib/execute/execDashboard.php][19/Sep/5 16:07:59]
+[<<][5d7132df48dda947094382][DEFAULT][/lib/execute/execDashboard.php][19/Sep/5 16:07:59][19/Sep/5 16:07:59][took 0.004118 secs]
+[<<][5d7132e008667249561687][DEFAULT][/lib/execute/execDashboard.php][19/Sep/5 16:08:00][19/Sep/5 16:08:00][took 0.003288 secs]
+[>>][5d7132e0093f9993279352][DEFAULT][/lib/execute/execDashboard.php][19/Sep/5 16:08:00]
+[<<][5d7132e0093f9993279352][DEFAULT][/lib/execute/execDashboard.php][19/Sep/5 16:08:00][19/Sep/5 16:08:00][took 0.002016 secs]
+[>>][5d7132e009c79004037203][DEFAULT][/lib/execute/execDashboard.php][19/Sep/5 16:08:00]
+[<<][5d7132e009c79004037203][DEFAULT][/lib/execute/execDashboard.php][19/Sep/5 16:08:00][19/Sep/5 16:08:00][took 0.004087 secs]
+[<<][5d7132e9dd150295664941][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 16:08:09][19/Sep/5 16:08:09][took 0.0031869999999999 secs]
+[>>][5d7132e9dde9f373035758][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 16:08:09]
+[<<][5d7132e9dde9f373035758][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 16:08:09][19/Sep/5 16:08:09][took 0.002382 secs]
+[>>][5d7132e9de88f287075127][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 16:08:09]
+[<<][5d7132e9de88f287075127][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 16:08:09][19/Sep/5 16:08:10][took 0.118288 secs]
+[<<][5d7132ea8ac94919870404][DEFAULT][/lib/execute/execDashboard.php][19/Sep/5 16:08:10][19/Sep/5 16:08:10][took 0.003277 secs]
+[>>][5d7132ea8ba20356028608][DEFAULT][/lib/execute/execDashboard.php][19/Sep/5 16:08:10]
+[<<][5d7132ea8ba20356028608][DEFAULT][/lib/execute/execDashboard.php][19/Sep/5 16:08:10][19/Sep/5 16:08:10][took 0.0021439999999999 secs]
+[>>][5d7132ea8c320748296123][DEFAULT][/lib/execute/execDashboard.php][19/Sep/5 16:08:10]
+[<<][5d7132ea8c320748296123][DEFAULT][/lib/execute/execDashboard.php][19/Sep/5 16:08:10][19/Sep/5 16:08:10][took 0.0087390000000001 secs]
+[<<][5d71498c143e9077030279][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:44:44][19/Sep/5 17:44:44][took 0.003494 secs]
+[>>][5d71498c1526b254279385][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:44:44]
+[<<][5d71498c1526b254279385][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:44:44][19/Sep/5 17:44:44][took 0.002105 secs]
+[>>][5d71498c15b46993923892][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:44:44]
+	[19/Sep/5 17:44:44][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d71498c15b46993923892][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:44:44][19/Sep/5 17:44:44][took 0.498818 secs]
+[<<][5d7149ee3a853292201690][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:46:22][19/Sep/5 17:46:22][took 0.003901 secs]
+[>>][5d7149ee3b863457699283][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:46:22]
+[<<][5d7149ee3b863457699283][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:46:22][19/Sep/5 17:46:22][took 0.002077 secs]
+[>>][5d7149ee3c11f202515451][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:46:22]
+	[19/Sep/5 17:46:23][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10088' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 17:46:23][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7149ee3c11f202515451][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:46:22][19/Sep/5 17:46:23][took 1.330431 secs]
+[<<][5d7149f0386d4757426533][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:46:24][19/Sep/5 17:46:24][took 0.003413 secs]
+[>>][5d7149f03950c005752625][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:46:24]
+[<<][5d7149f03950c005752625][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:46:24][19/Sep/5 17:46:24][took 0.001887 secs]
+[>>][5d7149f039d12597809493][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:46:24]
+[<<][5d7149f039d12597809493][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:46:24][19/Sep/5 17:46:24][took 0.126902 secs]
+[<<][5d714ab7c5514480423866][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:49:43][19/Sep/5 17:49:43][took 0.0039020000000001 secs]
+[>>][5d714ab7c652e220372902][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:49:43]
+[<<][5d714ab7c652e220372902][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:49:43][19/Sep/5 17:49:43][took 0.0020819999999999 secs]
+[>>][5d714ab7c6def642402481][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:49:43]
+	[19/Sep/5 17:49:43][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d714ab7c6def642402481][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:49:43][19/Sep/5 17:49:43][took 0.083581 secs]
+[<<][5d714ace272b4110960596][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:50:06][19/Sep/5 17:50:06][took 0.00357 secs]
+[>>][5d714ace2817f494210270][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:50:06]
+[<<][5d714ace2817f494210270][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:50:06][19/Sep/5 17:50:06][took 0.001923 secs]
+[>>][5d714ace289a2506639383][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:50:06]
+	[19/Sep/5 17:50:07][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10179' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 17:50:07][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/5 17:50:07][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d714ace289a2506639383][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:50:06][19/Sep/5 17:50:07][took 1.299969 secs]
+[<<][5d714acfdad99084290278][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:50:07][19/Sep/5 17:50:07][took 0.00344 secs]
+[>>][5d714acfdbbcd680426625][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:50:07]
+[<<][5d714acfdbbcd680426625][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:50:07][19/Sep/5 17:50:07][took 0.002053 secs]
+[>>][5d714acfdc470944450211][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:50:07]
+[<<][5d714acfdc470944450211][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:50:07][19/Sep/5 17:50:08][took 0.129661 secs]
+[<<][5d714af95d184933311405][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:50:49][19/Sep/5 17:50:49][took 0.003875 secs]
+[>>][5d714af95e1ad095267232][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:50:49]
+[<<][5d714af95e1ad095267232][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:50:49][19/Sep/5 17:50:49][took 0.002068 secs]
+[>>][5d714af95ea63770576737][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:50:49]
+	[19/Sep/5 17:50:49][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d714af95ea63770576737][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:50:49][19/Sep/5 17:50:49][took 0.09164 secs]
+[<<][5d714b88105bc109351948][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:12][19/Sep/5 17:53:12][took 0.003714 secs]
+[>>][5d714b881150b706199442][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:12]
+[<<][5d714b881150b706199442][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:12][19/Sep/5 17:53:12][took 0.001664 secs]
+[>>][5d714b8811c24477781498][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:12]
+	[19/Sep/5 17:53:13][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10147' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 17:53:13][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d714b8811c24477781498][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:12][19/Sep/5 17:53:13][took 1.268895 secs]
+[<<][5d714b89bca83391926935][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:53:13][19/Sep/5 17:53:13][took 0.003526 secs]
+[>>][5d714b89bd923400739507][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:53:13]
+[<<][5d714b89bd923400739507][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:53:13][19/Sep/5 17:53:13][took 0.0018630000000001 secs]
+[>>][5d714b89be10a110113379][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:53:13]
+[<<][5d714b89be10a110113379][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:53:13][19/Sep/5 17:53:13][took 0.132478 secs]
+[<<][5d714b8e08727858751421][DEFAULT][/lib/attachments/attachmentupload.php][19/Sep/5 17:53:18][19/Sep/5 17:53:18][took 0.003902 secs]
+[>>][5d714b8e0972e537291537][DEFAULT][/lib/attachments/attachmentupload.php][19/Sep/5 17:53:18]
+[<<][5d714b8e0972e537291537][DEFAULT][/lib/attachments/attachmentupload.php][19/Sep/5 17:53:18][19/Sep/5 17:53:18][took 0.001714 secs]
+[>>][5d714b8e09e73504473894][DEFAULT][/lib/attachments/attachmentupload.php][19/Sep/5 17:53:18]
+[<<][5d714b8e09e73504473894][DEFAULT][/lib/attachments/attachmentupload.php][19/Sep/5 17:53:18][19/Sep/5 17:53:18][took 0.006714 secs]
+[<<][5d714b92174e4317612411][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:22][19/Sep/5 17:53:22][took 0.003469 secs]
+[>>][5d714b921834d150096032][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:22]
+[<<][5d714b921834d150096032][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:22][19/Sep/5 17:53:22][took 0.001821 secs]
+[>>][5d714b9218b03729175177][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:22]
+	[19/Sep/5 17:53:22][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d714b9218b03729175177][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:22][19/Sep/5 17:53:22][took 0.081863 secs]
+[<<][5d714b9b1461e876479866][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:31][19/Sep/5 17:53:31][took 0.004368 secs]
+[>>][5d714b9b1580c747578764][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:31]
+[<<][5d714b9b1580c747578764][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:31][19/Sep/5 17:53:31][took 0.002114 secs]
+[>>][5d714b9b160ee877991971][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:31]
+	[19/Sep/5 17:53:31][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d714b9b160ee877991971][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:31][19/Sep/5 17:53:31][took 0.095553 secs]
+[<<][5d714ba2d35c5302149219][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:38][19/Sep/5 17:53:38][took 0.003744 secs]
+[>>][5d714ba2d4537922458474][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:38]
+[<<][5d714ba2d4537922458474][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:38][19/Sep/5 17:53:38][took 0.0020009999999999 secs]
+[>>][5d714ba2d4da7198838022][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:38]
+	[19/Sep/5 17:53:38][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d714ba2d4da7198838022][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:53:38][19/Sep/5 17:53:38][took 0.078487 secs]
+[<<][5d714c2dcab95385422164][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:55:57][19/Sep/5 17:55:57][took 0.0036389999999999 secs]
+[>>][5d714c2dcbabe504121848][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:55:57]
+[<<][5d714c2dcbabe504121848][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:55:57][19/Sep/5 17:55:57][took 0.001911 secs]
+[>>][5d714c2dcc2d5665988191][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:55:57]
+	[19/Sep/5 17:55:57][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d714c2dcc2d5665988191][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:55:57][19/Sep/5 17:55:57][took 0.102513 secs]
+[<<][5d714c5d0d964599064492][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:56:45][19/Sep/5 17:56:45][took 0.003037 secs]
+[>>][5d714c5d0e5f1452741361][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:56:45]
+[<<][5d714c5d0e5f1452741361][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:56:45][19/Sep/5 17:56:45][took 0.002337 secs]
+[>>][5d714c5d0ef9e328358313][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:56:45]
+	[19/Sep/5 17:56:45][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d714c5d0ef9e328358313][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:56:45][19/Sep/5 17:56:45][took 0.111757 secs]
+[<<][5d714cd1d2567794197563][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:58:41][19/Sep/5 17:58:41][took 0.003934 secs]
+[>>][5d714cd1d35d7135694747][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:58:41]
+[<<][5d714cd1d35d7135694747][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:58:41][19/Sep/5 17:58:41][took 0.0021370000000001 secs]
+[>>][5d714cd1d3ece334846614][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:58:41]
+	[19/Sep/5 17:58:43][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-13520' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 17:58:43][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/5 17:58:43][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d714cd1d3ece334846614][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:58:41][19/Sep/5 17:58:43][took 1.568285 secs]
+[<<][5d714cd405b37031371676][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:58:44][19/Sep/5 17:58:44][took 0.003471 secs]
+[>>][5d714cd40699a536311018][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:58:44]
+[<<][5d714cd40699a536311018][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:58:44][19/Sep/5 17:58:44][took 0.002062 secs]
+[>>][5d714cd40724a684316363][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:58:44]
+[<<][5d714cd40724a684316363][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 17:58:44][19/Sep/5 17:58:44][took 0.130511 secs]
+[<<][5d714cd7a6c1c943771057][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:58:47][19/Sep/5 17:58:47][took 0.003462 secs]
+[>>][5d714cd7a7a84033518638][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:58:47]
+[<<][5d714cd7a7a84033518638][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:58:47][19/Sep/5 17:58:47][took 0.002135 secs]
+[>>][5d714cd7a836d208353804][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:58:47]
+	[19/Sep/5 17:58:47][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d714cd7a836d208353804][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 17:58:47][19/Sep/5 17:58:47][took 0.082443 secs]
+[<<][5d714f38a440a104981954][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:08:56][19/Sep/5 18:08:56][took 0.0039439999999999 secs]
+[>>][5d714f38a5451584116209][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:08:56]
+[<<][5d714f38a5451584116209][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:08:56][19/Sep/5 18:08:56][took 0.002048 secs]
+[>>][5d714f38a5cf4159804297][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:08:56]
+	[19/Sep/5 18:08:58][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-13547' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 18:08:58][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d714f38a5cf4159804297][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:08:56][19/Sep/5 18:08:58][took 1.574557 secs]
+[<<][5d714f3ac1d38560608486][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:08:58][19/Sep/5 18:08:58][took 0.0036590000000001 secs]
+[>>][5d714f3ac2c4a446657319][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:08:58]
+[<<][5d714f3ac2c4a446657319][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:08:58][19/Sep/5 18:08:58][took 0.002155 secs]
+[>>][5d714f3ac3575655030154][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:08:58]
+[<<][5d714f3ac3575655030154][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:08:58][19/Sep/5 18:08:58][took 0.131647 secs]
+[<<][5d714f6611528275900420][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:09:42][19/Sep/5 18:09:42][took 0.003732 secs]
+[>>][5d714f6612492227212209][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:09:42]
+[<<][5d714f6612492227212209][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:09:42][19/Sep/5 18:09:42][took 0.001988 secs]
+[>>][5d714f6612cf5567593963][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:09:42]
+	[19/Sep/5 18:09:42][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d714f6612cf5567593963][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:09:42][19/Sep/5 18:09:42][took 0.099284 secs]
+[<<][5d7150241be82925489038][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:12:52][19/Sep/5 18:12:52][took 0.003629 secs]
+[>>][5d7150241cd8c003133116][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:12:52]
+[<<][5d7150241cd8c003133116][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:12:52][19/Sep/5 18:12:52][took 0.001933 secs]
+[>>][5d7150241d5b8911572560][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:12:52]
+	[19/Sep/5 18:12:53][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-13548' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 18:12:53][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/5 18:12:53][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7150241d5b8911572560][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:12:52][19/Sep/5 18:12:53][took 1.472559 secs]
+[<<][5d7150261505a612858998][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:12:54][19/Sep/5 18:12:54][took 0.003113 secs]
+[>>][5d71502615d63942652073][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:12:54]
+[<<][5d71502615d63942652073][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:12:54][19/Sep/5 18:12:54][took 0.002192 secs]
+[>>][5d71502616695586233328][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:12:54]
+[<<][5d71502616695586233328][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:12:54][19/Sep/5 18:12:54][took 0.12537 secs]
+[<<][5d71503348686222236956][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:13:07][19/Sep/5 18:13:07][took 0.003634 secs]
+[>>][5d7150334958d528903282][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:13:07]
+[<<][5d7150334958d528903282][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:13:07][19/Sep/5 18:13:07][took 0.002114 secs]
+[>>][5d71503349e70379645573][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:13:07]
+	[19/Sep/5 18:13:07][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d71503349e70379645573][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:13:07][19/Sep/5 18:13:07][took 0.079467 secs]
+[<<][5d715142209c9453990920][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:17:38][19/Sep/5 18:17:38][took 0.004019 secs]
+[>>][5d71514221a64848620522][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:17:38]
+[<<][5d71514221a64848620522][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:17:38][19/Sep/5 18:17:38][took 0.002035 secs]
+[>>][5d715142222f8569331999][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:17:38]
+	[19/Sep/5 18:17:39][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10207' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 18:17:39][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715142222f8569331999][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:17:38][19/Sep/5 18:17:39][took 1.41741 secs]
+[<<][5d715143e224d013737212][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:17:39][19/Sep/5 18:17:39][took 0.003414 secs]
+[>>][5d715143e306a075423255][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:17:39]
+[<<][5d715143e306a075423255][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:17:39][19/Sep/5 18:17:39][took 0.0022949999999999 secs]
+[>>][5d715143e39ff241339844][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:17:39]
+[<<][5d715143e39ff241339844][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:17:39][19/Sep/5 18:17:40][took 0.126817 secs]
+[<<][5d71515412f5a429522234][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:17:56][19/Sep/5 18:17:56][took 0.00352 secs]
+[>>][5d71515413dee144220597][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:17:56]
+[<<][5d71515413dee144220597][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:17:56][19/Sep/5 18:17:56][took 0.001861 secs]
+[>>][5d715154145f0315892453][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:17:56]
+	[19/Sep/5 18:17:56][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715154145f0315892453][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:17:56][19/Sep/5 18:17:56][took 0.064994 secs]
+[<<][5d7151cadfd5c996457412][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:19:54][19/Sep/5 18:19:54][took 0.0038159999999999 secs]
+[>>][5d7151cae0d1a524097094][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:19:54]
+[<<][5d7151cae0d1a524097094][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:19:54][19/Sep/5 18:19:54][took 0.001989 secs]
+[>>][5d7151cae1580605043094][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:19:54]
+	[19/Sep/5 18:19:56][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10089' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 18:19:56][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/5 18:19:56][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7151cae1580605043094][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:19:54][19/Sep/5 18:19:56][took 1.350472 secs]
+[<<][5d7151cca5865561643127][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:19:56][19/Sep/5 18:19:56][took 0.003394 secs]
+[>>][5d7151cca6662532023604][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:19:56]
+[<<][5d7151cca6662532023604][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:19:56][19/Sep/5 18:19:56][took 0.0063840000000001 secs]
+[>>][5d7151cca7ffa766967898][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:19:56]
+[<<][5d7151cca7ffa766967898][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:19:56][19/Sep/5 18:19:56][took 0.130057 secs]
+[<<][5d7151cf4e089808486371][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:19:59][19/Sep/5 18:19:59][took 0.003834 secs]
+[>>][5d7151cf4f04d742767452][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:19:59]
+[<<][5d7151cf4f04d742767452][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:19:59][19/Sep/5 18:19:59][took 0.002211 secs]
+[>>][5d7151cf4f98f917698528][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:19:59]
+	[19/Sep/5 18:19:59][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7151cf4f98f917698528][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:19:59][19/Sep/5 18:19:59][took 0.081103 secs]
+[<<][5d7156d30efd1108247229][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:41:23][19/Sep/5 18:41:23][took 0.007445 secs]
+[>>][5d7156d310dd3524723440][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:41:23]
+[<<][5d7156d310dd3524723440][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:41:23][19/Sep/5 18:41:23][took 0.002054 secs]
+[>>][5d7156d31167b526457615][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:41:23]
+	[19/Sep/5 18:41:24][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10090' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 18:41:24][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7156d31167b526457615][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:41:23][19/Sep/5 18:41:24][took 1.471307 secs]
+[<<][5d7156d530e11169151208][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:41:25][19/Sep/5 18:41:25][took 0.003462 secs]
+[>>][5d7156d531c5c704530130][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:41:25]
+[<<][5d7156d531c5c704530130][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:41:25][19/Sep/5 18:41:25][took 0.002074 secs]
+[>>][5d7156d532514491614405][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:41:25]
+[<<][5d7156d532514491614405][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:41:25][19/Sep/5 18:41:25][took 0.133796 secs]
+[<<][5d7158c3064fb785798781][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:49:39][19/Sep/5 18:49:39][took 0.00391 secs]
+[>>][5d7158c30751f178990625][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:49:39]
+[<<][5d7158c30751f178990625][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:49:39][19/Sep/5 18:49:39][took 0.002112 secs]
+[>>][5d7158c307e00378574196][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:49:39]
+	[19/Sep/5 18:49:39][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7158c307e00378574196][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:49:39][19/Sep/5 18:49:39][took 0.067285 secs]
+[<<][5d7159b057c46356449649][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:53:36][19/Sep/5 18:53:36][took 0.004049 secs]
+[>>][5d7159b058ce5401502393][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:53:36]
+[<<][5d7159b058ce5401502393][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:53:36][19/Sep/5 18:53:36][took 0.00323 secs]
+[>>][5d7159b059a25326055375][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:53:36]
+	[19/Sep/5 18:53:37][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10100' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 18:53:37][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/5 18:53:37][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7159b059a25326055375][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:53:36][19/Sep/5 18:53:37][took 1.450296 secs]
+[<<][5d7159b28bb27178835106][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:53:38][19/Sep/5 18:53:38][took 0.003484 secs]
+[>>][5d7159b28c9a0825224268][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:53:38]
+[<<][5d7159b28c9a0825224268][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:53:38][19/Sep/5 18:53:38][took 0.002043 secs]
+[>>][5d7159b28d23b528740344][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:53:38]
+[<<][5d7159b28d23b528740344][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:53:38][19/Sep/5 18:53:38][took 0.130921 secs]
+[<<][5d7159bcb4cff657837494][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:53:48][19/Sep/5 18:53:48][took 0.003655 secs]
+[>>][5d7159bcb5c3a318358125][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:53:48]
+[<<][5d7159bcb5c3a318358125][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:53:48][19/Sep/5 18:53:48][took 0.002027 secs]
+[>>][5d7159bcb64c6950146459][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:53:48]
+	[19/Sep/5 18:53:48][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7159bcb64c6950146459][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:53:48][19/Sep/5 18:53:48][took 0.075941 secs]
+[<<][5d7159e4416e4240150444][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:54:28][19/Sep/5 18:54:28][took 0.003643 secs]
+[>>][5d7159e442600088533469][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:54:28]
+[<<][5d7159e442600088533469][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:54:28][19/Sep/5 18:54:28][took 0.002018 secs]
+[>>][5d7159e442e84645905515][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:54:28]
+	[19/Sep/5 18:54:29][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10104' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 18:54:29][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7159e442e84645905515][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:54:28][19/Sep/5 18:54:29][took 1.428184 secs]
+[<<][5d7159e60e56c016443650][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:54:30][19/Sep/5 18:54:30][took 0.004197 secs]
+[>>][5d7159e60f97f719635649][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:54:30]
+[<<][5d7159e60f97f719635649][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:54:30][19/Sep/5 18:54:30][took 0.002792 secs]
+[>>][5d7159e61050b198234264][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:54:30]
+[<<][5d7159e61050b198234264][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:54:30][19/Sep/5 18:54:30][took 0.122989 secs]
+[<<][5d7159e9ab065827454762][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:54:33][19/Sep/5 18:54:33][took 0.0036389999999999 secs]
+[>>][5d7159e9abf6d567819697][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:54:33]
+[<<][5d7159e9abf6d567819697][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:54:33][19/Sep/5 18:54:33][took 0.0020520000000001 secs]
+[>>][5d7159e9ac811390715220][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:54:33]
+	[19/Sep/5 18:54:33][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7159e9ac811390715220][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:54:33][19/Sep/5 18:54:33][took 0.084411 secs]
+[<<][5d715a765383f037086499][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:56:54][19/Sep/5 18:56:54][took 0.003425 secs]
+[>>][5d715a7654694873642760][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:56:54]
+[<<][5d715a7654694873642760][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:56:54][19/Sep/5 18:56:54][took 0.001665 secs]
+[>>][5d715a7654da7010887062][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:56:54]
+	[19/Sep/5 18:56:55][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-13563' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 18:56:55][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/5 18:56:55][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715a7654da7010887062][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:56:54][19/Sep/5 18:56:55][took 1.412003 secs]
+[<<][5d715a785a150567552227][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:56:56][19/Sep/5 18:56:56][took 0.003163 secs]
+[>>][5d715a785ae84902759380][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:56:56]
+[<<][5d715a785ae84902759380][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:56:56][19/Sep/5 18:56:56][took 0.001624 secs]
+[>>][5d715a785b56c162681642][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:56:56]
+[<<][5d715a785b56c162681642][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 18:56:56][19/Sep/5 18:56:56][took 0.165735 secs]
+[<<][5d715a85ee19a626109519][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:57:09][19/Sep/5 18:57:09][took 0.0033609999999999 secs]
+[>>][5d715a85eef84314425116][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:57:09]
+[<<][5d715a85eef84314425116][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:57:09][19/Sep/5 18:57:09][took 0.001952 secs]
+[>>][5d715a85ef7c6148133859][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:57:09]
+	[19/Sep/5 18:57:10][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715a85ef7c6148133859][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:57:09][19/Sep/5 18:57:10][took 0.087974 secs]
+[<<][5d715b16c88b0655075342][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:59:34][19/Sep/5 18:59:34][took 0.003375 secs]
+[>>][5d715b16c96b5132135599][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:59:34]
+[<<][5d715b16c96b5132135599][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:59:34][19/Sep/5 18:59:34][took 0.00168 secs]
+[>>][5d715b16c9dd8333182366][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:59:34]
+	[19/Sep/5 18:59:34][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715b16c9dd8333182366][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 18:59:34][19/Sep/5 18:59:34][took 0.081741 secs]
+[<<][5d715c1731cba315352891][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:03:51][19/Sep/5 19:03:51][took 0.004035 secs]
+[>>][5d715c1732d55955327463][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:03:51]
+[<<][5d715c1732d55955327463][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:03:51][19/Sep/5 19:03:51][took 0.002109 secs]
+[>>][5d715c1733634197953779][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:03:51]
+	[19/Sep/5 19:03:52][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10153' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 19:03:52][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715c1733634197953779][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:03:51][19/Sep/5 19:03:52][took 1.301159 secs]
+[<<][5d715c18edaf9872926131][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:03:52][19/Sep/5 19:03:52][took 0.007221 secs]
+[>>][5d715c18ef7ed454011284][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:03:52]
+[<<][5d715c18ef7ed454011284][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:03:52][19/Sep/5 19:03:52][took 0.0017239999999999 secs]
+[>>][5d715c18eff47573846037][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:03:52]
+[<<][5d715c18eff47573846037][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:03:52][19/Sep/5 19:03:53][took 0.136441 secs]
+[<<][5d715c21067dd073943973][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:04:01][19/Sep/5 19:04:01][took 0.003674 secs]
+[>>][5d715c2107715012415563][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:04:01]
+[<<][5d715c2107715012415563][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:04:01][19/Sep/5 19:04:01][took 0.00202 secs]
+[>>][5d715c2107f97335206227][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:04:01]
+	[19/Sep/5 19:04:01][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715c2107f97335206227][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:04:01][19/Sep/5 19:04:01][took 0.071045 secs]
+[<<][5d715c3db25cf645030137][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:04:29][19/Sep/5 19:04:29][took 0.003684 secs]
+[>>][5d715c3db350c096597351][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:04:29]
+[<<][5d715c3db350c096597351][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:04:29][19/Sep/5 19:04:29][took 0.002099 secs]
+[>>][5d715c3db3ddf598417906][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:04:29]
+	[19/Sep/5 19:04:31][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10155' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 19:04:31][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/5 19:04:31][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715c3db3ddf598417906][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:04:29][19/Sep/5 19:04:31][took 1.411322 secs]
+[<<][5d715c3f8ec56658424664][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:04:31][19/Sep/5 19:04:31][took 0.003622 secs]
+[>>][5d715c3f8fb55215918698][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:04:31]
+[<<][5d715c3f8fb55215918698][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:04:31][19/Sep/5 19:04:31][took 0.001963 secs]
+[>>][5d715c3f903a0657159582][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:04:31]
+[<<][5d715c3f903a0657159582][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:04:31][19/Sep/5 19:04:31][took 0.130757 secs]
+[<<][5d715c43b7a3a264214176][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:04:35][19/Sep/5 19:04:35][took 0.003637 secs]
+[>>][5d715c43b8946652167038][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:04:35]
+[<<][5d715c43b8946652167038][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:04:35][19/Sep/5 19:04:35][took 0.002011 secs]
+[>>][5d715c43b91c1933788386][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:04:35]
+	[19/Sep/5 19:04:35][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715c43b91c1933788386][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:04:35][19/Sep/5 19:04:35][took 0.087524 secs]
+[<<][5d715c915c812398844483][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:05:53][19/Sep/5 19:05:53][took 0.004025 secs]
+[>>][5d715c915d8a1386781904][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:05:53]
+[<<][5d715c915d8a1386781904][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:05:53][19/Sep/5 19:05:53][took 0.001934 secs]
+[>>][5d715c915e0d0222054872][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:05:53]
+	[19/Sep/5 19:05:54][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10156' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 19:05:54][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715c915e0d0222054872][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:05:53][19/Sep/5 19:05:54][took 1.312688 secs]
+[<<][5d715c92f3a10696392371][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:05:54][19/Sep/5 19:05:55][took 0.003497 secs]
+[>>][5d715c9300641818642851][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:05:55]
+[<<][5d715c9300641818642851][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:05:55][19/Sep/5 19:05:55][took 0.001883 secs]
+[>>][5d715c9300e3a979206757][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:05:55]
+[<<][5d715c9300e3a979206757][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:05:55][19/Sep/5 19:05:55][took 0.135021 secs]
+[<<][5d715c98d96a5545487892][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:06:00][19/Sep/5 19:06:00][took 0.003628 secs]
+[>>][5d715c98da59c802607030][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:06:00]
+[<<][5d715c98da59c802607030][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:06:00][19/Sep/5 19:06:00][took 0.002076 secs]
+[>>][5d715c98dae5b378720151][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:06:00]
+	[19/Sep/5 19:06:00][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715c98dae5b378720151][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:06:00][19/Sep/5 19:06:00][took 0.081496 secs]
+[<<][5d715e875aa61177228229][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:15][19/Sep/5 19:14:15][took 0.003921 secs]
+[>>][5d715e875ba88312820757][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:15]
+[<<][5d715e875ba88312820757][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:15][19/Sep/5 19:14:15][took 0.001984 secs]
+[>>][5d715e875c2ea425314484][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:15]
+	[19/Sep/5 19:14:16][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10157' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 19:14:16][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/5 19:14:16][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715e875c2ea425314484][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:15][19/Sep/5 19:14:16][took 1.392362 secs]
+[<<][5d715e8916a31636792739][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:14:17][19/Sep/5 19:14:17][took 0.003516 secs]
+[>>][5d715e89178be711870998][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:14:17]
+[<<][5d715e89178be711870998][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:14:17][19/Sep/5 19:14:17][took 0.002252 secs]
+[>>][5d715e8918238780425995][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:14:17]
+[<<][5d715e8918238780425995][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:14:17][19/Sep/5 19:14:17][took 0.139826 secs]
+[<<][5d715e9aa8794941930771][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:34][19/Sep/5 19:14:34][took 0.003697 secs]
+[>>][5d715e9aa96d8282898812][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:34]
+[<<][5d715e9aa96d8282898812][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:34][19/Sep/5 19:14:34][took 0.001923 secs]
+[>>][5d715e9aa9efb523848706][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:34]
+	[19/Sep/5 19:14:34][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715e9aa9efb523848706][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:34][19/Sep/5 19:14:34][took 0.077127 secs]
+[<<][5d715ea974942984186693][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:49][19/Sep/5 19:14:49][took 0.003686 secs]
+[>>][5d715ea97589a240789053][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:49]
+[<<][5d715ea97589a240789053][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:49][19/Sep/5 19:14:49][took 0.001774 secs]
+[>>][5d715ea97602b769598901][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:49]
+	[19/Sep/5 19:14:50][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10154' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 19:14:50][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715ea97602b769598901][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:49][19/Sep/5 19:14:50][took 1.276005 secs]
+[<<][5d715eab0b517250225606][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:14:51][19/Sep/5 19:14:51][took 0.003188 secs]
+[>>][5d715eab0c255838362723][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:14:51]
+[<<][5d715eab0c255838362723][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:14:51][19/Sep/5 19:14:51][took 0.002156 secs]
+[>>][5d715eab0cb65577471504][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:14:51]
+[<<][5d715eab0cb65577471504][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:14:51][19/Sep/5 19:14:51][took 0.137378 secs]
+[<<][5d715ead5caa9176858059][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:53][19/Sep/5 19:14:53][took 0.003683 secs]
+[>>][5d715ead5d9d8041694791][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:53]
+[<<][5d715ead5d9d8041694791][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:53][19/Sep/5 19:14:53][took 0.002069 secs]
+[>>][5d715ead5e290077698238][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:53]
+	[19/Sep/5 19:14:53][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715ead5e290077698238][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:53][19/Sep/5 19:14:53][took 0.079979 secs]
+[<<][5d715eae0d992845003488][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:54][19/Sep/5 19:14:54][took 0.005873 secs]
+[>>][5d715eae0f155415776350][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:54]
+[<<][5d715eae0f155415776350][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:54][19/Sep/5 19:14:54][took 0.002093 secs]
+[>>][5d715eae0fa22070015641][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:54]
+	[19/Sep/5 19:14:54][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715eae0fa22070015641][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:14:54][19/Sep/5 19:14:54][took 0.075397 secs]
+[<<][5d715ebe00803553546078][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:15:10][19/Sep/5 19:15:10][took 0.004027 secs]
+[>>][5d715ebe018a0610721893][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:15:10]
+[<<][5d715ebe018a0610721893][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:15:10][19/Sep/5 19:15:10][took 0.006306 secs]
+[>>][5d715ebe03371029782467][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:15:10]
+	[19/Sep/5 19:15:10][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715ebe03371029782467][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:15:10][19/Sep/5 19:15:10][took 0.088303 secs]
+[<<][5d715efe62d73059702389][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:16:14][19/Sep/5 19:16:14][took 0.00346 secs]
+[>>][5d715efe63bd2189890242][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:16:14]
+[<<][5d715efe63bd2189890242][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:16:14][19/Sep/5 19:16:14][took 0.001639 secs]
+[>>][5d715efe642cc031585459][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:16:14]
+	[19/Sep/5 19:16:15][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10159' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 19:16:15][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/5 19:16:15][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715efe642cc031585459][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:16:14][19/Sep/5 19:16:15][took 1.332015 secs]
+[<<][5d715f0005111485609248][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:16:16][19/Sep/5 19:16:16][took 0.003474 secs]
+[>>][5d715f0005f73459719001][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:16:16]
+[<<][5d715f0005f73459719001][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:16:16][19/Sep/5 19:16:16][took 0.002114 secs]
+[>>][5d715f0006856594189107][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:16:16]
+[<<][5d715f0006856594189107][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:16:16][19/Sep/5 19:16:16][took 0.151315 secs]
+[<<][5d715f02ba860888213216][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:16:18][19/Sep/5 19:16:18][took 0.003969 secs]
+[>>][5d715f02bb8ac826916892][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:16:18]
+[<<][5d715f02bb8ac826916892][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:16:18][19/Sep/5 19:16:18][took 0.002224 secs]
+[>>][5d715f02bc1fe388963428][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:16:18]
+	[19/Sep/5 19:16:18][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715f02bc1fe388963428][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:16:18][19/Sep/5 19:16:18][took 0.070461 secs]
+[<<][5d715f51cf7e2378031034][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:17:37][19/Sep/5 19:17:37][took 0.0039469999999999 secs]
+[>>][5d715f51d082c505864189][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:17:37]
+[<<][5d715f51d082c505864189][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:17:37][19/Sep/5 19:17:37][took 0.005761 secs]
+[>>][5d715f51d1f40842925125][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:17:37]
+	[19/Sep/5 19:17:39][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10160' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 19:17:39][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715f51d1f40842925125][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:17:37][19/Sep/5 19:17:39][took 1.460453 secs]
+[<<][5d715f53b7361405974037][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:17:39][19/Sep/5 19:17:39][took 0.008082 secs]
+[>>][5d715f53b9425534890949][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:17:39]
+[<<][5d715f53b9425534890949][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:17:39][19/Sep/5 19:17:39][took 0.001795 secs]
+[>>][5d715f53b9bb3779117824][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:17:39]
+[<<][5d715f53b9bb3779117824][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:17:39][19/Sep/5 19:17:39][took 0.137835 secs]
+[<<][5d715f6062688531578364][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:17:52][19/Sep/5 19:17:52][took 0.003819 secs]
+[>>][5d715f6063646056401008][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:17:52]
+[<<][5d715f6063646056401008][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:17:52][19/Sep/5 19:17:52][took 0.001949 secs]
+[>>][5d715f6063e7c782338410][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:17:52]
+	[19/Sep/5 19:17:52][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d715f6063e7c782338410][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:17:52][19/Sep/5 19:17:52][took 0.077856 secs]
+[<<][5d7162ce05d59510196472][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:32:30][19/Sep/5 19:32:30][took 0.00388 secs]
+[>>][5d7162ce06d90623918777][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:32:30]
+[<<][5d7162ce06d90623918777][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:32:30][19/Sep/5 19:32:30][took 0.00186 secs]
+[>>][5d7162ce07565393538031][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:32:30]
+	[19/Sep/5 19:32:30][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7162ce07565393538031][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:32:30][19/Sep/5 19:32:30][took 0.085123 secs]
+[<<][5d7162fc507d1060687223][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:33:16][19/Sep/5 19:33:16][took 0.00369 secs]
+[>>][5d7162fc51717033644194][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:33:16]
+[<<][5d7162fc51717033644194][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:33:16][19/Sep/5 19:33:16][took 0.002122 secs]
+[>>][5d7162fc52003102931414][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:33:16]
+	[19/Sep/5 19:33:17][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10164' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 19:33:17][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/5 19:33:17][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7162fc52003102931414][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:33:16][19/Sep/5 19:33:17][took 1.370377 secs]
+[<<][5d7162fde9f46872594419][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:33:17][19/Sep/5 19:33:17][took 0.0041180000000001 secs]
+[>>][5d7162fdeb050437932962][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:33:17]
+[<<][5d7162fdeb050437932962][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:33:17][19/Sep/5 19:33:17][took 0.002 secs]
+[>>][5d7162fdeb8e1347891844][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:33:17]
+[<<][5d7162fdeb8e1347891844][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:33:17][19/Sep/5 19:33:18][took 0.133834 secs]
+[<<][5d7163b644259342399344][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:36:22][19/Sep/5 19:36:22][took 0.003507 secs]
+[>>][5d7163b6450de415096209][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:36:22]
+[<<][5d7163b6450de415096209][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:36:22][19/Sep/5 19:36:22][took 0.001599 secs]
+[>>][5d7163b6457b2770883923][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:36:22]
+	[19/Sep/5 19:36:22][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7163b6457b2770883923][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:36:22][19/Sep/5 19:36:22][took 0.070967 secs]
+[<<][5d7163c2363e1836343562][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:36:34][19/Sep/5 19:36:34][took 0.003621 secs]
+[>>][5d7163c2372da823492415][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:36:34]
+[<<][5d7163c2372da823492415][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:36:34][19/Sep/5 19:36:34][took 0.002391 secs]
+[>>][5d7163c237cd0942623139][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:36:34]
+	[19/Sep/5 19:36:35][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10163' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 19:36:35][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7163c237cd0942623139][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:36:34][19/Sep/5 19:36:35][took 1.331728 secs]
+[<<][5d7163c3ca516116682277][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:36:35][19/Sep/5 19:36:35][took 0.0030669999999999 secs]
+[>>][5d7163c3cb1ea110357374][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:36:35]
+[<<][5d7163c3cb1ea110357374][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:36:35][19/Sep/5 19:36:35][took 0.001675 secs]
+[>>][5d7163c3cb8ff963715599][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:36:35]
+[<<][5d7163c3cb8ff963715599][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:36:35][19/Sep/5 19:36:35][took 0.14449 secs]
+[<<][5d7163c87fb52697992450][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:36:40][19/Sep/5 19:36:40][took 0.0036889999999999 secs]
+[>>][5d7163c880a93103950126][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:36:40]
+[<<][5d7163c880a93103950126][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:36:40][19/Sep/5 19:36:40][took 0.002423 secs]
+[>>][5d7163c8814b0250082755][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:36:40]
+	[19/Sep/5 19:36:40][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7163c8814b0250082755][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:36:40][19/Sep/5 19:36:40][took 0.07492 secs]
+[<<][5d7163f1ad407900575556][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:37:21][19/Sep/5 19:37:21][took 0.0036259999999999 secs]
+[>>][5d7163f1ae339842311882][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:37:21]
+[<<][5d7163f1ae339842311882][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:37:21][19/Sep/5 19:37:21][took 0.001772 secs]
+[>>][5d7163f1aeac6692459923][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:37:21]
+	[19/Sep/5 19:37:22][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10162' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 19:37:23][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/5 19:37:23][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7163f1aeac6692459923][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:37:21][19/Sep/5 19:37:23][took 1.355923 secs]
+[<<][5d7163f359047291368250][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:37:23][19/Sep/5 19:37:23][took 0.003713 secs]
+[>>][5d7163f359f7e278975932][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:37:23]
+[<<][5d7163f359f7e278975932][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:37:23][19/Sep/5 19:37:23][took 0.002081 secs]
+[>>][5d7163f35a83f630617992][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:37:23]
+[<<][5d7163f35a83f630617992][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:37:23][19/Sep/5 19:37:23][took 0.151392 secs]
+[<<][5d7163fa77abf939439842][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:37:30][19/Sep/5 19:37:30][took 0.003594 secs]
+[>>][5d7163fa78999266031830][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:37:30]
+[<<][5d7163fa78999266031830][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:37:30][19/Sep/5 19:37:30][took 0.001868 secs]
+[>>][5d7163fa7917d105176627][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:37:30]
+	[19/Sep/5 19:37:30][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7163fa7917d105176627][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:37:30][19/Sep/5 19:37:30][took 0.080639 secs]
+[<<][5d7165038c3a0905352239][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:41:55][19/Sep/5 19:41:55][took 0.003985 secs]
+[>>][5d7165038d40b313042810][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:41:55]
+[<<][5d7165038d40b313042810][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:41:55][19/Sep/5 19:41:55][took 0.001865 secs]
+[>>][5d7165038dbf3313080020][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:41:55]
+	[19/Sep/5 19:41:56][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10165' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 19:41:56][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7165038dbf3313080020][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:41:55][19/Sep/5 19:41:56][took 1.367334 secs]
+[<<][5d71650562750405889366][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:41:57][19/Sep/5 19:41:57][took 0.00295 secs]
+[>>][5d71650563397340908380][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:41:57]
+[<<][5d71650563397340908380][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:41:57][19/Sep/5 19:41:57][took 0.003201 secs]
+[>>][5d716505640a6941355495][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:41:57]
+[<<][5d716505640a6941355495][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 19:41:57][19/Sep/5 19:41:57][took 0.14429 secs]
+[<<][5d71653824aec009268783][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:42:48][19/Sep/5 19:42:48][took 0.003394 secs]
+[>>][5d71653825919526378753][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:42:48]
+[<<][5d71653825919526378753][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:42:48][19/Sep/5 19:42:48][took 0.00196 secs]
+[>>][5d71653826151833110235][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:42:48]
+	[19/Sep/5 19:42:48][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d71653826151833110235][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 19:42:48][19/Sep/5 19:42:48][took 0.085051 secs]
+[<<][5d716c856edce365855910][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:13:57][19/Sep/5 20:13:57][took 0.003966 secs]
+[>>][5d716c856fe1f277977317][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:13:57]
+[<<][5d716c856fe1f277977317][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:13:57][19/Sep/5 20:13:57][took 0.002129 secs]
+[>>][5d716c8570711151504543][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:13:57]
+	[19/Sep/5 20:13:58][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10161' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 20:13:58][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/5 20:13:58][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d716c8570711151504543][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:13:57][19/Sep/5 20:13:58][took 1.430215 secs]
+[<<][5d716c8759cd7671380421][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:13:59][19/Sep/5 20:13:59][took 0.00348 secs]
+[>>][5d716c875ab3a436614050][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:13:59]
+[<<][5d716c875ab3a436614050][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:13:59][19/Sep/5 20:13:59][took 0.002049 secs]
+[>>][5d716c875b3e2918141919][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:13:59]
+[<<][5d716c875b3e2918141919][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:13:59][19/Sep/5 20:13:59][took 0.131012 secs]
+[<<][5d716ecb735b6567599674][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:23:39][19/Sep/5 20:23:39][took 0.004156 secs]
+[>>][5d716ecb74748745584866][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:23:39]
+[<<][5d716ecb74748745584866][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:23:39][19/Sep/5 20:23:39][took 0.002049 secs]
+[>>][5d716ecb74fec635325094][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:23:39]
+	[19/Sep/5 20:23:39][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d716ecb74fec635325094][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:23:39][19/Sep/5 20:23:39][took 0.074676 secs]
+[<<][5d7173bfeb348748522267][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:44:47][19/Sep/5 20:44:47][took 0.003201 secs]
+[>>][5d7173bfec0b0429373315][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:44:47]
+[<<][5d7173bfec0b0429373315][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:44:47][19/Sep/5 20:44:47][took 0.0020560000000001 secs]
+[>>][5d7173bfec94d215899649][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:44:47]
+	[19/Sep/5 20:44:49][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10167' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 20:44:49][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7173bfec94d215899649][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:44:47][19/Sep/5 20:44:49][took 1.314493 secs]
+[<<][5d7173c19c464682890744][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:44:49][19/Sep/5 20:44:49][took 0.003563 secs]
+[>>][5d7173c19d325285548244][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:44:49]
+[<<][5d7173c19d325285548244][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:44:49][19/Sep/5 20:44:49][took 0.0020990000000001 secs]
+[>>][5d7173c19dc09387808195][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:44:49]
+[<<][5d7173c19dc09387808195][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:44:49][19/Sep/5 20:44:49][took 0.127433 secs]
+[<<][5d71748325928343674643][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:03][19/Sep/5 20:48:03][took 0.004274 secs]
+[>>][5d71748326ab8092683246][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:03]
+[<<][5d71748326ab8092683246][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:03][19/Sep/5 20:48:03][took 0.001796 secs]
+[>>][5d7174832725e432496320][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:03]
+	[19/Sep/5 20:48:03][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7174832725e432496320][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:03][19/Sep/5 20:48:03][took 0.096736 secs]
+[<<][5d717484c94b3364330975][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:04][19/Sep/5 20:48:04][took 0.003671 secs]
+[>>][5d717484ca3e3730448898][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:04]
+[<<][5d717484ca3e3730448898][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:04][19/Sep/5 20:48:04][took 0.002066 secs]
+[>>][5d717484cac95289994778][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:04]
+	[19/Sep/5 20:48:04][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d717484cac95289994778][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:04][19/Sep/5 20:48:04][took 0.066839 secs]
+[<<][5d717499c659a786103920][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:25][19/Sep/5 20:48:25][took 0.003742 secs]
+[>>][5d717499c7512162862749][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:25]
+[<<][5d717499c7512162862749][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:25][19/Sep/5 20:48:25][took 0.002076 secs]
+[>>][5d717499c7dd0408370241][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:25]
+	[19/Sep/5 20:48:27][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10174' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 20:48:27][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/5 20:48:27][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d717499c7dd0408370241][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:25][19/Sep/5 20:48:27][took 1.356178 secs]
+[<<][5d71749b7895a830338196][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:48:27][19/Sep/5 20:48:27][took 0.003445 secs]
+[>>][5d71749b7979a945922434][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:48:27]
+[<<][5d71749b7979a945922434][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:48:27][19/Sep/5 20:48:27][took 0.002144 secs]
+[>>][5d71749b7a098977839112][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:48:27]
+[<<][5d71749b7a098977839112][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:48:27][19/Sep/5 20:48:27][took 0.138864 secs]
+[<<][5d71749e0371c556960541][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:30][19/Sep/5 20:48:30][took 0.00401 secs]
+[>>][5d71749e0479c948146464][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:30]
+[<<][5d71749e0479c948146464][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:30][19/Sep/5 20:48:30][took 0.001707 secs]
+[>>][5d71749e04eea124768698][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:30]
+	[19/Sep/5 20:48:30][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d71749e04eea124768698][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:30][19/Sep/5 20:48:30][took 0.06442 secs]
+[<<][5d7174ac79127214189425][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:44][19/Sep/5 20:48:44][took 0.003654 secs]
+[>>][5d7174ac7a042114785701][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:44]
+[<<][5d7174ac7a042114785701][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:44][19/Sep/5 20:48:44][took 0.002055 secs]
+[>>][5d7174ac7a903636118114][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:44]
+	[19/Sep/5 20:48:45][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10175' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 20:48:45][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7174ac7a903636118114][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:48:44][19/Sep/5 20:48:45][took 1.302431 secs]
+[<<][5d7174ae0d7d1925431954][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:48:46][19/Sep/5 20:48:46][took 0.005731 secs]
+[>>][5d7174ae0eef2169023363][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:48:46]
+[<<][5d7174ae0eef2169023363][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:48:46][19/Sep/5 20:48:46][took 0.00212 secs]
+[>>][5d7174ae0f7d9896575912][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:48:46]
+[<<][5d7174ae0f7d9896575912][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:48:46][19/Sep/5 20:48:46][took 0.128749 secs]
+[<<][5d71757a8f189347178425][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:52:10][19/Sep/5 20:52:10][took 0.004065 secs]
+[>>][5d71757a9023f744727206][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:52:10]
+[<<][5d71757a9023f744727206][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:52:10][19/Sep/5 20:52:10][took 0.002399 secs]
+[>>][5d71757a90c33644935058][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:52:10]
+	[19/Sep/5 20:52:10][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d71757a90c33644935058][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:52:10][19/Sep/5 20:52:10][took 0.077955 secs]
+[<<][5d71758488d2a339106253][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:52:20][19/Sep/5 20:52:20][took 0.003789 secs]
+[>>][5d71758489ccf758710262][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:52:20]
+[<<][5d71758489ccf758710262][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:52:20][19/Sep/5 20:52:20][took 0.002065 secs]
+[>>][5d7175848a581648173831][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:52:20]
+	[19/Sep/5 20:52:21][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10176' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 20:52:21][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/5 20:52:21][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7175848a581648173831][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:52:20][19/Sep/5 20:52:21][took 1.348646 secs]
+[<<][5d71758631df3578412929][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:52:22][19/Sep/5 20:52:22][took 0.003515 secs]
+[>>][5d71758632c7d875825899][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:52:22]
+[<<][5d71758632c7d875825899][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:52:22][19/Sep/5 20:52:22][took 0.002008 secs]
+[>>][5d71758633510492227947][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:52:22]
+[<<][5d71758633510492227947][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:52:22][19/Sep/5 20:52:22][took 0.120928 secs]
+[<<][5d717615740af320605219][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:54:45][19/Sep/5 20:54:45][took 0.003765 secs]
+[>>][5d71761575036427210383][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:54:45]
+[<<][5d71761575036427210383][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:54:45][19/Sep/5 20:54:45][took 0.001937 secs]
+[>>][5d71761575867747887014][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:54:45]
+	[19/Sep/5 20:54:45][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d71761575867747887014][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:54:45][19/Sep/5 20:54:45][took 0.065706 secs]
+[<<][5d717628170bf384094161][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:04][19/Sep/5 20:55:04][took 0.004069 secs]
+[>>][5d71762818177277375816][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:04]
+[<<][5d71762818177277375816][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:04][19/Sep/5 20:55:04][took 0.002044 secs]
+[>>][5d71762818a13378758791][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:04]
+	[19/Sep/5 20:55:05][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10177' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 20:55:05][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d71762818a13378758791][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:04][19/Sep/5 20:55:05][took 1.340917 secs]
+[<<][5d717629c68de789461482][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:55:05][19/Sep/5 20:55:05][took 0.003644 secs]
+[>>][5d717629c77e6111681176][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:55:05]
+[<<][5d717629c77e6111681176][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:55:05][19/Sep/5 20:55:05][took 0.0019399999999999 secs]
+[>>][5d717629c8018109772556][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:55:05]
+[<<][5d717629c8018109772556][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:55:05][19/Sep/5 20:55:05][took 0.135495 secs]
+[<<][5d71763567495480765154][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:17][19/Sep/5 20:55:17][took 0.00377 secs]
+[>>][5d71763568420141279327][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:17]
+[<<][5d71763568420141279327][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:17][19/Sep/5 20:55:17][took 0.001855 secs]
+[>>][5d71763568bff122389038][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:17]
+	[19/Sep/5 20:55:17][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d71763568bff122389038][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:17][19/Sep/5 20:55:17][took 0.072367 secs]
+[<<][5d71764658974285702355][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:34][19/Sep/5 20:55:34][took 0.003805 secs]
+[>>][5d71764659932328067544][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:34]
+[<<][5d71764659932328067544][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:34][19/Sep/5 20:55:34][took 0.002018 secs]
+[>>][5d7176465a1b9687256279][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:34]
+	[19/Sep/5 20:55:35][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10178' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 20:55:35][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/5 20:55:35][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7176465a1b9687256279][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:34][19/Sep/5 20:55:35][took 1.396067 secs]
+[<<][5d71764819280863418806][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:55:36][19/Sep/5 20:55:36][took 0.003646 secs]
+[>>][5d7176481a195800777668][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:55:36]
+[<<][5d7176481a195800777668][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:55:36][19/Sep/5 20:55:36][took 0.001888 secs]
+[>>][5d7176481a991068010629][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:55:36]
+[<<][5d7176481a991068010629][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:55:36][19/Sep/5 20:55:36][took 0.136207 secs]
+[<<][5d71764a47699641709192][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:38][19/Sep/5 20:55:38][took 0.003698 secs]
+[>>][5d71764a485d3169426733][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:38]
+[<<][5d71764a485d3169426733][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:38][19/Sep/5 20:55:38][took 0.002009 secs]
+[>>][5d71764a48e4b091715472][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:38]
+	[19/Sep/5 20:55:38][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d71764a48e4b091715472][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:55:38][19/Sep/5 20:55:38][took 0.094141 secs]
+[<<][5d71766149b2e603088337][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:56:01][19/Sep/5 20:56:01][took 0.003588 secs]
+[>>][5d7176614a9fe729372090][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:56:01]
+[<<][5d7176614a9fe729372090][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:56:01][19/Sep/5 20:56:01][took 0.002169 secs]
+[>>][5d7176614b318570220740][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:56:01]
+	[19/Sep/5 20:56:02][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10180' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 20:56:02][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7176614b318570220740][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 20:56:01][19/Sep/5 20:56:02][took 1.32093 secs]
+[<<][5d717662de2cc474230195][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:56:02][19/Sep/5 20:56:02][took 0.003435 secs]
+[>>][5d717662df10c933189374][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:56:02]
+[<<][5d717662df10c933189374][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:56:02][19/Sep/5 20:56:02][took 0.001997 secs]
+[>>][5d717662df978050670755][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:56:02]
+[<<][5d717662df978050670755][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 20:56:02][19/Sep/5 20:56:03][took 0.138051 secs]
+[<<][5d717a8a535c2101834771][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:13:46][19/Sep/5 21:13:46][took 0.003949 secs]
+[>>][5d717a8a5460e913391760][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:13:46]
+[<<][5d717a8a5460e913391760][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:13:46][19/Sep/5 21:13:46][took 0.001939 secs]
+[>>][5d717a8a54e40308464499][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:13:46]
+	[19/Sep/5 21:13:46][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d717a8a54e40308464499][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:13:46][19/Sep/5 21:13:46][took 0.074281 secs]
+[<<][5d717aab5d31b270229282][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:14:19][19/Sep/5 21:14:19][took 0.003631 secs]
+[>>][5d717aab5e221746108839][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:14:19]
+[<<][5d717aab5e221746108839][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:14:19][19/Sep/5 21:14:19][took 0.002058 secs]
+[>>][5d717aab5eacd294908391][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:14:19]
+	[19/Sep/5 21:14:20][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10171' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 21:14:20][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/5 21:14:20][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d717aab5eacd294908391][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:14:19][19/Sep/5 21:14:20][took 1.386111 secs]
+[<<][5d717aad1c05a214846791][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 21:14:21][19/Sep/5 21:14:21][took 0.003425 secs]
+[>>][5d717aad1ce91358852882][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 21:14:21]
+[<<][5d717aad1ce91358852882][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 21:14:21][19/Sep/5 21:14:21][took 0.002104 secs]
+[>>][5d717aad1d769487469353][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 21:14:21]
+[<<][5d717aad1d769487469353][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 21:14:21][19/Sep/5 21:14:21][took 0.138909 secs]
+[<<][5d717c82d6f3d800683078][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:10][19/Sep/5 21:22:10][took 0.004112 secs]
+[>>][5d717c82d801b373996374][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:10]
+[<<][5d717c82d801b373996374][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:10][19/Sep/5 21:22:10][took 0.0021289999999999 secs]
+[>>][5d717c82d890e915008571][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:10]
+	[19/Sep/5 21:22:10][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d717c82d890e915008571][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:10][19/Sep/5 21:22:10][took 0.084116 secs]
+[<<][5d717c84f031b276085319][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:12][19/Sep/5 21:22:12][took 0.003699 secs]
+[>>][5d717c84f1262721899034][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:12]
+[<<][5d717c84f1262721899034][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:12][19/Sep/5 21:22:12][took 0.002189 secs]
+[>>][5d717c84f1b97892703125][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:12]
+	[19/Sep/5 21:22:13][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d717c84f1b97892703125][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:12][19/Sep/5 21:22:13][took 0.096943 secs]
+[<<][5d717c96a6f2e602728933][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:30][19/Sep/5 21:22:30][took 0.003346 secs]
+[>>][5d717c96a7d27166063576][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:30]
+[<<][5d717c96a7d27166063576][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:30][19/Sep/5 21:22:30][took 0.001784 secs]
+[>>][5d717c96a84b3693984289][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:30]
+	[19/Sep/5 21:22:31][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10169' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 21:22:31][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d717c96a84b3693984289][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:30][19/Sep/5 21:22:31][took 1.292763 secs]
+[<<][5d717c9848368585595248][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 21:22:32][19/Sep/5 21:22:32][took 0.003581 secs]
+[>>][5d717c984923a579104927][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 21:22:32]
+[<<][5d717c984923a579104927][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 21:22:32][19/Sep/5 21:22:32][took 0.002402 secs]
+[>>][5d717c9849c3d812254176][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 21:22:32]
+[<<][5d717c9849c3d812254176][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 21:22:32][19/Sep/5 21:22:32][took 0.139383 secs]
+[<<][5d717c9f0f8d7659382235][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:39][19/Sep/5 21:22:39][took 0.003616 secs]
+[>>][5d717c9f107c8414509502][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:39]
+[<<][5d717c9f107c8414509502][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:39][19/Sep/5 21:22:39][took 0.001859 secs]
+[>>][5d717c9f10fab593609951][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:39]
+	[19/Sep/5 21:22:39][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d717c9f10fab593609951][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:22:39][19/Sep/5 21:22:39][took 0.080249 secs]
+[<<][5d717e4504065176709927][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:29:41][19/Sep/5 21:29:41][took 0.003957 secs]
+[>>][5d717e45050ae064657729][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:29:41]
+[<<][5d717e45050ae064657729][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:29:41][19/Sep/5 21:29:41][took 0.001991 secs]
+[>>][5d717e4505918482934370][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:29:41]
+	[19/Sep/5 21:29:42][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10170' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/5 21:29:42][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/5 21:29:42][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d717e4505918482934370][DEFAULT][/lib/execute/execSetResults.php][19/Sep/5 21:29:41][19/Sep/5 21:29:42][took 1.434681 secs]
+[<<][5d717e46ee516474651200][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 21:29:42][19/Sep/5 21:29:42][took 0.0034500000000001 secs]
+[>>][5d717e46ef3a8283745801][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 21:29:42]
+[<<][5d717e46ef3a8283745801][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 21:29:42][19/Sep/5 21:29:42][took 0.001758 secs]
+[>>][5d717e46efb21197657837][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 21:29:42]
+[<<][5d717e46efb21197657837][DEFAULT][/lib/execute/execNavigator.php][19/Sep/5 21:29:42][19/Sep/5 21:29:43][took 0.139709 secs]
+[<<][5d7269e39c535342609029][DEFAULT][/index.php][19/Sep/6 14:14:59][19/Sep/6 14:14:59][took 0.002593 secs]
+[<<][5d7269e415b74812066227][DEFAULT][/login.php][19/Sep/6 14:15:00][19/Sep/6 14:15:00][took 0.003644 secs]
+[>>][5d7269e416a7e399016325][DEFAULT][/login.php][19/Sep/6 14:15:00]
+[<<][5d7269e416a7e399016325][DEFAULT][/login.php][19/Sep/6 14:15:00][19/Sep/6 14:15:00][took 0.001814 secs]
+[<<][5d7269f151381365645866][DEFAULT][/login.php][19/Sep/6 14:15:13][19/Sep/6 14:15:13][took 0.003245 secs]
+[>>][5d7269f152126670171169][DEFAULT][/login.php][19/Sep/6 14:15:13]
+[<<][5d7269f152126670171169][DEFAULT][/login.php][19/Sep/6 14:15:13][19/Sep/6 14:15:13][took 0.134338 secs]
+[>>][5d7269f172ea7078021357][DEFAULT][/login.php][19/Sep/6 14:15:13]
+	[19/Sep/6 14:15:13][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Login for 'Jarom.Drollinger' from '209.253.35.146' succeeded
+[<<][5d7269f172ea7078021357][DEFAULT][/login.php][19/Sep/6 14:15:13][19/Sep/6 14:15:13][took 0.045219 secs]
+[<<][5d7269f1a5d5f156784640][DEFAULT][/index.php][19/Sep/6 14:15:13][19/Sep/6 14:15:13][took 0.003547 secs]
+[>>][5d7269f1a6bf7046653216][DEFAULT][/index.php][19/Sep/6 14:15:13]
+[<<][5d7269f1a6bf7046653216][DEFAULT][/index.php][19/Sep/6 14:15:13][19/Sep/6 14:15:13][took 0.001842 secs]
+[<<][5d7269f1d306d735495762][DEFAULT][/lib/general/navBar.php][19/Sep/6 14:15:13][19/Sep/6 14:15:13][took 0.0031709999999999 secs]
+[>>][5d7269f1d3d97742511701][DEFAULT][/lib/general/navBar.php][19/Sep/6 14:15:13]
+[<<][5d7269f1d3d97742511701][DEFAULT][/lib/general/navBar.php][19/Sep/6 14:15:13][19/Sep/6 14:15:13][took 0.0016780000000001 secs]
+[>>][5d7269f1d44c1763700404][DEFAULT][/lib/general/navBar.php][19/Sep/6 14:15:13]
+[<<][5d7269f1d44c1763700404][DEFAULT][/lib/general/navBar.php][19/Sep/6 14:15:13][19/Sep/6 14:15:13][took 0.004443 secs]
+[<<][5d7269f1df27f985922436][DEFAULT][/lib/general/mainPage.php][19/Sep/6 14:15:13][19/Sep/6 14:15:13][took 0.002808 secs]
+[>>][5d7269f1dfe26297129647][DEFAULT][/lib/general/mainPage.php][19/Sep/6 14:15:13]
+[<<][5d7269f1dfe26297129647][DEFAULT][/lib/general/mainPage.php][19/Sep/6 14:15:13][19/Sep/6 14:15:13][took 0.001684 secs]
+[>>][5d7269f1e0545967780952][DEFAULT][/lib/general/mainPage.php][19/Sep/6 14:15:13]
+	[19/Sep/6 14:15:13][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_NOTICE
+Undefined index: platform_view - in /opt/bitnami/apps/testlink/htdocs/gui/templates_c/835a037b28214872edd369779d57f903f1734c6a.file.mainPageLeft.tpl.php - Line 205
+[<<][5d7269f1e0545967780952][DEFAULT][/lib/general/mainPage.php][19/Sep/6 14:15:13][19/Sep/6 14:15:13][took 0.082266 secs]
+[<<][5d7269f63c580844427556][DEFAULT][/lib/general/frmWorkArea.php][19/Sep/6 14:15:18][19/Sep/6 14:15:18][took 0.003481 secs]
+[>>][5d7269f63d3e3392505812][DEFAULT][/lib/general/frmWorkArea.php][19/Sep/6 14:15:18]
+[<<][5d7269f63d3e3392505812][DEFAULT][/lib/general/frmWorkArea.php][19/Sep/6 14:15:18][19/Sep/6 14:15:18][took 0.002067 secs]
+[>>][5d7269f63dc97645657916][DEFAULT][/lib/general/frmWorkArea.php][19/Sep/6 14:15:18]
+[<<][5d7269f63dc97645657916][DEFAULT][/lib/general/frmWorkArea.php][19/Sep/6 14:15:18][19/Sep/6 14:15:18][took 0.0027219999999999 secs]
+[<<][5d7269f64d549942827270][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:15:18][19/Sep/6 14:15:18][took 0.002957 secs]
+[>>][5d7269f64e180429195315][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:15:18]
+[<<][5d7269f64e180429195315][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:15:18][19/Sep/6 14:15:18][took 0.002403 secs]
+[>>][5d7269f64eb85708770060][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:15:18]
+[<<][5d7269f64eb85708770060][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:15:18][19/Sep/6 14:15:18][took 0.128972 secs]
+[<<][5d7269f64dcd4638783066][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 14:15:18][19/Sep/6 14:15:18][took 0.135747 secs]
+[>>][5d7269f66eff7929453312][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 14:15:18]
+[<<][5d7269f66eff7929453312][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 14:15:18][19/Sep/6 14:15:18][took 0.001697 secs]
+[>>][5d7269f66f797191654121][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 14:15:18]
+[<<][5d7269f66f797191654121][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 14:15:18][19/Sep/6 14:15:18][took 0.012523 secs]
+[<<][5d7269f6e8d15886569486][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 14:15:18][19/Sep/6 14:15:18][took 0.003105 secs]
+[>>][5d7269f6e99fd940025841][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 14:15:18]
+[<<][5d7269f6e99fd940025841][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 14:15:18][19/Sep/6 14:15:18][took 0.001907 secs]
+[>>][5d7269f6ea223346900817][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 14:15:18]
+[<<][5d7269f6ea223346900817][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 14:15:18][19/Sep/6 14:15:18][took 0.008715 secs]
+[<<][5d7269fc04ffe622075700][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:15:24][19/Sep/6 14:15:24][took 0.003415 secs]
+[>>][5d7269fc05e22548890532][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:15:24]
+[<<][5d7269fc05e22548890532][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:15:24][19/Sep/6 14:15:24][took 0.006128 secs]
+[>>][5d7269fc076ab295920320][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:15:24]
+[<<][5d7269fc076ab295920320][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:15:24][19/Sep/6 14:15:24][took 0.127345 secs]
+[<<][5d7269fc74b42961465047][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 14:15:24][19/Sep/6 14:15:24][took 0.003683 secs]
+[>>][5d7269fc75a58891564067][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 14:15:24]
+[<<][5d7269fc75a58891564067][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 14:15:24][19/Sep/6 14:15:24][took 0.005475 secs]
+[>>][5d7269fc77054963894430][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 14:15:24]
+[<<][5d7269fc77054963894430][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 14:15:24][19/Sep/6 14:15:24][took 0.004344 secs]
+[<<][5d726d2f268e3464835157][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:03][19/Sep/6 14:29:03][took 0.004077 secs]
+[>>][5d726d2f279b8686745743][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:03]
+[<<][5d726d2f279b8686745743][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:03][19/Sep/6 14:29:03][took 0.001934 secs]
+[>>][5d726d2f281e5197613817][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:03]
+	[19/Sep/6 14:29:03][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d726d2f281e5197613817][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:03][19/Sep/6 14:29:03][took 0.072004 secs]
+[<<][5d726d3863937629671051][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:12][19/Sep/6 14:29:12][took 0.003695 secs]
+[>>][5d726d386487a817078258][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:12]
+[<<][5d726d386487a817078258][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:12][19/Sep/6 14:29:12][took 0.002087 secs]
+[>>][5d726d3865142282417400][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:12]
+	[19/Sep/6 14:29:12][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d726d3865142282417400][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:12][19/Sep/6 14:29:12][took 0.086341 secs]
+[<<][5d726d6329bf1389939466][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:55][19/Sep/6 14:29:55][took 0.004073 secs]
+[>>][5d726d632acbd451319786][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:55]
+[<<][5d726d632acbd451319786][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:55][19/Sep/6 14:29:55][took 0.00214 secs]
+[>>][5d726d632b5bb908906428][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:55]
+	[19/Sep/6 14:29:56][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10166' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/6 14:29:56][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d726d632b5bb908906428][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:55][19/Sep/6 14:29:56][took 1.370527 secs]
+[<<][5d726d64e0a97791019461][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:29:56][19/Sep/6 14:29:56][took 0.003505 secs]
+[>>][5d726d64e1927856037634][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:29:56]
+[<<][5d726d64e1927856037634][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:29:56][19/Sep/6 14:29:56][took 0.002329 secs]
+[>>][5d726d64e22d7365981304][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:29:56]
+[<<][5d726d64e22d7365981304][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:29:56][19/Sep/6 14:29:57][took 0.139657 secs]
+[<<][5d726d67a77c6279342500][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:59][19/Sep/6 14:29:59][took 0.0040509999999999 secs]
+[>>][5d726d67a886a546367267][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:59]
+[<<][5d726d67a886a546367267][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:59][19/Sep/6 14:29:59][took 0.002098 secs]
+[>>][5d726d67a913c470285889][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:59]
+	[19/Sep/6 14:29:59][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d726d67a913c470285889][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:29:59][19/Sep/6 14:29:59][took 0.073516 secs]
+[<<][5d726e34e60e9213212124][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:33:24][19/Sep/6 14:33:24][took 0.003512 secs]
+[>>][5d726e34e6f6f182829542][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:33:24]
+[<<][5d726e34e6f6f182829542][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:33:24][19/Sep/6 14:33:24][took 0.005652 secs]
+[>>][5d726e34e8624766724392][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:33:24]
+	[19/Sep/6 14:33:26][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10168' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/6 14:33:26][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/6 14:33:26][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d726e34e8624766724392][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:33:24][19/Sep/6 14:33:26][took 1.440822 secs]
+[<<][5d726e36cf3c3797049866][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:33:26][19/Sep/6 14:33:26][took 0.005274 secs]
+[>>][5d726e36d0912218078197][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:33:26]
+[<<][5d726e36d0912218078197][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:33:26][19/Sep/6 14:33:26][took 0.010023 secs]
+[>>][5d726e36d4d9e280141407][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:33:26]
+[<<][5d726e36d4d9e280141407][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:33:26][19/Sep/6 14:33:27][took 0.240301 secs]
+[<<][5d726e5276d4d258337826][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:33:54][19/Sep/6 14:33:54][took 0.003717 secs]
+[>>][5d726e5277cbc820719179][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:33:54]
+[<<][5d726e5277cbc820719179][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:33:54][19/Sep/6 14:33:54][took 0.002493 secs]
+[>>][5d726e527871d749665566][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:33:54]
+	[19/Sep/6 14:33:54][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d726e527871d749665566][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:33:54][19/Sep/6 14:33:54][took 0.090602 secs]
+[<<][5d726e5508b17063272016][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:33:57][19/Sep/6 14:33:57][took 0.005788 secs]
+[>>][5d726e550a288288035368][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:33:57]
+[<<][5d726e550a288288035368][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:33:57][19/Sep/6 14:33:57][took 0.002108 secs]
+[>>][5d726e550ab76660879614][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:33:57]
+	[19/Sep/6 14:33:57][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d726e550ab76660879614][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:33:57][19/Sep/6 14:33:57][took 0.075247 secs]
+[<<][5d726f3443b12298164199][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:37:40][19/Sep/6 14:37:40][took 0.00367 secs]
+[>>][5d726f3444a3b578443198][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:37:40]
+[<<][5d726f3444a3b578443198][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:37:40][19/Sep/6 14:37:40][took 0.003157 secs]
+[>>][5d726f344572e933495142][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:37:40]
+	[19/Sep/6 14:37:40][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d726f344572e933495142][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:37:40][19/Sep/6 14:37:40][took 0.103429 secs]
+[<<][5d726fd4cfe81293116512][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:40:20][19/Sep/6 14:40:20][took 0.003198 secs]
+[>>][5d726fd4d0bcf166075373][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:40:20]
+[<<][5d726fd4d0bcf166075373][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:40:20][19/Sep/6 14:40:20][took 0.001686 secs]
+[>>][5d726fd4d12f2323327675][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:40:20]
+	[19/Sep/6 14:40:22][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10158' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/6 14:40:22][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d726fd4d12f2323327675][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:40:20][19/Sep/6 14:40:22][took 1.301366 secs]
+[<<][5d726fd663867945426732][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:40:22][19/Sep/6 14:40:22][took 0.003745 secs]
+[>>][5d726fd6647cc575623595][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:40:22]
+[<<][5d726fd6647cc575623595][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:40:22][19/Sep/6 14:40:22][took 0.002186 secs]
+[>>][5d726fd6650f6612908175][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:40:22]
+[<<][5d726fd6650f6612908175][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:40:22][19/Sep/6 14:40:22][took 0.136774 secs]
+[<<][5d726fda8920b633399310][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:40:26][19/Sep/6 14:40:26][took 0.003664 secs]
+[>>][5d726fda8a12e647878412][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:40:26]
+[<<][5d726fda8a12e647878412][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:40:26][19/Sep/6 14:40:26][took 0.002098 secs]
+[>>][5d726fda8aa00203620411][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:40:26]
+	[19/Sep/6 14:40:26][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d726fda8aa00203620411][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:40:26][19/Sep/6 14:40:26][took 0.070677 secs]
+[<<][5d72703289251146628372][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:41:54][19/Sep/6 14:41:54][took 0.004316 secs]
+[>>][5d7270328a410121549906][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:41:54]
+[<<][5d7270328a410121549906][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:41:54][19/Sep/6 14:41:54][took 0.002015 secs]
+[>>][5d7270328ac92727829717][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:41:54]
+	[19/Sep/6 14:41:55][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-13552' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/6 14:41:55][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/6 14:41:55][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7270328ac92727829717][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:41:54][19/Sep/6 14:41:55][took 1.379809 secs]
+[<<][5d72703436aa4379547615][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:41:56][19/Sep/6 14:41:56][took 0.003498 secs]
+[>>][5d7270343791b417948493][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:41:56]
+[<<][5d7270343791b417948493][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:41:56][19/Sep/6 14:41:56][took 0.001982 secs]
+[>>][5d72703438176650388686][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:41:56]
+[<<][5d72703438176650388686][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 14:41:56][19/Sep/6 14:41:56][took 0.132663 secs]
+[<<][5d72712c982db506891429][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:46:04][19/Sep/6 14:46:04][took 0.0039950000000001 secs]
+[>>][5d72712c99359587719913][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:46:04]
+[<<][5d72712c99359587719913][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:46:04][19/Sep/6 14:46:04][took 0.002074 secs]
+[>>][5d72712c99c15170891877][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:46:04]
+	[19/Sep/6 14:46:04][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d72712c99c15170891877][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 14:46:04][19/Sep/6 14:46:04][took 0.084391 secs]
+[<<][5d727878740e1599948521][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:17:12][19/Sep/6 15:17:12][took 0.004009 secs]
+[>>][5d72787875161587709211][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:17:12]
+[<<][5d72787875161587709211][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:17:12][19/Sep/6 15:17:12][took 0.002099 secs]
+[>>][5d72787875a35908660054][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:17:12]
+	[19/Sep/6 15:17:13][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10149' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/6 15:17:13][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d72787875a35908660054][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:17:12][19/Sep/6 15:17:13][took 1.367959 secs]
+[<<][5d72787a4a9ac111621793][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:17:14][19/Sep/6 15:17:14][took 0.003455 secs]
+[>>][5d72787a4b847493068080][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:17:14]
+[<<][5d72787a4b847493068080][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:17:14][19/Sep/6 15:17:14][took 0.001507 secs]
+[>>][5d72787a4beb4649403999][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:17:14]
+[<<][5d72787a4beb4649403999][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:17:14][19/Sep/6 15:17:14][took 0.145587 secs]
+[<<][5d7278d15d94c981247027][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:18:41][19/Sep/6 15:18:41][took 0.004003 secs]
+[>>][5d7278d15e9cd559692623][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:18:41]
+[<<][5d7278d15e9cd559692623][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:18:41][19/Sep/6 15:18:41][took 0.002124 secs]
+[>>][5d7278d15f2ba908467068][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:18:41]
+	[19/Sep/6 15:18:41][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7278d15f2ba908467068][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:18:41][19/Sep/6 15:18:41][took 0.075787 secs]
+[<<][5d72793edc6e2047554607][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:20:30][19/Sep/6 15:20:30][took 0.0040049999999999 secs]
+[>>][5d72793edd766681806755][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:20:30]
+[<<][5d72793edd766681806755][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:20:30][19/Sep/6 15:20:30][took 0.001969 secs]
+[>>][5d72793eddfb3647535431][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:20:30]
+	[19/Sep/6 15:20:32][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10151' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/6 15:20:32][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/6 15:20:32][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d72793eddfb3647535431][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:20:30][19/Sep/6 15:20:32][took 1.376308 secs]
+[<<][5d727940883d3213924946][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:20:32][19/Sep/6 15:20:32][took 0.003531 secs]
+[>>][5d72794089274749685924][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:20:32]
+[<<][5d72794089274749685924][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:20:32][19/Sep/6 15:20:32][took 0.002039 secs]
+[>>][5d72794089b09428023111][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:20:32]
+[<<][5d72794089b09428023111][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:20:32][19/Sep/6 15:20:32][took 0.134458 secs]
+[<<][5d727942910ff795673401][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:20:34][19/Sep/6 15:20:34][took 0.003381 secs]
+[>>][5d72794291f17475390890][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:20:34]
+[<<][5d72794291f17475390890][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:20:34][19/Sep/6 15:20:34][took 0.001707 secs]
+[>>][5d72794292667592084892][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:20:34]
+	[19/Sep/6 15:20:34][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d72794292667592084892][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:20:34][19/Sep/6 15:20:34][took 0.085865 secs]
+[<<][5d72796288257555430314][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:21:06][19/Sep/6 15:21:06][took 0.003429 secs]
+[>>][5d7279628914a665262086][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:21:06]
+[<<][5d7279628914a665262086][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:21:06][19/Sep/6 15:21:06][took 0.001694 secs]
+[>>][5d7279628987d929969515][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:21:06]
+	[19/Sep/6 15:21:07][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10152' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/6 15:21:07][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7279628987d929969515][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:21:06][19/Sep/6 15:21:07][took 1.310817 secs]
+[<<][5d7279641bfdf973131982][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:21:08][19/Sep/6 15:21:08][took 0.003081 secs]
+[>>][5d7279641cca5540138445][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:21:08]
+[<<][5d7279641cca5540138445][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:21:08][19/Sep/6 15:21:08][took 0.001885 secs]
+[>>][5d7279641d4a1840039300][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:21:08]
+[<<][5d7279641d4a1840039300][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:21:08][19/Sep/6 15:21:08][took 0.132615 secs]
+[<<][5d7279665db23733552789][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:21:10][19/Sep/6 15:21:10][took 0.003778 secs]
+[>>][5d7279665eab6328202900][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:21:10]
+[<<][5d7279665eab6328202900][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:21:10][19/Sep/6 15:21:10][took 0.002112 secs]
+[>>][5d7279665f394233679699][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:21:10]
+	[19/Sep/6 15:21:10][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7279665f394233679699][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:21:10][19/Sep/6 15:21:10][took 0.076977 secs]
+[<<][5d727a248ed01729189478][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:24:20][19/Sep/6 15:24:20][took 0.004684 secs]
+[>>][5d727a2490032877513694][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:24:20]
+[<<][5d727a2490032877513694][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:24:20][19/Sep/6 15:24:20][took 0.0018630000000001 secs]
+[>>][5d727a249081c122312735][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:24:20]
+	[19/Sep/6 15:24:21][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-13554' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/6 15:24:22][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/6 15:24:22][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d727a249081c122312735][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:24:20][19/Sep/6 15:24:22][took 1.497083 secs]
+[<<][5d727a266026b141124435][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:24:22][19/Sep/6 15:24:22][took 0.003461 secs]
+[>>][5d727a26610d0089375476][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:24:22]
+[<<][5d727a26610d0089375476][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:24:22][19/Sep/6 15:24:22][took 0.002078 secs]
+[>>][5d727a266198d445114620][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:24:22]
+[<<][5d727a266198d445114620][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:24:22][19/Sep/6 15:24:22][took 0.137506 secs]
+[<<][5d727a28689e3110047982][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:24:24][19/Sep/6 15:24:24][took 0.003478 secs]
+[>>][5d727a2869851909061507][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:24:24]
+[<<][5d727a2869851909061507][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:24:24][19/Sep/6 15:24:24][took 0.001921 secs]
+[>>][5d727a286a063636295802][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:24:24]
+	[19/Sep/6 15:24:24][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d727a286a063636295802][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:24:24][19/Sep/6 15:24:24][took 0.086175 secs]
+[<<][5d727ab477c0b068291282][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:26:44][19/Sep/6 15:26:44][took 0.0041020000000001 secs]
+[>>][5d727ab478cd5480433891][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:26:44]
+[<<][5d727ab478cd5480433891][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:26:44][19/Sep/6 15:26:44][took 0.00165 secs]
+[>>][5d727ab4793f9269584673][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:26:44]
+	[19/Sep/6 15:26:45][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-13553' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/6 15:26:45][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d727ab4793f9269584673][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:26:44][19/Sep/6 15:26:45][took 1.351589 secs]
+[<<][5d727ab61c5d5079708632][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:26:46][19/Sep/6 15:26:46][took 0.003502 secs]
+[>>][5d727ab61d49e300402963][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:26:46]
+[<<][5d727ab61d49e300402963][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:26:46][19/Sep/6 15:26:46][took 0.005531 secs]
+[>>][5d727ab61eac6170260796][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:26:46]
+[<<][5d727ab61eac6170260796][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:26:46][19/Sep/6 15:26:46][took 0.157245 secs]
+[<<][5d727ccd9fd15944063034][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:35:41][19/Sep/6 15:35:41][took 0.003251 secs]
+[>>][5d727ccda0a9d672540731][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:35:41]
+[<<][5d727ccda0a9d672540731][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:35:41][19/Sep/6 15:35:41][took 0.0055529999999999 secs]
+[>>][5d727ccda20ea785087425][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:35:41]
+	[19/Sep/6 15:35:41][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d727ccda20ea785087425][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:35:41][19/Sep/6 15:35:41][took 0.08582 secs]
+[<<][5d727d2306921593102367][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:37:07][19/Sep/6 15:37:07][took 0.003966 secs]
+[>>][5d727d2307980969539846][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:37:07]
+[<<][5d727d2307980969539846][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:37:07][19/Sep/6 15:37:07][took 0.002435 secs]
+[>>][5d727d23083a6613285326][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:37:07]
+	[19/Sep/6 15:37:07][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d727d23083a6613285326][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:37:07][19/Sep/6 15:37:07][took 0.109214 secs]
+[<<][5d727d357dfeb885467542][DEFAULT][/index.php][19/Sep/6 15:37:25][19/Sep/6 15:37:25][took 0.003799 secs]
+[>>][5d727d357ef97360929089][DEFAULT][/index.php][19/Sep/6 15:37:25]
+[<<][5d727d357ef97360929089][DEFAULT][/index.php][19/Sep/6 15:37:25][19/Sep/6 15:37:25][took 0.001788 secs]
+[<<][5d727d35c8de9029687424][DEFAULT][/lib/general/navBar.php][19/Sep/6 15:37:25][19/Sep/6 15:37:25][took 0.003205 secs]
+[>>][5d727d35c9b36360607280][DEFAULT][/lib/general/navBar.php][19/Sep/6 15:37:25]
+[<<][5d727d35c9b36360607280][DEFAULT][/lib/general/navBar.php][19/Sep/6 15:37:25][19/Sep/6 15:37:25][took 0.0017740000000001 secs]
+[>>][5d727d35ca2b6818714625][DEFAULT][/lib/general/navBar.php][19/Sep/6 15:37:25]
+[<<][5d727d35ca2b6818714625][DEFAULT][/lib/general/navBar.php][19/Sep/6 15:37:25][19/Sep/6 15:37:25][took 0.014684 secs]
+[<<][5d727d35d5ba0491717339][DEFAULT][/lib/general/mainPage.php][19/Sep/6 15:37:25][19/Sep/6 15:37:25][took 0.0068779999999999 secs]
+[>>][5d727d35d7734193912724][DEFAULT][/lib/general/mainPage.php][19/Sep/6 15:37:25]
+[<<][5d727d35d7734193912724][DEFAULT][/lib/general/mainPage.php][19/Sep/6 15:37:25][19/Sep/6 15:37:25][took 0.002403 secs]
+[>>][5d727d35d8123846733597][DEFAULT][/lib/general/mainPage.php][19/Sep/6 15:37:25]
+	[19/Sep/6 15:37:25][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_NOTICE
+Undefined index: platform_view - in /opt/bitnami/apps/testlink/htdocs/gui/templates_c/835a037b28214872edd369779d57f903f1734c6a.file.mainPageLeft.tpl.php - Line 205
+[<<][5d727d35d8123846733597][DEFAULT][/lib/general/mainPage.php][19/Sep/6 15:37:25][19/Sep/6 15:37:25][took 0.074501 secs]
+[<<][5d727d3853794768231255][DEFAULT][/lib/general/frmWorkArea.php][19/Sep/6 15:37:28][19/Sep/6 15:37:28][took 0.003447 secs]
+[>>][5d727d38545df477208408][DEFAULT][/lib/general/frmWorkArea.php][19/Sep/6 15:37:28]
+[<<][5d727d38545df477208408][DEFAULT][/lib/general/frmWorkArea.php][19/Sep/6 15:37:28][19/Sep/6 15:37:28][took 0.002084 secs]
+[>>][5d727d3854ea1380497990][DEFAULT][/lib/general/frmWorkArea.php][19/Sep/6 15:37:28]
+[<<][5d727d3854ea1380497990][DEFAULT][/lib/general/frmWorkArea.php][19/Sep/6 15:37:28][19/Sep/6 15:37:28][took 0.006077 secs]
+[<<][5d727d386727f227847365][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:37:28][19/Sep/6 15:37:28][took 0.003459 secs]
+[>>][5d727d38680cf424666094][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:37:28]
+[<<][5d727d38680cf424666094][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:37:28][19/Sep/6 15:37:28][took 0.002055 secs]
+[>>][5d727d3868973826032430][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:37:28]
+[<<][5d727d3868973826032430][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:37:28][19/Sep/6 15:37:28][took 0.129685 secs]
+[<<][5d727d38674ff608251915][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 15:37:28][19/Sep/6 15:37:28][took 0.137557 secs]
+[>>][5d727d3888ef4012360851][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 15:37:28]
+[<<][5d727d3888ef4012360851][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 15:37:28][19/Sep/6 15:37:28][took 0.001489 secs]
+[>>][5d727d388954f346529984][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 15:37:28]
+[<<][5d727d388954f346529984][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 15:37:28][19/Sep/6 15:37:28][took 0.007756 secs]
+[<<][5d727d38ea3fc912774207][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 15:37:28][19/Sep/6 15:37:28][took 0.0036929999999999 secs]
+[>>][5d727d38eb32c861848963][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 15:37:28]
+[<<][5d727d38eb32c861848963][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 15:37:28][19/Sep/6 15:37:28][took 0.001862 secs]
+[>>][5d727d38ebb10340448779][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 15:37:28]
+[<<][5d727d38ebb10340448779][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 15:37:28][19/Sep/6 15:37:28][took 0.004028 secs]
+[<<][5d727d3bdadaf184370585][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:37:31][19/Sep/6 15:37:31][took 0.0053339999999999 secs]
+[>>][5d727d3bdc34e862041016][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:37:31]
+[<<][5d727d3bdc34e862041016][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:37:31][19/Sep/6 15:37:31][took 0.002113 secs]
+[>>][5d727d3bdcc2f655022798][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:37:31]
+[<<][5d727d3bdcc2f655022798][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:37:31][19/Sep/6 15:37:32][took 0.125277 secs]
+[<<][5d727d3c5172b216358694][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 15:37:32][19/Sep/6 15:37:32][took 0.00296 secs]
+[>>][5d727d3c5236c403492817][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 15:37:32]
+[<<][5d727d3c5236c403492817][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 15:37:32][19/Sep/6 15:37:32][took 0.001605 secs]
+[>>][5d727d3c52a49685734355][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 15:37:32]
+[<<][5d727d3c52a49685734355][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 15:37:32][19/Sep/6 15:37:32][took 0.003912 secs]
+[<<][5d727eb9a19e5925289097][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:43:53][19/Sep/6 15:43:53][took 0.003948 secs]
+[>>][5d727eb9a2a25158384130][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:43:53]
+[<<][5d727eb9a2a25158384130][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:43:53][19/Sep/6 15:43:53][took 0.005718 secs]
+[>>][5d727eb9a412e814835976][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:43:53]
+	[19/Sep/6 15:43:53][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d727eb9a412e814835976][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:43:53][19/Sep/6 15:43:53][took 0.075623 secs]
+[<<][5d72811aefe50817052967][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:54:02][19/Sep/6 15:54:02][took 0.0047980000000001 secs]
+[>>][5d72811af11d2209280642][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:54:02]
+[<<][5d72811af11d2209280642][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:54:02][19/Sep/6 15:54:02][took 0.002053 secs]
+[>>][5d72811af1a67073107123][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:54:02]
+	[19/Sep/6 15:54:04][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10200' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/6 15:54:04][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/6 15:54:04][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d72811af1a67073107123][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:54:02][19/Sep/6 15:54:04][took 1.407477 secs]
+[<<][5d72811cb14e0908395069][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:54:04][19/Sep/6 15:54:04][took 0.003647 secs]
+[>>][5d72811cb23f7826432575][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:54:04]
+[<<][5d72811cb23f7826432575][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:54:04][19/Sep/6 15:54:04][took 0.00209 secs]
+[>>][5d72811cb2cbf017985073][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:54:04]
+[<<][5d72811cb2cbf017985073][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 15:54:04][19/Sep/6 15:54:04][took 0.142561 secs]
+[<<][5d728135944c9998237561][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:54:29][19/Sep/6 15:54:29][took 0.0039859999999999 secs]
+[>>][5d7281359552b364400670][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:54:29]
+[<<][5d7281359552b364400670][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:54:29][19/Sep/6 15:54:29][took 0.001876 secs]
+[>>][5d72813595d21860559951][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:54:29]
+	[19/Sep/6 15:54:29][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d72813595d21860559951][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 15:54:29][19/Sep/6 15:54:29][took 0.087309 secs]
+[<<][5d72889917a6d452349012][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:26:01][19/Sep/6 16:26:01][took 0.003694 secs]
+[>>][5d728899189aa109107159][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:26:01]
+[<<][5d728899189aa109107159][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:26:01][19/Sep/6 16:26:01][took 0.001782 secs]
+[>>][5d72889919141305197437][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:26:01]
+	[19/Sep/6 16:26:02][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10213' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/6 16:26:02][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d72889919141305197437][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:26:01][19/Sep/6 16:26:02][took 1.331255 secs]
+[<<][5d72889af3fe7310988783][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:26:02][19/Sep/6 16:26:02][took 0.003477 secs]
+[>>][5d72889b00c0d889493391][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:26:02]
+[<<][5d72889b00c0d889493391][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:26:02][19/Sep/6 16:26:02][took 0.002043 secs]
+[>>][5d72889b014a6612512608][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:26:02]
+[<<][5d72889b014a6612512608][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:26:02][19/Sep/6 16:26:03][took 0.148008 secs]
+[<<][5d728af0bc259024172823][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:36:00][19/Sep/6 16:36:00][took 0.0036889999999999 secs]
+[>>][5d728af0bd19f716860891][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:36:00]
+[<<][5d728af0bd19f716860891][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:36:00][19/Sep/6 16:36:00][took 0.0021099999999999 secs]
+[>>][5d728af0bda7d553774077][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:36:00]
+	[19/Sep/6 16:36:00][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d728af0bda7d553774077][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:36:00][19/Sep/6 16:36:00][took 0.078566 secs]
+[<<][5d728af4a6837830997736][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:36:04][19/Sep/6 16:36:04][took 0.005317 secs]
+[>>][5d728af4a7dda597889353][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:36:04]
+[<<][5d728af4a7dda597889353][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:36:04][19/Sep/6 16:36:04][took 0.001718 secs]
+[>>][5d728af4a854c779895408][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:36:04]
+	[19/Sep/6 16:36:04][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d728af4a854c779895408][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:36:04][19/Sep/6 16:36:04][took 0.074471 secs]
+[<<][5d728b27a183e875588806][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:36:55][19/Sep/6 16:36:55][took 0.003772 secs]
+[>>][5d728b27a27da845958865][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:36:55]
+[<<][5d728b27a27da845958865][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:36:55][19/Sep/6 16:36:55][took 0.002116 secs]
+[>>][5d728b27a30bf231872561][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:36:55]
+	[19/Sep/6 16:36:56][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10211' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/6 16:36:57][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/6 16:36:57][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d728b27a30bf231872561][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:36:55][19/Sep/6 16:36:57][took 1.450746 secs]
+[<<][5d728b2977629743583681][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:36:57][19/Sep/6 16:36:57][took 0.0030559999999999 secs]
+[>>][5d728b29782ec176133322][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:36:57]
+[<<][5d728b29782ec176133322][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:36:57][19/Sep/6 16:36:57][took 0.001625 secs]
+[>>][5d728b29789d8450163738][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:36:57]
+[<<][5d728b29789d8450163738][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:36:57][19/Sep/6 16:36:57][took 0.13227 secs]
+[<<][5d728b31b1748051052941][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:37:05][19/Sep/6 16:37:05][took 0.004088 secs]
+[>>][5d728b31b2813078598874][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:37:05]
+[<<][5d728b31b2813078598874][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:37:05][19/Sep/6 16:37:05][took 0.007267 secs]
+[>>][5d728b31b4572700211851][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:37:05]
+	[19/Sep/6 16:37:05][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d728b31b4572700211851][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:37:05][19/Sep/6 16:37:05][took 0.090427 secs]
+[<<][5d728b50e482f425920517][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:37:36][19/Sep/6 16:37:36][took 0.003834 secs]
+[>>][5d728b50e5801923899300][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:37:36]
+[<<][5d728b50e5801923899300][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:37:36][19/Sep/6 16:37:36][took 0.001934 secs]
+[>>][5d728b50e6031129323062][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:37:36]
+	[19/Sep/6 16:37:38][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10212' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/6 16:37:38][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d728b50e6031129323062][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:37:36][19/Sep/6 16:37:38][took 1.274824 secs]
+[<<][5d728b5280f00605227073][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:37:38][19/Sep/6 16:37:38][took 0.003696 secs]
+[>>][5d728b5281e36835008953][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:37:38]
+[<<][5d728b5281e36835008953][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:37:38][19/Sep/6 16:37:38][took 0.00196 secs]
+[>>][5d728b528267a954943229][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:37:38]
+[<<][5d728b528267a954943229][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:37:38][19/Sep/6 16:37:38][took 0.135296 secs]
+[<<][5d728c3396592722049516][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:41:23][19/Sep/6 16:41:23][took 0.003987 secs]
+[>>][5d728c33975f9093538413][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:41:23]
+[<<][5d728c33975f9093538413][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:41:23][19/Sep/6 16:41:23][took 0.002105 secs]
+[>>][5d728c3397ed4531287153][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:41:23]
+	[19/Sep/6 16:41:23][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d728c3397ed4531287153][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:41:23][19/Sep/6 16:41:23][took 0.086944 secs]
+[<<][5d729010f0ef7151863790][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:57:52][19/Sep/6 16:57:52][took 0.003806 secs]
+[>>][5d729010f1eab145369679][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:57:52]
+[<<][5d729010f1eab145369679][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:57:52][19/Sep/6 16:57:52][took 0.005953 secs]
+[>>][5d729010f3691321282780][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:57:52]
+	[19/Sep/6 16:57:54][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10215' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/6 16:57:54][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/6 16:57:54][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d729010f3691321282780][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 16:57:52][19/Sep/6 16:57:54][took 1.354097 secs]
+[<<][5d729012abf0e818293378][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:57:54][19/Sep/6 16:57:54][took 0.003385 secs]
+[>>][5d729012acd21138616733][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:57:54]
+[<<][5d729012acd21138616733][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:57:54][19/Sep/6 16:57:54][took 0.003538 secs]
+[>>][5d729012adbb2645532007][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:57:54]
+[<<][5d729012adbb2645532007][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 16:57:54][19/Sep/6 16:57:54][took 0.142787 secs]
+[<<][5d72909d46ac3414550639][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:00:13][19/Sep/6 17:00:13][took 0.003976 secs]
+[>>][5d72909d47b27792718217][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:00:13]
+[<<][5d72909d47b27792718217][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:00:13][19/Sep/6 17:00:13][took 0.001933 secs]
+[>>][5d72909d48353057226129][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:00:13]
+	[19/Sep/6 17:00:13][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d72909d48353057226129][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:00:13][19/Sep/6 17:00:13][took 0.078058 secs]
+[<<][5d729283679e5800020215][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:08:19][19/Sep/6 17:08:19][took 0.003805 secs]
+[>>][5d729283689ad471669909][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:08:19]
+[<<][5d729283689ad471669909][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:08:19][19/Sep/6 17:08:19][took 0.001929 secs]
+[>>][5d729283691cf421162136][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:08:19]
+	[19/Sep/6 17:08:20][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10210' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/6 17:08:20][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d729283691cf421162136][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:08:19][19/Sep/6 17:08:20][took 1.283309 secs]
+[<<][5d72928516209658063041][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:08:21][19/Sep/6 17:08:21][took 0.003479 secs]
+[>>][5d72928517069075480875][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:08:21]
+[<<][5d72928517069075480875][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:08:21][19/Sep/6 17:08:21][took 0.002077 secs]
+[>>][5d72928517921393685269][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:08:21]
+[<<][5d72928517921393685269][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:08:21][19/Sep/6 17:08:21][took 0.14128 secs]
+[<<][5d72928ca66f8039799511][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:08:28][19/Sep/6 17:08:28][took 0.003711 secs]
+[>>][5d72928ca7650592433404][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:08:28]
+[<<][5d72928ca7650592433404][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:08:28][19/Sep/6 17:08:28][took 0.002004 secs]
+[>>][5d72928ca7ec4086768306][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:08:28]
+	[19/Sep/6 17:08:28][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d72928ca7ec4086768306][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:08:28][19/Sep/6 17:08:28][took 0.074617 secs]
+[<<][5d729836133c0106864338][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:32:38][19/Sep/6 17:32:38][took 0.003565 secs]
+[>>][5d72983614282980625892][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:32:38]
+[<<][5d72983614282980625892][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:32:38][19/Sep/6 17:32:38][took 0.002042 secs]
+[>>][5d72983614b2d313570466][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:32:38]
+[<<][5d72983614b2d313570466][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:32:38][19/Sep/6 17:32:38][took 0.121837 secs]
+[<<][5d7298ee201d7277703247][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:35:42][19/Sep/6 17:35:42][took 0.004225 secs]
+[>>][5d7298ee21339161028773][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:35:42]
+[<<][5d7298ee21339161028773][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:35:42][19/Sep/6 17:35:42][took 0.00169 secs]
+[>>][5d7298ee21a67514049325][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:35:42]
+	[19/Sep/6 17:35:42][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d7298ee21a67514049325][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:35:42][19/Sep/6 17:35:42][took 0.06639 secs]
+[<<][5d72993711825446474432][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:36:55][19/Sep/6 17:36:55][took 0.003673 secs]
+[>>][5d72993712757285790270][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:36:55]
+[<<][5d72993712757285790270][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:36:55][19/Sep/6 17:36:55][took 0.001929 secs]
+[>>][5d72993712f81099347850][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:36:55]
+	[19/Sep/6 17:36:56][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10214' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/6 17:36:56][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/6 17:36:56][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d72993712f81099347850][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:36:55][19/Sep/6 17:36:56][took 1.438606 secs]
+[<<][5d729938d2904922902577][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:36:56][19/Sep/6 17:36:56][took 0.00349 secs]
+[>>][5d729938d3770540426117][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:36:56]
+[<<][5d729938d3770540426117][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:36:56][19/Sep/6 17:36:56][took 0.00207 secs]
+[>>][5d729938d4015614657165][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:36:56]
+[<<][5d729938d4015614657165][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:36:56][19/Sep/6 17:36:57][took 0.139758 secs]
+[<<][5d72993b07a32968750787][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:36:59][19/Sep/6 17:36:59][took 0.003721 secs]
+[>>][5d72993b08991637403320][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:36:59]
+[<<][5d72993b08991637403320][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:36:59][19/Sep/6 17:36:59][took 0.002143 secs]
+[>>][5d72993b09294537156234][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:36:59]
+	[19/Sep/6 17:36:59][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d72993b09294537156234][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:36:59][19/Sep/6 17:36:59][took 0.077403 secs]
+[<<][5d72996e5d6e8419805084][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:37:50][19/Sep/6 17:37:50][took 0.004011 secs]
+[>>][5d72996e5e773785697862][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:37:50]
+[<<][5d72996e5e773785697862][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:37:50][19/Sep/6 17:37:50][took 0.001882 secs]
+[>>][5d72996e5ef6d927043604][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:37:50]
+	[19/Sep/6 17:37:51][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10205' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/6 17:37:51][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d72996e5ef6d927043604][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:37:50][19/Sep/6 17:37:51][took 1.352902 secs]
+[<<][5d72996ff19ad860748646][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:37:51][19/Sep/6 17:37:51][took 0.003601 secs]
+[>>][5d72996ff289f738993497][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:37:51]
+[<<][5d72996ff289f738993497][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:37:51][19/Sep/6 17:37:51][took 0.0019589999999999 secs]
+[>>][5d72996ff30ec207740688][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:37:51]
+[<<][5d72996ff30ec207740688][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:37:51][19/Sep/6 17:37:52][took 0.138781 secs]
+[<<][5d729973346c9398804389][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:37:55][19/Sep/6 17:37:55][took 0.00399 secs]
+[>>][5d7299733572d240268905][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:37:55]
+[<<][5d7299733572d240268905][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:37:55][19/Sep/6 17:37:55][took 0.002339 secs]
+[>>][5d72997336111486544630][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:37:55]
+	[19/Sep/6 17:37:55][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d72997336111486544630][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:37:55][19/Sep/6 17:37:55][took 0.069176 secs]
+[<<][5d729a98652b1971818503][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:42:48][19/Sep/6 17:42:48][took 0.004012 secs]
+[>>][5d729a986633a549351360][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:42:48]
+[<<][5d729a986633a549351360][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:42:48][19/Sep/6 17:42:48][took 0.002382 secs]
+[>>][5d729a9866d29673534556][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:42:48]
+	[19/Sep/6 17:42:49][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10209' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/6 17:42:49][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+	[19/Sep/6 17:42:49][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d729a9866d29673534556][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:42:48][19/Sep/6 17:42:49][took 1.384512 secs]
+[<<][5d729a9a2d90b964187381][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:42:50][19/Sep/6 17:42:50][took 0.003522 secs]
+[>>][5d729a9a2e79c093814189][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:42:50]
+[<<][5d729a9a2e79c093814189][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:42:50][19/Sep/6 17:42:50][took 0.002109 secs]
+[>>][5d729a9a2f078495656495][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:42:50]
+[<<][5d729a9a2f078495656495][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 17:42:50][19/Sep/6 17:42:50][took 0.137361 secs]
+[<<][5d729c90c5935338493567][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:51:12][19/Sep/6 17:51:12][took 0.004012 secs]
+[>>][5d729c90c69c7738476210][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:51:12]
+[<<][5d729c90c69c7738476210][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:51:12][19/Sep/6 17:51:12][took 0.0020180000000001 secs]
+[>>][5d729c90c7248177592862][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:51:12]
+	[19/Sep/6 17:51:12][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d729c90c7248177592862][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 17:51:12][19/Sep/6 17:51:12][took 0.103179 secs]
+[<<][5d72a80717df3364828602][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:40:07][19/Sep/6 18:40:07][took 0.004005 secs]
+[>>][5d72a80718e71633595619][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:40:07]
+[<<][5d72a80718e71633595619][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:40:07][19/Sep/6 18:40:07][took 0.002025 secs]
+[>>][5d72a807196fa546230706][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:40:07]
+	[19/Sep/6 18:40:08][AUDIT][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		Test Case 'MINING-10182' has been executed on Build 'Barrick release 9/4/2019' in the Test Plan 'Durability Mobius Tests'.
+	[19/Sep/6 18:40:08][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d72a807196fa546230706][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:40:07][19/Sep/6 18:40:08][took 1.451319 secs]
+[<<][5d72a80904d4b720432680][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:40:09][19/Sep/6 18:40:09][took 0.003347 secs]
+[>>][5d72a80905b29771936447][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:40:09]
+[<<][5d72a80905b29771936447][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:40:09][19/Sep/6 18:40:09][took 0.001838 secs]
+[>>][5d72a809062f1301325173][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:40:09]
+[<<][5d72a809062f1301325173][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:40:09][19/Sep/6 18:40:09][took 0.131676 secs]
+[<<][5d72a81888743908650828][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:40:24][19/Sep/6 18:40:24][took 0.0035839999999999 secs]
+[>>][5d72a81889620304894448][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:40:24]
+[<<][5d72a81889620304894448][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:40:24][19/Sep/6 18:40:24][took 0.005798 secs]
+[>>][5d72a8188ad62423726103][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:40:24]
+	[19/Sep/6 18:40:24][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d72a8188ad62423726103][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:40:24][19/Sep/6 18:40:24][took 0.073208 secs]
+[<<][5d72a85695d48466682594][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:41:26][19/Sep/6 18:41:26][took 0.00375 secs]
+[>>][5d72a85696ccc866442676][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:41:26]
+[<<][5d72a85696ccc866442676][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:41:26][19/Sep/6 18:41:26][took 0.0018830000000001 secs]
+[>>][5d72a856974bc849623473][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:41:26]
+[<<][5d72a856974bc849623473][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:41:26][19/Sep/6 18:41:26][took 0.11701 secs]
+[<<][5d72a897b87bd478739199][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:42:31][19/Sep/6 18:42:31][took 0.003893 secs]
+[>>][5d72a897b97d3170848140][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:42:31]
+[<<][5d72a897b97d3170848140][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:42:31][19/Sep/6 18:42:31][took 0.002105 secs]
+[>>][5d72a897ba0ad737859221][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:42:31]
+[<<][5d72a897ba0ad737859221][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:42:31][19/Sep/6 18:42:31][took 0.112266 secs]
+[<<][5d72a89823f42142727907][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 18:42:32][19/Sep/6 18:42:32][took 0.003579 secs]
+[>>][5d72a89824e03841834393][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 18:42:32]
+[<<][5d72a89824e03841834393][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 18:42:32][19/Sep/6 18:42:32][took 0.002276 secs]
+[>>][5d72a898257b0001243095][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 18:42:32]
+[<<][5d72a898257b0001243095][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 18:42:32][19/Sep/6 18:42:32][took 0.004483 secs]
+[<<][5d72a8a1d9389676247592][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:42:41][19/Sep/6 18:42:41][took 0.0078539999999999 secs]
+[>>][5d72a8a1db304184672372][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:42:41]
+[<<][5d72a8a1db304184672372][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:42:41][19/Sep/6 18:42:41][took 0.001865 secs]
+[>>][5d72a8a1dbaeb157891882][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:42:41]
+	[19/Sep/6 18:42:41][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d72a8a1dbaeb157891882][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:42:41][19/Sep/6 18:42:41][took 0.091255 secs]
+[<<][5d72a8b452557528042407][DEFAULT][/lib/execute/getExecNotes.php][19/Sep/6 18:43:00][19/Sep/6 18:43:00][took 0.00656 secs]
+[>>][5d72a8b454050028466606][DEFAULT][/lib/execute/getExecNotes.php][19/Sep/6 18:43:00]
+[<<][5d72a8b454050028466606][DEFAULT][/lib/execute/getExecNotes.php][19/Sep/6 18:43:00][19/Sep/6 18:43:00][took 0.001749 secs]
+[>>][5d72a8b4547ae585586500][DEFAULT][/lib/execute/getExecNotes.php][19/Sep/6 18:43:00]
+[<<][5d72a8b4547ae585586500][DEFAULT][/lib/execute/getExecNotes.php][19/Sep/6 18:43:00][19/Sep/6 18:43:00][took 0.003587 secs]
+[<<][5d72a909e5de8831094833][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:44:25][19/Sep/6 18:44:25][took 0.00371 secs]
+[>>][5d72a909e6d63566783801][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:44:25]
+[<<][5d72a909e6d63566783801][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:44:25][19/Sep/6 18:44:25][took 0.001857 secs]
+[>>][5d72a909e754b130276377][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:44:25]
+[<<][5d72a909e754b130276377][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:44:25][19/Sep/6 18:44:26][took 0.115635 secs]
+[<<][5d72a90f85413496046921][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:44:31][19/Sep/6 18:44:31][took 0.0036590000000001 secs]
+[>>][5d72a90f86334862824532][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:44:31]
+[<<][5d72a90f86334862824532][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:44:31][19/Sep/6 18:44:31][took 0.001881 secs]
+[>>][5d72a90f86b2d576279578][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:44:31]
+	[19/Sep/6 18:44:31][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d72a90f86b2d576279578][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:44:31][19/Sep/6 18:44:31][took 0.087756 secs]
+[<<][5d72a94263a80066267279][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:45:22][19/Sep/6 18:45:22][took 0.003737 secs]
+[>>][5d72a94264a02670486877][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:45:22]
+[<<][5d72a94264a02670486877][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:45:22][19/Sep/6 18:45:22][took 0.002073 secs]
+[>>][5d72a942652ad898536690][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:45:22]
+	[19/Sep/6 18:45:22][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d72a942652ad898536690][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 18:45:22][19/Sep/6 18:45:22][took 0.082094 secs]
+[<<][5d72a9755231c374072920][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:46:13][19/Sep/6 18:46:13][took 0.003929 secs]
+[>>][5d72a9755334a932962115][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:46:13]
+[<<][5d72a9755334a932962115][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:46:13][19/Sep/6 18:46:13][took 0.001933 secs]
+[>>][5d72a97553b8a869977765][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:46:13]
+[<<][5d72a97553b8a869977765][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 18:46:13][19/Sep/6 18:46:13][took 0.122534 secs]
+[<<][5d72ad30efd71421721778][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 19:02:08][19/Sep/6 19:02:08][took 0.0038050000000001 secs]
+[>>][5d72ad30f0d1d455844955][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 19:02:08]
+[<<][5d72ad30f0d1d455844955][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 19:02:08][19/Sep/6 19:02:08][took 0.0022369999999999 secs]
+[>>][5d72ad30f167d837070392][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 19:02:08]
+[<<][5d72ad30f167d837070392][DEFAULT][/lib/execute/execNavigator.php][19/Sep/6 19:02:08][19/Sep/6 19:02:09][took 0.118228 secs]
+[<<][5d72ad3191a68092622992][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 19:02:09][19/Sep/6 19:02:09][took 0.003895 secs]
+[>>][5d72ad3192af2637784347][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 19:02:09]
+[<<][5d72ad3192af2637784347][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 19:02:09][19/Sep/6 19:02:09][took 0.001649 secs]
+[>>][5d72ad31931f4587806785][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 19:02:09]
+[<<][5d72ad31931f4587806785][DEFAULT][/lib/execute/execDashboard.php][19/Sep/6 19:02:09][19/Sep/6 19:02:09][took 0.003976 secs]
+[<<][5d72ad3ad8ae9737129205][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 19:02:18][19/Sep/6 19:02:18][took 0.003702 secs]
+[>>][5d72ad3ad9a3d028635796][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 19:02:18]
+[<<][5d72ad3ad9a3d028635796][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 19:02:18][19/Sep/6 19:02:18][took 0.002139 secs]
+[>>][5d72ad3ada332098889924][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 19:02:18]
+	[19/Sep/6 19:02:18][WARNING][8ih61i454sk95t7lj3tr3od4se][GUI - Test Project ID : 21]
+		E_WARNING
+Invalid argument supplied for foreach() - in /opt/bitnami/apps/testlink/htdocs/lib/functions/testcase.class.php - Line 8474
+[<<][5d72ad3ada332098889924][DEFAULT][/lib/execute/execSetResults.php][19/Sep/6 19:02:18][19/Sep/6 19:02:18][took 0.074012 secs]

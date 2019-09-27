@@ -1,0 +1,217 @@
+	[19/Aug/27 20:12:26][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:26][AUDIT][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		Login for 'kevin.gidley' from '209.253.35.146' succeeded
+[<<][5d658eaaa0152621593555][DEFAULT][/login.php][19/Aug/27 20:12:26][19/Aug/27 20:12:26][took 0.091831 secs]
+[<<][5d658eaacd459955906272][DEFAULT][/index.php][19/Aug/27 20:12:26][19/Aug/27 20:12:26][took 0.0032519999999999 secs]
+[>>][5d658eaace1db511553252][DEFAULT][/index.php][19/Aug/27 20:12:26]
+[<<][5d658eaace1db511553252][DEFAULT][/index.php][19/Aug/27 20:12:26][19/Aug/27 20:12:26][took 0.001153 secs]
+[<<][5d658eaae24fd465354951][DEFAULT][/lib/general/mainPage.php][19/Aug/27 20:12:26][19/Aug/27 20:12:26][took 0.00315 secs]
+[>>][5d658eaae320e450027559][DEFAULT][/lib/general/mainPage.php][19/Aug/27 20:12:26]
+[<<][5d658eaae320e450027559][DEFAULT][/lib/general/mainPage.php][19/Aug/27 20:12:26][19/Aug/27 20:12:26][took 0.0017360000000001 secs]
+[>>][5d658eaae3976657406660][DEFAULT][/lib/general/mainPage.php][19/Aug/27 20:12:26]
+	[19/Aug/27 20:12:26][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:26][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:26][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:27][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+[<<][5d658eaae3976657406660][DEFAULT][/lib/general/mainPage.php][19/Aug/27 20:12:26][19/Aug/27 20:12:27][took 1.037315 secs]
+[<<][5d658eaae24fd424665064][DEFAULT][/lib/general/navBar.php][19/Aug/27 20:12:26][19/Aug/27 20:12:27][took 1.07216 secs]
+[>>][5d658eabf3f98430626412][DEFAULT][/lib/general/navBar.php][19/Aug/27 20:12:27]
+[<<][5d658eabf3f98430626412][DEFAULT][/lib/general/navBar.php][19/Aug/27 20:12:27][19/Aug/27 20:12:27][took 0.001127 secs]
+[>>][5d658eac00249671305187][DEFAULT][/lib/general/navBar.php][19/Aug/27 20:12:27]
+	[19/Aug/27 20:12:28][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:28][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:28][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:28][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:28][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:28][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:28][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:28][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+	[19/Aug/27 20:12:28][WARNING][519ginf1d8mfplbmvm1blei0p3][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/lib/functions/tlUser.class.php - Line 824
+[<<][5d658eac00249671305187][DEFAULT][/lib/general/navBar.php][19/Aug/27 20:12:27][19/Aug/27 20:12:28][took 0.26486 secs]
+[<<][5d658ebe5e514043913564][DEFAULT][/login.php][19/Aug/27 20:12:46][19/Aug/27 20:12:46][took 0.003319 secs]
+[>>][5d658ebe5f2cd314090530][DEFAULT][/login.php][19/Aug/27 20:12:46]
+[<<][5d658ebe5f2cd314090530][DEFAULT][/login.php][19/Aug/27 20:12:46][19/Aug/27 20:12:46][took 0.00171 secs]

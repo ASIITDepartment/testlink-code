@@ -231,7 +231,7 @@ $tlCfg->charts_font_size = 8;
 /**
  * TICKET 4969: Add Setting to Force HTTPS
  */
-$tlCfg->force_https = false;
+$tlCfg->force_https = TRUE;
 
 
 /**
@@ -283,7 +283,7 @@ $tlCfg->smarty_debug = false;
  *  for security reasons (see http://itsecuritysolutions.org/2012-08-13-TestLink-1.9.3-multiple-vulnerabilities/)
  *  put it out of reach via web or configure access denied.
  */
-$tlCfg->log_path = '/var/testlink/logs/'; /* unix example */
+$tlCfg->log_path = '/opt/bitnami/apps/testlink/htdocs/logs/'; /* unix example */
 
 
 /**
@@ -294,7 +294,7 @@ $tlCfg->log_path = '/var/testlink/logs/'; /* unix example */
  *         user will receive a message on screen. (default)
  * 'SILENT': same that FILE, but user will not receive message on screen.
  */
-$tlCfg->config_check_warning_mode = 'FILE';
+$tlCfg->config_check_warning_mode = 'SCREEN';
 
 /**
  * ONCE_FOR_SESSION
@@ -342,12 +342,12 @@ $tlCfg->loggerFilter = null; // default defined on logger.class.php ;
  * Configure using custom_config.inc.php
  * @uses lib/functions/email_api.php
  */
-$g_smtp_host        = '[smtp_host_not_configured]';  # SMTP server MUST BE configured
+$g_smtp_host        = '';  # SMTP server MUST BE configured
 
 # Configure using custom_config.inc.php
-$g_tl_admin_email     = '[testlink_sysadmin_email_not_configured]'; # for problem/error notification
-$g_from_email         = '[from_email_not_configured]';  # email sender
-$g_return_path_email  = '[return_path_email_not_configured]';
+$g_tl_admin_email     = 'user@example.com'; # for problem/error notification
+$g_from_email         = 'user@example.com';  # email sender
+$g_return_path_email  = 'user@example.com';
 
 /**
  * Email notification priority (low by default)
@@ -410,9 +410,8 @@ $tlCfg->authentication['method'] = 'DB';
 //
 // null => only check password IS NOT EMPTY
 //
-// $tlCfg->passwordChecks = array('minlen' => 8,'maxlen' => 20,'number' => true,'letter' => true,
-//                                'capital' => true, 'symbol' => true);
-$tlCfg->passwordChecks = null;
+$tlCfg->passwordChecks = array('minlen' => 8,'maxlen' => 20,'number' => true,'letter' => true,'capital' => true, 'symbol' => true);
+//$tlCfg->passwordChecks = null;
 
 // Applies ONLY to the HTML input.
 // If auth method is DB, password will be stored as MD5 HASH that requires 32 chars (128 bits)
@@ -531,11 +530,11 @@ $tlCfg->authentication['ldap'][1]['ldap_surname_field'] = 'sn';
 // mail
 // name
 // surname
-$tlCfg->authentication['ldap_automatic_user_creation'] = false;
+$tlCfg->authentication['ldap_automatic_user_creation'] = true;
 
 
 /** Enable/disable Users to create accounts on login page */
-$tlCfg->user_self_signup = TRUE;
+$tlCfg->user_self_signup = FALSE;
 
 /** What happens when Administrator push the Reset Password Button 
   'send_password_by_mail'
@@ -589,8 +588,8 @@ $tlCfg->api->id_format = "[ID: %s ]";
 /* [GUI LAYOUT] */
 
 /** Company logo (used by navigation bar and login page page) */
-$tlCfg->logo_login = 'tl-logo-transparent-25.png';
-$tlCfg->logo_navbar = 'tl-logo-transparent-12.5.png';
+$tlCfg->logo_login = 'ASI_Logo_FullMark_RGB_Color_OnLight.png';
+$tlCfg->logo_navbar = 'asiTag.png';
 
 /** Height of the navbar always displayed  */
 $tlCfg->navbar_height = 70;
@@ -877,8 +876,8 @@ $tlCfg->metrics_dashboard->show_test_plan_status = false;
  * Image is expected in directory <testlink_root>/gui/themes/<your_theme>/images/
  * Leave text values empty if you would like to hide parameters.
  */
-$tlCfg->document_generator->company_name = 'TestLink Community [configure $tlCfg->document_generator->company_name]';
-$tlCfg->document_generator->company_copyright = '2012 &copy; TestLink Community';
+$tlCfg->document_generator->company_name = 'Autonomous Solutions Inc.';
+$tlCfg->document_generator->company_copyright = 'Proprietary & Confidentail. Printed and offline docs are not the latest.';
 $tlCfg->document_generator->confidential_msg = '';
 
 // Logo for generated documents
@@ -1358,7 +1357,7 @@ $g_repositoryType = TL_REPOSITORY_TYPE_FS;
  * Put it out of reach via web or configure access denied.
  *
  **/
-$g_repositoryPath = '/var/testlink/upload_area/';  /* unix example */
+$g_repositoryPath = '/opt/bitnami/apps/testlink/htdocs/upload_area/';  /* unix example */
 
 /**
  * compression used within the repository
@@ -1537,7 +1536,7 @@ $tlCfg->internal_links->req_spec_link_title->value = '';
 // additionally you can configure your own types.
 $tlCfg->req_cfg->relations = new stdClass();
 $tlCfg->req_cfg->relations->enable = TRUE;
-$tlCfg->req_cfg->relations->interproject_linking = FALSE;
+$tlCfg->req_cfg->relations->interproject_linking = TRUE;
 
 // Requirement/testcase diff
 // default value of lines to show before and after each difference
@@ -1714,7 +1713,7 @@ $tlCfg->tplanDesign->hideTestCaseWithStatusIn = array($tlCfg->testCaseStatus['ob
 /** Maximum uploadfile size to importing stuff in TL */
 // Also check your PHP settings (default is usually 2MBs)
 // unit BYTES is required by MAX_FILE_SIZE HTML option
-$tlCfg->import_file_max_size_bytes = '409600';
+$tlCfg->import_file_max_size_bytes = '4000000';
 
 /** Maximum line size of the imported file */
 $tlCfg->import_max_row = '10000'; // in chars
@@ -1722,253 +1721,253 @@ $tlCfg->import_max_row = '10000'; // in chars
 /** Set the default role used for new users */
 // - created from the login page.
 // - created using user management features
-$tlCfg->default_roleid = TL_ROLES_GUEST;
+	$tlCfg->default_roleid = TL_ROLES_DEFAULT;
 
-// only show custom fields if their value isn't empty
-$tlCfg->custom_fields->show_custom_fields_without_value = true;
+	// only show custom fields if their value isn't empty
+	$tlCfg->custom_fields->show_custom_fields_without_value = true;
 
-/** used to check size in char for TEXT AREA type custom fields */
-// can not be greater that column definition on DB
-// 0 => do not check.
-$tlCfg->custom_fields->max_length = 255;
+	/** used to check size in char for TEXT AREA type custom fields */
+	// can not be greater that column definition on DB
+	// 0 => do not check.
+	$tlCfg->custom_fields->max_length = 255;
 
-// sizes for HTML INPUTS
-// for list, multiselection list 
-//  - MAXIMUM number of items displayed at once
-//  
-// for checkbox,radio is useless
-// Hint: more than 120 produce weird effects on user interface
-//
-$tlCfg->custom_fields->sizes = array('string' => 100,
-                                     'numeric' => 10,
-                                     'float' => 10,
-                                     'email' => 100,
-                                     'list' => 1,
-                                     'multiselection list' => 5,
-                                     'text area' => array('rows' => 6, 'cols' => 80),
-                                     'script' => 100,
-                                     'server' => 100);
+	// sizes for HTML INPUTS
+	// for list, multiselection list 
+	//  - MAXIMUM number of items displayed at once
+	//  
+	// for checkbox,radio is useless
+	// Hint: more than 120 produce weird effects on user interface
+	//
+	$tlCfg->custom_fields->sizes = array('string' => 100,
+					     'numeric' => 10,
+					     'float' => 10,
+					     'email' => 100,
+					     'list' => 1,
+					     'multiselection list' => 5,
+					     'text area' => array('rows' => 6, 'cols' => 80),
+					     'script' => 100,
+					     'server' => 100);
 
-// Use this variable (on custom_config.inc.php) to define new Custom Field types.
-// IMPORTANT:
-//           check $custom_field_types property on cfield_mgr.class.php
-//           to avoid overwrite of standard types.
-//
-$tlCfg->gui->custom_fields->types = null;
+	// Use this variable (on custom_config.inc.php) to define new Custom Field types.
+	// IMPORTANT:
+	//           check $custom_field_types property on cfield_mgr.class.php
+	//           to avoid overwrite of standard types.
+	//
+	$tlCfg->gui->custom_fields->types = null;
 
-// Use this variable (on custom_config.inc.php)
-// to define possible values behaviour for new Custom Field types.
-//
-// IMPORTANT:
-//           check $possible_values_cfg property on cfield_mgr.class.php
-//           to avoid overwrite of standard values.
-//
-$tlCfg->gui->custom_fields->possible_values_cfg = null;
-
-
-/**
- * Check unique titles of Test Project, Test Suite and Test Case
- *  ENABLED  => Check              [STANDARD BEHAVIOUR]
- *  DISABLED => don't check
- **/
-$tlCfg->check_names_for_duplicates = ENABLED;
-
-/**
- * Action for duplication check (only if check_names_for_duplicates=ENABLED)
- * 'allow_repeat' => allow the name to be repeated (backward compatibility)
- * 'generate_new' => generate a new name using $g_prefix_name_for_copy
- * 'block'        => return with an error
- **/
-$tlCfg->action_on_duplicate_name = 'generate_new';
-
-/**
- * String checking and conversions
- * Allow automatically convert www URLs and email adresses into clickable links
- * used by function string_display_links() for example by custom fields.
- * Valid values = ENABLED/DISABLED.
- **/
-$tlCfg->html_make_links = ENABLED;
-
-/**
- * Define the valid html tags for "content driven" single-line and multi-line fields.
- * Do NOT include tags with parameters (eg. <font face="arial">), img and href.
- * It's used by function string_display_links() for example by custom fields.
- */
-$tlCfg->html_valid_tags = 'p, li, ul, ol, br, pre, i, b, u, em';
-$tlCfg->html_valid_tags_single_line = 'i, b, u, em';
-
-/**
- * Defines the threshold values for filtering TC by a priority according to the formula
- * LOW  => all Tc's with (urgency*importance) < LOW_Threshold
- * HIGH   => all Tc's with (urgency*importance) >= HIGH_Threshold
- * MEDIUM  => all Tc's with (urgency*importance) >= LOW_Threshold AND (urgency*importance) < HIGH_Threshold
- */
-$tlCfg->urgencyImportance = new stdClass();
-$tlCfg->urgencyImportance->threshold['low'] = 3;
-$tlCfg->urgencyImportance->threshold['high'] = 6;
-
-/**
- * @var boolean Demo mode disables some functionality
- * user edit disable
- * role create ENABLED
- * user create ENABLED
- * special users manage DISABLE
- */
-$tlCfg->demoMode = OFF;
-$tlCfg->demoSpecialUsers = array('admin');
-
-/**
- * If enabled, every Ext JS table in TestLink will offer an export button,
- * which generates a file with the contents of the table.
- * ATTENTION: This feature is fully experimental. Enable at your own risk!
- *            Enabling it can cause broken tables.
- */
-$tlCfg->enableTableExportButton = DISABLED;
+	// Use this variable (on custom_config.inc.php)
+	// to define possible values behaviour for new Custom Field types.
+	//
+	// IMPORTANT:
+	//           check $possible_values_cfg property on cfield_mgr.class.php
+	//           to avoid overwrite of standard values.
+	//
+	$tlCfg->gui->custom_fields->possible_values_cfg = null;
 
 
-/**
- * Taken from Mantis to implement better login security, and solve
- * TICKET 4342
- */
-$tlCfg->auth_cookie = "TESTLINK_USER_AUTH_COOKIE";
+	/**
+	 * Check unique titles of Test Project, Test Suite and Test Case
+	 *  ENABLED  => Check              [STANDARD BEHAVIOUR]
+	 *  DISABLED => don't check
+	 **/
+	$tlCfg->check_names_for_duplicates = ENABLED;
 
-/** 
-Used when creating a Test Suite using copy
-and you have choose  $g_action_on_duplicate_name = 'generate_new'
-if the name exist.
-*/
-$g_prefix_name_for_copy = strftime("%Y%m%d-%H:%M:%S", time());
+	/**
+	 * Action for duplication check (only if check_names_for_duplicates=ENABLED)
+	 * 'allow_repeat' => allow the name to be repeated (backward compatibility)
+	 * 'generate_new' => generate a new name using $g_prefix_name_for_copy
+	 * 'block'        => return with an error
+	 **/
+	$tlCfg->action_on_duplicate_name = 'generate_new';
+
+	/**
+	 * String checking and conversions
+	 * Allow automatically convert www URLs and email adresses into clickable links
+	 * used by function string_display_links() for example by custom fields.
+	 * Valid values = ENABLED/DISABLED.
+	 **/
+	$tlCfg->html_make_links = ENABLED;
+
+	/**
+	 * Define the valid html tags for "content driven" single-line and multi-line fields.
+	 * Do NOT include tags with parameters (eg. <font face="arial">), img and href.
+	 * It's used by function string_display_links() for example by custom fields.
+	 */
+	$tlCfg->html_valid_tags = 'p, li, ul, ol, br, pre, i, b, u, em';
+	$tlCfg->html_valid_tags_single_line = 'i, b, u, em';
+
+	/**
+	 * Defines the threshold values for filtering TC by a priority according to the formula
+	 * LOW  => all Tc's with (urgency*importance) < LOW_Threshold
+	 * HIGH   => all Tc's with (urgency*importance) >= HIGH_Threshold
+	 * MEDIUM  => all Tc's with (urgency*importance) >= LOW_Threshold AND (urgency*importance) < HIGH_Threshold
+	 */
+	$tlCfg->urgencyImportance = new stdClass();
+	$tlCfg->urgencyImportance->threshold['low'] = 3;
+	$tlCfg->urgencyImportance->threshold['high'] = 6;
+
+	/**
+	 * @var boolean Demo mode disables some functionality
+	 * user edit disable
+	 * role create ENABLED
+	 * user create ENABLED
+	 * special users manage DISABLE
+	 */
+	$tlCfg->demoMode = OFF;
+	$tlCfg->demoSpecialUsers = array('admin');
+
+	/**
+	 * If enabled, every Ext JS table in TestLink will offer an export button,
+	 * which generates a file with the contents of the table.
+	 * ATTENTION: This feature is fully experimental. Enable at your own risk!
+	 *            Enabling it can cause broken tables.
+	 */
+	$tlCfg->enableTableExportButton = DISABLED;
 
 
+	/**
+	 * Taken from Mantis to implement better login security, and solve
+	 * TICKET 4342
+	 */
+	$tlCfg->auth_cookie = "TESTLINK_USER_AUTH_COOKIE";
 
-/** 
- * Configurable templates this can help if you want to use a non standard template.
- * i.e. you want to develop a new one without loosing the original template.
- * key: original TL template name WITHOUT extension
- * value: whatever name you want, only constrain you have to copy your template
- *        ON SAME FOLDER where original template is. 
- * See example below        
- */
-$g_tpl = array('inc_exec_controls' => 'inc_exec_img_controls.tpl');
-//$g_tpl = array('inc_exec_controls' => 'inc_exec_controls.tpl');
- 
-
-// Example 
-// $g_tpl = array('tcView'  => 'custom_tcView.tpl',
-//                 'tcSearchView' => 'myOwnTCSearchView.tpl',
-//                 'tcEdit' => 'tcEdit_ultraCool.tpl');
-
-/** Add o replace images */
-$tlCfg->images = array();
+	/** 
+	Used when creating a Test Suite using copy
+	and you have choose  $g_action_on_duplicate_name = 'generate_new'
+	if the name exist.
+	*/
+	$g_prefix_name_for_copy = strftime("%Y%m%d-%H:%M:%S", time());
 
 
 
-// ----------------------------------------------------------------------------
-/* [PROXY] */
-/* Used only */ 
-/* mantissoapInterface.class.php */
-/* jirasoapInterface.class.php */
-/* jirarestInterface.class.php */
-$tlCfg->proxy->host = null;
-$tlCfg->proxy->port = null;
-$tlCfg->proxy->login = null;
-$tlCfg->proxy->password = null;
+	/** 
+	 * Configurable templates this can help if you want to use a non standard template.
+	 * i.e. you want to develop a new one without loosing the original template.
+	 * key: original TL template name WITHOUT extension
+	 * value: whatever name you want, only constrain you have to copy your template
+	 *        ON SAME FOLDER where original template is. 
+	 * See example below        
+	 */
+	$g_tpl = array('inc_exec_controls' => 'inc_exec_img_controls.tpl');
+	//$g_tpl = array('inc_exec_controls' => 'inc_exec_controls.tpl');
+	 
 
+	// Example 
+	// $g_tpl = array('tcView'  => 'custom_tcView.tpl',
+	//                 'tcSearchView' => 'myOwnTCSearchView.tpl',
+	//                 'tcEdit' => 'tcEdit_ultraCool.tpl');
 
-/** Plugins feature */
-define('TL_PLUGIN_PATH', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR);
-
-// ----- End of Config ------------------------------------------------------------------
-// --------------------------------------------------------------------------------------
-// DO NOT DO CHANGES BELOW
-// --------------------------------------------------------------------------------------
-
-/** Functions for check request status */
-require_once('configCheck.php');
-
-
-if( !defined('TL_JQUERY') )
-{
-  define('TL_JQUERY','jquery-2.2.4.min.js' );
-}
-
-if( !defined('TL_DATATABLES_DIR') )
-{
-  define('TL_DATATABLES_DIR','DataTables-1.10.4' );
-}
-
-/** root of testlink directory location seen through the web server */
-/*  20070106 - franciscom - this statement it's not 100% right
-    better use $_SESSION['basehref'] in the scripts. */
-define('TL_BASE_HREF', get_home_url(array('force_https' => $tlCfg->force_https)));
-
-clearstatcache();
-if ( file_exists( TL_ABS_PATH . 'custom_config.inc.php' ) )
-{
-  require_once( TL_ABS_PATH . 'custom_config.inc.php' );
-}
-
-
-if( !isset($g_attachments->access_icon) )
-{
-  $g_attachments->access_icon = '<img src="' . $tlCfg->theme_dir . 'images/new_f2_16.png" style="border:none" />';
-}
-
-
-// Important to do this only after custom_* to use (if exists) redefinition of
-// $tlCfg->results['status_label_for_exec_ui']
-$tlCfg->reportsCfg->exec_status = $tlCfg->results['status_label_for_exec_ui'];
-
-
-/** Support for localization */
-//  @TODO move the code out of config and do it only once and 
-//  not always in any include!
-//  @TODO a better parsing function should be include
-$serverLanguage = false;
-if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']))
-{
-  @list($code) = explode(",",$_SERVER['HTTP_ACCEPT_LANGUAGE']);
-  @list($a,$b) = explode("-",$code);
-  if ($a && $b)
-  {
-    $a = strtolower($a);
-    $b = strtoupper($a);
-    $serverLanguage = $a."_".$b;
-  }
-}
-
-if(false !== $serverLanguage)
-{
-  if (array_key_exists($serverLanguage,$tlCfg->locales))
-  { 
-    $tlCfg->default_language = $serverLanguage;
-  } 
-}
-define ('TL_DEFAULT_LOCALE', $tlCfg->default_language);
-
-// Reverted execution status is used for two applications.
-// 1. To map code to CSS, Please if you add an status you need to add a corresponding CSS Class
-//    in the CSS files (see the gui directory)
-// 2. to decode from code to some more human oriented to use in code
-//
-/** Revered list of Test Case execution results */
-$tlCfg->results['code_status'] = array_flip($tlCfg->results['status_code']);
-
-// Enable CSRF global protection
-$tlCfg->csrf_filter_enabled = TRUE;
-
-// ---------------------------------------------------------------------------------
-/** Converted and derived variables (Users should not modify this section) */
-define('REFRESH_SPEC_TREE',$tlCfg->spec_cfg->automatic_tree_refresh ? 1 : 0);
-define('TL_SORT_TABLE_ENGINE',$g_sort_table_engine);
-define("TL_REPOSITORY_MAXFILESIZE", 1024*1024*$tlCfg->repository_max_filesize);
-
-define('TL_XMLEXPORT_HEADER', "<?xml version=\"1.0\" encoding=\"" . $tlCfg->charset . "\"?>\n");
+	/** Add o replace images */
+	$tlCfg->images = array();
 
 
 
-// ---------------------------------------------------------------------------------
-// when a role is deleted, a new role must be assigned to all users
+	// ----------------------------------------------------------------------------
+	/* [PROXY] */
+	/* Used only */ 
+	/* mantissoapInterface.class.php */
+	/* jirasoapInterface.class.php */
+	/* jirarestInterface.class.php */
+	$tlCfg->proxy->host = null;
+	$tlCfg->proxy->port = null;
+	$tlCfg->proxy->login = null;
+	$tlCfg->proxy->password = null;
+
+
+	/** Plugins feature */
+	define('TL_PLUGIN_PATH', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR);
+
+	// ----- End of Config ------------------------------------------------------------------
+	// --------------------------------------------------------------------------------------
+	// DO NOT DO CHANGES BELOW
+	// --------------------------------------------------------------------------------------
+
+	/** Functions for check request status */
+	require_once('configCheck.php');
+
+
+	if( !defined('TL_JQUERY') )
+	{
+	  define('TL_JQUERY','jquery-2.2.4.min.js' );
+	}
+
+	if( !defined('TL_DATATABLES_DIR') )
+	{
+	  define('TL_DATATABLES_DIR','DataTables-1.10.4' );
+	}
+
+	/** root of testlink directory location seen through the web server */
+	/*  20070106 - franciscom - this statement it's not 100% right
+	    better use $_SESSION['basehref'] in the scripts. */
+	define('TL_BASE_HREF', get_home_url(array('force_https' => $tlCfg->force_https)));
+
+	clearstatcache();
+	if ( file_exists( TL_ABS_PATH . 'custom_config.inc.php' ) )
+	{
+	  require_once( TL_ABS_PATH . 'custom_config.inc.php' );
+	}
+
+
+	if( !isset($g_attachments->access_icon) )
+	{
+	  $g_attachments->access_icon = '<img src="' . $tlCfg->theme_dir . 'images/new_f2_16.png" style="border:none" />';
+	}
+
+
+	// Important to do this only after custom_* to use (if exists) redefinition of
+	// $tlCfg->results['status_label_for_exec_ui']
+	$tlCfg->reportsCfg->exec_status = $tlCfg->results['status_label_for_exec_ui'];
+
+
+	/** Support for localization */
+	//  @TODO move the code out of config and do it only once and 
+	//  not always in any include!
+	//  @TODO a better parsing function should be include
+	$serverLanguage = false;
+	if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']))
+	{
+	  @list($code) = explode(",",$_SERVER['HTTP_ACCEPT_LANGUAGE']);
+	  @list($a,$b) = explode("-",$code);
+	  if ($a && $b)
+	  {
+	    $a = strtolower($a);
+	    $b = strtoupper($a);
+	    $serverLanguage = $a."_".$b;
+	  }
+	}
+
+	if(false !== $serverLanguage)
+	{
+	  if (array_key_exists($serverLanguage,$tlCfg->locales))
+	  { 
+	    $tlCfg->default_language = $serverLanguage;
+	  } 
+	}
+	define ('TL_DEFAULT_LOCALE', $tlCfg->default_language);
+
+	// Reverted execution status is used for two applications.
+	// 1. To map code to CSS, Please if you add an status you need to add a corresponding CSS Class
+	//    in the CSS files (see the gui directory)
+	// 2. to decode from code to some more human oriented to use in code
+	//
+	/** Revered list of Test Case execution results */
+	$tlCfg->results['code_status'] = array_flip($tlCfg->results['status_code']);
+
+	// Enable CSRF global protection
+	$tlCfg->csrf_filter_enabled = TRUE;
+
+	// ---------------------------------------------------------------------------------
+	/** Converted and derived variables (Users should not modify this section) */
+	define('REFRESH_SPEC_TREE',$tlCfg->spec_cfg->automatic_tree_refresh ? 1 : 0);
+	define('TL_SORT_TABLE_ENGINE',$g_sort_table_engine);
+	define("TL_REPOSITORY_MAXFILESIZE", 1024*1024*$tlCfg->repository_max_filesize);
+
+	define('TL_XMLEXPORT_HEADER', "<?xml version=\"1.0\" encoding=\"" . $tlCfg->charset . "\"?>\n");
+
+
+
+	// ---------------------------------------------------------------------------------
+	// when a role is deleted, a new role must be assigned to all users
 // having role to be deleted
 // A right choice seems to be using $g_default_roleid.
 // You can change this adding a config line in custom_config.inc.php

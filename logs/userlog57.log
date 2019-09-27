@@ -1,0 +1,45 @@
+	[19/Aug/27 23:14:44][AUDIT][uef6k58b03e4hofrdnlgac0cgn][GUI - Test Project ID : 71110]
+		Login for 'levi.baker' from '209.253.35.146' succeeded
+[<<][5d65b9643d732516100083][DEFAULT][/login.php][19/Aug/27 23:14:44][19/Aug/27 23:14:44][took 0.06039 secs]
+[<<][5d65b9646e412846123844][DEFAULT][/index.php][19/Aug/27 23:14:44][19/Aug/27 23:14:44][took 0.003483 secs]
+[>>][5d65b9646f28a236451759][DEFAULT][/index.php][19/Aug/27 23:14:44]
+[<<][5d65b9646f28a236451759][DEFAULT][/index.php][19/Aug/27 23:14:44][19/Aug/27 23:14:44][took 0.00181 secs]
+[<<][5d65b964870f3755507755][DEFAULT][/lib/general/mainPage.php][19/Aug/27 23:14:44][19/Aug/27 23:14:44][took 0.0033 secs]
+[>>][5d65b96487ea3214030755][DEFAULT][/lib/general/mainPage.php][19/Aug/27 23:14:44]
+[<<][5d65b96487ea3214030755][DEFAULT][/lib/general/mainPage.php][19/Aug/27 23:14:44][19/Aug/27 23:14:44][took 0.0022169999999999 secs]
+[>>][5d65b964887ea527870332][DEFAULT][/lib/general/mainPage.php][19/Aug/27 23:14:44]
+[<<][5d65b964887ea527870332][DEFAULT][/lib/general/mainPage.php][19/Aug/27 23:14:44][19/Aug/27 23:14:44][took 0.010175 secs]
+[<<][5d65b964870f4897903088][DEFAULT][/lib/general/navBar.php][19/Aug/27 23:14:44][19/Aug/27 23:14:44][took 0.017193 secs]
+[>>][5d65b9648b4d8258884904][DEFAULT][/lib/general/navBar.php][19/Aug/27 23:14:44]
+[<<][5d65b9648b4d8258884904][DEFAULT][/lib/general/navBar.php][19/Aug/27 23:14:44][19/Aug/27 23:14:44][took 0.001421 secs]
+[>>][5d65b9648baf1798611961][DEFAULT][/lib/general/navBar.php][19/Aug/27 23:14:44]
+[<<][5d65b9648baf1798611961][DEFAULT][/lib/general/navBar.php][19/Aug/27 23:14:44][19/Aug/27 23:14:44][took 0.004795 secs]
+[<<][5d65b96cd7e76048288063][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/27 23:14:52][19/Aug/27 23:14:52][took 0.003563 secs]
+[>>][5d65b96cd8d23548314889][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/27 23:14:52]
+[<<][5d65b96cd8d23548314889][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/27 23:14:52][19/Aug/27 23:14:52][took 0.001964 secs]
+[>>][5d65b96cd9570651638187][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/27 23:14:52]
+	[19/Aug/27 23:14:52][WARNING][uef6k58b03e4hofrdnlgac0cgn][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2045
+	[19/Aug/27 23:14:52][WARNING][uef6k58b03e4hofrdnlgac0cgn][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2045
+	[19/Aug/27 23:14:52][WARNING][uef6k58b03e4hofrdnlgac0cgn][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2046
+	[19/Aug/27 23:14:53][WARNING][uef6k58b03e4hofrdnlgac0cgn][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2046
+	[19/Aug/27 23:14:53][WARNING][uef6k58b03e4hofrdnlgac0cgn][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2047
+	[19/Aug/27 23:14:53][WARNING][uef6k58b03e4hofrdnlgac0cgn][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2047
+	[19/Aug/27 23:14:53][WARNING][uef6k58b03e4hofrdnlgac0cgn][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 3265
+	[19/Aug/27 23:14:53][WARNING][uef6k58b03e4hofrdnlgac0cgn][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 3265
+[<<][5d65b96cd9570651638187][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/27 23:14:52][19/Aug/27 23:14:53][took 0.234006 secs]

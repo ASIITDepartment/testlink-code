@@ -1,0 +1,198 @@
+	[19/Aug/16 16:40:52][AUDIT][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 71110]
+		Login for 'ben.call' from '209.253.35.146' succeeded
+[<<][5d56dc94142fb315695455][DEFAULT][/login.php][19/Aug/16 16:40:52][19/Aug/16 16:40:52][took 0.044431 secs]
+[<<][5d56dc94303d7888458990][DEFAULT][/index.php][19/Aug/16 16:40:52][19/Aug/16 16:40:52][took 0.003365 secs]
+[>>][5d56dc94311bd680371357][DEFAULT][/index.php][19/Aug/16 16:40:52]
+[<<][5d56dc94311bd680371357][DEFAULT][/index.php][19/Aug/16 16:40:52][19/Aug/16 16:40:52][took 0.001774 secs]
+[<<][5d56dc943ce08310468605][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:40:52][19/Aug/16 16:40:52][took 0.005836 secs]
+[>>][5d56dc943e58c821923280][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:40:52]
+[<<][5d56dc943e58c821923280][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:40:52][19/Aug/16 16:40:52][took 0.002119 secs]
+[>>][5d56dc943ee72830107772][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:40:52]
+[<<][5d56dc943ee72830107772][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:40:52][19/Aug/16 16:40:52][took 0.004474 secs]
+[<<][5d56dc943ddd2321344786][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:40:52][19/Aug/16 16:40:52][took 0.009805 secs]
+[>>][5d56dc94404ba967950407][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:40:52]
+[<<][5d56dc94404ba967950407][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:40:52][19/Aug/16 16:40:52][took 0.025704 secs]
+[>>][5d56dc94469be785910929][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:40:52]
+[<<][5d56dc94469be785910929][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:40:52][19/Aug/16 16:40:52][took 0.006316 secs]
+[<<][5d56dc9cc3bf7113081463][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:00][19/Aug/16 16:41:00][took 0.003244 secs]
+[>>][5d56dc9cc4968007264589][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:00]
+[<<][5d56dc9cc4968007264589][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:00][19/Aug/16 16:41:00][took 0.0019990000000001 secs]
+[>>][5d56dc9cc51d4363366589][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:00]
+	[19/Aug/16 16:41:00][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 68073]
+		E_NOTICE
+Undefined property: stdClass::$prefix - in /opt/bitnami/apps/testlink/htdocs/lib/general/navBar.php - Line 173
+[<<][5d56dc9cc51d4363366589][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:00][19/Aug/16 16:41:00][took 0.039711 secs]
+[<<][5d56dc9d066e3922199963][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:01][19/Aug/16 16:41:01][took 0.003286 secs]
+[>>][5d56dc9d0751f675505724][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:01]
+[<<][5d56dc9d0751f675505724][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:01][19/Aug/16 16:41:01][took 0.001931 secs]
+[>>][5d56dc9d07d62752678366][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:01]
+[<<][5d56dc9d07d62752678366][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:01][19/Aug/16 16:41:01][took 0.009384 secs]
+[<<][5d56dca255867217611052][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:06][19/Aug/16 16:41:06][took 0.00335 secs]
+[>>][5d56dca256641798241053][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:06]
+[<<][5d56dca256641798241053][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:06][19/Aug/16 16:41:06][took 0.001882 secs]
+[>>][5d56dca256e37097947004][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:06]
+	[19/Aug/16 16:41:06][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 75616]
+		E_NOTICE
+Undefined offset: 0 - in /opt/bitnami/apps/testlink/htdocs/lib/general/navBar.php - Line 143
+	[19/Aug/16 16:41:06][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 75616]
+		E_NOTICE
+Undefined offset: 0 - in /opt/bitnami/apps/testlink/htdocs/lib/general/navBar.php - Line 144
+	[19/Aug/16 16:41:06][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 75616]
+		E_NOTICE
+Undefined property: stdClass::$prefix - in /opt/bitnami/apps/testlink/htdocs/lib/general/navBar.php - Line 173
+[<<][5d56dca256e37097947004][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:06][19/Aug/16 16:41:06][took 0.084668 secs]
+[<<][5d56dca2942fb514415408][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:06][19/Aug/16 16:41:06][took 0.0034690000000001 secs]
+[>>][5d56dca29515f864723969][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:06]
+[<<][5d56dca29515f864723969][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:06][19/Aug/16 16:41:06][took 0.002277 secs]
+[>>][5d56dca295ae3153784970][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:06]
+[<<][5d56dca295ae3153784970][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:06][19/Aug/16 16:41:06][took 0.0052279999999999 secs]
+[<<][5d56dca5de413176429672][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:09][19/Aug/16 16:41:09][took 0.0033489999999999 secs]
+[>>][5d56dca5df1f1588020453][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:09]
+[<<][5d56dca5df1f1588020453][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:09][19/Aug/16 16:41:09][took 0.001993 secs]
+[>>][5d56dca5dfa5d150655274][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:09]
+	[19/Aug/16 16:41:09][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 21]
+		E_NOTICE
+Undefined property: stdClass::$prefix - in /opt/bitnami/apps/testlink/htdocs/lib/general/navBar.php - Line 173
+[<<][5d56dca5dfa5d150655274][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:09][19/Aug/16 16:41:09][took 0.05632 secs]
+[<<][5d56dca61c4a2575255012][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:10][19/Aug/16 16:41:10][took 0.003805 secs]
+[>>][5d56dca61d447698440794][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:10]
+[<<][5d56dca61d447698440794][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:10][19/Aug/16 16:41:10][took 0.003179 secs]
+[>>][5d56dca61e144990139719][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:10]
+[<<][5d56dca61e144990139719][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:10][19/Aug/16 16:41:10][took 0.009885 secs]
+[<<][5d56dcaee9c01853292809][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:18][19/Aug/16 16:41:18][took 0.003238 secs]
+[>>][5d56dcaeea965000268520][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:18]
+[<<][5d56dcaeea965000268520][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:18][19/Aug/16 16:41:18][took 0.001811 secs]
+[>>][5d56dcaeeb115421220235][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:18]
+	[19/Aug/16 16:41:18][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 71110]
+		E_NOTICE
+Undefined offset: 0 - in /opt/bitnami/apps/testlink/htdocs/lib/general/navBar.php - Line 143
+	[19/Aug/16 16:41:18][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 71110]
+		E_NOTICE
+Undefined offset: 0 - in /opt/bitnami/apps/testlink/htdocs/lib/general/navBar.php - Line 144
+	[19/Aug/16 16:41:19][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 71110]
+		E_NOTICE
+Undefined property: stdClass::$prefix - in /opt/bitnami/apps/testlink/htdocs/lib/general/navBar.php - Line 173
+[<<][5d56dcaeeb115421220235][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:18][19/Aug/16 16:41:19][took 0.071823 secs]
+[<<][5d56dcaf2cf51604175725][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:19][19/Aug/16 16:41:19][took 0.003417 secs]
+[>>][5d56dcaf2dd70545344529][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:19]
+[<<][5d56dcaf2dd70545344529][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:19][19/Aug/16 16:41:19][took 0.002211 secs]
+[>>][5d56dcaf2e6b1165432180][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:19]
+[<<][5d56dcaf2e6b1165432180][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:19][19/Aug/16 16:41:19][took 0.00402 secs]
+[<<][5d56dcb184847173081511][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:21][19/Aug/16 16:41:21][took 0.002897 secs]
+[>>][5d56dcb185474608677106][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:21]
+[<<][5d56dcb185474608677106][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:21][19/Aug/16 16:41:21][took 0.0015630000000001 secs]
+[>>][5d56dcb185b27975412669][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:21]
+	[19/Aug/16 16:41:21][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 2]
+		E_NOTICE
+Undefined offset: 0 - in /opt/bitnami/apps/testlink/htdocs/lib/functions/common.php - Line 448
+	[19/Aug/16 16:41:21][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 2]
+		E_NOTICE
+Undefined property: stdClass::$prefix - in /opt/bitnami/apps/testlink/htdocs/lib/general/navBar.php - Line 173
+[<<][5d56dcb185b27975412669][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:21][19/Aug/16 16:41:21][took 0.06555 secs]
+[<<][5d56dcb1baffb922915592][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:21][19/Aug/16 16:41:21][took 0.0032489999999999 secs]
+[>>][5d56dcb1bbd62405690340][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:21]
+[<<][5d56dcb1bbd62405690340][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:21][19/Aug/16 16:41:21][took 0.002505 secs]
+[>>][5d56dcb1bc7c6742388000][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:21]
+	[19/Aug/16 16:41:21][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 2]
+		E_NOTICE
+Undefined offset: 0 - in /opt/bitnami/apps/testlink/htdocs/lib/functions/common.php - Line 448
+[<<][5d56dcb1bc7c6742388000][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:21][19/Aug/16 16:41:21][took 0.049139 secs]
+[<<][5d56dcb33591a773354860][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:23][19/Aug/16 16:41:23][took 0.003295 secs]
+[>>][5d56dcb3366bd471548277][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:23]
+[<<][5d56dcb3366bd471548277][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:23][19/Aug/16 16:41:23][took 0.001958 secs]
+[>>][5d56dcb336f04335985087][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:23]
+	[19/Aug/16 16:41:23][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 68073]
+		E_NOTICE
+Undefined property: stdClass::$prefix - in /opt/bitnami/apps/testlink/htdocs/lib/general/navBar.php - Line 173
+[<<][5d56dcb336f04335985087][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:23][19/Aug/16 16:41:23][took 0.044388 secs]
+[<<][5d56dcb369cc0288471989][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:23][19/Aug/16 16:41:23][took 0.003401 secs]
+[>>][5d56dcb36aaca517355951][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:23]
+[<<][5d56dcb36aaca517355951][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:23][19/Aug/16 16:41:23][took 0.001984 secs]
+[>>][5d56dcb36b322909535369][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:23]
+[<<][5d56dcb36b322909535369][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:23][19/Aug/16 16:41:23][took 0.004337 secs]
+[<<][5d56dcb5e79b1246557463][DEFAULT][/lib/testcases/tcAssignedToUser.php][19/Aug/16 16:41:25][19/Aug/16 16:41:25][took 0.0034960000000001 secs]
+[>>][5d56dcb5e8826936647489][DEFAULT][/lib/testcases/tcAssignedToUser.php][19/Aug/16 16:41:25]
+[<<][5d56dcb5e8826936647489][DEFAULT][/lib/testcases/tcAssignedToUser.php][19/Aug/16 16:41:25][19/Aug/16 16:41:25][took 0.002 secs]
+[>>][5d56dcb5e9092438806794][DEFAULT][/lib/testcases/tcAssignedToUser.php][19/Aug/16 16:41:25]
+[<<][5d56dcb5e9092438806794][DEFAULT][/lib/testcases/tcAssignedToUser.php][19/Aug/16 16:41:25][19/Aug/16 16:41:25][took 0.007857 secs]
+[<<][5d56dcc03310e281505632][DEFAULT][/index.php][19/Aug/16 16:41:36][19/Aug/16 16:41:36][took 0.003393 secs]
+[>>][5d56dcc033f18292967370][DEFAULT][/index.php][19/Aug/16 16:41:36]
+[<<][5d56dcc033f18292967370][DEFAULT][/index.php][19/Aug/16 16:41:36][19/Aug/16 16:41:36][took 0.00171 secs]
+[<<][5d56dcc042181763857511][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:36][19/Aug/16 16:41:36][took 0.003369 secs]
+[>>][5d56dcc042fc4365296600][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:36]
+[<<][5d56dcc042fc4365296600][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:36][19/Aug/16 16:41:36][took 0.00267 secs]
+[>>][5d56dcc043b54127469393][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:36]
+[<<][5d56dcc043b54127469393][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:41:36][19/Aug/16 16:41:36][took 0.007499 secs]
+[<<][5d56dcc042147530409073][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:36][19/Aug/16 16:41:36][took 0.018459 secs]
+[>>][5d56dcc046a12592230514][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:36]
+[<<][5d56dcc046a12592230514][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:36][19/Aug/16 16:41:36][took 0.002644 secs]
+[>>][5d56dcc047521690544865][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:36]
+[<<][5d56dcc047521690544865][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:41:36][19/Aug/16 16:41:36][took 0.003393 secs]
+[<<][5d56dcc23965c109730241][DEFAULT][/lib/general/frmWorkArea.php][19/Aug/16 16:41:38][19/Aug/16 16:41:38][took 0.003025 secs]
+[>>][5d56dcc23a2ec117335411][DEFAULT][/lib/general/frmWorkArea.php][19/Aug/16 16:41:38]
+[<<][5d56dcc23a2ec117335411][DEFAULT][/lib/general/frmWorkArea.php][19/Aug/16 16:41:38][19/Aug/16 16:41:38][took 0.001763 secs]
+[>>][5d56dcc23aa6e342408236][DEFAULT][/lib/general/frmWorkArea.php][19/Aug/16 16:41:38]
+[<<][5d56dcc23aa6e342408236][DEFAULT][/lib/general/frmWorkArea.php][19/Aug/16 16:41:38][19/Aug/16 16:41:38][took 0.002957 secs]
+[<<][5d56dcc249a28020877204][DEFAULT][/lib/execute/execNavigator.php][19/Aug/16 16:41:38][19/Aug/16 16:41:38][took 0.003047 secs]
+[>>][5d56dcc24a6da990048473][DEFAULT][/lib/execute/execNavigator.php][19/Aug/16 16:41:38]
+[<<][5d56dcc24a6da990048473][DEFAULT][/lib/execute/execNavigator.php][19/Aug/16 16:41:38][19/Aug/16 16:41:38][took 0.001625 secs]
+[>>][5d56dcc24adc0771223743][DEFAULT][/lib/execute/execNavigator.php][19/Aug/16 16:41:38]
+[<<][5d56dcc24adc0771223743][DEFAULT][/lib/execute/execNavigator.php][19/Aug/16 16:41:38][19/Aug/16 16:41:38][took 0.10752 secs]
+[<<][5d56dcc249a28110579488][DEFAULT][/lib/execute/execDashboard.php][19/Aug/16 16:41:38][19/Aug/16 16:41:38][took 0.114659 secs]
+[>>][5d56dcc265abf954780835][DEFAULT][/lib/execute/execDashboard.php][19/Aug/16 16:41:38]
+[<<][5d56dcc265abf954780835][DEFAULT][/lib/execute/execDashboard.php][19/Aug/16 16:41:38][19/Aug/16 16:41:38][took 0.001375 secs]
+[>>][5d56dcc2660a8929966997][DEFAULT][/lib/execute/execDashboard.php][19/Aug/16 16:41:38]
+[<<][5d56dcc2660a8929966997][DEFAULT][/lib/execute/execDashboard.php][19/Aug/16 16:41:38][19/Aug/16 16:41:38][took 0.017675 secs]
+[<<][5d56dcc2c6d38907291102][DEFAULT][/lib/execute/execDashboard.php][19/Aug/16 16:41:38][19/Aug/16 16:41:38][took 0.0033890000000001 secs]
+[>>][5d56dcc2c7b36250612262][DEFAULT][/lib/execute/execDashboard.php][19/Aug/16 16:41:38]
+[<<][5d56dcc2c7b36250612262][DEFAULT][/lib/execute/execDashboard.php][19/Aug/16 16:41:38][19/Aug/16 16:41:38][took 0.001946 secs]
+[>>][5d56dcc2c8388404966053][DEFAULT][/lib/execute/execDashboard.php][19/Aug/16 16:41:38]
+[<<][5d56dcc2c8388404966053][DEFAULT][/lib/execute/execDashboard.php][19/Aug/16 16:41:38][19/Aug/16 16:41:38][took 0.017715 secs]
+[<<][5d56dccdaf582079537640][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/16 16:41:49][19/Aug/16 16:41:49][took 0.003706 secs]
+[>>][5d56dccdb04bd869359442][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/16 16:41:49]
+[<<][5d56dccdb04bd869359442][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/16 16:41:49][19/Aug/16 16:41:49][took 0.001906 secs]
+[>>][5d56dccdb0ce2533503841][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/16 16:41:49]
+	[19/Aug/16 16:41:49][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 68073]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2045
+	[19/Aug/16 16:41:49][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 68073]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2045
+	[19/Aug/16 16:41:49][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 68073]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2046
+	[19/Aug/16 16:41:49][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 68073]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2046
+	[19/Aug/16 16:41:49][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 68073]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2047
+	[19/Aug/16 16:41:49][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 68073]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2047
+	[19/Aug/16 16:41:49][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 68073]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 3265
+	[19/Aug/16 16:41:49][WARNING][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 68073]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 3265
+[<<][5d56dccdb0ce2533503841][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/16 16:41:49][19/Aug/16 16:41:49][took 0.213085 secs]
+[<<][5d56dcd8b1d28913569350][DEFAULT][/index.php][19/Aug/16 16:42:00][19/Aug/16 16:42:00][took 0.002927 secs]
+[>>][5d56dcd8b2953325611100][DEFAULT][/index.php][19/Aug/16 16:42:00]
+[<<][5d56dcd8b2953325611100][DEFAULT][/index.php][19/Aug/16 16:42:00][19/Aug/16 16:42:00][took 0.001495 secs]
+[<<][5d56dcd8c17e2055715988][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:42:00][19/Aug/16 16:42:00][took 0.002703 secs]
+[>>][5d56dcd8c231e346473028][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:42:00]
+[<<][5d56dcd8c231e346473028][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:42:00][19/Aug/16 16:42:00][took 0.00317 secs]
+[>>][5d56dcd8c3022880291031][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:42:00]
+[<<][5d56dcd8c3022880291031][DEFAULT][/lib/general/navBar.php][19/Aug/16 16:42:00][19/Aug/16 16:42:00][took 0.007629 secs]
+[<<][5d56dcd8c1ed4457539393][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:42:00][19/Aug/16 16:42:00][took 0.016279 secs]
+[>>][5d56dcd8c5f0a983853082][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:42:00]
+[<<][5d56dcd8c5f0a983853082][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:42:00][19/Aug/16 16:42:00][took 0.0015350000000001 secs]
+[>>][5d56dcd8c659a821872835][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:42:00]
+[<<][5d56dcd8c659a821872835][DEFAULT][/lib/general/mainPage.php][19/Aug/16 16:42:00][19/Aug/16 16:42:00][took 0.007673 secs]
+[<<][5d56dcdba6f41945924258][DEFAULT][/logout.php][19/Aug/16 16:42:03][19/Aug/16 16:42:03][took 0.003329 secs]
+[>>][5d56dcdba7d08716853397][DEFAULT][/logout.php][19/Aug/16 16:42:03]
+[<<][5d56dcdba7d08716853397][DEFAULT][/logout.php][19/Aug/16 16:42:03][19/Aug/16 16:42:03][took 0.0020880000000001 secs]
+[>>][5d56dcdba85d3743908479][DEFAULT][/logout.php][19/Aug/16 16:42:03]
+	[19/Aug/16 16:42:03][AUDIT][ar7v7nobl0esftpnsf8vq773cg][GUI - Test Project ID : 68073]
+		Logout of 'ben.call'

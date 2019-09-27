@@ -28,6 +28,14 @@ body.fixedheader {
 img {
 	border: 		none;
 }
+img[title='logo'] {
+  height: 70px;
+   width: 35px;
+}
+
+.menu_bar, .menu_title {
+  margin: 0px 5px 0px 40px !important;
+}
 
 pre
 {
@@ -452,7 +460,7 @@ table.common th, table.simple th, table.simple_tableruler th{
   	border:			1px solid #99bbe8;
   	line-height:	15px;
   	background:		transparent url(../images/white-top-bottom.gif) repeat-x 0 -1px;
-  	background-color: #CDDEF3;
+  	background-color: aqua/*#CDDEF3;
 }
 
 table.common td,th{
@@ -944,15 +952,46 @@ th.testlink, td.testlink, tr.testlink td {
 20121230 - franciscom - used on ext-js table implementation of users view 
 
 */
+
+.roleCode14
+{
+background-color: yellow !important:
+color: black;
+}
+
+.roleCode13
+{
+background-color: powderblue !important:
+color: black;
+}
+
+.roleCode12
+{
+background-color: chartreuse !important:
+color: black;
+}
+
+.roleCode11
+{
+background-color:  red !important:
+color: black;
+}
+
+.roleCode10
+{
+background-color: blue !important:
+color: black;
+}
+
 .roleCode9 
 {
-  background-color: acqua !important;
+  background-color: aqua !important;
   color: black;
 }
 
 .roleCode8 
 {
-  background-color: white !important;
+  background-color: red !important;
   color: black;
 }
 

@@ -1,0 +1,175 @@
+	[19/Mar/27 22:22:17][AUDIT][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		Login for 'kevin.gidley@asirobots.com' from '209.253.35.146' succeeded
+[<<][5c9bf7991dec1629149606][DEFAULT][/login.php][19/Mar/27 22:22:17][19/Mar/27 22:22:17][took 0.042652 secs]
+[<<][5c9bf79936515385200935][DEFAULT][/index.php][19/Mar/27 22:22:17][19/Mar/27 22:22:17][took 0.003366 secs]
+[>>][5c9bf799372e8641113197][DEFAULT][/index.php][19/Mar/27 22:22:17]
+[<<][5c9bf799372e8641113197][DEFAULT][/index.php][19/Mar/27 22:22:17][19/Mar/27 22:22:17][took 0.001621 secs]
+[<<][5c9bf799438eb510316409][DEFAULT][/lib/general/mainPage.php][19/Mar/27 22:22:17][19/Mar/27 22:22:17][took 0.002509 secs]
+[>>][5c9bf79944de9987503775][DEFAULT][/lib/general/mainPage.php][19/Mar/27 22:22:17]
+[<<][5c9bf79944de9987503775][DEFAULT][/lib/general/mainPage.php][19/Mar/27 22:22:17][19/Mar/27 22:22:17][took 0.001591 secs]
+[>>][5c9bf799454ad217229836][DEFAULT][/lib/general/mainPage.php][19/Mar/27 22:22:17]
+	[19/Mar/27 22:22:17][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_NOTICE
+Undefined index: platform_view - in /opt/bitnami/apps/testlink/htdocs/gui/templates_c/835a037b28214872edd369779d57f903f1734c6a.file.mainPageLeft.tpl.php - Line 205
+[<<][5c9bf799454ad217229836][DEFAULT][/lib/general/mainPage.php][19/Mar/27 22:22:17][19/Mar/27 22:22:17][took 0.053201 secs]
+[<<][5c9bf79943328962273214][DEFAULT][/lib/general/navBar.php][19/Mar/27 22:22:17][19/Mar/27 22:22:17][took 0.077732 secs]
+[>>][5c9bf79956373152537202][DEFAULT][/lib/general/navBar.php][19/Mar/27 22:22:17]
+[<<][5c9bf79956373152537202][DEFAULT][/lib/general/navBar.php][19/Mar/27 22:22:17][19/Mar/27 22:22:17][took 0.001686 secs]
+[>>][5c9bf79956a93225374607][DEFAULT][/lib/general/navBar.php][19/Mar/27 22:22:17]
+[<<][5c9bf79956a93225374607][DEFAULT][/lib/general/navBar.php][19/Mar/27 22:22:17][19/Mar/27 22:22:17][took 0.004199 secs]
+[<<][5c9bf7a6cb476486426504][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:22:30][19/Mar/27 22:22:30][took 0.003331 secs]
+[>>][5c9bf7a6cc237561127977][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:22:30]
+[<<][5c9bf7a6cc237561127977][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:22:30][19/Mar/27 22:22:30][took 0.001829 secs]
+[>>][5c9bf7a6cc9f1947586245][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:22:30]
+	[19/Mar/27 22:22:30][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2045
+	[19/Mar/27 22:22:30][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2045
+	[19/Mar/27 22:22:30][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2046
+	[19/Mar/27 22:22:30][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2046
+	[19/Mar/27 22:22:30][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2047
+	[19/Mar/27 22:22:30][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2047
+	[19/Mar/27 22:22:31][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 3265
+	[19/Mar/27 22:22:31][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 3265
+[<<][5c9bf7a6cc9f1947586245][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:22:30][19/Mar/27 22:22:31][took 0.216721 secs]
+[<<][5c9bf7ba90faf748167867][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:22:50][19/Mar/27 22:22:50][took 0.003282 secs]
+[>>][5c9bf7ba91d40322544000][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:22:50]
+[<<][5c9bf7ba91d40322544000][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:22:50][19/Mar/27 22:22:50][took 0.0021519999999999 secs]
+[>>][5c9bf7ba92641141355492][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:22:50]
+	[19/Mar/27 22:22:50][AUDIT][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		Password of user 'kevin.gidley@asirobots.com' was saved
+	[19/Mar/27 22:22:50][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2045
+	[19/Mar/27 22:22:50][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2045
+	[19/Mar/27 22:22:50][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2046
+	[19/Mar/27 22:22:50][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2046
+	[19/Mar/27 22:22:50][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2047
+	[19/Mar/27 22:22:50][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2047
+	[19/Mar/27 22:22:50][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 3265
+	[19/Mar/27 22:22:50][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 3265
+[<<][5c9bf7ba92641141355492][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:22:50][19/Mar/27 22:22:50][took 0.252554 secs]
+[<<][5c9bf7c529b6f185912794][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:23:01][19/Mar/27 22:23:01][took 0.003027 secs]
+[>>][5c9bf7c52a80c904602014][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:23:01]
+[<<][5c9bf7c52a80c904602014][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:23:01][19/Mar/27 22:23:01][took 0.001854 secs]
+[>>][5c9bf7c52afd5684857396][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:23:01]
+	[19/Mar/27 22:23:01][AUDIT][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		User 'kevin.gidley@asirobots.com' was saved
+	[19/Mar/27 22:23:01][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2045
+	[19/Mar/27 22:23:01][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2045
+	[19/Mar/27 22:23:01][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2046
+	[19/Mar/27 22:23:01][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2046
+	[19/Mar/27 22:23:01][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2047
+	[19/Mar/27 22:23:01][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2047
+	[19/Mar/27 22:23:01][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 3265
+	[19/Mar/27 22:23:01][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 3265
+[<<][5c9bf7c52afd5684857396][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:23:01][19/Mar/27 22:23:01][took 0.238042 secs]
+[<<][5c9bf7c585243394706938][DEFAULT][/lib/general/navBar.php][19/Mar/27 22:23:01][19/Mar/27 22:23:01][took 0.004756 secs]
+[>>][5c9bf7c586596634756895][DEFAULT][/lib/general/navBar.php][19/Mar/27 22:23:01]
+[<<][5c9bf7c586596634756895][DEFAULT][/lib/general/navBar.php][19/Mar/27 22:23:01][19/Mar/27 22:23:01][took 0.001568 secs]
+[>>][5c9bf7c586c3d161924526][DEFAULT][/lib/general/navBar.php][19/Mar/27 22:23:01]
+[<<][5c9bf7c586c3d161924526][DEFAULT][/lib/general/navBar.php][19/Mar/27 22:23:01][19/Mar/27 22:23:01][took 0.005672 secs]
+[<<][5c9bf7e00544f793022466][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:23:28][19/Mar/27 22:23:28][took 0.005601 secs]
+[>>][5c9bf7e006af1312760214][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:23:28]
+[<<][5c9bf7e006af1312760214][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:23:28][19/Mar/27 22:23:28][took 0.001714 secs]
+[>>][5c9bf7e007238646924202][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:23:28]
+	[19/Mar/27 22:23:28][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2045
+	[19/Mar/27 22:23:28][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2045
+	[19/Mar/27 22:23:28][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2046
+	[19/Mar/27 22:23:28][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2046
+	[19/Mar/27 22:23:28][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2047
+	[19/Mar/27 22:23:28][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2047
+	[19/Mar/27 22:23:28][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 3265
+	[19/Mar/27 22:23:28][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 3265
+[<<][5c9bf7e007238646924202][DEFAULT][/lib/usermanagement/userInfo.php][19/Mar/27 22:23:28][19/Mar/27 22:23:28][took 0.229891 secs]
+[<<][5c9bf7e41bef8746368818][DEFAULT][/logout.php][19/Mar/27 22:23:32][19/Mar/27 22:23:32][took 0.004181 secs]
+[>>][5c9bf7e41cff4747262766][DEFAULT][/logout.php][19/Mar/27 22:23:32]
+[<<][5c9bf7e41cff4747262766][DEFAULT][/logout.php][19/Mar/27 22:23:32][19/Mar/27 22:23:32][took 0.002012 secs]
+[>>][5c9bf7e41d862752160643][DEFAULT][/logout.php][19/Mar/27 22:23:32]
+	[19/Mar/27 22:23:32][AUDIT][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		Logout of 'kevin.gidley@asirobots.com'
+	[19/Mar/28 19:19:54][AUDIT][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		Login for 'kevin.gidley@asirobots.com' from '209.253.35.146' succeeded
+[<<][5c9d1e59ef3fb333955539][DEFAULT][/login.php][19/Mar/28 19:19:53][19/Mar/28 19:19:54][took 0.096207 secs]
+[<<][5c9d1e5a23c7b703857674][DEFAULT][/index.php][19/Mar/28 19:19:54][19/Mar/28 19:19:54][took 0.005778 secs]
+[>>][5c9d1e5a253d7162664771][DEFAULT][/index.php][19/Mar/28 19:19:54]
+[<<][5c9d1e5a253d7162664771][DEFAULT][/index.php][19/Mar/28 19:19:54][19/Mar/28 19:19:54][took 0.002443 secs]
+[<<][5c9d1e5a353aa732944575][DEFAULT][/lib/general/navBar.php][19/Mar/28 19:19:54][19/Mar/28 19:19:54][took 0.004855 secs]
+[>>][5c9d1e5a36768979199072][DEFAULT][/lib/general/navBar.php][19/Mar/28 19:19:54]
+[<<][5c9d1e5a36768979199072][DEFAULT][/lib/general/navBar.php][19/Mar/28 19:19:54][19/Mar/28 19:19:54][took 0.001682 secs]
+[>>][5c9d1e5a36e7e678394163][DEFAULT][/lib/general/navBar.php][19/Mar/28 19:19:54]
+[<<][5c9d1e5a36e7e678394163][DEFAULT][/lib/general/navBar.php][19/Mar/28 19:19:54][19/Mar/28 19:19:54][took 0.009634 secs]
+[<<][5c9d1e5a35711653639504][DEFAULT][/lib/general/mainPage.php][19/Mar/28 19:19:54][19/Mar/28 19:19:54][took 0.028933 secs]
+[>>][5c9d1e5a3c8c1491724504][DEFAULT][/lib/general/mainPage.php][19/Mar/28 19:19:54]
+[<<][5c9d1e5a3c8c1491724504][DEFAULT][/lib/general/mainPage.php][19/Mar/28 19:19:54][19/Mar/28 19:19:54][took 0.006636 secs]
+[>>][5c9d1e5a3e348867850098][DEFAULT][/lib/general/mainPage.php][19/Mar/28 19:19:54]
+	[19/Mar/28 19:19:54][L18N][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		string 'href_codetracker_management' is not localized for locale 'en_US'  - using en_GB
+	[19/Mar/28 19:19:54][WARNING][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		E_NOTICE
+Undefined index: platform_view - in /opt/bitnami/apps/testlink/htdocs/gui/templates_c/835a037b28214872edd369779d57f903f1734c6a.file.mainPageLeft.tpl.php - Line 205
+	[19/Mar/28 19:19:54][L18N][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		string 'poweredBy' is not localized for locale 'en_US'  - using en_GB
+	[19/Mar/28 19:19:54][L18N][ptn30vfas11ik6kholiduj2qso][GUI - Test Project ID : 2]
+		string 'system_descr' is not localized for locale 'en_US'  - using en_GB
+[<<][5c9d1e5a3e348867850098][DEFAULT][/lib/general/mainPage.php][19/Mar/28 19:19:54][19/Mar/28 19:19:54][took 0.195662 secs]

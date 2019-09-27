@@ -1,0 +1,110 @@
+	[19/Aug/16 14:54:15][AUDIT][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		Login for 'zac.womack@asirobots.com' from '209.253.35.146' succeeded
+[<<][5d56c3974248f501011286][DEFAULT][/login.php][19/Aug/16 14:54:15][19/Aug/16 14:54:15][took 0.048387 secs]
+[<<][5d56c39767545871533752][DEFAULT][/index.php][19/Aug/16 14:54:15][19/Aug/16 14:54:15][took 0.003323 secs]
+[>>][5d56c397682fe496295529][DEFAULT][/index.php][19/Aug/16 14:54:15]
+[<<][5d56c397682fe496295529][DEFAULT][/index.php][19/Aug/16 14:54:15][19/Aug/16 14:54:15][took 0.00193 secs]
+[<<][5d56c39779d04904402262][DEFAULT][/lib/general/mainPage.php][19/Aug/16 14:54:15][19/Aug/16 14:54:15][took 0.003261 secs]
+[>>][5d56c3977aa75185800285][DEFAULT][/lib/general/mainPage.php][19/Aug/16 14:54:15]
+[<<][5d56c3977aa75185800285][DEFAULT][/lib/general/mainPage.php][19/Aug/16 14:54:15][19/Aug/16 14:54:15][took 0.002609 secs]
+[>>][5d56c3977b546689889183][DEFAULT][/lib/general/mainPage.php][19/Aug/16 14:54:15]
+	[19/Aug/16 14:54:15][WARNING][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		E_NOTICE
+Undefined index: platform_view - in /opt/bitnami/apps/testlink/htdocs/gui/templates_c/835a037b28214872edd369779d57f903f1734c6a.file.mainPageLeft.tpl.php - Line 205
+[<<][5d56c3977b546689889183][DEFAULT][/lib/general/mainPage.php][19/Aug/16 14:54:15][19/Aug/16 14:54:15][took 0.04926 secs]
+[<<][5d56c39779d05161290191][DEFAULT][/lib/general/navBar.php][19/Aug/16 14:54:15][19/Aug/16 14:54:15][took 0.072039 secs]
+[>>][5d56c3978b71d421532062][DEFAULT][/lib/general/navBar.php][19/Aug/16 14:54:15]
+[<<][5d56c3978b71d421532062][DEFAULT][/lib/general/navBar.php][19/Aug/16 14:54:15][19/Aug/16 14:54:15][took 0.001769 secs]
+[>>][5d56c3978be91749132712][DEFAULT][/lib/general/navBar.php][19/Aug/16 14:54:15]
+[<<][5d56c3978be91749132712][DEFAULT][/lib/general/navBar.php][19/Aug/16 14:54:15][19/Aug/16 14:54:15][took 0.004629 secs]
+[<<][5d56c3a2da185872721025][DEFAULT][/logout.php][19/Aug/16 14:54:26][19/Aug/16 14:54:26][took 0.003638 secs]
+[>>][5d56c3a2db085740725734][DEFAULT][/logout.php][19/Aug/16 14:54:26]
+[<<][5d56c3a2db085740725734][DEFAULT][/logout.php][19/Aug/16 14:54:26][19/Aug/16 14:54:26][took 0.002203 secs]
+[>>][5d56c3a2db9bd424956575][DEFAULT][/logout.php][19/Aug/16 14:54:26]
+	[19/Aug/16 14:54:26][AUDIT][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		Logout of 'zac.womack@asirobots.com'
+	[19/Aug/16 14:54:29][AUDIT][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		Login for 'zac.womack@asirobots.com' from '209.253.35.146' succeeded
+[<<][5d56c3a5949b4333055956][DEFAULT][/login.php][19/Aug/16 14:54:29][19/Aug/16 14:54:29][took 0.070521 secs]
+[<<][5d56c3a5ba0f6769533448][DEFAULT][/index.php][19/Aug/16 14:54:29][19/Aug/16 14:54:29][took 0.003379 secs]
+[>>][5d56c3a5baedf097892346][DEFAULT][/index.php][19/Aug/16 14:54:29]
+[<<][5d56c3a5baedf097892346][DEFAULT][/index.php][19/Aug/16 14:54:29][19/Aug/16 14:54:29][took 0.002153 secs]
+[<<][5d56c3a5cc794324678904][DEFAULT][/lib/general/navBar.php][19/Aug/16 14:54:29][19/Aug/16 14:54:29][took 0.00279 secs]
+[>>][5d56c3a5cd31c420027079][DEFAULT][/lib/general/navBar.php][19/Aug/16 14:54:29]
+[<<][5d56c3a5cd31c420027079][DEFAULT][/lib/general/navBar.php][19/Aug/16 14:54:29][19/Aug/16 14:54:29][took 0.002495 secs]
+[>>][5d56c3a5cdd77761310383][DEFAULT][/lib/general/navBar.php][19/Aug/16 14:54:29]
+[<<][5d56c3a5cdd77761310383][DEFAULT][/lib/general/navBar.php][19/Aug/16 14:54:29][19/Aug/16 14:54:29][took 0.0078940000000001 secs]
+[<<][5d56c3a5cce12340994415][DEFAULT][/lib/general/mainPage.php][19/Aug/16 14:54:29][19/Aug/16 14:54:29][took 0.012983 secs]
+[>>][5d56c3a5d01ca425711324][DEFAULT][/lib/general/mainPage.php][19/Aug/16 14:54:29]
+[<<][5d56c3a5d01ca425711324][DEFAULT][/lib/general/mainPage.php][19/Aug/16 14:54:29][19/Aug/16 14:54:29][took 0.001775 secs]
+[>>][5d56c3a5d0950191315640][DEFAULT][/lib/general/mainPage.php][19/Aug/16 14:54:29]
+	[19/Aug/16 14:54:29][WARNING][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		E_NOTICE
+Undefined index: platform_view - in /opt/bitnami/apps/testlink/htdocs/gui/templates_c/835a037b28214872edd369779d57f903f1734c6a.file.mainPageLeft.tpl.php - Line 205
+[<<][5d56c3a5d0950191315640][DEFAULT][/lib/general/mainPage.php][19/Aug/16 14:54:29][19/Aug/16 14:54:29][took 0.059423 secs]
+[<<][5d56c3a7482cc231624519][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/16 14:54:31][19/Aug/16 14:54:31][took 0.003351 secs]
+[>>][5d56c3a7490c0587318868][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/16 14:54:31]
+[<<][5d56c3a7490c0587318868][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/16 14:54:31][19/Aug/16 14:54:31][took 0.002496 secs]
+[>>][5d56c3a749b1f245501328][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/16 14:54:31]
+	[19/Aug/16 14:54:31][WARNING][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2045
+	[19/Aug/16 14:54:31][WARNING][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2045
+	[19/Aug/16 14:54:31][WARNING][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2046
+	[19/Aug/16 14:54:31][WARNING][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2046
+	[19/Aug/16 14:54:31][WARNING][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2047
+	[19/Aug/16 14:54:31][WARNING][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2047
+	[19/Aug/16 14:54:31][WARNING][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 3265
+	[19/Aug/16 14:54:31][WARNING][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 3265
+[<<][5d56c3a749b1f245501328][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/16 14:54:31][19/Aug/16 14:54:31][took 0.221047 secs]
+[<<][5d56c3be017fc497818303][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/16 14:54:54][19/Aug/16 14:54:54][took 0.003304 secs]
+[>>][5d56c3be025aa736265820][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/16 14:54:54]
+[<<][5d56c3be025aa736265820][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/16 14:54:54][19/Aug/16 14:54:54][took 0.002125 secs]
+[>>][5d56c3be02e96604126341][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/16 14:54:54]
+	[19/Aug/16 14:54:54][AUDIT][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		Password of user 'zac.womack@asirobots.com' was saved
+	[19/Aug/16 14:54:54][WARNING][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2045
+	[19/Aug/16 14:54:54][WARNING][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2045
+	[19/Aug/16 14:54:54][WARNING][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2046
+	[19/Aug/16 14:54:54][WARNING][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2046
+	[19/Aug/16 14:54:54][WARNING][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2047
+	[19/Aug/16 14:54:54][WARNING][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 2047
+	[19/Aug/16 14:54:54][WARNING][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 3265
+	[19/Aug/16 14:54:54][WARNING][gqkkjgd9rn91idgi4m6bf282gp][GUI - Test Project ID : 71110]
+		E_WARNING
+A non-numeric value encountered - in /opt/bitnami/apps/testlink/htdocs/locale/ja_JP/strings.txt - Line 3265
+[<<][5d56c3be02e96604126341][DEFAULT][/lib/usermanagement/userInfo.php][19/Aug/16 14:54:54][19/Aug/16 14:54:54][took 0.276329 secs]
+[<<][5d56c400e5353543054513][DEFAULT][/index.php][19/Aug/16 14:56:00][19/Aug/16 14:56:00][took 0.003387 secs]
+[>>][5d56c400e6152981485635][DEFAULT][/index.php][19/Aug/16 14:56:00]
+[<<][5d56c400e6152981485635][DEFAULT][/index.php][19/Aug/16 14:56:00][19/Aug/16 14:56:00][took 0.001731 secs]
+[<<][5d56c40101e35923049727][DEFAULT][/login.php][19/Aug/16 14:56:01][19/Aug/16 14:56:01][took 0.003082 secs]
+[>>][5d56c40102af6919508236][DEFAULT][/login.php][19/Aug/16 14:56:01]
+[<<][5d56c40102af6919508236][DEFAULT][/login.php][19/Aug/16 14:56:01][19/Aug/16 14:56:01][took 0.001599 secs]
