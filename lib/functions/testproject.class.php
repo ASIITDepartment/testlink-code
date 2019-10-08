@@ -1452,6 +1452,27 @@ function setPublicStatus($id,$status)
     }
     return $keywordMap;
   }
+
+  /**
+   * Returns keywords that are linked to test cases
+   *
+   *  @param  integer $id testproject
+   *  @return array   map: key: keyword_id, value: keyword
+   */
+  function getUsedKeywordsMap($id) {
+    $debugMsg = $this->debugMsg . __FUNCTION__;
+    $sql = "/* $debugMsg */
+            SELECT DISTINCT KW.id,KW.keyword
+            FROM {$this->tables['keywords']} KW
+            JOIN {$this->tables['testcase_keywords']} TCKW
+            ON TCKW.keyword_id = KW.id
+            WHERE KW.testproject_id =" . intval($id);  
+    $sql .= " ORDER BY keyword";
+    $rs = $this->db->fetchColumnsIntoMap($sql,'id','keyword');        
+    return $rs;
+  }
+
+
   /* END KEYWORDS RELATED */
 
   /* REQUIREMENTS RELATED */
@@ -4004,15 +4025,14 @@ function getActiveTestPlansCount($id)
  */
 function getPlatformsLatestTCV($tproject_id, $platform_id=0) {
 
-  $filter= '' ;
-  $subquery='';
+  $filter = '' ;
   $ltcvJoin = " JOIN {$this->views['latest_tcase_version_id']} LTCV
                 ON LTCV.tcversion_id = TPL.tcversion_id ";
 
   if( is_array($platform_id) ) {
     $filter = " AND platform_id IN (" . implode(',',$platform_id) . ")";   
   }
-  else if( $keyword_id > 0 ) {
+  else if( $platform_id > 0 ) {
     $filter = " AND platform_id = {$platform_id} ";
   }
   
@@ -4020,10 +4040,10 @@ function getPlatformsLatestTCV($tproject_id, $platform_id=0) {
   $sql = " SELECT TPL.testcase_id,TPL.platform_id,PL.name
            FROM {$this->tables['platforms']} PL
            JOIN {$this->tables['testcase_platforms']} TPL
-           ON TK.platform_id = PL.id
+           ON TPL.platform_id = PL.id
            {$ltcvJoin}
            WHERE PL.testproject_id = {$tproject_id}
-           {$filter} {$subquery}
+           {$filter}
            ORDER BY name ASC ";
 
   $items = $this->db->fetchMapRowsIntoMap($sql,'testcase_id','platform_id');
