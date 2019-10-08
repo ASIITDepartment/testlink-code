@@ -191,7 +191,6 @@ class requirement_spec_mgr extends tlObjectWithAttachments
 
       switch($my['options']['output'])
       {
-
       	case 'credentials':
       		$doUserDecode = false;
       	break;
@@ -2768,8 +2767,6 @@ function get_requirement_child_by_id_req($id){
            " CONCAT(NH_REQ.name,' [v', REQVER.version ,'] ' ) AS title," .
            " REQ.req_doc_id, REQVER.version," .
            " TLUSER.login AS coverage_author," .
-           #" RCOV.creation_ts AS coverage_ts,REQVER.is_open,
-             REQVER.is_open AS reqver_is_open," .
            " RCOV.creation_ts AS coverage_ts,REQVER.is_open,
 	     REQVER.is_open AS reqver_is_open," .
 	   " CASE " .
