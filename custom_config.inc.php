@@ -38,7 +38,7 @@
 // You need to be certain that these folders have correct permissions in order
 // to allow the user/daemon used to run the webserver service/daemon read/write access.
 //
-// $tlCfg->log_path = '/var/testlink-ga-testlink-code/logs/'; /* unix example */
+ $tlCfg->log_path = '/var/log/testlink/'; /* unix example */
 // $g_repositoryPath = '/var/testlink-ga-testlink-code/upload_area/';  /* unix example */
 //
 // 
@@ -234,7 +234,7 @@ $g_smtp_connection_mode = 'tls';
 // $tlCfg->gui->custom_fields->types = array(100 => 'radio head');
 // $tlCfg->gui->custom_fields->possible_values_cfg = array('radio head' => 1);
 
-//$g_log_level='DEBUG';
+$g_log_level='DEBUG';
 
 /** Define your own test status(es) by modifying
  *   - $tlCfg->results['status_code'] (in this file)

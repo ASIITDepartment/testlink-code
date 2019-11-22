@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TestLink - www.testlink.org - xml to allow results import -->
+<results>
+	<testproject name="Mining" prefix="MINING" />
+	<testplan name="Durability OD Test Plan" />
+	<build name="Helping Terence" />
+	<platform name="Ouster Sensor" />
+
+	<testcase external_id="MINING-10810">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10811">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10814">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10815">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+
+<step>
+	<step_number>2</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10816">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10818">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10820">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10821">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+
+<step>
+	<step_number>2</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+
+<step>
+	<step_number>3</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+
+<step>
+	<step_number>4</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10822">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10823">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10824">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10825">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>4</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10827">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10828">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10829">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10830">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10832">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10835">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10836">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10837">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10840">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10841">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10842">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10843">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10845">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10846">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10849">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10850">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10851">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10852">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10855">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10856">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10860">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10862">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10863">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10864">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10865">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10866">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10867">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10868">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10869">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10871">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-12680">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+
+<step>
+	<step_number>2</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+
+<step>
+	<step_number>3</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+
+<step>
+	<step_number>4</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-12681">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		
+		
+	</testcase>
+
+	<testcase external_id="MINING-12682">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		
+		
+	</testcase>
+
+	<testcase external_id="MINING-12684">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		
+		
+	</testcase>
+
+	<testcase external_id="MINING-12687">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		
+		
+	</testcase>
+
+	<testcase external_id="MINING-13041">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-13042">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+	<testcase external_id="MINING-10221">
+		<result>X</result>
+		<notes>test link rocks </notes>
+		<tester>Brady.Bodily</tester>
+		<!-- if not present now() will be used -->
+		<timestamp>2019-01-01 12:12:12</timestamp>
+		<bug_id>put one of your bugs id here (repeat the line as many times you need)</bug_id>
+		<bug_id>put another of your bugs id here</bug_id>
+		<steps>
+<step>
+	<step_number>1</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+
+<step>
+	<step_number>2</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+
+<step>
+	<step_number>3</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+
+<step>
+	<step_number>6</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+
+<step>
+	<step_number>7</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+
+<step>
+	<step_number>8</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+
+<step>
+	<step_number>9</step_number>
+	<result>p</result>
+	<notes>your step exec notes</notes>
+</step>
+</steps>
+		
+	</testcase>
+
+</results>

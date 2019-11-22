@@ -1,0 +1,91 @@
+	[19/Oct/2 11:15:35][AUDIT][vs3d3jgjuhu1810a1b6e2vbifq][GUI - Test Project ID : 71110]
+		Login for 'brian.benson' from '68.179.247.210' succeeded
+[<<][5d9486d77c7b7825507688][DEFAULT][/login.php][19/Oct/2 11:15:35][19/Oct/2 11:15:35][took 0.061637 secs]
+[<<][5d9486d7c9362502738342][DEFAULT][/index.php][19/Oct/2 11:15:35][19/Oct/2 11:15:35][took 0.008293 secs]
+[>>][5d9486d7cb487262876660][DEFAULT][/index.php][19/Oct/2 11:15:35]
+[<<][5d9486d7cb487262876660][DEFAULT][/index.php][19/Oct/2 11:15:35][19/Oct/2 11:15:35][took 0.001753 secs]
+[<<][5d9486d811009477376071][DEFAULT][/lib/general/navBar.php][19/Oct/2 11:15:36][19/Oct/2 11:15:36][took 0.002649 secs]
+[>>][5d9486d811b18118850000][DEFAULT][/lib/general/navBar.php][19/Oct/2 11:15:36]
+[<<][5d9486d811b18118850000][DEFAULT][/lib/general/navBar.php][19/Oct/2 11:15:36][19/Oct/2 11:15:36][took 0.024519 secs]
+[>>][5d9486d817b7e140695519][DEFAULT][/lib/general/navBar.php][19/Oct/2 11:15:36]
+[<<][5d9486d817b7e140695519][DEFAULT][/lib/general/navBar.php][19/Oct/2 11:15:36][19/Oct/2 11:15:36][took 0.013401 secs]
+[<<][5d9486d81e012673304048][DEFAULT][/lib/general/mainPage.php][19/Oct/2 11:15:36][19/Oct/2 11:15:36][took 0.008344 secs]
+[>>][5d9486d820156290185418][DEFAULT][/lib/general/mainPage.php][19/Oct/2 11:15:36]
+[<<][5d9486d820156290185418][DEFAULT][/lib/general/mainPage.php][19/Oct/2 11:15:36][19/Oct/2 11:15:36][took 0.018788 secs]
+[>>][5d9486d824b71231238226][DEFAULT][/lib/general/mainPage.php][19/Oct/2 11:15:36]
+	[19/Oct/2 11:15:36][WARNING][vs3d3jgjuhu1810a1b6e2vbifq][GUI - Test Project ID : 71110]
+		E_NOTICE
+Undefined index: platform_view - in /opt/bitnami/apps/testlink/htdocs/gui/templates_c/54795a4051e7db4e5f36ef2f81b2a8e590588f81_0.file.mainPageLeft.tpl.php - Line 181
+[<<][5d9486d824b71231238226][DEFAULT][/lib/general/mainPage.php][19/Oct/2 11:15:36][19/Oct/2 11:15:36][took 0.144805 secs]
+[<<][5d9486e7bdc30612182836][DEFAULT][/lib/testcases/archiveData.php][19/Oct/2 11:15:51][19/Oct/2 11:15:51][took 0.008785 secs]
+[>>][5d9486e7bff3c014292893][DEFAULT][/lib/testcases/archiveData.php][19/Oct/2 11:15:51]
+[<<][5d9486e7bff3c014292893][DEFAULT][/lib/testcases/archiveData.php][19/Oct/2 11:15:51][19/Oct/2 11:15:51][took 0.001652 secs]
+[>>][5d9486e7c063f738703642][DEFAULT][/lib/testcases/archiveData.php][19/Oct/2 11:15:51]
+	[19/Oct/2 11:15:51][WARNING][vs3d3jgjuhu1810a1b6e2vbifq][GUI - Test Project ID : 71110]
+		E_NOTICE
+Undefined index: platRW - in /opt/bitnami/apps/testlink/htdocs/gui/templates_c/54c49d2f91c871e9b040e946384a32abcba0eacb_0.file.tcView_viewer.tpl.php - Line 557
+	[19/Oct/2 11:15:51][WARNING][vs3d3jgjuhu1810a1b6e2vbifq][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/gui/templates_c/54c49d2f91c871e9b040e946384a32abcba0eacb_0.file.tcView_viewer.tpl.php - Line 557
+	[19/Oct/2 11:15:52][L18N][vs3d3jgjuhu1810a1b6e2vbifq][GUI - Test Project ID : 71110]
+		string 'img_title_remove_platform' is not localized for locale 'en_GB' 
+	[19/Oct/2 11:15:52][L18N][vs3d3jgjuhu1810a1b6e2vbifq][GUI - Test Project ID : 71110]
+		string 'remove_plat_msgbox_msg' is not localized for locale 'en_GB' 
+	[19/Oct/2 11:15:52][L18N][vs3d3jgjuhu1810a1b6e2vbifq][GUI - Test Project ID : 71110]
+		string 'remove_plat_msgbox_title' is not localized for locale 'en_GB' 
+[<<][5d9486e7c063f738703642][DEFAULT][/lib/testcases/archiveData.php][19/Oct/2 11:15:51][19/Oct/2 11:15:52][took 0.34505 secs]
+[<<][5d94cd4dd5d14176413228][DEFAULT][/index.php][19/Oct/2 16:16:13][19/Oct/2 16:16:13][took 0.003151 secs]
+[>>][5d94cd4dd6a11962118805][DEFAULT][/index.php][19/Oct/2 16:16:13]
+[<<][5d94cd4dd6a11962118805][DEFAULT][/index.php][19/Oct/2 16:16:13][19/Oct/2 16:16:13][took 0.0079199999999999 secs]
+[<<][5d94cd4e616ef287449319][DEFAULT][/lib/general/navBar.php][19/Oct/2 16:16:14][19/Oct/2 16:16:14][took 0.019123 secs]
+[>>][5d94cd4e66273015984235][DEFAULT][/lib/general/navBar.php][19/Oct/2 16:16:14]
+[<<][5d94cd4e66273015984235][DEFAULT][/lib/general/navBar.php][19/Oct/2 16:16:14][19/Oct/2 16:16:14][took 0.001541 secs]
+[>>][5d94cd4e6690d331100750][DEFAULT][/lib/general/navBar.php][19/Oct/2 16:16:14]
+[<<][5d94cd4e6690d331100750][DEFAULT][/lib/general/navBar.php][19/Oct/2 16:16:14][19/Oct/2 16:16:14][took 0.008734 secs]
+[<<][5d94cd4e6240a914420265][DEFAULT][/lib/testcases/archiveData.php][19/Oct/2 16:16:14][19/Oct/2 16:16:14][took 0.054656 secs]
+[>>][5d94cd4e6fa33836145245][DEFAULT][/lib/testcases/archiveData.php][19/Oct/2 16:16:14]
+[<<][5d94cd4e6fa33836145245][DEFAULT][/lib/testcases/archiveData.php][19/Oct/2 16:16:14][19/Oct/2 16:16:14][took 0.005452 secs]
+[>>][5d94cd4e7100e437781092][DEFAULT][/lib/testcases/archiveData.php][19/Oct/2 16:16:14]
+	[19/Oct/2 16:16:14][WARNING][vs3d3jgjuhu1810a1b6e2vbifq][GUI - Test Project ID : 71110]
+		E_NOTICE
+Undefined index: platRW - in /opt/bitnami/apps/testlink/htdocs/gui/templates_c/54c49d2f91c871e9b040e946384a32abcba0eacb_0.file.tcView_viewer.tpl.php - Line 557
+	[19/Oct/2 16:16:14][WARNING][vs3d3jgjuhu1810a1b6e2vbifq][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/gui/templates_c/54c49d2f91c871e9b040e946384a32abcba0eacb_0.file.tcView_viewer.tpl.php - Line 557
+[<<][5d94cd4e7100e437781092][DEFAULT][/lib/testcases/archiveData.php][19/Oct/2 16:16:14][19/Oct/2 16:16:14][took 0.204089 secs]
+	[19/Oct/7 14:52:22][AUDIT][j54so5c22audtonh5v87dfpi05][GUI - Test Project ID : 71110]
+		Login for 'brian.benson' from '68.179.247.210' succeeded
+[<<][5d9b512681255411749097][DEFAULT][/login.php][19/Oct/7 14:52:22][19/Oct/7 14:52:22][took 0.064127 secs]
+[<<][5d9b5126d003f069621403][DEFAULT][/index.php][19/Oct/7 14:52:22][19/Oct/7 14:52:22][took 0.007856 secs]
+[>>][5d9b5126d1fa4800107059][DEFAULT][/index.php][19/Oct/7 14:52:22]
+[<<][5d9b5126d1fa4800107059][DEFAULT][/index.php][19/Oct/7 14:52:22][19/Oct/7 14:52:22][took 0.001495 secs]
+[<<][5d9b512710288637958591][DEFAULT][/lib/general/navBar.php][19/Oct/7 14:52:23][19/Oct/7 14:52:23][took 0.009019 secs]
+[>>][5d9b512712684437806210][DEFAULT][/lib/general/navBar.php][19/Oct/7 14:52:23]
+[<<][5d9b512712684437806210][DEFAULT][/lib/general/navBar.php][19/Oct/7 14:52:23][19/Oct/7 14:52:23][took 0.009354 secs]
+[>>][5d9b512714b9c189249412][DEFAULT][/lib/general/navBar.php][19/Oct/7 14:52:23]
+[<<][5d9b512714b9c189249412][DEFAULT][/lib/general/navBar.php][19/Oct/7 14:52:23][19/Oct/7 14:52:23][took 0.009489 secs]
+[<<][5d9b512710e12087180082][DEFAULT][/lib/general/mainPage.php][19/Oct/7 14:52:23][19/Oct/7 14:52:23][took 0.026407 secs]
+[>>][5d9b5127175d3851422435][DEFAULT][/lib/general/mainPage.php][19/Oct/7 14:52:23]
+[<<][5d9b5127175d3851422435][DEFAULT][/lib/general/mainPage.php][19/Oct/7 14:52:23][19/Oct/7 14:52:23][took 0.008806 secs]
+[>>][5d9b5127198ca800470062][DEFAULT][/lib/general/mainPage.php][19/Oct/7 14:52:23]
+	[19/Oct/7 14:52:23][WARNING][j54so5c22audtonh5v87dfpi05][GUI - Test Project ID : 71110]
+		E_NOTICE
+Undefined index: platform_view - in /opt/bitnami/apps/testlink/htdocs/gui/templates_c/54795a4051e7db4e5f36ef2f81b2a8e590588f81_0.file.mainPageLeft.tpl.php - Line 181
+[<<][5d9b5127198ca800470062][DEFAULT][/lib/general/mainPage.php][19/Oct/7 14:52:23][19/Oct/7 14:52:23][took 0.0692 secs]
+[<<][5d9b512b6de66982155569][DEFAULT][/lib/testcases/archiveData.php][19/Oct/7 14:52:27][19/Oct/7 14:52:27][took 0.008013 secs]
+[>>][5d9b512b6fe90388748433][DEFAULT][/lib/testcases/archiveData.php][19/Oct/7 14:52:27]
+[<<][5d9b512b6fe90388748433][DEFAULT][/lib/testcases/archiveData.php][19/Oct/7 14:52:27][19/Oct/7 14:52:27][took 0.001591 secs]
+[>>][5d9b512b70550713889041][DEFAULT][/lib/testcases/archiveData.php][19/Oct/7 14:52:27]
+	[19/Oct/7 14:52:27][WARNING][j54so5c22audtonh5v87dfpi05][GUI - Test Project ID : 71110]
+		E_NOTICE
+Undefined index: platRW - in /opt/bitnami/apps/testlink/htdocs/gui/templates_c/54c49d2f91c871e9b040e946384a32abcba0eacb_0.file.tcView_viewer.tpl.php - Line 557
+	[19/Oct/7 14:52:27][WARNING][j54so5c22audtonh5v87dfpi05][GUI - Test Project ID : 71110]
+		E_NOTICE
+Trying to get property of non-object - in /opt/bitnami/apps/testlink/htdocs/gui/templates_c/54c49d2f91c871e9b040e946384a32abcba0eacb_0.file.tcView_viewer.tpl.php - Line 557
+	[19/Oct/7 14:52:27][L18N][j54so5c22audtonh5v87dfpi05][GUI - Test Project ID : 71110]
+		string 'img_title_remove_platform' is not localized for locale 'en_GB' 
+	[19/Oct/7 14:52:27][L18N][j54so5c22audtonh5v87dfpi05][GUI - Test Project ID : 71110]
+		string 'remove_plat_msgbox_msg' is not localized for locale 'en_GB' 
+	[19/Oct/7 14:52:27][L18N][j54so5c22audtonh5v87dfpi05][GUI - Test Project ID : 71110]
+		string 'remove_plat_msgbox_title' is not localized for locale 'en_GB' 
+[<<][5d9b512b70550713889041][DEFAULT][/lib/testcases/archiveData.php][19/Oct/7 14:52:27][19/Oct/7 14:52:27][took 0.276361 secs]
