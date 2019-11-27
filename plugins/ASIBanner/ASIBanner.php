@@ -15,7 +15,7 @@ class ASIBannerPlugin extends TestlinkPlugin
     $this->name = 'ASIBanner';
     $this->description = 'Adds a banner';
 
-    $this->version = '1.1';
+    $this->version = '1.2';
 
     $this->author = 'Aaron Haslam';
   }
@@ -35,9 +35,7 @@ class ASIBannerPlugin extends TestlinkPlugin
 
   function title_bar()
   {
-    $message = 'Have a good Thanksgiving. See you on Monday!';
-
-    return("<div class='messages_rounded blocked' style='width: 80%;'>" . $message . "</div>");
+    return("<div class='messages_rounded blocked' style='width: 60%;'>" . file_get_contents(__DIR__.'/banner.txt') . "</div>");
   }
 
 }
