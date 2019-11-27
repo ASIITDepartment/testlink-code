@@ -93,7 +93,6 @@ CKEDITOR.editorConfig = function( config )
 	*/
 	config.filebrowserBrowseUrl = '/third_party/ckeditor/plugins/filemanager/dialog.php?type=2&editor=ckeditor&fldr=';
 	config.filebrowserImageBrowseUrl = '/third_party/ckeditor/plugins/filemanager/dialog.php?type=1&editor=ckeditor&fldr=';
-	config.filebrowserUploadUrl = '/third_party/ckeditor/plugins/filemanager/dialog.php?type=2&editor=ckeditor&fldr=';
 
 	// config.filebrowserBrowseUrl = '/third_party/ckfinder/ckfinder.html';
 	// config.filebrowserImageBrowseUrl = '/third_party/ckfinder/ckfinder.html?Type=Images';
