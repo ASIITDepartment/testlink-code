@@ -253,7 +253,7 @@ $tlCfg->charts_font_size = 8;
 /**
  * TICKET 4969: Add Setting to Force HTTPS
  */
-$tlCfg->force_https = false;
+$tlCfg->force_https = TRUE;
 
 
 /**
@@ -305,7 +305,7 @@ $tlCfg->smarty_debug = false;
  *  for security reasons (see http://itsecuritysolutions.org/2012-08-13-TestLink-1.9.3-multiple-vulnerabilities/)
  *  put it out of reach via web or configure access denied.
  */
-$tlCfg->log_path = '/var/testlink/logs/'; /* unix example */
+$tlCfg->log_path = '/var/log/testlink/'; /* unix example */
 if (($lp = getenv('TESTLINK_LOG_PATH'))) {
   $tlCfg->log_path = trim($lp);
 }
@@ -366,12 +366,12 @@ $tlCfg->loggerFilter = null; // default defined on logger.class.php ;
  * Configure using custom_config.inc.php
  * @uses lib/functions/email_api.php
  */
-$g_smtp_host        = '[smtp_host_not_configured]';  # SMTP server MUST BE configured
+$g_smtp_host        = '';  # SMTP server MUST BE configured
 
 # Configure using custom_config.inc.php
-$g_tl_admin_email     = '[testlink_sysadmin_email_not_configured]'; # for problem/error notification
-$g_from_email         = '[from_email_not_configured]';  # email sender
-$g_return_path_email  = '[return_path_email_not_configured]';
+$g_tl_admin_email     = 'user@example.com'; # for problem/error notification
+$g_from_email         = 'user@example.com';  # email sender
+$g_return_path_email  = 'user@example.com';
 
 /**
  * Email notification priority (low by default)
@@ -434,9 +434,8 @@ $tlCfg->authentication['method'] = 'DB';
 //
 // null => only check password IS NOT EMPTY
 //
-// $tlCfg->passwordChecks = array('minlen' => 8,'maxlen' => 20,'number' => true,'letter' => true,
-//                                'capital' => true, 'symbol' => true);
-$tlCfg->passwordChecks = null;
+$tlCfg->passwordChecks = array('minlen' => 8,'maxlen' => 20,'number' => true,'letter' => true,'capital' => true, 'symbol' => true);
+//$tlCfg->passwordChecks = null;
 
 // Applies ONLY to the HTML input.
 // If auth method is DB, password will be stored as MD5 HASH that requires 32 chars (128 bits)
@@ -592,11 +591,11 @@ $tlCfg->authentication['ldap'][1]['ldap_surname_field'] = 'sn';
 // mail
 // name
 // surname
-$tlCfg->authentication['ldap_automatic_user_creation'] = false;
+$tlCfg->authentication['ldap_automatic_user_creation'] = true;
 
 
 /** Enable/disable Users to create accounts on login page */
-$tlCfg->user_self_signup = TRUE;
+$tlCfg->user_self_signup = FALSE;
 
 /** What happens when Administrator push the Reset Password Button 
   'send_password_by_mail'
@@ -650,8 +649,8 @@ $tlCfg->api->id_format = "[ID: %s ]";
 /* [GUI LAYOUT] */
 
 /** Company logo (used by navigation bar and login page page) */
-$tlCfg->logo_login = 'tl-logo-transparent-25.png';
-$tlCfg->logo_navbar = 'tl-logo-transparent-12.5.png';
+$tlCfg->logo_login = 'ASI_Logo_FullMark_RGB_Color_OnLight.png';
+$tlCfg->logo_navbar = 'asiTag.png';
 
 /** Height of the navbar always displayed  */
 $tlCfg->navbar_height = 70;
@@ -938,8 +937,8 @@ $tlCfg->metrics_dashboard->show_test_plan_status = false;
  * Image is expected in directory <testlink_root>/gui/themes/<your_theme>/images/
  * Leave text values empty if you would like to hide parameters.
  */
-$tlCfg->document_generator->company_name = 'TestLink Community [configure $tlCfg->document_generator->company_name]';
-$tlCfg->document_generator->company_copyright = '2012 &copy; TestLink Community';
+$tlCfg->document_generator->company_name = 'Autonomous Solutions Inc.';
+$tlCfg->document_generator->company_copyright = 'Proprietary & Confidentail. Printed and offline docs are not the latest.';
 $tlCfg->document_generator->confidential_msg = '';
 
 // Logo for generated documents
@@ -1527,7 +1526,7 @@ $g_repositoryType = TL_REPOSITORY_TYPE_FS;
  * Put it out of reach via web or configure access denied.
  *
  **/
-$g_repositoryPath = '/var/testlink/upload_area/';  /* unix example */
+$g_repositoryPath = '/opt/bitnami/apps/testlink/htdocs/upload_area/';  /* unix example */
 if (($upa = getenv('TESTLINK_UPLOAD_AREA'))) {
   $g_repositoryPath = trim($upa);
 }
@@ -1709,7 +1708,7 @@ $tlCfg->internal_links->req_spec_link_title->value = '';
 // additionally you can configure your own types.
 $tlCfg->req_cfg->relations = new stdClass();
 $tlCfg->req_cfg->relations->enable = TRUE;
-$tlCfg->req_cfg->relations->interproject_linking = FALSE;
+$tlCfg->req_cfg->relations->interproject_linking = TRUE;
 
 // Requirement/testcase diff
 // default value of lines to show before and after each difference
@@ -1888,7 +1887,7 @@ $tlCfg->tplanDesign->hideTestCaseWithStatusIn = array($tlCfg->testCaseStatus['ob
 /** Maximum uploadfile size to importing stuff in TL */
 // Also check your PHP settings (default is usually 2MBs)
 // unit BYTES is required by MAX_FILE_SIZE HTML option
-$tlCfg->import_file_max_size_bytes = '409600';
+$tlCfg->import_file_max_size_bytes = '4000000';
 
 /** Maximum line size of the imported file */
 $tlCfg->import_max_row = '10000'; // in chars
@@ -1896,7 +1895,7 @@ $tlCfg->import_max_row = '10000'; // in chars
 /** Set the default role used for new users */
 // - created from the login page.
 // - created using user management features
-$tlCfg->default_roleid = TL_ROLES_GUEST;
+	$tlCfg->default_roleid = TL_ROLES_DEFAULT;
 
 	// only show custom fields if their value isn't empty
 	$tlCfg->custom_fields->show_custom_fields_without_value = true;
@@ -2083,11 +2082,10 @@ $tlCfg->default_roleid = TL_ROLES_GUEST;
 	}
 
 
-if( !isset($tlCfg->attachments->access_icon) ) {
-  $tlCfg->attachments->access_icon = 
-    '<img src="' . $tlCfg->theme_dir . 
-    'images/new_f2_16.png" style="border:none" />';
-}
+	if( !isset($tlCfg->attachments->access_icon) ) {
+	$tlCfg->attachments->access_icon =
+	   '<img src="' . $tlCfg->theme_dir . 'images/new_f2_16.png" style="border:none" />';
+	}
 
 
 	// Important to do this only after custom_* to use (if exists) redefinition of

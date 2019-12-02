@@ -39,7 +39,7 @@
 // to allow the user/daemon used to run the webserver service/daemon read/write access.
 //
  $tlCfg->log_path = '/var/log/testlink/'; /* unix example */
-// $g_repositoryPath = '/var/testlink-ga-testlink-code/upload_area/';  /* unix example */
+ $g_repositoryPath = '/var/testlink-ga-testlink-code/upload_area/';  /* unix example */
 //
 // 
 // ********************************************************************************************
@@ -199,7 +199,8 @@ $tlCfg->authentication['ldap'][1]['ldap_surname_field'] = 'sn';
 $g_smtp_host        = 'smtp.office365.com';  # SMTP server MUST BE configured  
 
 # Configure using custom_config.inc.php
-$g_tl_admin_email     = 'Brady.Bodily@asirobots.com'; # for problem/error notification 
+$g_tl_admin_email     = 'Brady.Bodily@asirobots.com'; # for problem/error notificationfg->passwordChecks = array('minlen' => 8,'maxlen' => 20,'number' => true,'letter' => true,'capital' => true, 'symbol' => true);
+
 $g_from_email         = 'Mail.Man@asirobots.com';  # email sender
 $g_return_path_email  = 'DoNotReply@asirobots.com';
 
@@ -305,5 +306,23 @@ $g_log_level='DEBUG';
 // $tlCfg->req_spec_template->scope->type = 'file';
 // $tlCfg->req_spec_template->scope->value = 'c:\usr\local\xampp-1.7.2\xampp\htdocs\head-20090909\item_templates\req_spec.txt';
 
-$tlCfg->req_cfg->allow_insertion_of_last_doc_id
+$tlCfg->req_cfg->allow_insertion_of_last_doc_id = TRUE;
+$tlCfg->force_https = TRUE;
+$tlCfg->passwordChecks = array('minlen' => 8,'maxlen' => 20,'number' => true,'letter' => true,'capital' => true, 'symbol' => true);
+
+
+/** Company logo (used by navigation bar and login page page) */
+$tlCfg->logo_login = 'ASI_Logo_FullMark_RGB_Color_OnLight.png';
+$tlCfg->logo_navbar = 'asiTag.png';
+
+$tlCfg->document_generator->company_name = 'Autonomous Solutions Inc.';
+$tlCfg->document_generator->company_copyright = 'Proprietary & Confidentail. Printed and offline docs are not the latest.';
+
+$tlCfg->req_cfg->relations->interproject_linking = TRUE;
+
+$tlCfg->import_file_max_size_bytes = '4000000';
+
+$tlCfg->default_roleid = TL_ROLES_DEFAULT;
+
+
 ?>
