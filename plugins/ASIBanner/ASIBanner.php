@@ -35,7 +35,7 @@ class ASIBannerPlugin extends TestlinkPlugin
 
   function title_bar()
   {
-    return("<div  style='width: 80%;'>" . file_get_contents(__DIR__.'/banner.html') . "</div>");
+    return("<div class='messages_rounded blocked' style='width: 80%;'>" . file_get_contents(__DIR__.'/banner.txt') . "</div>");
   }
 
 }
