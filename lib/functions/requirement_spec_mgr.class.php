@@ -2693,7 +2693,7 @@ function get_requirement_child_by_id_req($id){
            " SELECT NH_REQ.id,REQVER.scope, " .
            " CONCAT(NH_REQ.name,' [v', REQVER.version ,'] ' ) AS title," .
            " REQ.req_doc_id, REQVER.version," .
-           " (CASE WHEN REQVER.version IS NULL " . 
+           " (CASE WHEN REQVER.version IS NULL " .
            "       THEN 1 ELSE 0 END) AS can_be_deleted " .
 
            " FROM {$this->tables['nodes_hierarchy']} NH_REQ " .
@@ -2707,7 +2707,7 @@ function get_requirement_child_by_id_req($id){
 
            " LEFT JOIN {$this->tables['req_versions']} REQVER " .
            " ON REQVER.id = RCOV.req_version_id " .
-           
+
            
            " WHERE NH_REQ.parent_id=" . intval($id) .
            " AND NH_REQ.node_type_id = {$this->node_types_descr_id['requirement']}";
@@ -2768,8 +2768,8 @@ function get_requirement_child_by_id_req($id){
            " REQ.req_doc_id, REQVER.version," .
            " TLUSER.login AS coverage_author," .
            " RCOV.creation_ts AS coverage_ts,REQVER.is_open,
-             REQVER.is_open AS reqver_is_open," .
-           " CASE " .
+	     REQVER.is_open AS reqver_is_open," .
+	   " CASE " .
            "      WHEN RCOV.link_status = " . LINK_TC_REQ_OPEN .
            "           THEN 1 " .
            "      ELSE 0 " .

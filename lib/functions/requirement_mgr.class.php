@@ -1521,22 +1521,22 @@ function createFromMap($req,$tproject_id,$parent_id,$author_id,$filters = null,$
   {
      $checkLengthOK = false;
      $what2add = $labels['req_title_lenght_exceeded'] . '/';
-  }  
+  }
 
-  if( strlen($req['docid']) > $fieldSize->req_docid )
-  {
-     $checkLengthOK = false;
-     $what2add .= $labels['req_docid_lenght_exceeded'];
-  }  
+ // if( strlen($req['docid']) > $fieldSize->req_docid )
+ // {
+   //  $checkLengthOK = false;
+    // $what2add .= $labels['req_docid_lenght_exceeded'];
+ // }
 
-  if( $checkLengthOK == FALSE )
-  {
-    $msgID = 'import_req_skipped_plain';
-    $user_feedback[] = array('doc_id' => $req['docid'],'title' => $req['title'], 
-                             'import_status' => sprintf($labels[$msgID],$what2add));
+ // if( $checkLengthOK == FALSE )
+ // {
+ //   $msgID = 'import_req_skipped_plain';
+ //   $user_feedback[] = array('doc_id' => $req['docid'],'title' => $req['title'],
+//                             'import_status' => sprintf($labels[$msgID],$what2add));
 
-    return $user_feedback;
-  }  
+ //   return $user_feedback;
+ // }
 
   // Check:
   // If item with SAME DOCID exists inside container
@@ -3819,7 +3819,7 @@ function getByIDBulkLatestVersionRevision($id,$opt=null)
   $sql = " /* $debugMsg */ SELECT REQ.id,REQ.srs_id,REQ.req_doc_id," . 
          " REQV.scope,REQV.status,REQV.type,REQV.active," . 
          " REQV.is_open,REQV.author_id,REQV.version,REQV.id AS version_id," .
-         " REQV.expected_coverage,REQV.creation_ts,REQV.modifier_id," .
+	 " REQV.expected_coverage,REQV.creation_ts,REQV.modifier_id," .
          " REQV.modification_ts,REQV.revision, -1 AS revision_id, " .
          " NH_REQ.name AS title, REQ_SPEC.testproject_id, " .
          " NH_RSPEC.name AS req_spec_title, REQ_SPEC.doc_id AS req_spec_doc_id, NH_REQ.node_order " .

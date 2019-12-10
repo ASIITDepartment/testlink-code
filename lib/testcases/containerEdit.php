@@ -151,14 +151,14 @@ if( $doIt ) {
           $gui = initializeGui($tsuite_mgr,$args->testsuiteID,$args);
           $gui->refreshTree = 0;
           $tsuite_mgr->show($smarty,$gui,$template_dir,$args->testsuiteID,null,null);
-        break;  
+        break;
 
         case 'testproject':
           $gui = initializeGui($tproject_mgr,$args->tprojectID,$args);
           $gui->refreshTree = 0;
           $tproject_mgr->show($smarty,$gui,$template_dir,$args->tprojectID,null,null);
-        break;  
-      }  
+        break;
+      }
     break;
 
     case 'edit_testsuite':
@@ -173,22 +173,22 @@ if( $doIt ) {
       $gui->refreshTree = $args->refreshTree;
       $gui->hasKeywords = (count($opt_cfg->from->map) > 0) || (count($opt_cfg->to->map) > 0);
 
-      $gui->cancelActionJS = 'location.href=fRoot+' . 
+      $gui->cancelActionJS = 'location.href=fRoot+' .
                              "'lib/testcases/archiveData.php?id=" . intval($args->containerID);
       switch($level) {
         case 'testproject':
           $gui->cancelActionJS .= "&edit=testproject&level=testproject'";
-        break;  
+        break;
 
         case 'testsuite':
           $gui->cancelActionJS .= "&edit=testsuite&level=testsuite&containerType=testsuite'";
-        break;  
-      }  
+        break;
+      }
 
       $smarty->assign('level', $level);
       $smarty->assign('gui', $gui);
       $tsuite_mgr->viewer_edit_new($smarty,$template_dir,$webEditorHtmlNames,
-                                   $oWebEditor,$action,$args->containerID, 
+                                   $oWebEditor,$action,$args->containerID,
                                    $args->testsuiteID,null,
                                    $webEditorTemplateKey);
     break;
@@ -207,7 +207,7 @@ if( $doIt ) {
 
     case 'testcases_table_view':
       $cf = null;
-      $cf_map = $tcase_mgr->get_linked_cfields_at_design(0,null,null,null,$args->tprojectID);    
+      $cf_map = $tcase_mgr->get_linked_cfields_at_design(0,null,null,null,$args->tprojectID);
       if(!is_null($cf_map)) {
         $cfOpt = array('addCheck' => true, 'forceOptional' => true);
         $cf = $tcase_mgr->cfield_mgr->html_table_inputs($cf_map,'',null,$cfOpt);
@@ -246,7 +246,7 @@ if( $doIt ) {
         $messages = array( 'result_msg' => $op['messages']['msg'],
                            'user_feedback' => $op['messages']['user_feedback']);
       }
-           
+
       // $userInput is used to maintain data filled by user if there is
       // a problem with test suite name.
       $userInput = $op['status'] ? null : $_REQUEST;
@@ -258,23 +258,23 @@ if( $doIt ) {
       $gui->tproject_id = $args->tprojectID;
       $gui->containerType = $level;
       $gui->refreshTree = $args->refreshTree;
-      $gui->cancelActionJS = 'location.href=fRoot+' . 
+      $gui->cancelActionJS = 'location.href=fRoot+' .
                              "'lib/testcases/archiveData.php?id=" . intval($args->containerID);
-      
+
       switch($level) {
         case 'testproject':
           $gui->cancelActionJS .= "&edit=testproject&level=testproject'";
-        break;  
+        break;
 
         case 'testsuite':
           $gui->cancelActionJS .= "&edit=testsuite&level=testsuite&containerType=testsuite'";
-        break;  
-      }  
+        break;
+      }
 
       $smarty->assign('level', $level);
       $smarty->assign('gui', $gui);
 
-      $tsuite_mgr->viewer_edit_new($smarty,$template_dir,$webEditorHtmlNames, 
+      $tsuite_mgr->viewer_edit_new($smarty,$template_dir,$webEditorHtmlNames,
                                    $oWebEditor, $action,$args->containerID, null,
                                    $messages,$webEditorTemplateKey,$userInput);
     break;
@@ -331,10 +331,10 @@ if( $doIt ) {
 
     case 'doBulkSet':
       $args->refreshTree = true;
-      doBulkSet($db,$args,$args->tcaseSet,$tcase_mgr);    
+      doBulkSet($db,$args,$args->tcaseSet,$tcase_mgr);
 
       $cf = null;
-      $cf_map = $tcase_mgr->get_linked_cfields_at_design(0,null,null,null,$args->tprojectID);    
+      $cf_map = $tcase_mgr->get_linked_cfields_at_design(0,null,null,null,$args->tprojectID);
       if(!is_null($cf_map)) {
         $cfOpt = array('addCheck' => true, 'forceOptional' => true);
         $cf = $tcase_mgr->cfield_mgr->html_table_inputs($cf_map,'',null,$cfOpt);
@@ -344,18 +344,18 @@ if( $doIt ) {
     break;
 
     case 'addKeyword':
-      $tsuite_mgr->addKeywords($args->item_id,$args->free_keywords);    
+      $tsuite_mgr->addKeywords($args->item_id,$args->free_keywords);
       showTestSuite($smarty,$args,$tsuite_mgr,$template_dir);
       exit();
     break;
 
     case 'addKeywordTSDeep':
-      $tsuite_mgr->addKeywordsDeep($args->item_id,$args->free_keywords);    
+      $tsuite_mgr->addKeywordsDeep($args->item_id,$args->free_keywords);
       showTestSuite($smarty,$args,$tsuite_mgr,$template_dir);
       exit();
     break;
 
-    case 'removeKeyword': 
+    case 'removeKeyword':
       $tsuite_mgr->deleteKeywordByLinkID($args->kw_link_id);
       showTestSuite($smarty,$args,$tsuite_mgr,$template_dir);
       exit();
@@ -470,16 +470,16 @@ function init_args(&$dbHandler,&$tprojectMgr,&$tsuiteMgr,$optionTransferCfg) {
   $args = new stdClass();
   $_REQUEST = strings_stripSlashes($_REQUEST);
 
-  $args->kw_link_id = isset($_REQUEST['kw_link_id']) ? 
+  $args->kw_link_id = isset($_REQUEST['kw_link_id']) ?
                       intval($_REQUEST['kw_link_id']) : null;
 
-  $args->item_id = isset($_REQUEST['item_id']) ? 
-                   intval($_REQUEST['item_id']) : null; 
+  $args->item_id = isset($_REQUEST['item_id']) ?
+                   intval($_REQUEST['item_id']) : null;
 
-  $args->free_keywords = isset($_REQUEST['free_keywords']) ? 
-                         $_REQUEST['free_keywords'] : null; 
+  $args->free_keywords = isset($_REQUEST['free_keywords']) ?
+                         $_REQUEST['free_keywords'] : null;
 
-  $args->containerID = isset($_REQUEST['containerID']) ? 
+  $args->containerID = isset($_REQUEST['containerID']) ?
                          $_REQUEST['containerID'] : null; 
 
   // check againts whitelist
@@ -533,9 +533,9 @@ function init_args(&$dbHandler,&$tprojectMgr,&$tsuiteMgr,$optionTransferCfg) {
       $args->tprojectID = intval($_REQUEST['tproject_id']);
     }
 
-    if( isset($_REQUEST['tprojectID']) ) {
+     if( isset($_REQUEST['tprojectID']) ) {
       $args->tprojectID = intval($_REQUEST['tprojectID']);
-    }    
+    }
   }
 
   // very ugly
@@ -562,10 +562,10 @@ function init_args(&$dbHandler,&$tprojectMgr,&$tsuiteMgr,$optionTransferCfg) {
   $args->user = $_SESSION['currentUser'];
 
   $args->grants = new stdClass();
-  $args->grants->delete_executed_testcases = 
+  $args->grants->delete_executed_testcases =
     $args->user->hasRight($dbHandler,'testproject_delete_executed_testcases',$args->tprojectID);
 
-  $args->grants->testcase_mgmt = 
+  $args->grants->testcase_mgmt =
     $args->user->hasRight($dbHandler,'mgt_modify_tc',$args->tprojectID);
 
 
@@ -599,7 +599,7 @@ function init_args(&$dbHandler,&$tprojectMgr,&$tsuiteMgr,$optionTransferCfg) {
     $args->testCaseSet = isset($sdata['testcases_to_show']) ? $sdata['testcases_to_show'] : null;
   }
 
-  $dummy = ($sortCriteria = config_get('testcase_reorder_by')) == 'NAME' ? '_alpha' : 
+  $dummy = ($sortCriteria = config_get('testcase_reorder_by')) == 'NAME' ? '_alpha' :
            '_externalid';
   $lbl2init = array('warning_empty_testsuite_name' => null,
                     'string_contains_bad_chars' => null,
@@ -1148,7 +1148,7 @@ function initWebEditors($action,$itemType,$editorCfg) {
 
   $oWebEditor = array();
   $htmlNames = '';
-  if( isset($webEditorKeys[$accessKey]) ) {  
+  if( isset($webEditorKeys[$accessKey]) ) {
     $htmlNames = $webEditorKeys[$accessKey];
     foreach ($htmlNames as $key) {
       $oWebEditor[$key] = web_editor($key,$_SESSION['basehref'],$editorCfg);
@@ -1395,7 +1395,7 @@ function initializeGui(&$objMgr,$id,$argsObj,$lbl=null) {
   $guiObj->fileUploadURL = $_SESSION['basehref'] . $objMgr->getFileUploadRelativeURL($id);
 
   if( $objMgr->my_node_type == $objMgr->node_types_descr_id['testsuite'] ) {
-    $guiObj->direct_link = 
+    $guiObj->direct_link =
       $objMgr->buildDirectWebLink($_SESSION['basehref'],
                                   $guiObj->id,$argsObj->tprojectID);
   }  
@@ -1508,7 +1508,7 @@ function initTPLActions() {
  */
 function showTestSuite(&$tplEngine,&$argsO,&$tsuiteMgr,$tplDir) {
   if( null == $argsO->tprojectID ) {
-    $argsO->tprojectID = $tsuiteMgr->getTestproject($argsO->item_id); 
+    $argsO->tprojectID = $tsuiteMgr->getTestproject($argsO->item_id);
   }
   $gui = initializeGui($tsuiteMgr,$argsO->item_id,$argsO,$argsO->l10n);
   $gui->refreshTree = 0;

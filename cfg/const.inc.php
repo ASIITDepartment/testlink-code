@@ -240,13 +240,13 @@ define('MENU_ITEM_CLOSE', '</div><br />');
 $g_field_size = new stdClass();
 $g_field_size->node_name = 100;
 $g_field_size->testsuite_name = 100;
-$g_field_size->testcase_name = 100;
+$g_field_size->testcase_name = 1000;
 $g_field_size->testproject_name = 100;
 
 // requirements and req_spec tables field sizes
 $g_field_size->req_docid = 64;
-$g_field_size->req_title = 100;
-$g_field_size->requirement_title = 100;
+$g_field_size->req_title = 1000;
+$g_field_size->requirement_title = 1000;
 $g_field_size->docid = 64;
 
 // execution table
@@ -509,6 +509,7 @@ define('TL_USER_ANYBODY', 0);
 
 /** Follows CODES present in roles table - DO NOT CHANGE ON ANY CIRCUNSTANCE */
 define('TL_ROLES_MANAGER', 1);
+define('TL_ROLES_DEFAULT', 4);
 define('TL_ROLES_ADMIN', 8);
 define('TL_ROLES_LEADER', 9);
 define('TL_ROLES_TESTER', 7);
@@ -530,6 +531,7 @@ $g_role_colour = array (
   'tester'        => 'wheat',
   'leader'        => 'acqua',
   'senior tester' => '#FFA',
+  'default'       => 'purple',
   'guest'         => 'pink',
   'test designer' => 'cyan',
   '<no rights>'   => 'grey',
