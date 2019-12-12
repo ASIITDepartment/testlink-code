@@ -1794,25 +1794,28 @@ class tlTestPlanMetrics extends testplan
     $bi->idSet = $my['filters']['buildSet']; 
     $bi->inClause = '';
     $bi->infoSet = null;
-    if( is_null($bi->idSet) )
-    {
+
+    if (is_null($bi->idSet)) {
       $openStatus = $my['opt']['processClosedBuilds'] ? null : 1;
-      $bi->idSet = array_keys($bi->infoSet = $this->get_builds($id,testplan::ACTIVE_BUILDS,$openStatus));
+
+      $bi->infoSet = $this->get_builds($id,testplan::ACTIVE_BUILDS,
+                                       $openStatus);
+      if (!is_null($bi->infoSet)) {
+       $bi->idSet = array_keys($bi->infoSet);
+      }
     }
     
-    // ==========================================================================
+    // =========================================================
     // Emergency Exit !!!
-    if( is_null($bi->idSet) )
-    {
+    if ( is_null($bi->idSet) ) {
         throw new Exception(__METHOD__ . " - Can not work with empty build set");
     }
-    // ==========================================================================
+    // =========================================================
     
     
     // Things seems to be OK
     $bi->inClause = implode(",",$bi->idSet);
-    if( $my['opt']['getOnlyAssigned'] )
-    {
+    if( $my['opt']['getOnlyAssigned'] ) {
       $sql['getAssignedFeatures']   =  " /* Get feature id with Tester Assignment */ " .
                                        " JOIN {$this->tables['user_assignments']} UA " .
                                        " ON UA.feature_id = TPTCV.id " .
@@ -2231,11 +2234,17 @@ class tlTestPlanMetrics extends testplan
     list($my,$builds,$sqlStm) = $this->helperGetExecCounters($id, $filters, $opt);
     
     // particular options
-    $my['opt'] = array_merge(array('output' => 'map'),$my['opt']);    
+    $options = array('output' => 'map', 
+                     'add2fields' => '');
+    $my['opt'] = array_merge($options,$my['opt']);    
     $safe_id = intval($id);  
 
     $fullEID = $this->helperConcatTCasePrefix($safe_id);
 
+    $addFields = '';
+    if ( '' != $my['opt']['add2fields']) {
+      $addFields = ',' . $my['opt']['add2fields'];
+    }
 
     $sqlLEBBP = $sqlStm['LEBBP'];
     $sql =  "/* {$debugMsg} executions with status WRITTEN on DB => not run is not present */" . 
@@ -2246,6 +2255,8 @@ class tlTestPlanMetrics extends testplan
             " TCV.version,TCV.tc_external_id AS external_id, " .
             " $fullEID AS full_external_id," .
             " (TPTCV.urgency * TCV.importance) AS urg_imp " .
+            $addFields .
+
             " FROM {$this->tables['testplan_tcversions']} TPTCV " .
             
             " /* GO FOR Absolute LATEST exec ID On BUILD,PLATFORM */ " .
