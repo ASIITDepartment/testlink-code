@@ -1,1 +1,0 @@
-<div style = "background-color:orange;"><font color="black"> TestLink will be going down for an update @ 4:30 Dec 5, expected down time 15 min. Please be logged out by then, Thanks!</font> </div>
