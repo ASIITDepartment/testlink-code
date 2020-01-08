@@ -295,8 +295,8 @@ CREATE TABLE /*prefix*/keywords (
 CREATE TABLE /*prefix*/milestones (
   id int(10) unsigned NOT NULL auto_increment,
   testplan_id int(10) unsigned NOT NULL default '0',
-  target_date date NULL,
-  start_date date NOT NULL,
+  target_date date NOT NULL,
+  start_date date NULL,
   a tinyint(3) unsigned NOT NULL default '0',
   b tinyint(3) unsigned NOT NULL default '0',
   c tinyint(3) unsigned NOT NULL default '0',
@@ -509,6 +509,7 @@ CREATE TABLE /*prefix*/testplan_platforms (
   id int(10) unsigned NOT NULL auto_increment,
   testplan_id int(10) unsigned NOT NULL,
   platform_id int(10) unsigned NOT NULL,
+  active tinyint(1) NOT NULL default '1',
   PRIMARY KEY (id),
   UNIQUE KEY /*prefix*/idx_testplan_platforms(testplan_id,platform_id)
 ) DEFAULT CHARSET=utf8 COMMENT='Connects a testplan with platforms';
@@ -573,7 +574,7 @@ CREATE TABLE /*prefix*/user_assignments (
 CREATE TABLE /*prefix*/users (
   `id` int(10) unsigned NOT NULL auto_increment,
   `login` varchar(100) NOT NULL default '',
-  `password` varchar(32) NOT NULL default '',
+  `password` varchar(255) NOT NULL default '',
   `role_id` int(10) unsigned NOT NULL default '0',
   `email` varchar(100) NOT NULL default '',
   `first` varchar(50) NOT NULL default '',
@@ -899,3 +900,23 @@ CREATE OR REPLACE VIEW /*prefix*/latest_exec_by_testplan_plat
 AS SELECT tcversion_id, testplan_id,platform_id,max(id) AS id
 FROM /*prefix*/executions 
 GROUP BY tcversion_id,testplan_id,platform_id;
+
+#
+CREATE OR REPLACE VIEW /*prefix*/tsuites_tree_depth_2
+AS SELECT TPRJ.prefix,
+NHTPRJ.name AS testproject_name,    
+NHTS_L1.name AS level1_name,
+NHTS_L2.name AS level2_name,
+NHTPRJ.id AS testproject_id, 
+NHTS_L1.id AS level1_id, 
+NHTS_L2.id AS level2_id 
+FROM /*prefix*/testprojects TPRJ 
+JOIN /*prefix*/nodes_hierarchy NHTPRJ 
+ON TPRJ.id = NHTPRJ.id
+LEFT OUTER JOIN /*prefix*/nodes_hierarchy NHTS_L1 
+ON NHTS_L1.parent_id = NHTPRJ.id
+LEFT OUTER JOIN /*prefix*/nodes_hierarchy NHTS_L2
+ON NHTS_L2.parent_id = NHTS_L1.id 
+WHERE NHTPRJ.node_type_id = 1 
+AND NHTS_L1.node_type_id = 2
+AND NHTS_L2.node_type_id = 2;

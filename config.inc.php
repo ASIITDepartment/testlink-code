@@ -79,6 +79,7 @@ $tlCfg->keywords->onDeleteCheckExecutedTCVersions = TRUE;
 //
 $tlCfg->keywords->byTestProject = array();
 
+$tlCfg->keywords->headsUpTSuiteOnExec = 'CMD_OPEN_ON_EXEC';
 
 $tlCfg->accessWithoutLogin = array();
 
@@ -147,8 +148,7 @@ $tlCfg->gui->ux = 'tl-classic';
  * @see $tlCfg->cookie->path
  * @global string $tlCfg->cookie->prefix
  */
-$tlCfg->cookie->prefix = 'TESTLINK197';
-
+$tlCfg->cookie->prefix = 'TESTLINK1920';
 
 /**
  * @link http://php.net/function.setcookie
@@ -158,6 +158,9 @@ $tlCfg->cookie->expire = (time()+60*60*24*30); // 30 days;
 $tlCfg->cookie->domain = '';
 $tlCfg->cookie->secure = false;
 $tlCfg->cookie->httponly = false;
+
+$tlCfg->cookie->testProjectMemory = $tlCfg->cookie->prefix . 
+                                    '_PROJ_ID_USER_ID_';
 
 /**
  * Copied from MantisBT
@@ -901,6 +904,8 @@ $tlCfg->reportsCfg->start_date_offset = (7*24*60*60); // one week
 $tlCfg->reportsCfg->start_time = '00:00';
 
 // Result matrix (resultsTC.php)
+$tlCfg->resultMatrixReport = new stdClass();
+
 // Shows an extra column with the result of the latest execution on
 // the lastest CREATED build
 $tlCfg->resultMatrixReport->buildColumns['showExecutionResultLatestCreatedBuild'] = true;
@@ -2001,10 +2006,11 @@ $tlCfg->enableTableExportButton = DISABLED;
 
 
 /**
- * Taken from Mantis to implement better login security, and solve
- * TICKET 4342
+ * Taken from Mantis to implement better login security
+ * and solve TICKET 4342.
  */
-$tlCfg->auth_cookie = "TESTLINK_USER_AUTH_COOKIE";
+$tlCfg->auth_cookie = $tlCfg->cookie->prefix . 
+                      "TESTLINK_USER_AUTH_COOKIE";
 
 /** 
 Used when creating a Test Suite using copy

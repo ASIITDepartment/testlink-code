@@ -97,7 +97,7 @@ CREATE UNIQUE INDEX /*prefix*/roles_uidx1 ON /*prefix*/roles ("description");
 CREATE TABLE /*prefix*/users(  
   "id" BIGSERIAL NOT NULL ,
   "login" VARCHAR(100) NOT NULL DEFAULT '',
-  "password" VARCHAR(32) NOT NULL DEFAULT '',
+  "password" VARCHAR(255) NOT NULL DEFAULT '',
   "role_id" SMALLINT NOT NULL DEFAULT '0' REFERENCES  /*prefix*/roles (id),
   "email" VARCHAR(100) NOT NULL DEFAULT '',
   "first" VARCHAR(50) NOT NULL DEFAULT '',
@@ -707,6 +707,7 @@ CREATE TABLE /*prefix*/testplan_platforms (
   id BIGSERIAL NOT NULL,
   testplan_id BIGINT NOT NULL DEFAULT '0' REFERENCES  /*prefix*/testplans (id) ON DELETE CASCADE,
   platform_id BIGINT NOT NULL DEFAULT '0',
+  active INT2 NOT NULL DEFAULT '1',
   PRIMARY KEY (id)
 );
 CREATE UNIQUE INDEX /*prefix*/testplan_platforms_uidx1 ON /*prefix*/testplan_platforms (testplan_id,platform_id);
@@ -1056,3 +1057,27 @@ CREATE OR REPLACE VIEW /*prefix*/tcversions_without_platforms AS
   AND NOT(EXISTS(SELECT 1 FROM /*prefix*/testcase_platforms TCPL
                  WHERE TCPL.tcversion_id = NHTCV.id ) )
 );
+
+--
+--
+CREATE OR REPLACE VIEW /*prefix*/tsuites_tree_depth_2 AS 
+(
+  SELECT TPRJ.prefix,
+  NHTPRJ.name AS testproject_name,    
+  NHTS_L1.name AS level1_name,
+  NHTS_L2.name AS level2_name,
+  NHTPRJ.id AS testproject_id, 
+  NHTS_L1.id AS level1_id, 
+  NHTS_L2.id AS level2_id
+  FROM /*prefix*/testprojects TPRJ 
+  JOIN /*prefix*/nodes_hierarchy NHTPRJ 
+  ON TPRJ.id = NHTPRJ.id
+  LEFT OUTER JOIN /*prefix*/nodes_hierarchy NHTS_L1 
+  ON NHTS_L1.parent_id = NHTPRJ.id
+  LEFT OUTER JOIN /*prefix*/nodes_hierarchy NHTS_L2
+  ON NHTS_L2.parent_id = NHTS_L1.id 
+  WHERE NHTPRJ.node_type_id = 1 
+  AND NHTS_L1.node_type_id = 2
+  AND NHTS_L2.node_type_id = 2
+);
+--

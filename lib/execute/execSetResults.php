@@ -125,7 +125,7 @@ if(!is_null($linked_tcversions)) {
   // will create a record even if the testcase version has not been executed (GET_NO_EXEC)
   //
   // Can be DONE JUST ONCE AFTER write results to DB
-  // --------------------------------------------------------------------------------------------
+  // --------------------------------------------------------------------------
   // Results to DB
   // 
   // 20130917 - this implementation regarding save_results is confusing.
@@ -158,7 +158,8 @@ if(!is_null($linked_tcversions)) {
         $tcase_mgr->deleteStepsPartialExec(array_keys($_REQUEST['step_notes']),$ctx);
       }
       
-      list($execSet,$gui->addIssueOp) = write_execution($db,$args,$_REQUEST,$its);
+      list($execSet,$gui->addIssueOp,$gui->uploadOp) = 
+        write_execution($db,$args,$_REQUEST,$its);
       
       // Copy Attachments from latest exec ?
       if($args->copyAttFromLEXEC && $cfg->exec_cfg->exec_mode->new_exec && 
@@ -478,7 +479,12 @@ if($args->reload_caller) {
       $userSet[] = $value;
     }
   }
-  smarty_assign_tsuite_info($smarty,$_REQUEST,$db,$tree_mgr,$tcase_id,$args->tproject_id,$cfg);
+
+  $gui->headsUpTSuite = 
+     smarty_assign_tsuite_info($smarty,$tree_mgr,$tcase_id,$args->tproject_id,$cfg);
+  if ($args->doSave || $args->saveStepsPartialExec) {
+    $gui->headsUpTSuite = false;
+  }
 
   // Bulk is possible when test suite is selected (and is allowed in config)
   if( $gui->can_use_bulk_op = ($args->level == 'testsuite') ) {
@@ -847,26 +853,22 @@ function get_ts_name_details(&$db,$tcase_id) {
   $rs = '';
   $do_query = true;
   $sql = "SELECT TS.id AS tsuite_id, TS.details, 
-               NHA.id AS tc_id, NHB.name AS tsuite_name 
-        FROM {$tables['testsuites']} TS, {$tables['nodes_hierarchy']} NHA, 
-             {$tables['nodes_hierarchy']} NHB
-        WHERE TS.id=NHA.parent_id
-        AND   NHB.id=NHA.parent_id ";
-  if( is_array($tcase_id) && count($tcase_id) > 0)
-  {
+          NHA.id AS tc_id, NHB.name AS tsuite_name 
+          FROM {$tables['testsuites']} TS, 
+               {$tables['nodes_hierarchy']} NHA, 
+               {$tables['nodes_hierarchy']} NHB
+          WHERE TS.id=NHA.parent_id
+          AND   NHB.id=NHA.parent_id ";
+  if( is_array($tcase_id) && count($tcase_id) > 0) {
     $in_list = implode(",",$tcase_id);
     $sql .= "AND NHA.id IN (" . $in_list . ")";
-  }
-  else if(!is_null($tcase_id))
-  {
+  } else if(!is_null($tcase_id)) {
     $sql .= "AND NHA.id={$tcase_id}";
-  }
-  else
-  {
+  } else {
     $do_query = false;
   }
-  if($do_query)
-  {
+
+  if ($do_query) {
     $rs = $db->fetchRowsIntoMap($sql,'tc_id');
   }
   return $rs;
@@ -880,35 +882,33 @@ function get_ts_name_details(&$db,$tcase_id) {
   returns: 
 
 */
-function smarty_assign_tsuite_info(&$smarty,&$request_hash, &$db,&$tree_mgr,$tcase_id,$tproject_id,$cfgObj)
+function smarty_assign_tsuite_info(&$smarty,&$tree_mgr,$tcase_id,$tproject_id,$cfgObj)
 {
-  if( ($safeTCaseID = intval($tcase_id)) <= 0)
-  {
+
+  if( ($safeTCaseID = intval($tcase_id)) <= 0) {
     // hmm, no good
     return;
   }  
-
   $fpath = $tree_mgr->get_full_path_verbose($tcase_id, array('output_format' => 'id_name'));
-  $tsuite_info = get_ts_name_details($db,$tcase_id);
 
-  foreach($fpath as $key => $value)
-  {
-      unset($value['name'][0]);  // Remove test plan name
-      unset($value['node_id'][0]);  // Remove test plan name
-      $str='';
-      foreach($value['name'] as $jdx => $elem)
-      {
-        $str .= "<a href=\"javascript:openTestSuiteWindow(" . $value['node_id'][$jdx] . ")\"> ";
-        // BUGID 4324 - Julian - Encoding did not work properly
-        $str .= htmlspecialchars($elem,ENT_QUOTES) . '</a>/';
-      }
-      $tsuite_info[$key]['tsuite_name']=$str;  
+  $tsuite_info = get_ts_name_details($tree_mgr->db,$tcase_id);
+
+  foreach($fpath as $key => $value) {
+    unset($value['name'][0]);  // Remove test plan name
+    unset($value['node_id'][0]);  // Remove test plan name
+    $str='';
+    foreach($value['name'] as $jdx => $elem) {
+      $str .= "<a href=\"javascript:openTestSuiteWindow(" . $value['node_id'][$jdx] . ")\"> ";
+      $str .= htmlspecialchars($elem,ENT_QUOTES) . '</a>/';
+    }
+    $tsuite_info[$key]['tsuite_name']=$str;  
   }
   $smarty->assign('tsuite_info',$tsuite_info);
   
-  // ------------------------------------------------------------------------------
-  if(!is_null($tsuite_info))
-  {
+  $headsUp = false;
+
+  // --------------------------------------------------------------------------
+  if (!is_null($tsuite_info)) {
     $ckObj = new stdClass();
     $ckCfg = config_get('cookie');
     $cookieKey = $ckCfg->prefix . 'TL_execSetResults_tsdetails_view_status';
@@ -918,24 +918,25 @@ function smarty_assign_tsuite_info(&$smarty,&$request_hash, &$db,&$tree_mgr,$tca
     $a_ts=array();
     $a_tsval=array();
       
-    $tsuite_mgr = New testsuite($db);
-     
-    foreach($tsuite_info as $key => $elem)
-    {
+    $tsuite_mgr = new testsuite($tree_mgr->db);
+    $tsid = current($tsuite_info)['tsuite_id'];
+    if ($cfgObj->kwHeadsUpTSuiteOnExec != '') {
+      $headsUp = $tsuite_mgr->keywordIsLinked($tsid,
+                                $cfgObj->kwHeadsUpTSuiteOnExec);
+    }
+    foreach($tsuite_info as $key => $elem) {
       $main_k = 'tsdetails_view_status_' . $key;
       $a_tsvw[] = $main_k;
       $a_ts[] = 'tsdetails_' . $key;
       $expand_collapse = 0;
-      if( !isset($request_hash[$main_k]) )
-      {
-        // First time we are entered here => we can need to understand how to proceed
-        switch($exec_cfg->expand_collapse->testsuite_details)
-        {
+      if( !isset($_REQUEST[$main_k]) ){
+        // First time we are entered here => 
+        // we can need to understand how to proceed
+        switch($exec_cfg->expand_collapse->testsuite_details) {
           case LAST_USER_CHOICE:
-          if (isset($_COOKIE[$cookieKey]) ) 
-          {
-            $expand_collapse = $_COOKIE[$cookieKey];
-          }
+            if (isset($_COOKIE[$cookieKey]) ) {
+              $expand_collapse = $_COOKIE[$cookieKey];
+            }
           break;  
           
           default:
@@ -943,11 +944,11 @@ function smarty_assign_tsuite_info(&$smarty,&$request_hash, &$db,&$tree_mgr,$tca
           break;
         } 
       }
-      $a_tsval[] = isset($request_hash[$main_k]) ? $request_hash[$main_k] : $expand_collapse;
+      $a_tsval[] = isset($_REQUEST[$main_k]) ? 
+                         $_REQUEST[$main_k] : $expand_collapse;
       $tsuite_id = $elem['tsuite_id'];
       $tc_id = $elem['tc_id'];
-      if(!isset($cached_cf[$tsuite_id]))
-      {
+      if (!isset($cached_cf[$tsuite_id])) {
         $cached_cf[$tsuite_id] = $tsuite_mgr->html_table_of_custom_field_values($tsuite_id,'design',null,$tproject_id);
       }
       $ts_cf_smarty[$tc_id] = $cached_cf[$tsuite_id];
@@ -964,9 +965,9 @@ function smarty_assign_tsuite_info(&$smarty,&$request_hash, &$db,&$tree_mgr,$tca
       
     $smarty->assign('ts_cf_smarty',$ts_cf_smarty);
   }
-
+  return $headsUp;
 }  
-// --------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
 
 
 /*
@@ -1338,6 +1339,10 @@ function getCfg() {
   $cfg->editorCfg = getWebEditorCfg('execution');
   
   $cfg->cookie = config_get('cookie');  
+
+  $cfg->kwHeadsUpTSuiteOnExec = 
+          trim(config_get('keywords')->headsUpTSuiteOnExec);
+
   return $cfg;
 }
 
@@ -1361,10 +1366,12 @@ function getCfg() {
 */
 function initializeRights(&$dbHandler,&$userObj,$tproject_id,$tplan_id) {
     $exec_cfg = config_get('exec_cfg');
+
+
+    $userERole = $userObj->getEffectiveRole($dbHandler,$tproject_id,$tplan_id);
+
     $grants = new stdClass();
-    
-    $grants->execute = $userObj->hasRight($dbHandler,"testplan_execute",$tproject_id,$tplan_id,true);
-    $grants->execute = $grants->execute=="yes" ? 1 : 0;
+    $grants->execute = $userERole->hasRight("testplan_execute");
     
     // IMPORTANT NOTICE - TICKET 5128
     // If is TRUE we will need also to analize, test case by test case
@@ -1382,18 +1389,18 @@ function initializeRights(&$dbHandler,&$userObj,$tproject_id,$tplan_id) {
     // These checks can not be done here
     //
     // TICKET 5310: Execution Config - convert options into rights
-    $grants->delete_execution = $userObj->hasRight($dbHandler,"exec_delete",$tproject_id,$tplan_id,true);
+    $grants->delete_execution = $userERole->hasRight("exec_delete");
   
     
     // Important:
     // Execution right must be present to consider this configuration option.
     // $grants->edit_exec_notes = $grants->execute && $exec_cfg->edit_notes;
     $grants->edit_exec_notes = $grants->execute && 
-                               $userObj->hasRight($dbHandler,"exec_edit_notes",$tproject_id,$tplan_id);
+                               $userERole->hasRight("exec_edit_notes");
     
+    $grants->edit_testcase = $userERole->hasRight("mgt_modify_tc");
 
-    $grants->edit_testcase = $userObj->hasRight($dbHandler,"mgt_modify_tc",$tproject_id,$tplan_id);
-    $grants->edit_testcase = $grants->edit_testcase=="yes" ? 1 : 0;
+    
     return $grants;
 }
 
@@ -1412,6 +1419,7 @@ function initializeGui(&$dbHandler,&$argsObj,&$cfgObj,&$tplanMgr,&$tcaseMgr,&$is
   $platformMgr = new tlPlatform($dbHandler,$argsObj->tproject_id);
     
   $gui = new stdClass();
+  $gui->headsUpTSuite = false;
   $gui->direct_link = '';  
   $gui->allIssueAttrOnScreen = 0;
   $gui->lexNotes = null;
@@ -1697,6 +1705,7 @@ function processTestCase($tcase,&$guiObj,&$argsObj,&$cfgObj,$tcv,&$treeMgr,&$tca
   }
 
   $cf_map = null;
+  $guiObj->execution_time_cfields[$tcase_id] = null;
   if($guiObj->grants->execute) {
     if( $eid > 0 ) {
       // I'm getting the values saved on latest execution
