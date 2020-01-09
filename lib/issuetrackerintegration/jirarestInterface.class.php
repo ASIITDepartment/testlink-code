@@ -9,9 +9,6 @@
  * @see https://developer.atlassian.com/jiradev/api-reference/jira-rest-apis/jira-rest-api-tutorials/
  *
  *
- * @internal revisions
- * @since 1.9.16
- *
 **/
 require_once(TL_ABS_PATH . "/third_party/fayp-jira-rest/RestRequest.php");
 require_once(TL_ABS_PATH . "/third_party/fayp-jira-rest/Jira.php");
@@ -396,29 +393,26 @@ class jirarestInterface extends issueTrackerInterface
           }  
         }
 
-        if(property_exists($opt, 'artifactVersion'))
-        {
+        if (property_exists($opt, 'artifactVersion')) {
           // YES is plural!!
           $issue['fields']['versions'] = array();
-          foreach( $opt->artifactVersion as $vv)
-          {
+          foreach ( $opt->artifactVersion as $vv) {
             $issue['fields']['versions'][] = array('id' => (string)$vv);
           }  
         }
 
 
-
-        if(property_exists($opt, 'reporter'))
-        {
+        if (property_exists($opt, 'reporter')) {
           $issue['fields']['reporter'] = array('name' => (string)$opt->reporter);
         }
 
-        if(property_exists($opt, 'issueType'))
-        {
+        if (property_exists($opt, 'issueType')) {
           $issue['fields']['issuetype'] = array('id' => $opt->issueType);
         }
         
-
+        if (preg_grep("/(?:\/.*\/{1,})(.*) - Execution/", $summary, $matches)) {
+          $issue['fields']['customfield_10311'] = $matches[1];
+        }
       }  
 
       $op = $this->APIClient->createIssue($issue);
@@ -813,9 +807,16 @@ class jirarestInterface extends issueTrackerInterface
         break;
 
         case 'radiobutton':
+          $dummy = array('value' => (string)$valueSet['value']);
+        break;
         case 'selectlist':
           // "customfield_10012": { "value": "red" }
-          $dummy = array('value' => (string)$valueSet['value']);
+          $dummy = array('id' => (string)$valueSet['value']);
+        break;
+
+        case 'userpicker':
+          // "customfield_10012": { "value": "admin" }
+          $dummy = array('name' => (string)$valueSet['value']);
         break;
 
         case 'labels':

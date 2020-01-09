@@ -13,7 +13,7 @@
  * @filesource  common.php
  * @package     TestLink
  * @author      TestLink community
- * @Copyright   2005,2018 TestLink community 
+ * @Copyright   2005,2019 TestLink community 
  * @link        http://www.testlink.org
  *
  */
@@ -209,7 +209,8 @@ function setSessionTestPlan($tplan_info) {
     $ckObj = new stdClass();
 
     $ckCfg = config_get('cookie');
-    $ckObj->name = $ckCfg->prefix . 'TL_lastTestPlanForUserID_' . 1;
+    $ckObj->name = $ckCfg->prefix . 'TL_lastTestPlanForUserID_' . 
+                   intval($_SESSION['userID']);
     $ckObj->value = $tplan_info['id'];
 
     tlSetCookie($ckObj);
@@ -812,13 +813,11 @@ function transform_nodes_order($nodes_order,$node_to_exclude=null)
  * @param array $fInfo an array used by uploading files ($_FILES)
  * @return string containing an error message (if any)
  */
-function getFileUploadErrorMessage($fInfo)
+function getFileUploadErrorMessage($fInfo,$tlInfo=null)
 {
   $msg = null;
-  if (isset($fInfo['error']))
-  {
-    switch($fInfo['error'])
-    {
+  if (isset($fInfo['error'])) {
+    switch($fInfo['error']) {
       case UPLOAD_ERR_INI_SIZE:
         $msg = lang_get('error_file_size_larger_than_maximum_size_check_php_ini');
       break;
@@ -832,6 +831,10 @@ function getFileUploadErrorMessage($fInfo)
         $msg = lang_get('error_file_upload');
       break;
     }
+  }
+
+  if (null == $msg && null != $tlInfo && $tlInfo->statusOK == false) {
+    $msg = lang_get('FILE_UPLOAD_' . $tlInfo->statusCode);
   }
   return $msg;
 }
@@ -1521,3 +1524,33 @@ function tlSetCookie($ckObj) {
             $stdCk->domain,$stdCk->secure,$stdCk->httponly);
 }
 
+/**
+ * context is defined by:
+ *  - test project id
+ *  - test plan id
+ * @return array 
+ *         element 1 is an object with 
+ *           tproject_id and tplan_id properties
+ *         element 2 query string with the properties
+ *                 
+ */
+function initContext()
+{
+  $_REQUEST = strings_stripSlashes($_REQUEST);
+  $context = new stdClass();
+  $env = '';
+  $k2ctx = array('tproject_id' => 0,
+                 'tplan_id' => 0);
+  foreach ($k2ctx as $prop => $defa) {
+    $context->$prop = isset($_REQUEST[$prop]) ? $_REQUEST[$prop] : $defa;
+    if( is_numeric($defa) ) {
+      $context->$prop = intval($context->$prop);    
+    } 
+    if ($env != '') {
+      $env .= "&";
+    }
+    $env .= "$prop=" . $context->$prop;
+  }
+
+  return array($context,$env);
+}
