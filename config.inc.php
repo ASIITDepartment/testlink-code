@@ -1532,7 +1532,7 @@ $g_repositoryType = TL_REPOSITORY_TYPE_FS;
  * Put it out of reach via web or configure access denied.
  *
  **/
-$g_repositoryPath = '/var/testlink/upload_area/';  /* unix example */
+$g_repositoryPath = '/opt/bitnami/apps/testlink/upload_area/';  /* unix example */
 if (($upa = getenv('TESTLINK_UPLOAD_AREA'))) {
   $g_repositoryPath = trim($upa);
 }
@@ -1893,7 +1893,7 @@ $tlCfg->tplanDesign->hideTestCaseWithStatusIn = array($tlCfg->testCaseStatus['ob
 /** Maximum uploadfile size to importing stuff in TL */
 // Also check your PHP settings (default is usually 2MBs)
 // unit BYTES is required by MAX_FILE_SIZE HTML option
-$tlCfg->import_file_max_size_bytes = '409600';
+$tlCfg->import_file_max_size_bytes = '4000000';
 
 /** Maximum line size of the imported file */
 $tlCfg->import_max_row = '10000'; // in chars
@@ -1901,7 +1901,7 @@ $tlCfg->import_max_row = '10000'; // in chars
 /** Set the default role used for new users */
 // - created from the login page.
 // - created using user management features
-$tlCfg->default_roleid = TL_ROLES_GUEST;
+$tlCfg->default_roleid = TL_ROLES_DEFAULT;
 
 // only show custom fields if their value isn't empty
 $tlCfg->custom_fields->show_custom_fields_without_value = true;
