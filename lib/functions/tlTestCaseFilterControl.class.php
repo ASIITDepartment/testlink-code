@@ -6,7 +6,7 @@
  * @filesource tlTestCaseFilterControl.class.php
  * @package    TestLink
  * @author     Andreas Simon
- * @copyright  2006-2016, TestLink community
+ * @copyright  2006-2020, TestLink community
  * @link       http://testlink.sourceforge.net/
  * 
  *
@@ -1000,8 +1000,7 @@ class tlTestCaseFilterControl extends tlFilterControl {
         $key = 'setting_testsgroupby';
         $mode = $this->args->$key;
 
-        if ($this->do_filtering)
-        {
+        if ($this->do_filtering) {
           // TICKET 4496: added active/inactive filter
           // Will be refactored in future versions
           // $ignore_inactive_testcases = DO_NOT_FILTER_INACTIVE_TESTCASES;
@@ -1026,14 +1025,11 @@ class tlTestCaseFilterControl extends tlFilterControl {
                            'ignore_active_testcases' => $ignore_active_testcases);
       
 
-          if ($mode == 'mode_test_suite')
-          {
-			
+          if ($mode == 'mode_test_suite') {
          	 $tree_menu = generateTestSpecTree($this->db,
                                             $this->args->testproject_id,
                                             $this->args->testproject_name,
                                             $gui->menuUrl,$filters,$options);
-
           }
 
 		  $tree_menu = $tree_menu['menu']; 
@@ -1488,7 +1484,8 @@ class tlTestCaseFilterControl extends tlFilterControl {
     $type_selection = $this->args->{$type};
     
     // are there any keywords?
-    if (!is_null($keywords) && count($keywords)) {
+    $atLeastOneKW = !is_null($keywords) && count($keywords);
+    if ($atLeastOneKW) {
       $this->filters[$key] = array();
 
       if (!$selection || !$type_selection || $this->args->reset_filters) {
@@ -1513,14 +1510,18 @@ class tlTestCaseFilterControl extends tlFilterControl {
       $this->filters[$key][$type]['selected'] = $type_selection;
     }
     
-    // set the active value to filter
-    // delete keyword filter if "any" (0) is part of the selection - regardless of filter mode
-    if (is_array($this->filters[$key]['selected']) && in_array(0, $this->filters[$key]['selected'])) {
-      $this->active_filters[$key] = null;
+    if ($atLeastOneKW) {
+      // set the active value to filter
+      // delete keyword filter if "any" (0) is part of the selection - regardless of filter mode
+      if (is_array($this->filters[$key]['selected']) && in_array(0, $this->filters[$key]['selected'])) {
+        $this->active_filters[$key] = null;
+      } else {
+        $this->active_filters[$key] = $this->filters[$key]['selected'];
+      }
+      $this->active_filters[$type] = $selection ? $type_selection : null;
     } else {
-      $this->active_filters[$key] = $this->filters[$key]['selected'];
-    }
-    $this->active_filters[$type] = $selection ? $type_selection : null;
+      $this->active_filters[$key] = 0;
+    }  
   } 
 
 
