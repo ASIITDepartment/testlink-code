@@ -1663,7 +1663,7 @@ $TLS_testproject_alt_delete = 'Delete the Test project and all related data.';
 // Warning!!! - if JS string you must use \\n to get \n
 $TLS_popup_product_delete = 'Warning! This action deletes irrevocable all Test Project related ' .
                             'data (including test results, plans, etc.). ' .
-                            'You can also use to desactivate instead of delete.\\n' .
+                            'You can also use to deactivate instead of delete.\\n' .
                             'Recommendation: Execute a dump of database at first.\\n' .
                             'Are you sure to delete the Test Project?';
 $TLS_th_reqmgrsystem_short = 'Req. Mgmt. System';
@@ -1714,7 +1714,7 @@ $TLS_hint_new_version = "Create a new version";
 $TLS_can_not_edit_tc = "You can not edit this version because it has been executed";
 $TLS_can_not_edit_frozen_tc = "You can not edit this version because it has been frozen";
 $TLS_can_not_delete_relation_frozen_tc = "You can not delete this relation : testcase has been frozen";
-$TLS_deactivate_this_tcversion = "Desactivate this version";
+$TLS_deactivate_this_tcversion = "Deactivate this version";
 $TLS_execution_type = 'Execution type';
 $TLS_execution_type_short_descr = 'Execution';
 $TLS_tcversion_is_inactive_msg = "This version is INACTIVE => will be not available to be included in a test plan";
@@ -3979,8 +3979,8 @@ $TLS_info_neverRunByPP_report =
    Test cases <b>with and without tester assignment</b>
    are considered<br />";
 
-$TLS_neverRunByPP_title = "Test Cases Never Runned"; 
-$TLS_link_report_never_run = "Test Cases Never Runned";
+$TLS_neverRunByPP_title = "Test Cases Never Run"; 
+$TLS_link_report_never_run = "Test Cases Never Run";
 
 
 $TLS_commit_id = 'commit id';
@@ -3991,5 +3991,27 @@ $TLS_release_candidate = 'release candidate';
 $TLS_allowed_files = "Allowed files:";
 $TLS_allowed_filenames_regexp = "Filename must verify this regexp:";
 
+$TLS_info_xls_report_results_by_status = '!!Spreasheet Output includes the Test Case Summary';
 
+
+$TLS_link_report_test_absolute_latest_exec = "Absolute Latest Execution Matrix";
+$TLS_latest_execution = "Latest execution on Context";
+$TLS_resultsTCAbsoluteLatest = "Latest execution is computed over all builds";
+$TLS_info_resultsTCAbsoluteLatest_report = $TLS_resultsTCAbsoluteLatest;
+
+$TLS_resultsTCAbsoluteLatest_title = "Latest execution in Selected Platform  computed over all builds";
+
+$TLS_FILE_UPLOAD_allowed_filenames_regexp = 'File Name does not pass REGEXP checkings';
+
+$TLS_FILE_UPLOAD_empty_extension = 'Empty Extension is Forbidden';
+$TLS_FILE_UPLOAD_allowed_files = 'File does not pass allowed file type check';
+
+$TLS_file_upload_ko = 'File Upload Issue';
+$TLS_pleaseOpenTSuite = 'Test Suite Details contain CRITIC information for ' .
+                   'execution. <br>Please open the section and ' .
+                   'read it carefully.<br>Thanks!';
+
+$TLS_delete_frozen_tcversion = "Delete Frozen TCVersion";
+$TLS_right_delete_frozen_tcversion = "Delete Frozen TCVersion";
+$TLS_copy_only_latest_version = 'Copy ONLY the Latest Version AS Version 1';
 // ----- END ------------------------------------------------------------------

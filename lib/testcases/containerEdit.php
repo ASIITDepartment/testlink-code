@@ -1098,22 +1098,22 @@ args:
 returns: -
 
 */
-function moveTestCases(&$smartyObj,$template_dir,&$tsuiteMgr,&$treeMgr,$argsObj,$lbl)
+function moveTestCases(&$smartyObj,$template_dir,&$tsuiteMgr,&$treeMgr,$argsObj)
 {
-    if(sizeof($argsObj->tcaseSet) > 0)
-    {
-        $status_ok = $treeMgr->change_parent($argsObj->tcaseSet,$argsObj->containerID);
-        $user_feedback= $status_ok ? '' : lang_get('move_testcases_failed');
+  $lbl = $argsObj->l10n; 
+  if (sizeof($argsObj->tcaseSet) > 0) {
+    $status_ok = $treeMgr->change_parent($argsObj->tcaseSet,$argsObj->containerID);
+    $user_feedback= $status_ok ? '' : lang_get('move_testcases_failed');
 
-        // objectID - original container
-        $guiObj = new stdClass();
-        $guiObj->attachments = getAttachmentInfosFrom($tsuiteMgr,$argsObj->objectID);
-        $guiObj->id = $argsObj->objectID;
-        $guiObj->refreshTree = true;
-        $guiObj->btn_reorder_testcases = $lbl['btn_reorder_testcases'];
+    // objectID - original container
+    $guiObj = new stdClass();
+    $guiObj->attachments = getAttachmentInfosFrom($tsuiteMgr,$argsObj->objectID);
+    $guiObj->id = $argsObj->objectID;
+    $guiObj->refreshTree = true;
+    $guiObj->btn_reorder_testcases = $lbl['btn_reorder_testcases'];
 
-        $tsuiteMgr->show($smartyObj,$guiObj,$template_dir,$argsObj->objectID,null,$user_feedback);
-    }
+    $tsuiteMgr->show($smartyObj,$guiObj,$template_dir,$argsObj->objectID,null,$user_feedback);
+  }
 }
 
 
@@ -1265,8 +1265,7 @@ function deleteTestCasesViewer(&$dbHandler,&$smartyObj,&$tprojectMgr,&$treeMgr,&
       $guiObj->user_feedback = is_null($guiObj->user_feedback) ? lang_get('no_testcases_available') : $guiObj->user_feedback;
     }
 
-    if(!$argsObj->grants->delete_executed_testcases && $hasExecutedTC)
-    {
+    if (!$argsObj->grants->delete_executed_testcases && $hasExecutedTC) {
       $guiObj->system_message = lang_get('system_blocks_delete_executed_tc');
     }
 
@@ -1400,6 +1399,8 @@ function initializeGui(&$objMgr,$id,$argsObj,$lbl=null) {
                                   $guiObj->id,$argsObj->tprojectID);
   }  
 
+
+  $guiObj->modify_tc_rights = $argsObj->grants->testcase_mgmt;
   return $guiObj;
 }
 

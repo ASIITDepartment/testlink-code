@@ -412,8 +412,8 @@ abstract class issueTrackerInterface
 
     $link .= "</a>";
 
-    if($my['opt']['colorByStatus'] && property_exists($issue,'statusColor') )
-    {
+    if ($my['opt']['colorByStatus'] 
+        && property_exists($issue,'statusColor') ) {
       $title = lang_get('access_to_bts');  
       $link = "<div  title=\"{$title}\" style=\"display: inline; background: $issue->statusColor;\">$link</div>";
     }
@@ -423,12 +423,10 @@ abstract class issueTrackerInterface
     $ret->isResolved = $issue->isResolved;
     $ret->op = true;
 
-    if( isset($my['opt']['raw']) && !is_null(isset($my['opt']['raw'])) )
-    {
-      foreach($my['opt']['raw'] as $attr)
-      {
-      	if(property_exists($issue, $attr))
-      	{
+    if (isset($my['opt']['raw']) 
+        && !is_null(isset($my['opt']['raw'])) ) {
+      foreach ($my['opt']['raw'] as $attr) {
+      	if (property_exists($issue, $attr)) {
           $ret->$attr = $issue->$attr;
       	}
       }  
@@ -528,17 +526,13 @@ abstract class issueTrackerInterface
    **/
   public function setResolvedStatusCfg()
   {
-    if( property_exists($this->cfg,'resolvedstatus') )
-    {
+    if (property_exists($this->cfg,'resolvedstatus')) {
       $statusCfg = (array)$this->cfg->resolvedstatus;
-    }
-    else
-    {
+    } else {
       $statusCfg['status'] = $this->defaultResolvedStatus;
     }
     $this->resolvedStatus = new stdClass();
-    foreach($statusCfg['status'] as $cfx)
-    {
+    foreach ($statusCfg['status'] as $cfx) {
       $e = (array)$cfx;
       $this->resolvedStatus->byCode[$e['code']] = $e['verbose'];
     }

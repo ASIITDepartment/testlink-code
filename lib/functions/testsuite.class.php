@@ -5,7 +5,7 @@
  * 
  * @filesource  testsuite.class.php
  * @package     TestLink
- * @copyright   2005-2019, TestLink community 
+ * @copyright   2005-2020, TestLink community 
  * @link        http://www.testlink.org/
  *
  *
@@ -487,11 +487,6 @@ class testsuite extends tlObjectWithAttachments
     $my['options'] = array('show_mode' => 'readwrite');   
     $my['options'] = array_merge($my['options'], (array)$options);
 
-    $gui->modify_tc_rights = has_rights($this->db,"mgt_modify_tc");
-    if($my['options']['show_mode'] == 'readonly') {       
-      $gui->modify_tc_rights = 'no';
-    }
-      
     if($sqlResult) { 
       $gui->sqlResult = $sqlResult;
       $gui->sqlAction = $action;
@@ -502,6 +497,14 @@ class testsuite extends tlObjectWithAttachments
     if( !property_exists($gui,'tproject_id') ) {
       $gui->tproject_id = $this->getTestProjectFromTestSuite($tsuite_id,null);
     }
+
+    $gui->modify_tc_rights = 
+      has_rights($this->db,"mgt_modify_tc",$gui->tproject_id);
+      
+    if($my['options']['show_mode'] == 'readonly') {       
+      $gui->modify_tc_rights = 'no';
+    }
+
 
     $gui->assign_keywords = 0;
     if( property_exists($gui, 'user') ) {
@@ -999,16 +1002,11 @@ class testsuite extends tlObjectWithAttachments
   }
   
   
-  /*
+  /**
     function: getKeywords
               Get keyword assigned to a testsuite.
               Uses table object_keywords.
               
-              Attention:
-              probably write on obejct_keywords has not been implemented yet,
-              then right now thie method can be useless.
-               
-  
     args: id: testsuite id
           kw_id: [default = null] the optional keyword id
     
@@ -1025,13 +1023,12 @@ class testsuite extends tlObjectWithAttachments
     $sql = "/* $debugMsg */ SELECT keyword_id,keywords.keyword, notes " .
            " FROM {$this->tables['object_keywords']}, {$this->tables['keywords']} keywords " .
            " WHERE keyword_id = keywords.id AND fk_id = {$id}";
-    if (!is_null($kw_id))
-    {
+    if (!is_null($kw_id)) {
       $sql .= " AND keyword_id = {$kw_id}";
     } 
     $map_keywords = $this->db->fetchRowsIntoMap($sql,'keyword_id');
     
-    return($map_keywords);
+    return $map_keywords;
   } 
   
   
@@ -2054,6 +2051,31 @@ class testsuite extends tlObjectWithAttachments
 
     return $kw;
   } 
+
+  /**
+   *
+   *
+   */
+  function keywordIsLinked($id,$kw) {
+
+    $debugMsg = 'Class:' . __CLASS__ . ' - Method: ' . __FUNCTION__;
+
+    $idSet = $id;
+    $safeKW = "'" . $this->db->prepare_string(trim($kw)) . "'";
+    $sql = " /* $debugMsg */ 
+             SELECT fk_id AS tsuite_id, OKW.keyword_id 
+             FROM {$this->tables['object_keywords']} OKW
+             JOIN {$this->tables['keywords']} KW
+             ON KW.id = OKW.keyword_id
+             WHERE fk_id IN ( {$idSet} ) 
+             AND fk_table = 'nodes_hierarchy' 
+             AND KW.keyword = {$safeKW}";
+    $rs = $this->db->get_recordset($sql);
+
+    return (count($rs) == 1);
+  } 
+
+
 
 
 } // end class
