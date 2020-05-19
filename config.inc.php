@@ -278,7 +278,7 @@ $tlCfg->sessionInactivityTimeout = 9900;
  * If you want sessions to last longer this must be set to a higher value.
  * You may need to set this in your global php.ini if the settings don't take effect.
  */
-//ini_set('session.gc_maxlifetime', 54000);
+//ini_set('session.gc_maxlifetime', 60*90);
 
 $tlCfg->notifications->userSignUp = new stdClass();
 $tlCfg->notifications->userSignUp->enabled = TRUE;  // @see notifyGlobalAdmins()
@@ -1338,6 +1338,17 @@ $tlCfg->testcase_cfg->addTCVRelationsOnlyOnLatestTCVersion = TRUE;
 //$tlCfg->testcase_cfg->frozenNotExecutedTCVDelREQVLink = FALSE;
 
 
+// Change order using CSS flexbox model
+// @used-by tcEdit.tpl
+$tlCfg->testcase_cfg->viewerFieldsOrder = new stdClass();
+$tlCfg->testcase_cfg->viewerFieldsOrder->summary = 3;
+$tlCfg->testcase_cfg->viewerFieldsOrder->spaceOne = 2;
+$tlCfg->testcase_cfg->viewerFieldsOrder->preconditions = 1;
+
+
+
+
+
 // Effects on Req Version to TCVersion LINK 
 // when a new version of a linked Test Case is created
 // If LINK is frozen, then this means that link can not be deleted.
@@ -1863,6 +1874,8 @@ $tlCfg->tree_filter_cfg->testcases->plan_add_mode->filter_execution_type = ENABL
 $tlCfg->tree_filter_cfg->testcases->plan_add_mode->filter_workflow_status = ENABLED;
 $tlCfg->tree_filter_cfg->testcases->plan_add_mode->filter_custom_fields = ENABLED;
 $tlCfg->tree_filter_cfg->testcases->plan_add_mode->advanced_filter_mode_choice = ENABLED;
+$tlCfg->tree_filter_cfg->testcases->plan_add_mode->filter_platforms = ENABLED;
+
 
 $tlCfg->tree_filter_cfg->requirements->filter_doc_id = ENABLED;
 $tlCfg->tree_filter_cfg->requirements->filter_title = ENABLED;

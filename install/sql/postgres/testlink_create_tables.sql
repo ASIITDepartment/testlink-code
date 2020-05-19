@@ -699,6 +699,8 @@ CREATE TABLE /*prefix*/platforms (
   name VARCHAR(100) NOT NULL,
   testproject_id BIGINT NOT NULL DEFAULT '0' REFERENCES  /*prefix*/testprojects (id) ON DELETE CASCADE,
   notes text NOT NULL,
+  enable_on_design INT2 NOT NULL DEFAULT '0',
+  enable_on_execution INT2 NOT NULL DEFAULT '1',
   PRIMARY KEY (id)
 );
 CREATE UNIQUE INDEX /*prefix*/platforms_uidx1 ON /*prefix*/platforms (testproject_id,name);
@@ -914,6 +916,33 @@ CREATE INDEX /*prefix*/idx02_testcase_platforms ON /*prefix*/testcase_platforms 
 
 
 
+CREATE TABLE /*prefix*/baseline_l1l2_context (
+  "id" BIGSERIAL NOT NULL , 
+  "testplan_id" BIGINT NOT NULL DEFAULT '0' REFERENCES  /*prefix*/testplans (id),
+  "platform_id" BIGINT NOT NULL DEFAULT '0' REFERENCES  /*prefix*/platforms (id) ON DELETE CASCADE,
+  "begin_exec_ts" timestamp NOT NULL,
+  "end_exec_ts" timestamp NOT NULL,
+  "creation_ts" timestamp NOT NULL DEFAULT now(),
+  PRIMARY KEY ("id")
+);
+CREATE UNIQUE INDEX /*prefix*/udx1_context ON /*prefix*/baseline_l1l2_context ("testplan_id","platform_id","creation_ts");
+
+
+CREATE TABLE /*prefix*/baseline_l1l2_details (
+  "id" BIGSERIAL NOT NULL , 
+  "context_id" BIGINT NOT NULL DEFAULT '0' REFERENCES  /*prefix*/baseline_l1l2_context (id),
+  "top_tsuite_id" BIGINT NOT NULL DEFAULT '0'  REFERENCES  /*prefix*/testsuites (id),
+  "child_tsuite_id" BIGINT NOT NULL DEFAULT '0'  REFERENCES  /*prefix*/testsuites (id),
+  "status" char(1) DEFAULT NULL,
+  "qty" INT NOT NULL DEFAULT '0',
+  "total_tc" INT NULL DEFAULT '0',
+  PRIMARY KEY ("id")
+) ;
+CREATE UNIQUE INDEX /*prefix*/udx1_details 
+ON /*prefix*/baseline_l1l2_details ("context_id","top_tsuite_id","child_tsuite_id","status");
+
+
+
 --
 -- VIEWS
 --
@@ -1081,3 +1110,15 @@ CREATE OR REPLACE VIEW /*prefix*/tsuites_tree_depth_2 AS
   AND NHTS_L2.node_type_id = 2
 );
 --
+
+CREATE OR REPLACE VIEW /*prefix*/exec_by_date_time 
+AS (
+SELECT NHTPL.name AS testplan_name, 
+TO_CHAR(E.execution_ts, 'YYYY-MM-DD') AS yyyy_mm_dd,
+TO_CHAR(E.execution_ts, 'YYYY-MM') AS yyyy_mm,
+TO_CHAR(E.execution_ts, 'HH24') AS hh,
+TO_CHAR(E.execution_ts, 'HH24') AS hour,
+E.* FROM /*prefix*/executions E
+JOIN /*prefix*/testplans TPL on TPL.id=E.testplan_id
+JOIN /*prefix*/nodes_hierarchy NHTPL on NHTPL.id = TPL.id);
+

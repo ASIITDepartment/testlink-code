@@ -132,8 +132,14 @@ class cfield_mgr extends tlObject
      * IMPORTANT: if you add a new key, this values are used as access keys in several properties of this object.
      *            then if you add one here, remember to update other properties.
      */
-    var $locations = array( 'testcase' => 
-                            array( 1 => 'standard_location', 2 => 'before_steps_results'));
+    var $locations = array('testcase' => 
+                       array( 1 => 'standard_location', 
+                              2 => 'before_steps_results',
+                              3 => 'before_summary',
+                              4 => 'before_preconditions',
+                              5 => 'after_title',
+                              6 => 'after_summary',
+                              7 => 'after_preconditions') );
 
     // changes in configuration
     //
@@ -254,7 +260,7 @@ class cfield_mgr extends tlObject
    */
 	function getLocations()
 	{
-    return($this->locations);
+    return $this->locations;
   }
 
 
@@ -375,8 +381,9 @@ class cfield_mgr extends tlObject
 
     extract($ctx);
 
-    return $this->get_linked_cfields_at_design($tproject_id,$enabled,$filters,
-                                        $node_type,$node_id,$access_key);
+    return $this->get_linked_cfields_at_design($tproject_id,
+                    $enabled,$filters,
+                    $node_type,$node_id,$access_key);
 
   }
 
@@ -440,9 +447,9 @@ class cfield_mgr extends tlObject
     rev :
 
   */
-  function get_linked_cfields_at_design($tproject_id,$enabled,$filters=null,
-                                        $node_type=null,$node_id=null,
-                                        $access_key='id')
+  function get_linked_cfields_at_design($tproject_id,$enabled,
+             $filters=null,$node_type=null,$node_id=null,
+             $access_key='id')
   {
     $debugMsg = 'Class:' . __CLASS__ . ' - Method: ' . __FUNCTION__;
   	
@@ -453,6 +460,7 @@ class cfield_mgr extends tlObject
     switch ($access_key) {
       case 'id':
       case 'node_id':
+      case 'name':
       break;
       
       default:
@@ -2599,16 +2607,15 @@ function get_linked_testprojects($id)
 function buildLocationMap($nodeType)
 {
 	$locationMap=null;
-    $dummy = $this->getLocations();
+  $dummy = $this->getLocations();
 	$verboseLocationCode = array_flip($dummy[$nodeType]);
-	if( !is_null($verboseLocationCode) && count($verboseLocationCode) > 0 )
-	{
-		foreach($verboseLocationCode as $key => $value)
-		{
+	if( !is_null($verboseLocationCode)
+      && count($verboseLocationCode) > 0 ) {
+		foreach($verboseLocationCode as $key => $value) {
 			$locationMap[$key]['location']=$value;
 		}
-	}	     
-    return $locationMap; 
+	}	 
+  return $locationMap; 
 }
 
 

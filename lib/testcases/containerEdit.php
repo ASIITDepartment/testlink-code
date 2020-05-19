@@ -129,16 +129,19 @@ if( $doIt ) {
     case 'fileUpload':
       switch($level) {
         case 'testsuite':
-          fileUploadManagement($db,$args->testsuiteID,$args->fileTitle,$tsuite_mgr->getAttachmentTableName());
+          $uploadOp = fileUploadManagement($db,$args->testsuiteID,$args->fileTitle,$tsuite_mgr->getAttachmentTableName());
           $gui = initializeGui($tsuite_mgr,$args->testsuiteID,$args);
           $gui->refreshTree = 0;
+          $gui->uploadOp = $uploadOp;
           $tsuite_mgr->show($smarty,$gui,$template_dir,$args->testsuiteID,null,null);
         break;
 
         case 'testproject':
-          fileUploadManagement($db,$args->tprojectID,$args->fileTitle,$tproject_mgr->getAttachmentTableName());
+          $uploadOp = fileUploadManagement($db,$args->tprojectID,$args->fileTitle,$tproject_mgr->getAttachmentTableName());
           $gui = initializeGui($tproject_mgr,$args->tprojectID,$args);
           $gui->refreshTree = 0;
+          $gui->uploadOp = $uploadOp;
+         
           $tproject_mgr->show($smarty,$gui,$template_dir,$args->tprojectID,null,null);
         break;
       }
@@ -686,6 +689,7 @@ function deleteTestSuite(&$smartyObj,&$argsObj,&$tsuiteMgr,&$treeMgr,&$tcaseMgr,
     $smartyObj->assign('objectID',$argsObj->testsuiteID);
     $smartyObj->assign('objectType','testsuite');
     $smartyObj->assign('objectName', $argsObj->tsuite_name);
+    $smartyObj->assign('containerType', $argsObj->containerType);    
     $smartyObj->assign('delete_msg',$map_msg['delete_msg']);
     $smartyObj->assign('warning', $map_msg['warning']);
     $smartyObj->assign('link_msg', $map_msg['link_msg']);

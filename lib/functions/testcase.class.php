@@ -6,7 +6,7 @@
  * @filesource  testcase.class.php
  * @package     TestLink
  * @author      Francisco Mancardi (francisco.mancardi@gmail.com)
- * @copyright   2005-2019, TestLink community
+ * @copyright   2005-2020, TestLink community
  * @link        http://www.testlink.org/
  *
  */
@@ -952,11 +952,11 @@ class testcase extends tlObjectWithAttachments {
     if($status_ok && sizeof($idSet)) {
 
       $cfPlaces = $this->buildCFLocationMap();
-
       $gui->linked_versions = null;
-
-      $gopt = array('renderGhost' => true, 'withGhostString' => true,
-                    'renderImageInline' => true, 'renderVariables' => true,
+      $gopt = array('renderGhost' => true, 
+                    'withGhostString' => true,
+                    'renderImageInline' => true, 
+                    'renderVariables' => true,
                     'renderSpecialKW' => true,
                     'caller' => 'show()');
 
@@ -965,7 +965,6 @@ class testcase extends tlObjectWithAttachments {
 
       $gui->fileUploadURL = array();
       foreach($idSet as $key => $tc_id) {
-
         // IMPORTANT NOTICE
         // Deep Analysis is need to understand if there is an use case
         // where this method really receive an array of test case ID.
@@ -1073,7 +1072,9 @@ class testcase extends tlObjectWithAttachments {
           $gui->relationSet[] = $this->getTCVersionRelations($xm);
         }
 
-        $cfCtx = array('scope' => 'design','tproject_id' => $gui->tproject_id,'link_id' => $tc_current['id']);
+        $cfCtx = array('scope' => 'design',
+                       'tproject_id' => $gui->tproject_id,
+                       'link_id' => $tc_current['id']);
         foreach($cfPlaces as $cfpKey => $cfpFilter) {
           $gui->cf_current_version[$cfx][$cfpKey] =
             $this->htmlTableOfCFValues($tc_id,$cfCtx,$cfpFilter);
@@ -1607,42 +1608,38 @@ class testcase extends tlObjectWithAttachments {
              " AND    NHB.id = TTC.testplan_id " .
              " AND    NH.parent_id = {$id}";
 
-            if(!is_null($tplan_id))
-            {
-                $sql .= " AND TTC.testplan_id = {$tplan_id} ";
+            if (!is_null($tplan_id)) {
+              $sql .= " AND TTC.testplan_id = {$tplan_id} ";
             }
 
-            if(!is_null($platform_id))
-            {
-                $sql .= " AND TTC.platform_id = {$platform_id} ";
+            if (!is_null($platform_id)) {
+              $sql .= " AND TTC.platform_id = {$platform_id} ";
             }
 
             $recordset = $this->db->fetchMapRowsIntoMap($sql,'tcversion_id','testplan_id',database::CUMULATIVE);
 
-        if( !is_null($recordset) )
-        {
+        if (!is_null($recordset)) {
           // changes third access key from sequential index to platform_id
-          foreach ($recordset as $accessKey => $testplan)
-          {
-            foreach ($testplan as $tplanKey => $testcases)
-            {
+          foreach ($recordset as $accessKey => $testplan) {
+            foreach ($testplan as $tplanKey => $testcases) {
               // Use a temporary array to avoid key collisions
               $newArray = array();
-              foreach ($testcases as $elemKey => $element)
-              {
+              foreach ($testcases as $elemKey => $element) {
                 $platform_id = $element['platform_id'];
                 $newArray[$platform_id] = $element;
               }
               $recordset[$accessKey][$tplanKey] = $newArray;
-              }
+            }
           }
         }
       break;
 
       case "EXECUTED":
       case "NOT_EXECUTED":
-        $getFilters = array('exec_status' => $exec_status,'active_status' => $active_status,
-                            'tplan_id' => $tplan_id, 'platform_id' => $platform_id);
+        $getFilters = array('exec_status' => $exec_status,
+                            'active_status' => $active_status,
+                            'tplan_id' => $tplan_id, 
+                            'platform_id' => $platform_id);
         $recordset=$this->get_exec_status($id,$getFilters);
       break;
     }
@@ -2206,6 +2203,8 @@ class testcase extends tlObjectWithAttachments {
     $debugMsg = 'Class:' . __CLASS__ . ' - Method: ' . __FUNCTION__;
     $my['options'] = array( 'get_steps' => false, 'output' => 'full','active' => null);
     $my['options'] = array_merge($my['options'], (array)$options);
+
+
     $tcInfo = null;
     switch($my['options']['output']) {
 
@@ -4861,17 +4860,22 @@ class testcase extends tlObjectWithAttachments {
   /**
    * Just a Wrapper to improve, sometimes code layout
    */
-  function htmlTableOfCFValues($id,$context,$filters=null,$formatOptions=null) {
+  function htmlTableOfCFValues($id,$context,$filters=null,
+                               $formatOptions=null) 
+  {
 
     // $context
     $ctx = array('scope' => 'design', 'execution_id' => null,
-                 'testplan_id' => null,'tproject_id' => null,'link_id' => null);
+                 'testplan_id' => null,'tproject_id' => null,
+                 'link_id' => null);
 
     $ctx = array_merge($ctx,$context);
     extract($ctx);
 
-    return $this->html_table_of_custom_field_values($id,$scope,$filters,$execution_id,
-              $testplan_id,$tproject_id,$formatOptions,$link_id);
+    return $this->html_table_of_custom_field_values($id,$scope,
+                    $filters,$execution_id,
+                    $testplan_id,$tproject_id,
+                    $formatOptions,$link_id);
 
   }  
 
@@ -4954,10 +4958,10 @@ class testcase extends tlObjectWithAttachments {
 
     $add_table=true;
     $table_style='';
-    if( !is_null($formatOptions) )
-    {
+    if (!is_null($formatOptions)) {
       $label_css_style = isset($formatOptions['label_css_style']) ?
                          $formatOptions['label_css_style'] : $label_css_style;
+
       $value_css_style = isset($formatOptions['value_css_style']) ?
                          $formatOptions['value_css_style'] : $value_css_style;
 
@@ -4967,22 +4971,21 @@ class testcase extends tlObjectWithAttachments {
 
     $cf_smarty = '';
 
-    $location=null; // no filter
+    $location = null; // no filter
     $filterKey='location';
-    if( isset($filters[$filterKey]) && !is_null($filters[$filterKey]) )
-    {
+    if( isset($filters[$filterKey]) 
+        && !is_null($filters[$filterKey]) ) {
       $location = $filters[$filterKey];
     }
 
-    switch($scope)
-    {
+    switch($scope) {
       case 'design':
         $cf_map = $this->get_linked_cfields_at_design($id,$link_id,null,$filters,$tproject_id);
       break;
 
       case 'testplan_design':
         $cf_map = $this->get_linked_cfields_at_testplan_design($id,null,$filters,$link_id,
-                                                               $testplan_id,$tproject_id);
+          $testplan_id,$tproject_id);
       break;
 
       case 'execution':
@@ -4991,14 +4994,11 @@ class testcase extends tlObjectWithAttachments {
       break;
     }
 
-    if(!is_null($cf_map))
-    {
-      foreach($cf_map as $cf_id => $cf_info)
-      {
+    if (!is_null($cf_map)) {
+      foreach ($cf_map as $cf_id => $cf_info) {
         // if user has assigned a value, then node_id is not null
         if(isset($cf_info['node_id']) ||
-           $this->cfg->cfield->show_custom_fields_without_value)
-        {
+           $this->cfg->cfield->show_custom_fields_without_value) {
           // true => do not create input in audit log
           $label = str_replace(TL_LOCALIZE_TAG,'',lang_get($cf_info['label'],null,true));
 
@@ -5009,8 +5009,7 @@ class testcase extends tlObjectWithAttachments {
         }
       }
 
-      if( (trim($cf_smarty) != "") && $add_table)
-      {
+      if( (trim($cf_smarty) != "") && $add_table) {
         $cf_smarty = "<table {$table_style}>" . $cf_smarty . "</table>";
       }
     }
@@ -5181,13 +5180,13 @@ class testcase extends tlObjectWithAttachments {
 
 
   /**
-   * returns map with key: verbose location (see custom field class $locations
-   *                  value: array with fixed key 'location'
-   *                         value: location code
+   * returns map with key: 
+   *   verbose location (see custom field class $locations)
+   *   value: array with fixed key 'location'
+   *          value: location code
    *
    */
-  function buildCFLocationMap()
-  {
+  function buildCFLocationMap() {
     $ret = $this->cfield_mgr->buildLocationMap('testcase');
     return $ret;
   }
@@ -6899,6 +6898,10 @@ class testcase extends tlObjectWithAttachments {
       $goo->closeMyWindow = 0;
     }
 
+    if( !property_exists($goo, 'uploadOp') ) {
+      $goo->uploadOp = null;
+    }
+
     $goo->new_version_source = 'this';
 
     $goo->execution_types = $this->execution_types;
@@ -7034,7 +7037,10 @@ class testcase extends tlObjectWithAttachments {
 
 
     $platformMgr = new tlPlatform($this->db,$goo->tproject_id);
-    $goo->platforms = $platformMgr->getAllAsMap();
+
+    $opx = array('enable_on_design' => true,
+                 'enable_on_execution' => false);
+    $goo->platforms = $platformMgr->getAllAsMap($opx);
 
     $goo->tcasePrefix = $this->tproject_mgr->getTestCasePrefix($goo->tproject_id) . $this->cfg->testcase->glue_character;
 
@@ -8839,7 +8845,7 @@ class testcase extends tlObjectWithAttachments {
       $key2check = array('summary','preconditions');
     }
 
-    if( !$skwSet[$tcase_id] ) {
+    if( null==$skwSet || !$skwSet[$tcase_id] ) {
       $optSKW = array('getTSuiteKeywords' => true);
       $skwSet[$tcase_id] = $this->getPathLayered($tcase_id,$optSKW);      
     }
@@ -9292,6 +9298,7 @@ class testcase extends tlObjectWithAttachments {
     $sql = " SELECT PL.id AS platform_id, PL.name AS platform
              FROM {$this->tables['platforms']} PL
              WHERE PL.testproject_id = {$tproject_id}
+             AND PL.enable_on_design = 1
              AND PL.id NOT IN 
              (
                SELECT TCPL.platform_id 
@@ -9615,6 +9622,33 @@ class testcase extends tlObjectWithAttachments {
     return true;
   }
 
+  /**
+   *
+   */
+  function getLTCVInfo($tcaseID) {
+    $parentSet = (array)$tcaseID;
+    $sql = "SELECT 
+            NHTC.name, NHTCV.node_order,
+            NHTC.parent_id AS testsuite_id,
+            LTCV.tcversion_id, TCV.id, TCV.version, 
+            NHTCV.parent_id AS testcase_id,
+            TCV.active, TCV.tc_external_id,
+            TCV.execution_type, TCV.importance,
+            TCV.status
+            FROM {$this->views['latest_tcase_version_id']} LTCV
+            JOIN {$this->tables['tcversions']} TCV
+            ON TCV.id = LTCV.tcversion_id
+            JOIN {$this->tables['nodes_hierarchy']} NHTCV
+            ON NHTCV.id = TCV.id
+            JOIN {$this->tables['nodes_hierarchy']} NHTC
+            ON NHTC.id = NHTCV.parent_id
+            WHERE LTCV.testcase_id IN (" . 
+            implode(',',$parentSet) . ")";
+
+    // $rs = $this->db->fetchRowsIntoMap($sql,'testcase_id');
+    $rs = $this->db->get_recordset($sql);
+    return $rs;
+  }
 
 
 

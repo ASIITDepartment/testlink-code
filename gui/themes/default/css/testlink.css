@@ -79,7 +79,7 @@ that remain always visible while rest of body content scrolls,
 giving visual experience that body goes under the section on top
 */
 body.fixedheader {
-	padding-top:	120px !important;
+	padding-top:	200px !important;
 	padding-top:	0; /* IE 6 does not understand fixed */
 }
 
@@ -210,7 +210,7 @@ On chrome seems not work
 */
 #header-wrap {
 	border-bottom:	1px solid #000;
-	height: 100px;
+	height: 200px;
 	position: fixed;
 	top:  0;
 	width:  100%;
@@ -293,10 +293,11 @@ div.menu_bubble h3{
  * Give buttons, submit, reset a gradient 3d look and other components
  * text/password-input, textarea and select a flat appearance.
  */
+
 input[type="button"],
+input[type="submit"],
 input[type="password"],
 input[type="reset"],
-input[type="submit"],
 input[type="text"],
 select,
 textarea,

@@ -331,6 +331,8 @@ CREATE TABLE /*prefix*/platforms (
   name varchar(100) NOT NULL,
   testproject_id int(10) UNSIGNED NOT NULL,
   notes text NOT NULL,
+  enable_on_design tinyint(1) unsigned NOT NULL default '0',
+  enable_on_execution tinyint(1) unsigned NOT NULL default '1',
   PRIMARY KEY (id),
   UNIQUE KEY /*prefix*/idx_platforms (testproject_id,name)
 ) DEFAULT CHARSET=utf8;
@@ -796,6 +798,31 @@ CREATE TABLE /*prefix*/testcase_platforms (
 ) DEFAULT CHARSET=utf8;
 
 
+CREATE TABLE /*prefix*/baseline_l1l2_context (
+  id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  testplan_id int(10) unsigned NOT NULL DEFAULT '0',
+  platform_id int(10) unsigned NOT NULL DEFAULT '0',
+  begin_exec_ts timestamp NOT NULL,
+  end_exec_ts timestamp NOT NULL,
+  creation_ts timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  UNIQUE KEY udx1_context (testplan_id,platform_id,creation_ts)
+) DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE /*prefix*/baseline_l1l2_details (
+  id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  context_id int(10) unsigned NOT NULL,
+  top_tsuite_id int(10) unsigned NOT NULL DEFAULT '0',
+  child_tsuite_id int(10) unsigned NOT NULL DEFAULT '0',
+  status char(1) DEFAULT NULL,
+  qty int(10) unsigned NOT NULL DEFAULT '0',
+  total_tc int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY udx1_details (context_id,top_tsuite_id,child_tsuite_id,status)
+) DEFAULT CHARSET=utf8;
+
+
 
 # VIEWS
 #
@@ -920,3 +947,16 @@ ON NHTS_L2.parent_id = NHTS_L1.id
 WHERE NHTPRJ.node_type_id = 1 
 AND NHTS_L1.node_type_id = 2
 AND NHTS_L2.node_type_id = 2;
+
+#
+CREATE OR REPLACE VIEW /*prefix*/exec_by_date_time 
+AS (
+SELECT NHTPL.name AS testplan_name, 
+DATE_FORMAT(E.execution_ts, '%Y-%m-%d') AS yyyy_mm_dd,
+DATE_FORMAT(E.execution_ts, '%Y-%m') AS yyyy_mm,
+DATE_FORMAT(E.execution_ts, '%H') AS hh,
+DATE_FORMAT(E.execution_ts, '%k') AS hour,
+E.* FROM /*prefix*/executions E
+JOIN /*prefix*/testplans TPL on TPL.id=E.testplan_id
+JOIN /*prefix*/nodes_hierarchy NHTPL on NHTPL.id = TPL.id);
+

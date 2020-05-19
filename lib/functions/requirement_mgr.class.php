@@ -1104,8 +1104,16 @@ function create_tc_from_requirement($mixIdReq,$srs_id, $user_id, $tproject_id = 
 
     $output = 0;
     $now = $this->db->db_now();
-    if($testcase_id && $req_id) {
+    if ($testcase_id && $req_id) {
+      // Get Latest Active Test Case Version 
+      $tcv = current($tcMgr->get_last_active_version($testcase_id));
+      if ($tcv == null) {
+        return $output;
+      }
+    }
 
+    // Go ahead
+    if ($testcase_id && $req_id) {
       // Need to get latest version for each requirement
       $reqIDSet = (array)$req_id;
       $gopt = array('output' => 'id,version');
@@ -1118,8 +1126,6 @@ function create_tc_from_requirement($mixIdReq,$srs_id, $user_id, $tproject_id = 
         $reqLatestVersionNumberSet[] = $isofix['version'];
       }
 
-      // Get Latest Active Test Case Version 
-      $tcv = current($tcMgr->get_last_active_version($testcase_id));
       $ltcv = $tcv['tcversion_id'];
       $ltcvNum = $tcv['version'];
       $in_clause = implode(",",$reqLatestVersionIDSet);
@@ -1161,9 +1167,7 @@ function create_tc_from_requirement($mixIdReq,$srs_id, $user_id, $tproject_id = 
                             "ASSIGN",$this->object_table);
             }                 
           }
-        }    
-        else
-        {
+        } else {
           $output = 1;
         }
       }
@@ -1292,7 +1296,8 @@ function set_order($map_id_order)
  *
  * @param  int $id requirement id
  * @param  int $tproject_id: optional default null.
- *         useful to get custom fields (when this feature will be developed).
+ *         useful to get custom fields 
+ *         (when this feature will be developed).
  *
  * @return  string with XML code
  *
@@ -1301,6 +1306,7 @@ function exportReqToXML($id,$tproject_id=null, $inc_attachments=false)
 {
   $req = $this->get_by_id($id,requirement_mgr::LATEST_VERSION);
   $reqData[] = $req[0]; 
+  $req_version_id = $req[0]['version_id'];
 
   $elemTpl = "\t" .   "<requirement>" .
              "\n\t\t" . "<docid><![CDATA[||DOCID||]]></docid>" .
@@ -1315,19 +1321,20 @@ function exportReqToXML($id,$tproject_id=null, $inc_attachments=false)
              "\n\t\t" . $this->customFieldValuesAsXML($id,$req[0]['version_id'],$tproject_id);
 			 
   // add req attachment content if checked in GUI
-  if ($inc_attachments)
-  {
-	$attachments=null;
-	// retrieve all attachments linked to req
-	$attachmentInfos = $this->attachmentRepository->getAttachmentInfosFor($id,$this->attachmentTableName,'id');
-	  
+  if ($inc_attachments) {
+  	$attachments = null;
+
+    // id -> req_id, but I need latest req_versionid
+  	$attachSet = $this->attachmentRepository
+                      ->getAttachmentInfosFor(
+                        $req_version_id,
+                        $this->attachmentTableName,'id');
 	// get all attachments content and encode it in base64	  
-	if ($attachmentInfos)
-	{
-		foreach ($attachmentInfos as $attachmentInfo)
-		{
+	if ($attachSet) {
+		foreach ($attachSet as $attachmentInfo) {
 			$aID = $attachmentInfo["id"];
-			$content = $this->attachmentRepository->getAttachmentContent($aID, $attachmentInfo);
+			$content = $this->attachmentRepository
+                      ->getAttachmentContent($aID, $attachmentInfo);
 			
 			if ($content != null)
 			{
@@ -1491,7 +1498,8 @@ function createFromMap($req,$tproject_id,$parent_id,$author_id,$filters = null,$
     $messages['cfield'] = lang_get('cf_value_not_imported_missing_cf_on_testproject');
 
     $labels = array('import_req_created' => '',
-                    'import_req_skipped' =>'', 'import_req_updated' => '', 
+                    'import_req_skipped' =>'', 
+                    'import_req_updated' => '', 
                     'frozen_req_unable_to_import' => '', 'requirement' => '', 
                     'import_req_new_version_created' => '',
                     'import_req_update_last_version_failed' => '',
@@ -1503,7 +1511,8 @@ function createFromMap($req,$tproject_id,$parent_id,$author_id,$filters = null,$
       $labels[$key] = lang_get($key);
     }  
     $getByAttributeOpt = array('output' => 'id');
-    $getLastChildInfoOpt = array('child_type' => 'version', 'output' => ' CHILD.is_open, CHILD.id ');
+    $getLastChildInfoOpt = array('child_type' => 'version', 
+      'output' => ' CHILD.is_open, CHILD.id ');
   }  
   
   $cf2insert=null;
@@ -1516,37 +1525,36 @@ function createFromMap($req,$tproject_id,$parent_id,$author_id,$filters = null,$
   $copy_req = null;
   $getOptions = array('output' => 'minimun');
   $has_filters = !is_null($filters);
-  $my['options'] = array( 'hitCriteria' => 'docid' , 'actionOnHit' => "update", 'skipFrozenReq' => true);
+  $my['options'] = array( 'hitCriteria' => 'docid' , 
+    'actionOnHit' => "update", 'skipFrozenReq' => true);
   $my['options'] = array_merge($my['options'], (array)$options);
 
-  // 20160314
-  // Check data than can create issue when writting to DB due to lenght
+  // Check data than can create issue when writting 
+  // to DB due to lenght
   // 
   $req['title'] = trim($req['title']);
   $req['docid'] = trim($req['docid']);
 
   $checkLengthOK = true;
   $what2add = '';
-  if( strlen($req['title']) > $fieldSize->req_title )
-  {
+  if( strlen($req['title']) > $fieldSize->req_title ) {
      $checkLengthOK = false;
      $what2add = $labels['req_title_lenght_exceeded'] . '/';
-  }
+  }  
 
- // if( strlen($req['docid']) > $fieldSize->req_docid )
- // {
-   //  $checkLengthOK = false;
-    // $what2add .= $labels['req_docid_lenght_exceeded'];
- // }
+  if( strlen($req['docid']) > $fieldSize->req_docid ) {
+     $checkLengthOK = false;
+     $what2add .= $labels['req_docid_lenght_exceeded'];
+  }  
 
- // if( $checkLengthOK == FALSE )
- // {
- //   $msgID = 'import_req_skipped_plain';
- //   $user_feedback[] = array('doc_id' => $req['docid'],'title' => $req['title'],
-//                             'import_status' => sprintf($labels[$msgID],$what2add));
+  if( $checkLengthOK == FALSE ) {
+    $msgID = 'import_req_skipped_plain';
+    $user_feedback[] = array('doc_id' => $req['docid'],
+                             'title' => $req['title'], 
+                             'import_status' => sprintf($labels[$msgID],$what2add));
 
- //   return $user_feedback;
- // }
+    return $user_feedback;
+  }  
 
   // Check:
   // If item with SAME DOCID exists inside container
@@ -1560,7 +1568,8 @@ function createFromMap($req,$tproject_id,$parent_id,$author_id,$filters = null,$
   // $getOptions = array('output' => 'minimun');
   $msgID = 'import_req_skipped';
 
-  $target = array('key' => $my['options']['hitCriteria'], 'value' => $req[$my['options']['hitCriteria']]);
+  $target = array('key' => $my['options']['hitCriteria'], 
+                  'value' => $req[$my['options']['hitCriteria']]);
 
   // IMPORTANT NOTICE
   // When get is done by attribute that can not be unique (like seems to happen now 20110108 with
@@ -1573,15 +1582,18 @@ function createFromMap($req,$tproject_id,$parent_id,$author_id,$filters = null,$
   // when creating/update item using GUI, and these criteria have to be
   // checked abd fullfilled.
   //
-  if(is_null($check_in_reqspec))
-  {
+  if (is_null($check_in_reqspec)) {
     $check_in_tproject = $this->getByAttribute($target,$tproject_id,null,$getByAttributeOpt);
 
     if (is_null($check_in_tproject)) {
 	    $importMode = 'creation';
-      $newReq = $this->create($parent_id,$req['docid'],$req['title'],$req['description'],
-                         $author_id,$req['status'],$req['type'],$req['expected_coverage'],
-                         $req['node_order'],$tproject_id,array('quickAndDirty' => true));
+      $newReq = $this->create($parent_id,$req['docid'],
+                              $req['title'],$req['description'],
+                              $author_id,$req['status'],
+                              $req['type'],
+                              $req['expected_coverage'],
+                              $req['node_order'],$tproject_id,
+                              array('quickAndDirty' => true));
 	    $reqID = $newReq['id'];
       $fk_id = $newReq['version_id'];  // for attachments
       if( ($status_ok = ($newReq['status_ok'] == 1)) ){
@@ -1590,18 +1602,14 @@ function createFromMap($req,$tproject_id,$parent_id,$author_id,$filters = null,$
         $msgID = 'import_req_skipped_plain';
         $result['msg'] = $newReq['msg'];  // done to use what2add logic far below
       }
-        
-    }                  
-    else
-    {
-      // Can not have req with same req doc id on another branch => BLOCK
+    } else {
+      // Can not have req with same req doc id 
+      // on another branch => BLOCK
       // What to do if is Frozen ??? -> now ignore and update anyway
       $msgID = 'import_req_skipped';
       $status_ok = false;
     }                    
-  }
-  else
-  {
+  } else {
     // IMPORTANT NOTICE
     // When you
     // Need to get Last Version no matter active or not.
@@ -1614,9 +1622,11 @@ function createFromMap($req,$tproject_id,$parent_id,$author_id,$filters = null,$
       switch ($my['options']['actionOnHit']) {
         case 'update_last_version':
 		      $importMode = 'update';
-          $result = $this->update($reqID,$last_version['id'],$req['docid'],$req['title'],$req['description'],
-                                  $author_id,$req['status'],$req['type'],$req['expected_coverage'],
-                                  $req['node_order']);
+          $result = $this->update($reqID,$last_version['id'],
+            $req['docid'],$req['title'],$req['description'],
+            $author_id,$req['status'],$req['type'],
+            $req['expected_coverage'],
+            $req['node_order']);
           $fk_id = $last_version['id']; // for attachment management
           $status_ok = ($result['status_ok'] == 1);
           if( $status_ok) {
@@ -1644,17 +1654,16 @@ function createFromMap($req,$tproject_id,$parent_id,$author_id,$filters = null,$
           // and if update fails => we need to delete new created version.
           $title = trim_and_limit($req['title'],$fieldSize->req_title);
 		      $importMode = 'update';
-          $result = $this->update($reqID,$newItem['id'],$req['docid'],$title,$req['description'],
-                                  $author_id,$req['status'],$req['type'],$req['expected_coverage'],
-                                  $req['node_order']);
+          $result = $this->update($reqID,$newItem['id'],
+            $req['docid'],$title,$req['description'],
+            $author_id,$req['status'],$req['type'],
+            $req['expected_coverage'],
+            $req['node_order']);
           
           $status_ok = ($result['status_ok'] == 1);
-          if( $status_ok)
-          {
+          if( $status_ok) {
             $msgID = 'import_req_new_version_created';
-          }
-          else
-          {
+          } else {
             // failed -> removed just created version
             $this->delete($reqID,$newItem['id']);  
             $msgID = 'import_req_new_version_failed';
@@ -1665,49 +1674,49 @@ function createFromMap($req,$tproject_id,$parent_id,$author_id,$filters = null,$
   }     
   $what2add = is_null($result) ? $req['docid'] : $req['docid'] . ':' . $result['msg'];
   
-  $user_feedback[] = array('doc_id' => $req['docid'],'title' => $req['title'], 
-                           'import_status' => sprintf($labels[$msgID],$what2add));
+  $user_feedback[] = array('doc_id' => $req['docid'],
+    'title' => $req['title'], 
+    'import_status' => sprintf($labels[$msgID],$what2add));
 
   $hasAttachments = array_key_exists('attachments',$req);
   // process attachements for creation and update
   if ($status_ok && $hasAttachments) {
-	$addAttachResp = $this->processAttachments( $importMode, $fk_id, $req['attachments'], $feedbackMsg );
+	  $addAttachResp = $this->processAttachments( 
+      $importMode, $fk_id, $req['attachments'], $feedbackMsg );
   }
 
   // display only problems during attachments import
   if( isset($addAttachResp) && !is_null($addAttachResp) ) {
-  	foreach($addAttachResp as $att_name){
+  	foreach($addAttachResp as $att_name) {
   	  $user_feedback[] = 
         array('doc_id' => $req['docid'],
               'title' => $req['title'],
-  						'import_status' => sprintf(lang_get('import_req_attachment_skipped'),$att_name));
+  						'import_status' => 
+                sprintf(lang_get('import_req_attachment_skipped'),$att_name));
   	}
   }
   
-  if( $status_ok && $doProcessCF && isset($req['custom_fields']) && !is_null($req['custom_fields']) )
-  {
+  if( $status_ok && $doProcessCF && isset($req['custom_fields']) && !is_null($req['custom_fields']) ) {
     $req_version_id = !is_null($newReq) ? $newReq['version_id'] : $last_version['id'];
     $cf2insert = null;
-    foreach($req['custom_fields'] as $cfname => $cfvalue)
-    {
+    
+    foreach( $req['custom_fields'] as $cfname => $cfvalue) {
       $cfname = trim($cfname);
-      if( isset($linkedCF[$cfname]) )
-      {
-          $cf2insert[$linkedCF[$cfname]['id']]=array('type_id' => $linkedCF[$cfname]['type'],
-                                                       'cf_value' => $cfvalue);         
-      }
-      else
-      {
-        if( !isset($missingCfMsg[$cfname]) )
-        {
-            $missingCfMsg[$cfname] = sprintf($messages['cfield'],$cfname,$labels['requirement']);
+      if( isset($linkedCF[$cfname]) ) {
+        $cf2insert[$linkedCF[$cfname]['id']] = 
+          array('type_id' => $linkedCF[$cfname]['type'],
+                'cf_value' => $cfvalue);         
+      } else {
+        if (!isset($missingCfMsg[$cfname])) {
+          $missingCfMsg[$cfname] = sprintf($messages['cfield'],
+            $cfname,$labels['requirement']);
         }
-        $user_feedback[] = array('doc_id' => $req['docid'],'title' => $req['title'], 
+        $user_feedback[] = array('doc_id' => $req['docid'],
+                                 'title' => $req['title'], 
                                  'import_status' => $missingCfMsg[$cfname]);
       }
     }  
-   if( !is_null($cf2insert) )
-   {
+   if (!is_null($cf2insert)) {
       $this->cfield_mgr->design_values_to_db($cf2insert,$req_version_id,null,'simple');
     }  
   }
@@ -2936,10 +2945,10 @@ function html_table_of_custom_field_values($id,$child_id,$tproject_id=null)
   
   /**
    * 
-    *
-    * @internal revision
-    * 20110115 - franciscom - fixed insert of null on timestamp field
-    */
+   *
+   * @internal revision
+   * 20110115 - franciscom - fixed insert of null on timestamp field
+   */
   function create_new_revision($parent_id,$user_id,$tproject_id,$req = null,$log_msg = null)
   {
     $debugMsg = 'Class:' . __CLASS__ . ' - Method: ' . __FUNCTION__;
@@ -2976,8 +2985,7 @@ function html_table_of_custom_field_values($id,$child_id,$tproject_id=null)
              " creation_ts = {$db_now} ,author_id = {$user_id}, modifier_id = NULL";
               
       $nullTS = $this->db->db_null_timestamp();
-      if(!is_null($nullTS))
-      {
+      if (!is_null($nullTS)) {
         $sql .= ",modification_ts = {$nullTS} ";
       }  
       
@@ -3114,8 +3122,10 @@ function html_table_of_custom_field_values($id,$child_id,$tproject_id=null)
           // MSSQL    NULL DATE - ???
           $key4date = 'creation_ts';
           $key4user = 'author_id';
-          if( ($rs[$ap]['modification_ts'] != '0000-00-00 00:00:00') && !is_null($rs[$ap]['modification_ts']) )
-          {
+          $nullTS = $this->db->db_null_timestamp();
+          if( ($rs[$ap]['modification_ts'] != $nullTS) 
+               && !is_null($rs[$ap]['modification_ts']) 
+               && !is_null($rs[$ap]['modifier_id'])) {
             $key4date = 'modification_ts';
             $key4user = 'modifier_id';
           }
@@ -3827,7 +3837,7 @@ function getByIDBulkLatestVersionRevision($id,$opt=null)
   $sql = " /* $debugMsg */ SELECT REQ.id,REQ.srs_id,REQ.req_doc_id," . 
          " REQV.scope,REQV.status,REQV.type,REQV.active," . 
          " REQV.is_open,REQV.author_id,REQV.version,REQV.id AS version_id," .
-	 " REQV.expected_coverage,REQV.creation_ts,REQV.modifier_id," .
+         " REQV.expected_coverage,REQV.creation_ts,REQV.modifier_id," .
          " REQV.modification_ts,REQV.revision, -1 AS revision_id, " .
          " NH_REQ.name AS title, REQ_SPEC.testproject_id, " .
          " NH_RSPEC.name AS req_spec_title, REQ_SPEC.doc_id AS req_spec_doc_id, NH_REQ.node_order " .
